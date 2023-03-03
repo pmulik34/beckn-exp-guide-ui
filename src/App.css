@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif !important;
+}
+
+.beckn-app {
+  background: url("./assets/beckn-background.png");
+  background-size: 100% 100%;
+  position: relative;
+  height: 100vh;
+  display: grid;
+  text-align: center;
+}
+
+.beckn-app-container {
+  max-width: 1600px;
+  width: 80%;
+  margin: 0 auto;
+  font-family: "Poppins", sans-serif !important;
+}
+
+.main-container {
+  background: url("./assets/beckn-background.png");
+  background-size: 100% 100%;
+  height: 80vh;
+}
+
+.Title {
+  font-style: normal;
+  color: white;
+  font-weight: 275;
+}
+
+.signal text {
+  fill: #fff;
+}
+
+.goBack {
+  position: "absolute";
+  left: "50%";
+  top: "50%";
+  transform: translate(-"50%", -"50%");
+  color: "#fff";
+}
+
+.image-url-container img:nth-child(2) {
+  display: none;
+}
+
+.image-url-container:hover img:nth-child(1) {
+  display: none;
+}
+
+.image-url-container:hover img:nth-child(2) {
+  display: block;
+}
+.hover_card:hover {
+  background: #abd4fa !important;
+}
+
+.image-url-container img:nth-child(2) {
+  display: none;
+}
+.hover_card:hover .main-title,
+.hover_card:hover .sub-title {
+  color: #000 !important;
+}
+.hover_card:hover .mains-title,
+.hover_card:hover .sub-title {
+  color: #000 !important;
+}
+.hover_card:hover .image-url-container{
+  display: flex;
+  justify-content: center;
+}
+.hover_card:hover .image-url-container img:nth-child(1) {
+  display: none;
+}
+.hover_card:hover .image-url-container img:nth-child(2) {
+  display: block;
+}
+/* -----------------Card.tsx-------------------------------- */
+.image-url-containers img:nth-child(2) {
+  display: none;
+}
+
+.image-url-containers:hover img:nth-child(1) {
+  display: none;
+}
+
+.image-url-containers:hover img:nth-child(2) {
+  display: block;
+}
+.image-url-containers img:nth-child(2) {
+  display: none;
+}
+.hover_card:hover .image-url-containers{
+  display: flex;
+  justify-content: center;
+}
+.hover_card:hover .image-url-containers img:nth-child(1) {
+  display: none;
+}
+.hover_card:hover .image-url-containers img:nth-child(2) {
+  display: block;
+}
