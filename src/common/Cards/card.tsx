@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Cards.css";
 
 interface cardContentPropsModal {
@@ -7,31 +7,26 @@ interface cardContentPropsModal {
   mainIconUrlInBlack?: any;
   className?: string;
   onClick?: () => void;
+  hover?: boolean;
 }
 
 const Card: React.FC<cardContentPropsModal> = ({
   mainIconUrl,
-  MainTitle,
   mainIconUrlInBlack,
   className,
+  hover
 }: cardContentPropsModal) => {
+  console.log("flag", hover)
   return (
-    <div className={`cards ${className}`}>
-      <div className="cards-inner">
-        <div className="cards-img">
-          <div className="image-url-containers">
-            <img src={mainIconUrl} alt={"BecknLogoIcon"} />
-            <img
-              className="hover-icon"
-              src={mainIconUrlInBlack}
-              alt={"BecknLogoIcon"}
-            />
-          </div>
-          <div className="cards-title">
-            <div className="mains-title">{MainTitle}</div>
-          </div>
-        </div>
-      </div>
+    <div className="image-url-containers">
+      <img className="firstImage"
+        src={mainIconUrl}
+        alt={"BecknLogoIcon"}
+      />
+      <img className="secondImage"
+        src={mainIconUrlInBlack}
+        alt={"BecknLogoIcon"}
+      />
     </div>
   );
 };

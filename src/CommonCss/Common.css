@@ -8,7 +8,7 @@
 }
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   width: 96%;
   align-items: center;
   margin: 0 auto;
@@ -26,8 +26,10 @@
 }
 
 .page-content-title {
-  font-size: 50px;
+  font-size: 48px;
   line-height: 120px;
+  font-weight: 400;
+  margin-bottom: 15px;
 }
 .card-wrapper {
   margin-top: 40px;
@@ -45,8 +47,6 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 70px;
-  height: 200px;
   align-items: center;
 }
 .back-btn {
