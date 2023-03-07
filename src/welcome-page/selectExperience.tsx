@@ -26,7 +26,7 @@ const SelectExperience = () => {
           />
         </div>
         <div style={{display:"flex", justifyContent:"center"}}>
-          <div>
+          <div className="card-head">
             <Link
               to="/Select-application"
               style={{ textDecoration: "none", color: "#000", width: "100%" }}
@@ -39,7 +39,7 @@ const SelectExperience = () => {
               />
             </Link>
           </div>
-          <div>
+          <div className="card-head">
             <Link
               to="/select-admin"
               style={{ textDecoration: "none", color: "#000", width: "100%" }}

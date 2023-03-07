@@ -19,7 +19,7 @@ const SelectApplication = () => {
       </div>
       <div className="content-wrapper">
         <div style={{display:"flex", justifyContent:"center", marginTop:"100px"}}>
-          <div>
+          <div className="card-head">
               <Card
                 mainIconUrlInBlack="/assets/turisumApplicationHover.svg"
                 className="hover_card"
@@ -27,7 +27,7 @@ const SelectApplication = () => {
                 MainTitle={"Policy Admin"}
               />
           </div>
-          <div>
+          <div className="card-head">
               <Card
                 mainIconUrlInBlack="/assets/retailApplicationHover.svg"
                 className="hover_card"

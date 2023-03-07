@@ -24,7 +24,7 @@ const SelectAdmin = () => {
             marginTop: "100px",
           }}
         >
-          <div>
+          <div className="card-head">
             <Link
               to="https://policy-admin.becknprotocol.io/"
               target="_blank"
@@ -38,7 +38,7 @@ const SelectAdmin = () => {
               />
             </Link>
           </div>
-          <div>
+          <div className="card-head">
             <Link
               to="https://travelbuddy.becknprotocol.io/Policies"
               target="_blank"
@@ -52,7 +52,7 @@ const SelectAdmin = () => {
             />
             </Link>
           </div>
-          <div>
+          <div className="card-head">
             <Link
               to="https://travelbuddy.becknprotocol.io/"
               target="_blank"
