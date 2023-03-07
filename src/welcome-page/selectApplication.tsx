@@ -20,30 +20,20 @@ const SelectApplication = () => {
       <div className="content-wrapper">
         <div style={{display:"flex", justifyContent:"center", marginTop:"100px"}}>
           <div>
-            <Link
-              to="/Select-application"
-              style={{ textDecoration: "none", color: "#000", width: "100%" }}
-            >
               <Card
                 mainIconUrlInBlack="/assets/turisumApplicationHover.svg"
                 className="hover_card"
                 mainIconUrl="/assets/turisumApplication.svg"
                 MainTitle={"Policy Admin"}
               />
-            </Link>
           </div>
           <div>
-            <Link
-              to="/select-admin"
-              style={{ textDecoration: "none", color: "#000", width: "100%" }}
-            >
               <Card
                 mainIconUrlInBlack="/assets/retailApplicationHover.svg"
                 className="hover_card"
                 mainIconUrl="/assets/retailApplication.svg"
                 MainTitle={"Policy Admin"}
               />
-            </Link>
           </div>
         </div>
       </div>
