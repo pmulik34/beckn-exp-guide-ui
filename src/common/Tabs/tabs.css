@@ -1,0 +1,134 @@
+.tabsConatiner {
+}
+.ant-tabs-nav {
+  width: 1080px;
+  height: 86px;
+  background: #ffffff;
+  box-shadow: 8px 10px 42px rgba(0, 0, 0, 0.42);
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-around;
+  background: linear-gradient(
+    to top,
+    white 0%,
+    white 50%,
+    lightgray 50%,
+    lightgray 100%
+  );
+  margin: 40px auto !important;
+}
+:where(.css-dev-only-do-not-override-ixblex).ant-tabs
+  .ant-tabs-tab
+  + .ant-tabs-tab {
+  margin: unset !important;
+}
+.ant-tabs-tab {
+  padding: 15px 30px !important;
+}
+.tabs-style {
+  /* TO-DO */
+}
+.ant-tabs-tab {
+  /* width: 214px;
+    height: 78px; */
+  /* background-color: pink !important; */
+  font-family: "Poppins" !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-size: 16px !important;
+  line-height: 100%;
+  border-left: 0.5px solid #c7c7c7 !important;
+}
+.ant-tabs-tab-btn {
+  /* border-bottom: 2px solid red !important; */
+}
+/* The device with borders */
+.smartphone-wrapper {
+  position: relative;
+  width: 300px;
+  height: 650px;
+  border: 4px solid #ffffff;
+  border-radius: 36px;
+}
+.smartphone {
+  position: relative;
+  width: 360px;
+  height: 640px;
+  margin: auto;
+  border: 4px #d9d9d9 solid;
+  border-top-width: 4px;
+  border-bottom-width: 4px;
+  border-radius: 36px;
+}
+
+/* The horizontal line on the top of the device */
+.smartphone:before {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #d9d9d9;
+  border-radius: 50%;
+  z-index: 99;
+}
+
+/* The circle on the bottom of the device */
+/* .smartphone:after {
+  content: "";
+  display: block;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  left: 50%;
+  bottom: -65px;
+  transform: translate(-50%, -50%);
+  background: #d9d9d9;
+  border-radius: 50%;
+} */
+
+/* The screen (or content) of the device */
+.smartphone {
+  width: 290px;
+  height: 640px;
+  background: white;
+}
+.content {
+  width: 258px;
+  height: 520px;
+}
+/* iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 36px;
+} */
+.ant-tabs-tab.ant-tabs-tab-active {
+  border-bottom: 10px solid #398480 !important;
+  z-index: 99;
+}
+.ant-tabs-ink-bar {
+  border-bottom: 10px solid #398480 !important;
+}
+@media screen and (min-width: 768px) and (max-width: 1080px) {
+  .ant-tabs-nav {
+    width: 740px;
+  }
+  .ant-tabs-tab {
+    font-size: 12px !important;
+  }
+  .ant-tabs-tab {
+    padding: 5px 10px !important;
+  }
+  .tab-wrappper-content {
+    width: 96% !important;
+  }
+  .tab-wrappper-content img {
+    width: 100%;
+  }
+}

@@ -1,0 +1,55 @@
+.ant-progress-text {
+  display: none !important;
+}
+.ant-progress-outer {
+  /* display: none; */
+  /*  */
+}
+.ant-progress-inner {
+  background: #523f62 !important;
+}
+.ant-progress-bg {
+  background: linear-gradient(269.49deg, #df877b 0%, #6cb6ce 100%) !important;
+}
+.beckn-image {
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+}
+.main-containers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+}
+.headingOfProgress {
+  font-weight: 400;
+  font-size: 36px;
+  color: #4e4646;
+}
+.headingOfHeader {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.progress-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.progress {
+  width: 75%;
+  position: relative;
+  left: 15px;
+}
+.data-set-container{
+    display: flex;
+  justify-content: center; 
+}
+.data-set{
+font-weight: 300;
+font-size: 20px;
+line-height: 30px;
+text-align: center;
+color: #000000;
+}

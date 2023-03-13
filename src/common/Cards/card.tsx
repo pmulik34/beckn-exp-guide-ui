@@ -16,7 +16,6 @@ const Card: React.FC<cardContentPropsModal> = ({
   className,
   hover
 }: cardContentPropsModal) => {
-  console.log("flag", hover)
   return (
     <div className="image-url-containers">
       <img className="firstImage"

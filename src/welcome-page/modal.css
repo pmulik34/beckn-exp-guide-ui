@@ -1,0 +1,32 @@
+p {
+  text-align: center;
+}
+.title {
+  font-size: 14px;
+  font-weight: 700;
+  color: rgb(78, 70, 70);
+  margin-bottom: 10px;
+}
+.titleMain {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #4e4646;
+}
+.ant-modal-footer{
+    text-align: center !important;
+}
+.ant-btn{
+    width: 158px !important;
+}
+.ant-btn-primary{
+    background-color: #C9BCC0 !important;
+    position: relative;
+    left: 15px;
+}
+.ant-btn-default{
+    border-color: #554e4e !important;
+    position: relative;
+    right: 15px;
+   
+}

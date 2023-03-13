@@ -23,8 +23,8 @@ const WelcomeScreen = () => {
         </div>
         <div style={{position:"relative", bottom:'120px'}}>
         <button onClick={()=>navigate('/select-experience')} className="border-gradient border-gradient-purple">
-          <span style={{paddingRight:"5px"}}>EXPLORE</span>
-          <span style={{paddingLeft:"5px"}}><img src="/assets/tiltArrow.svg" alt="" /></span>
+          <span style={{paddingRight:"5px"}}>begin</span>
+          <span style={{paddingLeft:"5px"}}><img style={{ width:"16px"}} src="/assets/tiltArrow.svg" alt="" /></span>
         </button>
         
         </div>
