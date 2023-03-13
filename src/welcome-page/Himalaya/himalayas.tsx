@@ -13,6 +13,7 @@ const Himalayas = () => {
         fourthProps={<VideoTemplate />}
         fifthProps={<Modal />}
       />
+      
     </div>
   );
 };
