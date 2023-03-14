@@ -24,7 +24,6 @@ const AnimatedRoutes = () => {
         <Route path="/select-experience" element={<SelectExperience/>} />
         <Route path="/tabs" element={<TabsComponent />} />
         <Route path="/progress" element={<ProgressBar />} />
-        <Route path="/ModalComponent" element={<ModalComponent />} />
         <Route path="/ThankYou" element={<ThankYou />} />
         <Route path="/videoTemplate" element={<VideoTemplate />} />
         <Route

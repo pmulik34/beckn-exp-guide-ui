@@ -1,8 +1,14 @@
 import React, { useState } from "react";
 import { Card } from "antd";
 import "./thankYou.css";
+import { useNavigate } from "react-router-dom";
 
 const ThankYou: React.FC = () => {
+  const navigate = useNavigate();
+  
+  const handleNevigate = () => {
+    navigate("/");
+  };
   return (
     <div
       style={{ display: "flex", justifyContent: "center", alignItems: "end" }}
@@ -23,7 +29,7 @@ const ThankYou: React.FC = () => {
             <img src="/assets/barcode.svg" alt={"Logo"} />
           </li>
           <li>
-            <button className="border-gradient border-gradient-purple">
+            <button onClick={handleNevigate} className="border-gradient border-gradient-purple">
               <span style={{  paddingRight: "5px"  }}>
                 <img
                   style={{ width: "24px", position:"relative", top:"5px" }}

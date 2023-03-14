@@ -1,4 +1,9 @@
-.tabsConatiner {
+.tab-wrappper-content {
+  display: flex;
+  justify-content: space-between;
+  width: 65%;
+  align-items: center;
+  margin: 0px auto;
 }
 .ant-tabs-nav {
   width: 1080px;
@@ -15,7 +20,7 @@
     lightgray 50%,
     lightgray 100%
   );
-  margin: 40px auto !important;
+  margin: 20px auto !important;
 }
 :where(.css-dev-only-do-not-override-ixblex).ant-tabs
   .ant-tabs-tab
@@ -45,8 +50,8 @@
 /* The device with borders */
 .smartphone-wrapper {
   position: relative;
-  width: 300px;
-  height: 650px;
+  width: 393px;
+  height: 686px;
   border: 4px solid #ffffff;
   border-radius: 36px;
 }
@@ -59,6 +64,7 @@
   border-top-width: 4px;
   border-bottom-width: 4px;
   border-radius: 36px;
+  margin-top: 1px;
 }
 
 /* The horizontal line on the top of the device */
@@ -92,8 +98,8 @@
 
 /* The screen (or content) of the device */
 .smartphone {
-  width: 290px;
-  height: 640px;
+  width: 383px;
+  height: 678px;
   background: white;
 }
 .content {
@@ -112,10 +118,31 @@
   border-bottom: 10px solid #398480 !important;
   z-index: 99;
 }
+.ant-tabs-tab.ant-tabs-tab-active[data-node-key="6"] {
+  /* border-bottom-right-radius: 36px !important; */
+  border-bottom-width: 10px !important;
+}
 .ant-tabs-ink-bar {
   border-bottom: 10px solid #398480 !important;
 }
+.ant-tabs-ink-bar[data-node-key="6"] {
+  width: 60px !important;
+  /* border-bottom-width: 10px !important; */
+  /* border-bottom-right-radius: 36px !important; */
+}
+.ant-tabs-ink-bar[data-node-key="6"] {
+  border-bottom-right-radius: 36px !important;
+}
 @media screen and (min-width: 768px) and (max-width: 1080px) {
+  .ChooseExpIframe{
+    height: 617px !important;
+  }
+  .smartphone-wrapper{
+    height: 636px !important;
+  }
+  .smartphone {
+    height: 628px !important;
+}
   .ant-tabs-nav {
     width: 740px;
   }

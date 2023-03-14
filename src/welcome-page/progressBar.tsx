@@ -8,7 +8,7 @@ const ProgressBar = () => {
   const navigate = useNavigate();
 
   const n = 100;
-  const delay = 50;
+  const delay = 30;
   useEffect(() => {
     function loopWithDelay(i: any) {
       setdata(i);
@@ -22,6 +22,7 @@ const ProgressBar = () => {
   }, [n]);
   useEffect(()=>{
     if(data === 100){
+      console.log("progress-Bar: ", data)
       localStorage.getItem("name") === "himalayas" ? 
       navigate('/himalayas')
       : navigate('/cities')

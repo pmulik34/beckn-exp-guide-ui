@@ -34,7 +34,7 @@
 .image-url-containers img:nth-child(2) {
   display: none;
 }
-.hover_card:hover .image-url-containers{
+.hover_card:hover .image-url-containers {
   display: flex;
   justify-content: center;
 }
@@ -44,37 +44,39 @@
 .hover_card:hover .image-url-containers img:nth-child(2) {
   display: block;
 }
+iframe .header-container .location-btn {
+  padding: 10px 10px !important;
+}
 
 /* ----------------------------Media Query---------------------- */
 @media screen and (min-width: 320px) and (max-width: 767px) {
-
 }
 @media screen and (min-width: 768px) and (max-width: 1224px) {
   /* TO-DO */
-  .beckn-app{
+  .beckn-app {
     /* height: 100%; */
   }
-.page-content{
-  height: 100%;
-  width: 100%;
-}
-.card-head{
-  width: 30%;
-  margin: 15px;
-}
-.image-url-containers{
-  margin: unset !important;
-  width: 100%;
-}
-.firstImage{
-  width: 100%;
-}
-.secondImage{
-  width: 100%;
-}
-.child-container{
-height: 100%;
-}
+  .page-content {
+    height: 100%;
+    width: 100%;
+  }
+  .card-head {
+    width: 30%;
+    margin: 15px;
+  }
+  .image-url-containers {
+    margin: unset !important;
+    width: 100%;
+  }
+  .firstImage {
+    width: 100%;
+  }
+  .secondImage {
+    width: 100%;
+  }
+  .child-container {
+    height: 100%;
+  }
 }
 @media screen and (min-width: 800px) and (max-width: 741px) {
 }

@@ -30,3 +30,10 @@ p {
     right: 15px;
    
 }
+.ant-modal{
+  margin-top: 70px !important;
+}
+.ant-modal-mask{
+  backdrop-filter: blur(32px) !important;
+  width: 100% !important;
+}

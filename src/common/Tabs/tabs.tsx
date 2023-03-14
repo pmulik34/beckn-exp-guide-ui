@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { Tabs } from "antd";
 import "./tabs.css";
+import Modal from '../../welcome-page/modal';
 interface TabsComponentPropsModal {
   firstProps?: any;
   secondProps?: any;
   thirdProps?: any;
   fourthProps?: any;
-  fifthProps?: any;
+  FifthProps?: any;
 }
 
 const TabsComponent: React.FC<TabsComponentPropsModal> = ({
@@ -14,9 +15,9 @@ const TabsComponent: React.FC<TabsComponentPropsModal> = ({
   secondProps,
   thirdProps,
   fourthProps,
-  fifthProps,
+  FifthProps,
 }: TabsComponentPropsModal) =>{ 
-  console.log("Video---->", secondProps)
+  const [flag, setFlag] = useState(true);
 return(
   <>
     <Tabs
@@ -100,8 +101,8 @@ return(
             </div>
           ),
           key: "6",
-          className: "tabs-style",
-          children: fifthProps,
+          className: "home-tabs-style",
+          children: <Modal flag={flag}/>,
         },
       ]}
     />

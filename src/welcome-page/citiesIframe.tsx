@@ -6,7 +6,7 @@ const CitiesIframe = () => {
     <div>
       <ChooseExperience
         textURL={"/assets/citiesText.svg"}
-        iframeURL={"https://retail-app.becknprotocol.io/"}
+        iframeURL={"https://travelbuddy.becknprotocol.io/"}
       />
     </div>
   );

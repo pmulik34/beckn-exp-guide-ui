@@ -1,31 +1,36 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button, Modal } from "antd";
 import "./modal.css";
 import { useNavigate } from "react-router-dom";
-
-const ModalComponent: React.FC = () => {
+interface propsModal {
+  flag: boolean,
+}
+const ModalComponent: React.FC<propsModal> = ({flag}: propsModal) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const navigate = useNavigate();
 
-  const showModal = () => {
-    setIsModalOpen(true);
-  };
+  useEffect(() => {
+    setIsModalOpen(flag);
+  }, [])
+  
 
   const handleOk = () => {
-    setIsModalOpen(false);
-    navigate('/ThankYou')
+    setIsModalOpen(!flag);
+    navigate('/')
   };
 
   const handleCancel = () => {
-    setIsModalOpen(false);
+    window.location.reload()
+    setIsModalOpen(!flag);
   };
 
   return (
     <>
-      <Button type="primary" onClick={showModal}>
+      {/* <Button type="primary" onClick={showModal}>
         Open Modal
-      </Button>
-      <Modal okText={"confirm"} open={isModalOpen} onOk={handleOk} onCancel={handleCancel} width={559}>
+      </Button> */}
+
+      <Modal mask={true} okText={"confirm"} open={isModalOpen} onOk={handleOk} onCancel={handleCancel} width={559}>
         <div style={{ width: "100%", marginTop: "15px" }}>
           <img
             style={{ width: "100%" }}
@@ -33,7 +38,7 @@ const ModalComponent: React.FC = () => {
             alt="menLogo"
           />
         </div>
-        <div style={{ display: "flex", justifyContent: "center" }}>
+        <div style={{ display: "flex", justifyContent: "center", marginBottom:"30px" }}>
           <div>
             <p className="title">Leaving so soon?</p>
             <p className="titleMain">

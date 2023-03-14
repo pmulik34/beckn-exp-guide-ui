@@ -1,0 +1,13 @@
+.exit-icon{
+    position: fixed;
+    bottom: 60px;
+    right: 40px;
+    width: 77px;
+    height: 75px;
+    background: #FFFFFF;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
