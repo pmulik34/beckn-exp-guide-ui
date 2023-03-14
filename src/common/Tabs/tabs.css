@@ -17,8 +17,8 @@
     to top,
     white 0%,
     white 50%,
-    lightgray 50%,
-    lightgray 100%
+    #DCDCDC 50%,
+    #DCDCDC 100%
   );
   margin: 20px auto !important;
 }

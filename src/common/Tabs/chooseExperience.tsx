@@ -19,10 +19,12 @@ const chooseExperience: React.FC<selectExpModalProps> = ({
       <div className="smartphone-wrapper">
         <div className="smartphone">
           <div className="content">
-            {/* "https://retail-app.becknprotocol.io/" */}
              {/* geolocation */}
             <iframe className="ChooseExpIframe"
               allow="clipboard-read; clipboard-write;"
+              // referrerPolicy="no-referrer"
+              // sandbox="allow-same-origin"
+              // name="my-iframe"
               src={iframeURL}
               frameBorder="0"
               allowFullScreen

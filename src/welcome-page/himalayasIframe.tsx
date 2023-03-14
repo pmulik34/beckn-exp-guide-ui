@@ -5,8 +5,8 @@ const HimalayasIframe = () => {
     <div>
       <ChooseExperience
         textURL={"/assets/himalyasText.svg"}
-        iframeURL={"https://tourism-app.becknprotocol.io/"}
-        // iframeURL={"https://www.wikipedia.org/"}
+        iframeURL={"https://tourism-app.becknprotocol.io"}
+        // iframeURL={"https://retail-app.becknprotocol.io/"}
       />
     </div>
   );

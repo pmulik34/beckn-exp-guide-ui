@@ -16,10 +16,7 @@ const Cities = () => {
         fourthProps={<VideoTemplate />}
         FifthProps={Modal}
       />
-      <div
-        style={{ position: "fixed", bottom: "60px", right: "40px" }}
-        className="exit-icon"
-      >
+      <div className="exit-icon">
         <img onClick={()=>navigate('/thankYou')} src="/assets/curvedArrow.svg" alt="curvedArrow" />
       </div>
     </div>

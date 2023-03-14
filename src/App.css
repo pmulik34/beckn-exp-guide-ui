@@ -77,6 +77,17 @@ iframe .header-container .location-btn {
   .child-container {
     height: 100%;
   }
+  .exit-icon{
+    width: 45px;
+    height: 45px;
+    bottom: 27px !important;
+    right: 9px !important;
+  }
+  .videoScreen{
+    width: 900px !important;
+    height: 550px !important;
+    margin-top: 43px !important;
+  }
 }
 @media screen and (min-width: 800px) and (max-width: 741px) {
 }
