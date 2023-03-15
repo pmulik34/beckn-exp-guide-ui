@@ -5,13 +5,13 @@ import { useNavigate } from "react-router-dom";
 
 const ThankYou: React.FC = () => {
   const navigate = useNavigate();
-  
+
   const handleNevigate = () => {
     navigate("/");
   };
   return (
     <div
-      style={{ display: "flex", justifyContent: "center", alignItems: "end" }}
+      style={{ display: "flex", justifyContent: "center", alignItems: "end", backdropFilter:"blur(2px)" }}
     >
       <Card className="card-container" style={{ width: 1120 }}>
         <ul style={{ listStyleType: "none" }}>

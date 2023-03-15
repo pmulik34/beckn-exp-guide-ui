@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./videoTemplate.css"
+import "./videoTemplate.css";
 interface videoTemplatePropsModal {
   mainIconUrl?: any;
 }
@@ -9,8 +9,17 @@ const videoTemplate: React.FC<videoTemplatePropsModal> = ({
 }: videoTemplatePropsModal) => {
   return (
     <div className="video-container">
-    <iframe className="videoScreen"  allow="autoplay; encrypted-media" src="/assets/Beckn-Final_27.12.mp4" width="1180" height="664"  allowFullScreen ></iframe>
-  </div>
+      <iframe
+        className="videoScreen"
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        // allow="autoplay; encrypted-media"
+        src="/assets/Beckn-Final_27.12.mp4"
+        sandbox="allow-same-origin"
+        width="1180"
+        height="664"
+        allowFullScreen
+      ></iframe>
+    </div>
   );
 };
 export default videoTemplate;

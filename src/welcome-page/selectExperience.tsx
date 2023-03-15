@@ -3,6 +3,7 @@ import Title from "../common/title";
 import Card from "../common/Cards/card";
 import { useNavigate } from "react-router-dom";
 import "./selectExperience.css";
+import { useEffect } from "react";
 
 
 const SelectExperience = () => {
@@ -11,8 +12,10 @@ const SelectExperience = () => {
     localStorage.setItem("name", id);
     navigate("/progress");
   };
+  console.log("PATH: ", window.location.pathname);
   return (
-    <div className="main-container page-content">
+    <div className= "fadeinout">
+      <div style={{width:"100%"}}>
       <div style={{width:"100%"}} className="header">
         <div style={{width:"50%", textAlign:"end"}}>
           <img
@@ -74,6 +77,7 @@ const SelectExperience = () => {
             </li>
           </ul>
         </div>    
+      </div>
       </div>
     </div>
   );

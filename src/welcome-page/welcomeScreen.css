@@ -1,6 +1,15 @@
 .welcome-Screen-container {
   display: flex;
   justify-content: center;
+  animation: fadeinout 4s;
+}
+@keyframes welcome-Screen-container {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .child-container {
     text-align: center;
@@ -14,10 +23,10 @@
   position: relative;
 }
 .welcomeQuote {
-  font-weight: 275;
+  font-weight: 400;
   font-size: 64px;
   line-height: 96px;
-  color: #000000;
+  color: #4e4646;
 }
 .headLogo{
     display: flex;

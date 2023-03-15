@@ -32,3 +32,46 @@
 .second-image-card {
   margin-top: 15px;
 }
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.page-content-title {
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 96px;
+  color: #4e4646;
+}
+
+/* -------fade-in---------------- */
+
+.fadeinout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  animation: fadeinout 4s;
+}
+
+@keyframes fadeinout {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    animation: fadeinout 4s; 
+}
+@keyframes main-container {
+100% {
+    opacity: 0;
+  }
+}
