@@ -1,7 +1,7 @@
 .tab-wrappper-content {
   display: flex;
   justify-content: space-between;
-  width: 65%;
+  width: 100%;
   align-items: center;
   margin: 0px auto;
 }
@@ -20,7 +20,6 @@
     #DCDCDC 50%,
     #DCDCDC 100%
   );
-  margin: 20px auto !important;
 }
 :where(.css-dev-only-do-not-override-ixblex).ant-tabs
   .ant-tabs-tab
@@ -152,9 +151,9 @@
   .ant-tabs-tab {
     padding: 5px 10px !important;
   }
-  .tab-wrappper-content {
+  /* .tab-wrappper-content {
     width: 96% !important;
-  }
+  } */
   .tab-wrappper-content img {
     width: 100%;
   }

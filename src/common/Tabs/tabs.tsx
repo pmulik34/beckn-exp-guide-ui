@@ -102,7 +102,7 @@ return(
           ),
           key: "6",
           className: "home-tabs-style",
-          children: <Modal flag={flag}/>,
+          children: <Modal flag={flag} pathName={'/select-experience'}/>,
         },
       ]}
     />

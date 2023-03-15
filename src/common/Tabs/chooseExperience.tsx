@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./tabs.css";
 interface selectExpModalProps {
   textURL: string;
@@ -9,22 +9,16 @@ const chooseExperience: React.FC<selectExpModalProps> = ({
   iframeURL,
 }: selectExpModalProps) => {
   return (
-    <div
-      className="tab-wrappper-content"
-    >
+    <div className="tab-wrappper-content">
       <div>
-        {/* "/assets/text.svg" */}
-        <img src={textURL} alt="" />
+        <img src={textURL} alt="header-content-text" />
       </div>
       <div className="smartphone-wrapper">
         <div className="smartphone">
           <div className="content">
-             {/* geolocation */}
-            <iframe className="ChooseExpIframe"
-              allow="clipboard-read; clipboard-write;"
-              // referrerPolicy="no-referrer"
-              // sandbox="allow-same-origin"
-              // name="my-iframe"
+            <iframe
+              className="ChooseExpIframe"
+              allow="clipboard-read; clipboard-write; geolocation"
               src={iframeURL}
               frameBorder="0"
               allowFullScreen

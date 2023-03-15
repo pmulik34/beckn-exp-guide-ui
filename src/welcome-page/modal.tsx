@@ -4,8 +4,9 @@ import "./modal.css";
 import { useNavigate } from "react-router-dom";
 interface propsModal {
   flag: boolean,
+  pathName?: string
 }
-const ModalComponent: React.FC<propsModal> = ({flag}: propsModal) => {
+const ModalComponent: React.FC<propsModal> = ({flag, pathName}: propsModal) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const navigate = useNavigate();
 
@@ -16,7 +17,7 @@ const ModalComponent: React.FC<propsModal> = ({flag}: propsModal) => {
 
   const handleOk = () => {
     setIsModalOpen(!flag);
-    navigate('/')
+    navigate(pathName)
   };
 
   const handleCancel = () => {
@@ -25,13 +26,8 @@ const ModalComponent: React.FC<propsModal> = ({flag}: propsModal) => {
   };
 
   return (
-    <>
-      {/* <Button type="primary" onClick={showModal}>
-        Open Modal
-      </Button> */}
-
-      <Modal mask={true} okText={"confirm"} open={isModalOpen} onOk={handleOk} onCancel={handleCancel} width={559}>
-        <div style={{ width: "100%", marginTop: "15px" }}>
+      <Modal mask={true} okText={"Confirm"} open={isModalOpen} onOk={handleOk} onCancel={handleCancel} width={559}>
+        <div style={{ width: "100%", padding: "16px" }}>
           <img
             style={{ width: "100%" }}
             src="/assets/menWithDoor.svg"
@@ -48,7 +44,6 @@ const ModalComponent: React.FC<propsModal> = ({flag}: propsModal) => {
           </div>
         </div>
       </Modal>
-    </>
   );
 };
 

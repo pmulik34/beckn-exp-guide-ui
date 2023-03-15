@@ -13,20 +13,32 @@ const WelcomeScreen = () => {
     <div className="welcome-Screen-container">
       <div className="child-container">
         <div className="headLogo">
-        <img className="Beckn-logo" src="/assets/BecknLogo.svg" alt={"Logo"} />
+          <img
+            className="Beckn-logo"
+            src="/assets/BecknLogo.svg"
+            alt={"Logo"}
+          />
         </div>
-        <div className="welcomeQuote-container">
+        <div className="animate fadeIn five">
           <Typography className="welcomeQuote">welcome to the</Typography>
           <Typography className="welcomeQuote">
             beckn experience center
           </Typography>
         </div>
-        <div style={{position:"relative", bottom:'120px'}}>
-        <button onClick={()=>navigate('/select-experience')} className="border-gradient border-gradient-purple">
-          <span style={{paddingRight:"5px"}}>begin</span>
-          <span style={{paddingLeft:"5px"}}><img style={{ width:"16px"}} src="/assets/tiltArrow.svg" alt="" /></span>
-        </button>
-        
+        <div className="animate fadeIn five">
+          <button
+            onClick={() => navigate("/select-experience")}
+            className="welcom-begin-button"
+          >
+            <span style={{ paddingRight: "5px", color: "#4e4646" }}>begin</span>
+            <span style={{ paddingLeft: "5px" }}>
+              <img
+                style={{ width: "16px" }}
+                src="/assets/tiltArrow.svg"
+                alt=""
+              />
+            </span>
+          </button>
         </div>
       </div>
     </div>

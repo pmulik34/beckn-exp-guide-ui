@@ -4,7 +4,7 @@ import Card from "../common/Cards/card";
 import { useNavigate } from "react-router-dom";
 import "./selectExperience.css";
 import { useEffect } from "react";
-
+import { Typography } from "antd";
 
 const SelectExperience = () => {
   const navigate = useNavigate();
@@ -12,31 +12,23 @@ const SelectExperience = () => {
     localStorage.setItem("name", id);
     navigate("/progress");
   };
-  console.log("PATH: ", window.location.pathname);
   return (
-    <div className= "fadeinout">
-      <div style={{width:"100%"}}>
-      <div style={{width:"100%"}} className="header">
-        <div style={{width:"50%", textAlign:"end"}}>
+    <div className="welcome-Screen-container">
+      <div className="child-container">
+        <div className="headLogo-image">
           <img
-            style={{
-              height: "52px",
-              width: "200px",
-              marginTop: "20px",
-              cursor: "pointer",
-            }}
+            className="Beckn-image"
             src="/assets/BecknLogo.svg"
-            alt={"BecknLogoIcon"}
+            alt={"Logo"}
           />
-        </div>
-        <div style={{width:"40%", textAlign:"end"}}>
-          <button onClick={()=>navigate('/')}
-            style={{ width: "130px" }}
-            className="border-gradient border-gradient-purple"
+          <button
+            onClick={() => navigate("/")}
+            style={{ width: "150px", marginTop: "-10px" }}
+            className="home-buttom-nevigate"
           >
             <span style={{ paddingRight: "5px" }}>
               <img
-                style={{ width: "24px", position: "relative", top: "5px" }}
+                style={{ width: "24px", position: "relative" }}
                 src="/assets/home.svg"
                 alt=""
               />
@@ -44,16 +36,12 @@ const SelectExperience = () => {
             <span style={{ paddingLeft: "5px", color: "#343538" }}>home</span>
           </button>
         </div>
-      </div>
-
-      <div className="content-wrapper">
-        <div className="content-wrapper-innr">
-          <Title
-            titleText={"select your experience"}
-            className="page-content-title"
-          />
+        <div className="animates fadeIns fives">
+          <Typography className="welcomeQuote">
+            select your experience
+          </Typography>
         </div>
-        <div className="card-containers">
+        <div className="animates fadeIns fives">
           <ul className="card-sub-containers">
             <li onClick={() => handleNevigate("himalayas")}>
               <div className="card-with-image">
@@ -76,8 +64,7 @@ const SelectExperience = () => {
               </div>
             </li>
           </ul>
-        </div>    
-      </div>
+        </div>
       </div>
     </div>
   );
