@@ -2,9 +2,9 @@ import React, { useEffect } from "react";
 import "./tabs.css";
 interface selectExpModalProps {
   textURL: string;
-  iframeURL: string;
+  iframeURL: string | undefined;
 }
-const chooseExperience: React.FC<selectExpModalProps> = ({
+const ChooseExperience: React.FC<selectExpModalProps> = ({
   textURL,
   iframeURL,
 }: selectExpModalProps) => {
@@ -33,4 +33,4 @@ const chooseExperience: React.FC<selectExpModalProps> = ({
   );
 };
 
-export default chooseExperience;
+export default ChooseExperience;

@@ -11,9 +11,9 @@ const videoTemplate: React.FC<videoTemplatePropsModal> = ({
     <div className="video-container">
       <iframe
         className="videoScreen"
+        src={mainIconUrl}
         allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         // allow="autoplay; encrypted-media"
-        src="/assets/Beckn-Final_27.12.mp4"
         sandbox="allow-same-origin"
         width="1180"
         height="664"

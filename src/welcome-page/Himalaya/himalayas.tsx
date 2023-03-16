@@ -12,10 +12,10 @@ const Himalayas = () => {
   return (
     <div style={{display:"flex", justifyContent:"center",}}>
       <Tabs
-        firstProps={<VideoTemplate />}
+        firstProps={<VideoTemplate mainIconUrl={process.env.REACT_APP_BECKN_VIDEO_LINK}/>}
         secondProps={<HimalayasIframe />}
-        thirdProps={<VideoTemplate />}
-        fourthProps={<VideoTemplate />}
+        thirdProps={<VideoTemplate mainIconUrl={process.env.REACT_APP_BECKN_VIDEO_LINK}/>}
+        fourthProps={<VideoTemplate mainIconUrl={process.env.REACT_APP_BECKN_VIDEO_LINK}/>}
       />
       {/* <div
         style={{ position: "fixed", bottom: "60px", right: "40px" }}
