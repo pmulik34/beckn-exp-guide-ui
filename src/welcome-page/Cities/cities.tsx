@@ -8,14 +8,13 @@ import "../Himalaya/himalayas.css";
 const Cities = () => {
     const [openModal, setOpenModal] = useState(false)
     const navigate = useNavigate();
-    console.log("Env", process.env.REACT_APP_BECKN_VIDEO_LINK)
   return (
     <div style={{display:"flex", justifyContent:"center",}}>
       <Tabs
-        firstProps={<VideoTemplate mainIconUrl={process.env.REACT_APP_BECKN_VIDEO_LINK}/>}
+        firstProps={<VideoTemplate />}
         secondProps={<CitiesIframe />}
-        thirdProps={<VideoTemplate mainIconUrl={process.env.REACT_APP_BECKN_VIDEO_LINK}/>}
-        fourthProps={<VideoTemplate mainIconUrl={process.env.REACT_APP_BECKN_VIDEO_LINK}/>}
+        thirdProps={<VideoTemplate />}
+        fourthProps={<VideoTemplate />}
       />
       <div className="exit-icon">
         {!openModal?
