@@ -11,10 +11,10 @@ const Cities = () => {
   return (
     <div style={{display:"flex", justifyContent:"center",}}>
       <Tabs
-        firstProps={<VideoTemplate />}
+        firstProps={<VideoTemplate mainIconUrl="https://player.vimeo.com/video/808588011?h=d81ed972e2&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"/>}
         secondProps={<CitiesIframe />}
-        thirdProps={<VideoTemplate />}
-        fourthProps={<VideoTemplate />}
+        thirdProps={<VideoTemplate  mainIconUrl="/assets/Beckn-Final_27.12.mp4"/>}
+        fourthProps={<VideoTemplate mainIconUrl="https://player.vimeo.com/video/808588900?h=93081abfef&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"/>}
       />
       <div className="exit-icon">
         {!openModal?
