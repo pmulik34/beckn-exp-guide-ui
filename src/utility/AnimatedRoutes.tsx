@@ -12,6 +12,7 @@ import ThankYou from "../welcome-page/thankYou";
 import VideoTemplate from "../common/videoTemplate/videoTemplate";
 import Himalayas from "../welcome-page/Himalaya/himalayas";
 import Cities from "../welcome-page/Cities/cities";
+import Wallet from "../welcome-page/Wallet";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -19,6 +20,7 @@ const AnimatedRoutes = () => {
     <AnimatePresence initial={false}>
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<WelcomeScreen/>} />
+        <Route path="/wallet" element={<Wallet/>} />
         <Route path="/himalayas" element={<Himalayas />} />
         <Route path="/cities" element={<Cities />} />
         <Route path="/select-experience" element={<SelectExperience/>} />
