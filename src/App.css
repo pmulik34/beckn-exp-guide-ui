@@ -7,7 +7,7 @@
 }
 
 .beckn-app {
-  background: url("./assets/welcome.png");
+  background: url("./assets/welcome-page.png");
   background-size: 100% 100%;
   position: relative;
   min-height: 100vh;
@@ -57,7 +57,7 @@ iframe .header-container .location-btn {
 }
 .tabs-style{
 margin-top: 45px;
-margin-bottom: 30px;
+margin-bottom: 60px !important;
 }
 /* ----------------------------Media Query---------------------- */
 @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation : landscape) {
@@ -89,12 +89,6 @@ margin-bottom: 30px;
   }
   .child-container {
     height: 100%;
-  }
-  .exit-icon{
-    width: 45px;
-    height: 45px;
-    bottom: 27px !important;
-    right: 9px !important;
   }
   .videoScreen{
     width: 900px !important;

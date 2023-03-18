@@ -35,7 +35,6 @@ const ProgressBar = () => {
         <img  style={{
               height: "80px",
               width: "270px",
-              marginTop: "70px",
               cursor: "pointer",
             }} src="/assets/BecknLogo.svg" alt={"Logo"} />
       </div>
@@ -51,7 +50,7 @@ const ProgressBar = () => {
             className="progress"
             percent={data}
             status="active"
-            strokeColor={{ from: "#108ee9", to: "#87d068" }}
+            strokeColor={{ from: "#108ee9", to: "#523F62" }}
           />
         </div>
         <div className="data-set-container">

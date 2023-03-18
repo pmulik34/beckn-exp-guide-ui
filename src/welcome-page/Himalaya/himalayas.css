@@ -11,3 +11,14 @@
     align-items: center;
     cursor: pointer;
 }
+@media only screen 
+and (min-device-width : 820px) 
+and (max-device-width : 1180px) 
+and (orientation : landscape) {
+    .exit-icon{
+        bottom: 85px;
+        right: 15px;
+        width: 55px;
+        height: 50px;
+}
+}

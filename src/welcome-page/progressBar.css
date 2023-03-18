@@ -9,12 +9,12 @@
   background: #523f62 !important;
 }
 .ant-progress-bg {
-  background: linear-gradient(269.49deg, #df877b 0%, #6cb6ce 100%) !important;
+  background: linear-gradient(269.49deg, #4383BF 0%, #CFE4F5 100%) !important;
 }
 .beckn-image {
   display: flex;
-  justify-content: center;
-  margin-top: 70px;
+  margin-top: 90px;
+  margin-left: 100px;
 }
 .main-containers {
     display: flex;

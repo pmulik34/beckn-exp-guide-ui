@@ -30,7 +30,7 @@ const WelcomeScreen = () => {
             onClick={() => navigate("/select-experience")}
             className="welcom-begin-button"
           >
-            <span style={{ paddingRight: "5px", color: "#4e4646" }}>begin</span>
+            <span style={{ paddingRight: "5px", color: "#FFFF" }}>begin</span>
             <span style={{ paddingLeft: "5px" }}>
               <img
                 style={{ width: "16px" }}

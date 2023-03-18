@@ -23,23 +23,17 @@ const SelectExperience = () => {
           />
           <button
             onClick={() => navigate("/")}
-            style={{ width: "150px", marginTop: "-10px" }}
+            style={{ width: "55px", marginTop: "-10px" }}
             className="home-buttom-nevigate"
           >
-            <span style={{ paddingRight: "5px" }}>
+            <span>
               <img
                 style={{ width: "24px", position: "relative" }}
                 src="/assets/home.svg"
                 alt=""
               />
             </span>
-            <span style={{ paddingLeft: "5px", color: "#343538" }}>home</span>
           </button>
-        </div>
-        <div className="animates fadeIns fives">
-          <Typography className="welcomeQuote">
-            select your experience
-          </Typography>
         </div>
         <div className="animates fadeIns fives">
           <ul className="card-sub-containers">
@@ -50,7 +44,12 @@ const SelectExperience = () => {
                   src="/assets/XXX.png"
                   alt={"BecknLogoIcon"}
                 />
-                <p className="card-title-image">A Tryst with the Himalayas</p>
+                <p className="card-title-image">
+                  <span className="font-color">A Tryst with the</span><br/>
+                  <span className="font-color">Himalayas</span>
+                   
+                  </p>
+
               </div>
             </li>
             <li onClick={() => handleNevigate("cities")}>
@@ -60,7 +59,10 @@ const SelectExperience = () => {
                   src="/assets/YYY.png"
                   alt={"BecknLogoIcon"}
                 />
-                <p className="card-title-image">Enabling Smart Cities</p>
+                <p className="card-title-image">
+                  <span className="font-color">Enabling</span><br/>
+                  <span className="font-color">Smart Cities</span>
+                   </p>
               </div>
             </li>
           </ul>

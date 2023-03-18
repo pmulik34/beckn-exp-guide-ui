@@ -19,8 +19,14 @@ p {
 .ant-btn{
     width: 158px !important;
 }
+.ant-btn >span{
+  color: #FFFF;
+}
+.ant-btn-default > span{
+  color:#4e4646;
+}
 .ant-btn-primary{
-    background-color: #C9BCC0 !important;
+    background-color: #83B5E0 !important;
     position: relative;
     left: 15px;
 }

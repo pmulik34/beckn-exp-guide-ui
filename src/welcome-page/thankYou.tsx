@@ -33,11 +33,11 @@ const ThankYou: React.FC = () => {
               <span style={{  paddingRight: "5px"  }}>
                 <img
                   style={{ width: "24px", position:"relative", top:"5px" }}
-                  src="/assets/home.svg"
+                  src="/assets/homeIcon.svg"
                   alt=""
                 />
               </span>
-              <span style={{ paddingLeft: "5px", color: "#343538"}}>go back home</span>
+              <span style={{ paddingLeft: "5px", color: "#FFFF"}}>go back home</span>
             </button>
           </li>
         </ul>
