@@ -18,7 +18,7 @@ const SelectExperience = () => {
         <div className="headLogo-image">
           <img
             className="Beckn-image"
-            src="/assets/BecknLogo.svg"
+            src="/assets/beckn_lg.svg"
             alt={"Logo"}
           />
           <button
@@ -45,11 +45,10 @@ const SelectExperience = () => {
                   alt={"BecknLogoIcon"}
                 />
                 <p className="card-title-image">
-                  <span className="font-color">A Tryst with the</span><br/>
-                  <span className="font-color">Himalayas</span>
-                   
-                  </p>
-
+                  <span className="font-color">a tryst with the</span>
+                  <br />
+                  <span className="font-color">himalayas</span>
+                </p>
               </div>
             </li>
             <li onClick={() => handleNevigate("cities")}>
@@ -60,9 +59,10 @@ const SelectExperience = () => {
                   alt={"BecknLogoIcon"}
                 />
                 <p className="card-title-image">
-                  <span className="font-color">Enabling</span><br/>
-                  <span className="font-color">Smart Cities</span>
-                   </p>
+                  <span className="font-color">enabling</span>
+                  <br />
+                  <span className="font-color">smart cities</span>
+                </p>
               </div>
             </li>
           </ul>

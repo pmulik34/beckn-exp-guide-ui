@@ -7,8 +7,8 @@
 }
 
 .beckn-app {
-  background: url("./assets/welcome-page.png");
-  background-size: 100% 100%;
+  background: url("./assets/experience_bg.svg");
+  background-size: cover;
   position: relative;
   min-height: 100vh;
   height: max-content;
@@ -48,24 +48,24 @@
 iframe .header-container .location-btn {
   padding: 10px 10px !important;
 }
-.ant-tabs-nav{
+.ant-tabs-nav {
   margin: 0 auto !important;
   margin-top: 45px !important;
 }
-.videoScreen{
+.videoScreen {
   margin-top: 45px !important;
 }
-.tabs-style{
-margin-top: 45px;
-margin-bottom: 60px !important;
+.tabs-style {
+  margin-top: 45px;
+  margin-bottom: 60px !important;
 }
 /* ----------------------------Media Query---------------------- */
-@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation : landscape) {
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   .headLogo-image {
     margin-top: 20px !important;
-}
-.home-buttom-nevigate{
-  top: 20px !important;
+  }
+  .home-buttom-nevigate {
+    top: 20px !important;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1224px) {
@@ -90,39 +90,33 @@ margin-bottom: 60px !important;
   .child-container {
     height: 100%;
   }
-  .videoScreen{
+  .videoScreen {
     width: 900px !important;
     height: 550px !important;
     margin-top: 43px !important;
   }
 }
 
-@media only screen 
-and (min-device-width : 820px) 
-and (max-device-width : 1180px) 
-and (orientation : portrait) { 
+@media only screen and (min-device-width: 820px) and (max-device-width: 1180px) and (orientation: portrait) {
   .videoScreen {
     width: 725px !important;
     height: 408px !important;
-}
-.exit-icon{
-  bottom: 467px !important;
+  }
+  .exit-icon {
+    bottom: 467px !important;
     right: 25px !important;
+  }
 }
-}
-@media only screen 
-and (min-device-width : 820px) 
-and (max-device-width : 1180px) 
-and (orientation : landscape) {
-  .tab-wrappper-content{
+@media only screen and (min-device-width: 820px) and (max-device-width: 1180px) and (orientation: landscape) {
+  .tab-wrappper-content {
     width: 75% !important;
   }
   .card-container {
     width: 1000px !important;
-}
+  }
 }
 @media screen and (min-width: 1225px) and (max-width: 1800px) {
-  .beckn-app{
+  .beckn-app {
     margin: 0 auto;
     width: 100%;
     min-height: 100vh;

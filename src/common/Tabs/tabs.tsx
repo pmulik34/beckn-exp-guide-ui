@@ -23,7 +23,6 @@ const TabsComponent: React.FC<TabsComponentPropsModal> = ({
     let i: number;
     let tabcontent: any = [];
     tabcontent = document.getElementsByClassName("tabcontent");
-    console.log("tabcontent", tabcontent)
     for (i = 0; i < tabcontent.length; i++) {
       const currentContent = tabcontent[i].innerHTML;
       tabcontent[i].innerHTML = currentContent;
@@ -39,7 +38,12 @@ const TabsComponent: React.FC<TabsComponentPropsModal> = ({
           {
             label: (
               <div>
-                <img src="/assets/becknIcon.svg" alt={"Icon"} width={"98%"} />
+                <img
+                  style={{ height: "35px", width: "135px" }}
+                  src="/assets/beckn_lg.svg"
+                  alt={"Icon"}
+                  width={"98%"}
+                />
               </div>
             ),
             key: "1",

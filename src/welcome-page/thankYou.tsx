@@ -16,7 +16,7 @@ const ThankYou: React.FC = () => {
       <Card className="card-container" style={{ width: 1120 }}>
         <ul style={{ listStyleType: "none" }}>
           <li>
-            <img className="beckn-logo" src="/assets/BecknLogo.svg" alt={"Logo"} />
+            <img className="beckn-logo" src="/assets/beckn_lg.svg" alt={"Logo"} />
           </li>
           <li>
             <h2 className="head-text">thank you for visiting the</h2>

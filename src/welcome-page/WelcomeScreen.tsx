@@ -15,7 +15,7 @@ const WelcomeScreen = () => {
         <div className="headLogo">
           <img
             className="Beckn-logo"
-            src="/assets/BecknLogo.svg"
+            src="/assets/beckn_lg.svg"
             alt={"Logo"}
           />
         </div>

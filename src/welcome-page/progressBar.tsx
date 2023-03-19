@@ -33,10 +33,10 @@ const ProgressBar = () => {
     <div>
       <div className="beckn-image">
         <img  style={{
-              height: "80px",
-              width: "270px",
+              height: "50px",
+              width: "161px",
               cursor: "pointer",
-            }} src="/assets/BecknLogo.svg" alt={"Logo"} />
+            }} src="/assets/beckn_lg.svg" alt={"Logo"} />
       </div>
       <div className="main-containers">
         <div>

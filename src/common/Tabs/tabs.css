@@ -83,7 +83,7 @@
   height: 520px;
 }
 .ant-tabs-tab.ant-tabs-tab-active {
-  border-bottom: 10px solid #398480 !important;
+  border-bottom: 10px solid #77AEDE !important;
   z-index: 99;
 }
 .ant-tabs-tab.ant-tabs-tab-active[data-node-key="6"] {
@@ -91,7 +91,7 @@
   padding: 34px !important;
 }
 .ant-tabs-ink-bar {
-  border-bottom: 10px solid #398480 !important;
+  border-bottom: 10px solid #77AEDE !important;
   
 }
 .ant-tabs-ink-bar[data-node-key="6"] {
