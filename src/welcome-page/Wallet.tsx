@@ -26,7 +26,7 @@ function Wallet() {
       <div className="img-container">
         <img
           className="item-image"
-          src={orderObject.order.item[0].descriptor.images[0]}
+          src={orderObject.message.order.item[0].descriptor.images[0]}
           alt=""
         />
       </div>
@@ -40,19 +40,22 @@ function Wallet() {
           <div className="order-details">
             <div>
               <div className="content-heading">BOOKED ON</div>
-              <div className="content-sub-heading">21 JUN 2021, 12:21pm</div>
+              <div className="content-sub-heading">
+                {" "}
+                {orderObject.message.order.created_at}
+              </div>
             </div>
             <div>
               <div className="content-heading">TRAVELLERS</div>
               <div className="content-sub-heading">
-                {orderObject.order.item[0].quantity}
+                {orderObject.message.order.item[0].quantity}
               </div>
             </div>
 
             <div>
               <div className="content-heading">TOTAL PRICE</div>
               <div className="content-sub-heading">
-                Rs.{orderObject.order.item[0].price.value}
+                Rs.{orderObject.message.order.item[0].price.value}
               </div>
             </div>
           </div>
