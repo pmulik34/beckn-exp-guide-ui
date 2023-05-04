@@ -14,6 +14,7 @@ import Himalayas from "../welcome-page/Himalaya/himalayas";
 import Cities from "../welcome-page/Cities/cities";
 import CityOfLight from "../welcome-page/CityOfLight/cityOfLight";
 import Wallet from "../welcome-page/Wallet";
+import SelectionPage from "../common/MobileBAP/SelectionPages/selectionPages";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -30,6 +31,7 @@ const AnimatedRoutes = () => {
         <Route path="/progress" element={<ProgressBar />} />
         <Route path="/ThankYou" element={<ThankYou />} />
         <Route path="/videoTemplate" element={<VideoTemplate />} />
+        <Route path="/selectionPage" element={<SelectionPage />} />
         <Route
           path="*"
           element={

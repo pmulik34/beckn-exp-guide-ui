@@ -7,8 +7,14 @@
 }
 
 .beckn-app {
-  background: url("./assets/experience_bg.svg");
-  background-size: cover;
+  /* background: url("./assets/experience_bg.svg");
+  background-size: cover; */
+  background: rgb(243, 243, 243);
+  background: linear-gradient(
+    90deg,
+    rgba(243, 243, 243, 1) 0%,
+    rgba(211, 234, 251, 1) 100%
+  );
   position: relative;
   min-height: 100vh;
   height: max-content;
