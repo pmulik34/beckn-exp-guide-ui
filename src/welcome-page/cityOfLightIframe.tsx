@@ -8,7 +8,7 @@ const CityOfLightIframe = () => {
         textURL={"/assets/city-of-light-text.png"}
         languageEng={"English"}
         languageFra={"Francais"}
-        iframeURL={"https://travelbuddy.becknprotocol.io/"}
+        iframeURL={"https://tourism-app-staging-infra.becknprotocol.io"}
       />
     </div>
   );
