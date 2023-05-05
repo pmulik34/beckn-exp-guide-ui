@@ -1,6 +1,17 @@
+import React, { useEffect, useState } from "react";
 import "./selectionPage.css";
 
-function selectionPages() {
+const SelectionPages = () => {
+  const [orderObjectUrl, setOrderObjectUrl] = useState("");
+
+  useEffect(() => {
+    const URL = window.location.href;
+    if (URL.includes("?")) {
+      const queryString = URL.split("?")[1];
+      setOrderObjectUrl(queryString);
+    }
+  }, []);
+
   return (
     <div className="selectionPage_wrapper">
       <div className="beckn_logo">
@@ -10,7 +21,11 @@ function selectionPages() {
         <div>select what would you like to do next?</div>
       </div>
       <div className="selectionPage_wrapper_innr">
-        <a href="https://google.com" target="" rel="noopener noreferrer">
+        <a
+          href={`https://retail-app-staging-infra.becknprotocol.io/?${orderObjectUrl}`}
+          target=""
+          rel="noopener noreferrer"
+        >
           <div className="Link_wrapper">
             <div className="link_img">
               <img src="/assets/Shop.png" alt="" />
@@ -19,18 +34,22 @@ function selectionPages() {
             <img src="/assets/arrow_forword_ios_24pxnavArrow.png" alt="" />
           </div>
         </a>
-        <a href="https://google.com" target="" rel="noopener noreferrer">
+        <a
+          href={`https://mobility-app-staging-infra.becknprotocol.io?${orderObjectUrl}`}
+          target=""
+          rel="noopener noreferrer"
+        >
           <div className="Link_wrapper">
             <div className="link_img">
               <img src="/assets/bookRide.png" alt="" />
             </div>
-            <div style={{ fontSize: "20px" }}>shop for items</div>
+            <div style={{ fontSize: "20px" }}>book a ride</div>
             <img src="/assets/arrow_forword_ios_24pxnavArrow.png" alt="" />
           </div>
         </a>
       </div>
     </div>
   );
-}
+};
 
-export default selectionPages;
+export default SelectionPages;
