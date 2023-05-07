@@ -39,8 +39,8 @@ const TabsComponent: React.FC<TabsComponentPropsModal> = ({
             label: (
               <div>
                 <img
-                  style={{ height: "35px", width: "135px" }}
-                  src="/assets/beckn_lg.svg"
+                  // style={{ height: "35px", width: "135px" }}
+                  src="/assets/logo2.png"
                   alt={"Icon"}
                   width={"98%"}
                 />
@@ -61,7 +61,7 @@ const TabsComponent: React.FC<TabsComponentPropsModal> = ({
                 <div style={{ paddingLeft: "14.4px" }}>
                   <span style={{ width: "60% !important" }}>a world</span>
                   <br />
-                  <span style={{ width: "60% !important" }}>without beckn</span>
+                  <span style={{ width: "60% !important" }}>without ROCC</span>
                 </div>
               </div>
             ),
@@ -76,7 +76,7 @@ const TabsComponent: React.FC<TabsComponentPropsModal> = ({
                 <div style={{ paddingLeft: "14.4px" }}>
                   <span>a world</span>
                   <br />
-                  <span>with beckn</span>
+                  <span>with ROCC</span>
                 </div>
               </div>
             ),
