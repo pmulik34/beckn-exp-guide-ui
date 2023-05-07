@@ -7,8 +7,9 @@ const SelectionPages = () => {
   useEffect(() => {
     const URL = window.location.href;
     if (URL.includes("?")) {
-      const queryString = URL.split("?")[1];
-      setOrderObjectUrl(queryString);
+      let start = URL.indexOf("=") + 1;
+      const orderObjectUrl = URL.substring(start);
+      setOrderObjectUrl(orderObjectUrl);
     }
   }, []);
 
@@ -22,7 +23,7 @@ const SelectionPages = () => {
       </div>
       <div className="selectionPage_wrapper_innr">
         <a
-          href={`https://retail-app-staging-infra.becknprotocol.io/?${orderObjectUrl}`}
+          href={`https://retail-app-staging-infra.becknprotocol.io??external_url=${orderObjectUrl}`}
           target=""
           rel="noopener noreferrer"
         >
@@ -35,7 +36,7 @@ const SelectionPages = () => {
           </div>
         </a>
         <a
-          href={`https://mobility-app-staging-infra.becknprotocol.io?${orderObjectUrl}`}
+          href={`https://mobility-app-staging-infra.becknprotocol.io??external_url=${orderObjectUrl}`}
           target=""
           rel="noopener noreferrer"
         >
