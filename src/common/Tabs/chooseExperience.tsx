@@ -5,20 +5,39 @@ interface selectExpModalProps {
   iframeURL: string | undefined;
   languageEng?: string;
   languageFra?: string;
+  setTourismUrl?: Function;
 }
 const ChooseExperience: React.FC<selectExpModalProps> = ({
   textURL,
   iframeURL,
   languageEng,
   languageFra,
+  setTourismUrl,
 }: selectExpModalProps) => {
   return (
     <div className="tab-wrappper-content">
       <div>
         <img src={textURL} alt="header-content-text" />{" "}
         <div style={{ padding: "10px 0", fontSize: "16px" }}>
-          <span style={{ paddingRight: "8px" }}>{languageEng}</span>|
-          <span style={{ paddingLeft: "8px", fontWeight: "300" }}>
+          <span
+            onClick={() =>
+              setTourismUrl!(
+                "https://tourism-app-staging-infra.becknprotocol.io"
+              )
+            }
+            style={{ paddingRight: "8px", cursor: "pointer" }}
+          >
+            {languageEng}
+          </span>
+          |
+          <span
+            onClick={() =>
+              setTourismUrl!(
+                "https://tourism-app-staging-french-infra.becknprotocol.io/"
+              )
+            }
+            style={{ paddingLeft: "8px", fontWeight: "300", cursor: "pointer" }}
+          >
             {languageFra}
           </span>
         </div>
