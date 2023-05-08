@@ -19,6 +19,8 @@ const TabsComponent: React.FC<TabsComponentPropsModal> = ({
 }: TabsComponentPropsModal) => {
   const [flag, setFlag] = useState(true);
 
+  const cityOfLight = localStorage.getItem("name") === "cityOfLight";
+
   const openCity = (evt: any, cityName: string) => {
     let i: number;
     let tabcontent: any = [];
@@ -39,8 +41,16 @@ const TabsComponent: React.FC<TabsComponentPropsModal> = ({
             label: (
               <div>
                 <img
-                  // style={{ height: "35px", width: "135px" }}
-                  src="/assets/logo2.png"
+                  style={
+                    cityOfLight
+                      ? { height: "unset", width: "unset" }
+                      : { height: "35px", width: "135px" }
+                  }
+                  // src="/assets/logo2.png"
+
+                  src={
+                    cityOfLight ? "/assets/logo2.png" : "/assets/beckn_lg.svg"
+                  }
                   alt={"Icon"}
                   width={"98%"}
                 />
@@ -61,7 +71,9 @@ const TabsComponent: React.FC<TabsComponentPropsModal> = ({
                 <div style={{ paddingLeft: "14.4px" }}>
                   <span style={{ width: "60% !important" }}>a world</span>
                   <br />
-                  <span style={{ width: "60% !important" }}>without ROCC</span>
+                  <span style={{ width: "60% !important" }}>
+                    without {cityOfLight ? "ROCC" : "beckn"}
+                  </span>
                 </div>
               </div>
             ),
@@ -76,7 +88,7 @@ const TabsComponent: React.FC<TabsComponentPropsModal> = ({
                 <div style={{ paddingLeft: "14.4px" }}>
                   <span>a world</span>
                   <br />
-                  <span>with ROCC</span>
+                  <span>with {cityOfLight ? "ROCC" : "beckn"}</span>
                 </div>
               </div>
             ),
