@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./tabs.css";
 interface selectExpModalProps {
   textURL: string;
@@ -33,7 +33,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
           <span
             onClick={() =>
               setTourismUrl!(
-                "https://tourism-app-staging-french-infra.becknprotocol.io/"
+                "https://tourism-app-french-infra.becknprotocol.io/"
               )
             }
             style={{ paddingLeft: "8px", fontWeight: "300", cursor: "pointer" }}
