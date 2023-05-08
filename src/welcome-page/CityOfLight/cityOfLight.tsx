@@ -16,7 +16,7 @@ const CityOfLight = () => {
         }
         secondProps={<CityOfLightIframe />}
         thirdProps={
-          <VideoTemplate mainIconUrl="https://player.vimeo.com/video/809506238?h=8eb603c1ba&amp;badge=0&amp;player_id=0&amp;app_id=58479" />
+          <VideoTemplate mainIconUrl="https://player.vimeo.com/video/824744961?h=772d3cf1cc&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" />
         }
         fourthProps={
           <VideoTemplate mainIconUrl="https://player.vimeo.com/video/824729531?h=b973254da6&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" />
