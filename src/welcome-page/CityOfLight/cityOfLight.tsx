@@ -12,14 +12,14 @@ const CityOfLight = () => {
     <div style={{ display: "flex", justifyContent: "center" }}>
       <Tabs
         firstProps={
-          <VideoTemplate mainIconUrl="https://player.vimeo.com/video/808588011?h=d81ed972e2&amp;badge=0&amp;player_id=0&amp;app_id=58479" />
+          <VideoTemplate mainIconUrl="https://player.vimeo.com/video/824663740?h=9464185e33&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" />
         }
         secondProps={<CityOfLightIframe />}
         thirdProps={
           <VideoTemplate mainIconUrl="https://player.vimeo.com/video/809506238?h=8eb603c1ba&amp;badge=0&amp;player_id=0&amp;app_id=58479" />
         }
         fourthProps={
-          <VideoTemplate mainIconUrl="https://player.vimeo.com/video/808588900?h=93081abfef&amp;badge=0&amp;player_id=0&amp;app_id=58479" />
+          <VideoTemplate mainIconUrl="https://player.vimeo.com/video/824729531?h=b973254da6&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" />
         }
       />
       <div className="exit-icon">
