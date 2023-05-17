@@ -14,6 +14,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
   languageFra,
   setTourismUrl,
 }: selectExpModalProps) => {
+  console.log(localStorage.getItem("name"));
   return (
     <div className="tab-wrappper-content">
       <div>
@@ -30,15 +31,15 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
             {languageEng}
           </span>
           |
-          <span
-            onClick={() =>
-              setTourismUrl!(
-                "https://tourism-app-french-infra.becknprotocol.io/"
-              )
-            }
-            style={{ paddingLeft: "8px", fontWeight: "300", cursor: "pointer" }}
-          >
-            {languageFra}
+          <span style={{ paddingLeft: "8px", cursor: "pointer" }}>
+            <a
+              style={{ color: "#000" }}
+              href="https://experience-guide-french-infra.becknprotocol.io/cityOfLight"
+              target="_self"
+              rel="noreferrer"
+            >
+              {languageFra}
+            </a>
           </span>
         </div>
       </div>
