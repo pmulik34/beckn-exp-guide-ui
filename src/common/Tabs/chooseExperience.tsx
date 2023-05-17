@@ -31,7 +31,9 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
             {languageEng}
           </span>
           |
-          <span style={{ paddingLeft: "8px", cursor: "pointer" }}>
+          <span
+            style={{ paddingLeft: "8px", fontWeight: "300", cursor: "pointer" }}
+          >
             <a
               style={{ color: "#000" }}
               href="https://experience-guide-french-infra.becknprotocol.io/cityOfLight"
