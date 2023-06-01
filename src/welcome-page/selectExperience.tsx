@@ -41,7 +41,7 @@ const SelectExperience = () => {
               <div className="card-with-image">
                 <img
                   className="first-image-card"
-                  // src="/assets/city-of-light.png"
+                  src="/assets/city-of-light.png"
                   alt={"BecknLogoIcon"}
                 />
                 <p className="card-title-image">
