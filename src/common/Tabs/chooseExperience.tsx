@@ -14,18 +14,17 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
   languageFra,
   setTourismUrl,
 }: selectExpModalProps) => {
-  console.log(localStorage.getItem("name"));
   return (
     <div className="tab-wrappper-content">
       <div>
         <img src={textURL} alt="header-content-text" />{" "}
         <div style={{ padding: "10px 0", fontSize: "16px" }}>
           <span
-            onClick={() =>
-              setTourismUrl!(
-                "https://tourism-app-staging-infra.becknprotocol.io"
-              )
-            }
+            // onClick={() =>
+            //   setTourismUrl!(
+            //     "https://tourism-app-staging-infra.becknprotocol.io"
+            //   )
+            // }
             style={{ paddingRight: "8px", cursor: "pointer" }}
           >
             {languageEng}
@@ -56,7 +55,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
               frameBorder="0"
               allowFullScreen
               width={"375px"}
-              height={"667px"}
+              height={"670px"}
               style={{ borderRadius: "36px" }}
             />
           </div>
