@@ -5,6 +5,9 @@
   align-items: center;
   margin: 0px auto;
 }
+.tabsConatiner {
+  width: 1080px;
+}
 .ant-tabs-nav {
   width: 1080px;
   height: 86px;
@@ -20,6 +23,15 @@
     #DCDCDC 50%,
     #DCDCDC 100%
   ); */
+}
+.cityOfAfrica .ant-tabs-nav {
+  width: unset;
+}
+.cityOfAfrica .ant-tabs-tab {
+  width: 260px;
+}
+.cityOfAfrica .ant-tabs-tab .ant-tabs-tab-btn {
+  margin: 0 auto;
 }
 :where(.css-dev-only-do-not-override-ixblex).ant-tabs
   .ant-tabs-tab
