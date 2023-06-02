@@ -40,14 +40,15 @@ const SelectExperience = () => {
             <li onClick={() => handleNevigate("cityOfAfrica")}>
               <div className="card-with-image">
                 <img
+                  style={{ borderRadius: "35px" }}
                   className="first-image-card"
-                  src="/assets/city-of-light.png"
+                  src="/assets/smartafrica.png"
                   alt={"BecknLogoIcon"}
                 />
                 <p className="card-title-image">
-                  <span className="font-color">experience the</span>
+                  <span className="font-color">enabling smart</span>
                   <br />
-                  <span className="font-color">city of Africa</span>
+                  <span className="font-color">africa</span>
                 </p>
               </div>
             </li>

@@ -65,10 +65,8 @@ const TabsComponent: React.FC<TabsComponentPropsModal> = ({
                 >
                   <img src="/assets/worldIcon.svg" alt={"Icon"} width={"25%"} />
                   <div style={{ paddingLeft: "14.4px" }}>
-                    <span style={{ width: "60% !important" }}>a world</span>
-                    <br />
                     <span style={{ width: "60% !important" }}>
-                      without {cityOfLight ? "ROCC" : "beckn"}
+                      a world without beckn
                     </span>
                   </div>
                 </div>
@@ -82,9 +80,7 @@ const TabsComponent: React.FC<TabsComponentPropsModal> = ({
                 <div className="tablinks" style={{ display: "flex" }}>
                   <img src="/assets/bulbIcon.svg" alt={"Icon"} width={"25%"} />
                   <div style={{ paddingLeft: "14.4px" }}>
-                    <span>a world</span>
-                    <br />
-                    <span>with {cityOfLight ? "ROCC" : "beckn"}</span>
+                    <span>a world with beckn</span>
                   </div>
                 </div>
               ),

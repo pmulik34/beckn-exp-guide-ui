@@ -30,6 +30,18 @@
 .cityOfAfrica .ant-tabs-tab {
   width: 260px;
 }
+.cityOfAfrica .ant-tabs-tab[data-node-key="1"] {
+  width: 196px;
+}
+.cityOfAfrica .ant-tabs-tab[data-node-key="2"] {
+  width: 400px;
+}
+.cityOfAfrica .ant-tabs-tab[data-node-key="3"] {
+  width: 400px;
+}
+.cityOfAfrica .ant-tabs-tab[data-node-key="6"] {
+  width: 83px;
+}
 .cityOfAfrica .ant-tabs-tab .ant-tabs-tab-btn {
   margin: 0 auto;
 }
