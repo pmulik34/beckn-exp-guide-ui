@@ -7,7 +7,6 @@ const CityOfAfricaIframe = () => {
       <ChooseExperience
         textURL={"/assets/CityTextes.svg"}
         iframeURL={"https://mobility-app-staging-infra.becknprotocol.io/"}
-        languageEng={"English"}
       />
     </div>
   );
