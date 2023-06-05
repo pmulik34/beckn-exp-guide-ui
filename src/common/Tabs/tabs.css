@@ -124,7 +124,7 @@
   border-bottom-right-radius: 36px !important;
 }
 @media screen and (min-width: 768px) and (max-width: 1080px) {
-  .ChooseExpIframe {
+  /* .ChooseExpIframe {
     height: 617px !important;
   }
   .smartphone-wrapper {
@@ -132,7 +132,7 @@
   }
   .smartphone {
     height: 628px !important;
-  }
+  } */
   .ant-tabs-nav {
     width: 740px;
   }
