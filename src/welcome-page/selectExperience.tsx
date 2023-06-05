@@ -48,7 +48,7 @@ const SelectExperience = () => {
                 <p className="card-title-image">
                   <span className="font-color">enabling smart</span>
                   <br />
-                  <span className="font-color">africa</span>
+                  <span className="font-color">gambia</span>
                 </p>
               </div>
             </li>

@@ -63,6 +63,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
               src={iframeURL}
               frameBorder="0"
               allowFullScreen
+              scrolling="no"
               width={"375px"}
               height={"667px"}
               style={{ borderRadius: "36px" }}
