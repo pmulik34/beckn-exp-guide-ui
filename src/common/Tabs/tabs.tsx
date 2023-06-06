@@ -60,7 +60,7 @@ const TabsComponent: React.FC<TabsComponentPropsModal> = ({
               label: (
                 <div
                   className="tablinks"
-                  style={{ display: "flex" }}
+                  style={{ display: "flex", alignItems: "center" }}
                   onClick={(event) => openCity(event, "aWorldWithoutBeckn")}
                 >
                   <img src="/assets/worldIcon.svg" alt={"Icon"} width={"25%"} />
@@ -137,7 +137,7 @@ const TabsComponent: React.FC<TabsComponentPropsModal> = ({
                   onClick={(event) => openCity(event, "aWorldWithoutBeckn")}
                 >
                   <img src="/assets/worldIcon.svg" alt={"Icon"} width={"25%"} />
-                  <div style={{ paddingLeft: "14.4px" }}>
+                  <div className="worldIcon" style={{ paddingLeft: "14.4px" }}>
                     <span style={{ width: "60% !important" }}>a world</span>
                     <br />
                     <span style={{ width: "60% !important" }}>

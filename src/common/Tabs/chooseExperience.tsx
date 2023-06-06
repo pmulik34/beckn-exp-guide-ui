@@ -64,8 +64,8 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
               frameBorder="0"
               allowFullScreen
               scrolling="no"
-              width={"375px"}
-              height={"667px"}
+              width={"100%"}
+              height={"100%"}
               style={{ borderRadius: "36px" }}
             />
           </div>

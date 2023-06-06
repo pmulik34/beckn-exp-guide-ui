@@ -1,24 +1,34 @@
-.exit-icon{
-    position: fixed;
-    bottom: 62px;
-    right: 40px;
-    width: 77px;
-    height: 75px;
-    background: #FFFFFF;
-    border-radius: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+.exit-icon {
+  position: fixed;
+  bottom: 62px;
+  right: 40px;
+  width: 77px;
+  height: 75px;
+  background: #ffffff;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
-@media only screen 
-and (min-device-width : 820px) 
-and (max-device-width : 1180px) 
-and (orientation : landscape) {
-    .exit-icon{
-        bottom: 85px;
-        right: 15px;
-        width: 55px;
-        height: 50px;
+@media only screen and (min-device-width: 820px) and (max-device-width: 1180px) and (orientation: landscape) {
+  .exit-icon {
+    bottom: 85px;
+    right: 15px;
+    width: 55px;
+    height: 50px;
+  }
 }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .exit-icon {
+    width: 55px;
+    height: 58px;
+  }
+}
+@media screen and (min-width: 1025px) and (max-width: 1471px) {
+  .exit-icon {
+    bottom: 0;
+    width: 55px;
+    height: 58px;
+  }
 }
