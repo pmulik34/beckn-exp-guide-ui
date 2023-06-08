@@ -66,7 +66,7 @@ const TabsComponent: React.FC<TabsComponentPropsModal> = ({
                   <img src="/assets/worldIcon.svg" alt={"Icon"} width={"25%"} />
                   <div style={{ paddingLeft: "14.4px" }}>
                     <span style={{ width: "60% !important" }}>
-                      a world without beckn
+                      Imagine with us
                     </span>
                   </div>
                 </div>
