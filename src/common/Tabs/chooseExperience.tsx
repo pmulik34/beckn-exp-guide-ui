@@ -14,33 +14,44 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
   languageFra,
   setTourismUrl,
 }: selectExpModalProps) => {
+  const cityOfAfrica = localStorage.getItem("name") === "cityOfAfrica";
+
   return (
     <div className="tab-wrappper-content">
       <div>
-        <img src={textURL} alt="header-content-text" />{" "}
-        <div style={{ padding: "10px 0", fontSize: "16px" }}>
-          <span
-            onClick={() =>
-              setTourismUrl!(
-                "https://tourism-app-staging-infra.becknprotocol.io"
-              )
-            }
-            style={{ paddingRight: "8px", cursor: "pointer" }}
-          >
-            {languageEng}
-          </span>
-          |
-          <span
-            onClick={() =>
-              setTourismUrl!(
-                "https://tourism-app-french-infra.becknprotocol.io/"
-              )
-            }
-            style={{ paddingLeft: "8px", fontWeight: "300", cursor: "pointer" }}
-          >
-            {languageFra}
-          </span>
-        </div>
+        <img src={textURL} alt="header-content-text" />
+
+        {!cityOfAfrica ? (
+          <div style={{ padding: "10px 0", fontSize: "16px" }}>
+            <span
+              onClick={() =>
+                setTourismUrl!(
+                  "https://tourism-app-staging-infra.becknprotocol.io"
+                )
+              }
+              style={{ paddingRight: "8px", cursor: "pointer" }}
+            >
+              {languageEng}
+            </span>
+            |
+            <span
+              style={{
+                paddingLeft: "8px",
+                fontWeight: "300",
+                cursor: "pointer",
+              }}
+            >
+              <a
+                style={{ color: "#000" }}
+                href="https://experience-guide-french-infra.becknprotocol.io/cityOfLight"
+                target="_self"
+                rel="noreferrer"
+              >
+                {languageFra}
+              </a>
+            </span>
+          </div>
+        ) : null}
       </div>
 
       <div className="smartphone-wrapper">
@@ -52,8 +63,9 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
               src={iframeURL}
               frameBorder="0"
               allowFullScreen
-              width={"375px"}
-              height={"667px"}
+              scrolling="no"
+              width={"100%"}
+              height={"100%"}
               style={{ borderRadius: "36px" }}
             />
           </div>

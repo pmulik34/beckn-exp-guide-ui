@@ -15,6 +15,7 @@ import Cities from "../welcome-page/Cities/cities";
 import CityOfLight from "../welcome-page/CityOfLight/cityOfLight";
 import Wallet from "../welcome-page/Wallet";
 import SelectionPage from "../common/MobileBAP/SelectionPages/selectionPages";
+import CityOfAfrica from "../welcome-page/CityOfAfrica/CityOfAfrica";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -26,6 +27,7 @@ const AnimatedRoutes = () => {
         <Route path="/himalayas" element={<Himalayas />} />
         <Route path="/cities" element={<Cities />} />
         <Route path="/cityOfLight" element={<CityOfLight />} />
+        <Route path="/cityOfAfrica" element={<CityOfAfrica />} />
         <Route path="/select-experience" element={<SelectExperience />} />
         <Route path="/tabs" element={<TabsComponent />} />
         <Route path="/progress" element={<ProgressBar />} />

@@ -5,6 +5,9 @@
   align-items: center;
   margin: 0px auto;
 }
+.tabsConatiner {
+  width: 1080px;
+}
 .ant-tabs-nav {
   width: 1080px;
   height: 86px;
@@ -20,6 +23,27 @@
     #DCDCDC 50%,
     #DCDCDC 100%
   ); */
+}
+.cityOfAfrica .ant-tabs-nav {
+  width: unset;
+}
+.cityOfAfrica .ant-tabs-tab {
+  width: 260px;
+}
+.cityOfAfrica .ant-tabs-tab[data-node-key="1"] {
+  width: 196px;
+}
+.cityOfAfrica .ant-tabs-tab[data-node-key="2"] {
+  width: 400px;
+}
+.cityOfAfrica .ant-tabs-tab[data-node-key="3"] {
+  width: 400px;
+}
+.cityOfAfrica .ant-tabs-tab[data-node-key="6"] {
+  width: 83px;
+}
+.cityOfAfrica .ant-tabs-tab .ant-tabs-tab-btn {
+  margin: 0 auto;
 }
 :where(.css-dev-only-do-not-override-ixblex).ant-tabs
   .ant-tabs-tab
@@ -79,8 +103,10 @@
   background: white;
 }
 .content {
-  width: 258px;
-  height: 520px;
+  width: 375px;
+  height: 666px;
+  overflow: hidden;
+  margin-top: 1px;
 }
 .ant-tabs-tab.ant-tabs-tab-active {
   border-bottom: 10px solid #77aede !important;
@@ -99,18 +125,13 @@
 .ant-tabs-ink-bar[data-node-key="6"] {
   border-bottom-right-radius: 36px !important;
 }
-@media screen and (min-width: 768px) and (max-width: 1080px) {
-  .ChooseExpIframe {
-    height: 617px !important;
-  }
-  .smartphone-wrapper {
-    height: 636px !important;
-  }
-  .smartphone {
-    height: 628px !important;
+@media screen and (min-width: 768px) and (max-width: 1085px) {
+  .tabsConatiner {
+    width: 96%;
   }
   .ant-tabs-nav {
-    width: 740px;
+    width: 96% !important;
+    height: 74px;
   }
   .ant-tabs-tab {
     font-size: 12px !important;
@@ -118,7 +139,45 @@
   .ant-tabs-tab {
     padding: 5px 10px !important;
   }
+  .ant-tabs-tab {
+    width: 19%;
+  }
+  .ant-tabs-tab[data-node-key="6"] {
+    width: 5%;
+    padding: 15px 10px !important;
+  }
+  .ant-tabs-tab[data-node-key="6"] .ant-tabs-tab-btn {
+    margin: 0 auto;
+  }
+  .ant-tabs-nav-list {
+    width: 100%;
+  }
+  .cityOfAfrica .ant-tabs-tab[data-node-key="1"] {
+    width: 20%;
+  }
+  .cityOfAfrica .ant-tabs-tab[data-node-key="1"] img {
+    width: 90px !important;
+  }
+  .cityOfAfrica .ant-tabs-tab[data-node-key="2"] {
+    width: 40%;
+  }
+  .cityOfAfrica .ant-tabs-tab[data-node-key="3"] {
+    width: 40%;
+  }
   .tab-wrappper-content img {
     width: 100%;
+  }
+  .video-container iframe {
+    width: 96%;
+  }
+  .ant-tabs-tab-disabled .ant-tabs-tab-btn,
+  .ant-tabs-tab .ant-tabs-tab-btn {
+    margin: 0 auto;
+  }
+  .ant-tabs-tab-disabled img {
+    width: 90% !important;
+  }
+  .worldIcon {
+    padding-left: 8px !important;
   }
 }

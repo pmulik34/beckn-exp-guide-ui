@@ -37,6 +37,21 @@ const SelectExperience = () => {
         </div>
         <div className="animates fadeIns fives">
           <ul className="card-sub-containers">
+            <li onClick={() => handleNevigate("cityOfAfrica")}>
+              <div className="card-with-image">
+                <img
+                  style={{ borderRadius: "35px" }}
+                  className="first-image-card"
+                  src="/assets/smartafrica.png"
+                  alt={"BecknLogoIcon"}
+                />
+                <p className="card-title-image">
+                  <span className="font-color">enabling smart</span>
+                  <br />
+                  <span className="font-color">gambia</span>
+                </p>
+              </div>
+            </li>
             <li onClick={() => handleNevigate("cityOfLight")}>
               <div className="card-with-image">
                 <img

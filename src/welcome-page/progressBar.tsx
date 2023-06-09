@@ -27,7 +27,9 @@ const ProgressBar = () => {
         ? navigate("/himalayas")
         : localStorage.getItem("name") === "cities"
         ? navigate("/cities")
-        : navigate("/cityOfLight");
+        : localStorage.getItem("name") === "cityOfLight"
+        ? navigate("/cityOfLight")
+        : navigate("/cityOfAfrica");
     }
   });
 
