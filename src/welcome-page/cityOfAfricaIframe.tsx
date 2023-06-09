@@ -6,7 +6,7 @@ const CityOfAfricaIframe = () => {
     <div>
       <ChooseExperience
         textURL={"/assets/smartCityGambia.svg"}
-        iframeURL={"https://mobility-app-staging-infra.becknprotocol.io/"}
+        iframeURL={"https://mobility-app-infra.becknprotocol.io/"}
       />
     </div>
   );

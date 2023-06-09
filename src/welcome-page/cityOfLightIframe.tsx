@@ -3,7 +3,7 @@ import ChooseExperience from "../common/Tabs/chooseExperience";
 
 const CityOfLightIframe = () => {
   const [tourismUrl, setTourismUrl] = useState(
-    "https://tourism-app-staging-infra.becknprotocol.io"
+    "https://tourism-app-infra.becknprotocol.io"
   );
 
   return (
