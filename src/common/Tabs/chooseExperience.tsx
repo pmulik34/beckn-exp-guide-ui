@@ -1,8 +1,9 @@
-import React from "react";
+import { QRCode, Space, Tabs } from "antd";
+import React, { useState } from "react";
 import "./tabs.css";
 interface selectExpModalProps {
   textURL: string;
-  iframeURL: string | undefined;
+  iframeURL?: string | undefined;
   languageEng?: string;
   languageFra?: string;
   setTourismUrl?: Function;
@@ -14,22 +15,50 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
   languageFra,
   setTourismUrl,
 }: selectExpModalProps) => {
+  const [text, setText] = React.useState(
+    "https://pcm-apk.becknprotocol.io/pcm-apk/NammaYatri/AllianceTaxis.apk"
+  );
   const cityOfAfrica = localStorage.getItem("name") === "cityOfAfrica";
+  const OSC = localStorage.getItem("name") === "OSC";
+  const PCM = localStorage.getItem("name") === "PCM";
+
+  const [lang, setLang] = useState();
+  console.log(lang);
 
   return (
-    <div className="tab-wrappper-content">
+    <div
+      className={
+        PCM ? "tab-wrappper-content PCM_details" : "tab-wrappper-content"
+      }
+    >
       <div>
         <img src={textURL} alt="header-content-text" />
 
         {!cityOfAfrica ? (
-          <div style={{ padding: "10px 0", fontSize: "16px" }}>
+          <div
+            style={{
+              padding: "10px 0",
+              fontSize: "16px",
+            }}
+          >
             <span
-              onClick={() =>
+              onClick={(e: any) => {
+                setLang(e.target.textContent);
                 setTourismUrl!(
-                  "https://tourism-app-staging-infra.becknprotocol.io"
-                )
-              }
-              style={{ paddingRight: "8px", cursor: "pointer" }}
+                  `${
+                    OSC
+                      ? "https://osm-dev.becknprotocol.io/"
+                      : "https://tourism-app-staging-infra.becknprotocol.io"
+                  }`
+                );
+              }}
+              style={{
+                paddingRight: "8px",
+                cursor: "pointer",
+                fontWeight: `${
+                  lang === "English" || lang === undefined ? "unset" : "300"
+                }`,
+              }}
             >
               {languageEng}
             </span>
@@ -37,40 +66,111 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
             <span
               style={{
                 paddingLeft: "8px",
-                fontWeight: "300",
+                fontWeight: `${lang === "Francais" ? "unset" : "300"}`,
                 cursor: "pointer",
               }}
+              onClick={(e: any) => {
+                setLang(e.target.textContent);
+                setTourismUrl!(
+                  `${OSC ? "https://osm-dev.becknprotocol.io/fa" : ""}`
+                );
+              }}
             >
-              <a
-                style={{ color: "#000" }}
-                href="https://experience-guide-french-infra.becknprotocol.io/cityOfLight"
-                target="_self"
-                rel="noreferrer"
-              >
-                {languageFra}
-              </a>
+              {!OSC ? (
+                <a
+                  style={{ color: "#000" }}
+                  href="https://experience-guide-french-infra.becknprotocol.io/cityOfLight"
+                  target="_self"
+                  rel="noreferrer"
+                >
+                  {languageFra}
+                </a>
+              ) : (
+                `${languageFra}`
+              )}
             </span>
           </div>
         ) : null}
       </div>
 
-      <div className="smartphone-wrapper">
-        <div className="smartphone">
-          <div className="content">
-            <iframe
-              className="ChooseExpIframe"
-              allow="clipboard-read; clipboard-write; geolocation"
-              src={iframeURL}
-              frameBorder="0"
-              allowFullScreen
-              scrolling="no"
-              width={"100%"}
-              height={"100%"}
-              style={{ borderRadius: "36px" }}
-            />
+      {PCM ? (
+        <div className="QR-wrapper">
+          {/* <div className="QR_code QR_code_cust">
+            <Space direction="vertical" align="center">
+              <QRCode className="QR_code_PCM_cust" value={text || "-"} />
+            </Space>
+            <p>
+              PCM customer <br />
+              Application
+            </p>
+          </div>
+          <div className="QR_code">
+            <img src="/assets/driver_side_QR.svg" alt="QR-code" />
+            <p>
+              Driver-side <br />
+              Application
+            </p>
+          </div> */}
+          <Tabs
+            className={"QR_Innr"}
+            defaultActiveKey="1"
+            items={[
+              {
+                label: (
+                  <div>
+                    <span style={{ color: "#696868" }}>
+                      pass Culture demo app
+                    </span>
+                  </div>
+                ),
+                key: "1",
+                className: "",
+                children: (
+                  <div className="QR_custom">
+                    <QRCode className="QR_code_PCM_cust" value={text || "-"} />
+                    <p>Scan to see how!</p>
+                  </div>
+                ),
+              },
+              {
+                label: (
+                  <div className="" style={{ display: "flex" }}>
+                    <div>
+                      <span style={{ color: "#696868" }}>driver-side app</span>
+                    </div>
+                  </div>
+                ),
+                key: "2",
+                className: "",
+                children: (
+                  <div className="QR_custom">
+                    <QRCode className="QR_code_PCM_cust" value={text || "-"} />
+                    <p>Scan to see how!</p>
+                  </div>
+                ),
+              },
+            ]}
+          />
+        </div>
+      ) : (
+        <div className="smartphone-wrapper">
+          <div className="smartphone">
+            <div className="content">
+              <iframe
+                className="ChooseExpIframe"
+                allow="clipboard-read; clipboard-write; geolocation"
+                src={iframeURL}
+                frameBorder="0"
+                allowFullScreen
+                scrolling={!OSC ? "no" : "yes"}
+                width={"100%"}
+                height={"100%"}
+                style={{ borderRadius: "36px" }}
+              />
+            </div>
           </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };
