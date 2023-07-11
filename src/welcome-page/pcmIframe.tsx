@@ -7,7 +7,7 @@ const pcmIframe = () => {
       <ChooseExperience
         textURL={"/assets/PCMtext.svg"}
         languageEng={"English"}
-        // languageFra={"Francais"}
+        languageFra={"Francais"}
       />
     </div>
   );

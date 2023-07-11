@@ -19,11 +19,11 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
     "https://pcm-apk.becknprotocol.io/pcm-apk/NammaYatri/AllianceTaxis.apk"
   );
   const cityOfAfrica = localStorage.getItem("name") === "cityOfAfrica";
+  const cityOfLight = localStorage.getItem("name") === "cityOfLight";
   const OSC = localStorage.getItem("name") === "OSC";
   const PCM = localStorage.getItem("name") === "PCM";
 
   const [lang, setLang] = useState();
-  console.log(lang);
 
   return (
     <div
@@ -76,10 +76,12 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                 );
               }}
             >
-              {!OSC || !PCM ? (
+              {!PCM && !OSC ? (
                 <a
                   style={{ color: "#000" }}
-                  href="https://experience-guide-french-infra.becknprotocol.io/cityOfLight"
+                  href={
+                    "https://experience-guide-french-infra.becknprotocol.io/cityOfLight"
+                  }
                   target="_self"
                   rel="noreferrer"
                 >
