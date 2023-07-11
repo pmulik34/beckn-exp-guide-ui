@@ -76,7 +76,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                 );
               }}
             >
-              {!OSC ? (
+              {!OSC || !PCM ? (
                 <a
                   style={{ color: "#000" }}
                   href="https://experience-guide-french-infra.becknprotocol.io/cityOfLight"
@@ -95,22 +95,6 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
 
       {PCM ? (
         <div className="QR-wrapper">
-          {/* <div className="QR_code QR_code_cust">
-            <Space direction="vertical" align="center">
-              <QRCode className="QR_code_PCM_cust" value={text || "-"} />
-            </Space>
-            <p>
-              PCM customer <br />
-              Application
-            </p>
-          </div>
-          <div className="QR_code">
-            <img src="/assets/driver_side_QR.svg" alt="QR-code" />
-            <p>
-              Driver-side <br />
-              Application
-            </p>
-          </div> */}
           <Tabs
             className={"QR_Innr"}
             defaultActiveKey="1"
