@@ -129,6 +129,9 @@
 .ant-tabs-ink-bar[data-node-key="6"] {
   border-bottom-right-radius: 36px !important;
 }
+.ant-tabs .ant-tabs-tab + .ant-tabs-tab {
+  margin: unset !important;
+}
 .QR-wrapper {
   display: flex;
   justify-content: space-between;
@@ -165,7 +168,7 @@
 .QR-wrapper .QR_Innr .ant-tabs-nav-wrap {
   margin-bottom: -10px;
 }
-.QR-wrapper .QR_Innr .ant-tabs-nav {
+.QR-wrapper .ant-tabs .QR_Innr .ant-tabs-nav {
   height: unset !important;
   margin-top: 2px !important;
   box-shadow: unset !important;
@@ -200,9 +203,6 @@
 
 .PCM_details {
   height: 74vh;
-}
-.ant-tabs .ant-tabs-tab + .ant-tabs-tab {
-  margin: unset !important;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1085px) {
