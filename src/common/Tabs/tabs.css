@@ -201,7 +201,7 @@
 .PCM_details {
   height: 74vh;
 }
-:where(.css-ixblex).ant-tabs .ant-tabs-tab + .ant-tabs-tab {
+.ant-tabs .ant-tabs-tab + .ant-tabs-tab {
   margin: unset !important;
 }
 
