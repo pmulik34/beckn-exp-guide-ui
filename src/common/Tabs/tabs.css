@@ -175,6 +175,13 @@
   border-radius: unset !important;
   border-bottom: 1px solid #d6d6d6;
 }
+.QR-wrapper .ant-tabs .ant-tabs-nav {
+  height: unset !important;
+  margin-top: 2px !important;
+  box-shadow: unset !important;
+  border-radius: unset !important;
+  border-bottom: 1px solid #d6d6d6;
+}
 .QR-wrapper .QR_Innr .ant-tabs-nav-list::before,
 .QR-wrapper .QR_Innr .ant-tabs-nav-list::after {
   position: unset !important;
