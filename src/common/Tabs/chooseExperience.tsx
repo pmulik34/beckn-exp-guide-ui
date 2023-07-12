@@ -16,13 +16,15 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
   languageFra,
   setTourismUrl,
 }: selectExpModalProps) => {
-  const [driverApk, setDriverApk] = React.useState(
-    "https://pcm-apk.becknprotocol.io/pcm-apk/NammaYatri/AllianceTaxis.apk"
-  );
-  const [text, setText] = React.useState(
-    "https://pcm-apk.becknprotocol.io/pcm-apk/PCMApp-Dev.apk"
-  );
+  const osmEngUrl = process.env.REACT_APP_OSM_ENG_URL;
+  const pcmDriverUrl = process.env.REACT_APP_PCM_DRIVER_URL;
+  const pcmPcAppUrl = process.env.REACT_APP_PCM_PC_APP_URL;
+  const cityOfLightFaUrl = process.env.REACT_APP_CITY_OF_LIGHT_FRENCH_URL;
+  const tourismAppStagingInfraUrl =
+    process.env.REACT_APP_TOURISM_APP_STAGING_INFRA_URL;
+
   const cityOfAfrica = localStorage.getItem("name") === "cityOfAfrica";
+  const cityOfLight = localStorage.getItem("name") === "cityOfLight";
   const OSC = localStorage.getItem("name") === "OSC";
   const PCM = localStorage.getItem("name") === "PCM";
   const navigate = useNavigate();
@@ -49,11 +51,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
               onClick={(e: any) => {
                 setLang(e.target.textContent);
                 setTourismUrl!(
-                  `${
-                    OSC
-                      ? "https://osm-dev.becknprotocol.io/"
-                      : "https://tourism-app-staging-infra.becknprotocol.io"
-                  }`
+                  `${OSC ? { osmEngUrl } : { tourismAppStagingInfraUrl }}`
                 );
               }}
               style={{
@@ -83,9 +81,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
               {!PCM && !OSC ? (
                 <a
                   style={{ color: "#000" }}
-                  href={
-                    "https://experience-guide-french-infra.becknprotocol.io/cityOfLight"
-                  }
+                  href={cityOfLightFaUrl}
                   target="_self"
                   rel="noreferrer"
                 >
@@ -117,7 +113,10 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                 className: "",
                 children: (
                   <div className="QR_custom">
-                    <QRCode className="QR_code_PCM_cust" value={text || "-"} />
+                    <QRCode
+                      className="QR_code_PCM_cust"
+                      value={pcmPcAppUrl || "-"}
+                    />
                     <p>scan to see how!</p>
                   </div>
                 ),
@@ -136,7 +135,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                   <div className="QR_custom">
                     <QRCode
                       className="QR_code_PCM_cust"
-                      value={driverApk || "-"}
+                      value={pcmDriverUrl || "-"}
                     />
                     <p>scan to see how!</p>
                   </div>

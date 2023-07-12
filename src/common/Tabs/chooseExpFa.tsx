@@ -11,12 +11,10 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
   languageFra,
   setTourismUrl,
 }: selectExpModalProps) => {
-  const [driverApk, setDriverApk] = React.useState(
-    "https://pcm-apk.becknprotocol.io/pcm-apk/NammaYatri/AllianceTaxis.apk"
-  );
-  const [text, setText] = React.useState(
-    "https://pcm-apk.becknprotocol.io/pcm-apk/PCMApp-Dev.apk"
-  );
+  const pcmDriverUrl = process.env.REACT_APP_PCM_DRIVER_URL;
+  const pcmPcAppUrl = process.env.REACT_APP_PCM_PC_APP_URL;
+  const cityOfLightFaUrl = process.env.REACT_APP_CITY_OF_LIGHT_FRENCH_URL;
+
   const cityOfAfrica = localStorage.getItem("name") === "cityOfAfrica";
   const OSC = localStorage.getItem("name") === "OSC";
   const PCM = localStorage.getItem("name") === "PCM";
@@ -66,9 +64,7 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
               {!PCM && !OSC ? (
                 <a
                   style={{ color: "#000" }}
-                  href={
-                    "https://experience-guide-french-infra.becknprotocol.io/cityOfLight"
-                  }
+                  href={cityOfLightFaUrl}
                   target="_self"
                   rel="noreferrer"
                 >
@@ -103,7 +99,10 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                 className: "",
                 children: (
                   <div className="QR_custom">
-                    <QRCode className="QR_code_PCM_cust" value={text || "-"} />
+                    <QRCode
+                      className="QR_code_PCM_cust"
+                      value={pcmPcAppUrl || "-"}
+                    />
                     <p>Scannez pour voir comment!</p>
                   </div>
                 ),
@@ -126,7 +125,7 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                   <div className="QR_custom">
                     <QRCode
                       className="QR_code_PCM_cust"
-                      value={driverApk || "-"}
+                      value={pcmDriverUrl || "-"}
                     />
                     <p>Scannez pour voir comment!</p>
                   </div>

@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import ChooseExpFa from "../common/Tabs/chooseExpFa";
 
 const OscIframe = () => {
-  const [openStreetCom, setOpenStreetCom] = useState(
-    "https://osm-dev.becknprotocol.io/fa"
-  );
+  const osmFaUrl = process.env.REACT_APP_OSM_FAR_URL;
+  const [openStreetCom, setOpenStreetCom] = useState(osmFaUrl);
   return (
     <div>
       <ChooseExpFa

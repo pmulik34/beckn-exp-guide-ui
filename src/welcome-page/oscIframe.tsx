@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import ChooseExperience from "../common/Tabs/chooseExperience";
 
 const OscIframe = () => {
-  const [openStreetCom, setOpenStreetCom] = useState(
-    "https://osm-dev.becknprotocol.io/"
-  );
+  const osmEngUrl = process.env.REACT_APP_OSM_ENG_URL;
+  const [openStreetCom, setOpenStreetCom] = useState(osmEngUrl);
   return (
     <div>
       <ChooseExperience
