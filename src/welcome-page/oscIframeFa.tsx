@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import ChooseExperience from "../common/Tabs/chooseExperience";
+import ChooseExpFa from "../common/Tabs/chooseExpFa";
 
 const OscIframe = () => {
   const [openStreetCom, setOpenStreetCom] = useState(
-    "https://osm-dev.becknprotocol.io/"
+    "https://osm-dev.becknprotocol.io/fa"
   );
   return (
     <div>
-      <ChooseExperience
-        textURL={"/assets/OSCtext.svg"}
+      <ChooseExpFa
+        textURL={"/assets/OSCtextFa.svg"}
         setTourismUrl={setOpenStreetCom}
         iframeURL={openStreetCom}
         languageEng={"english"}

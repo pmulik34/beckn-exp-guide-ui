@@ -132,7 +132,7 @@
 .QR-wrapper {
   display: flex;
   justify-content: space-between;
-  height: 385px;
+  /* height: 385px; */
   /* width: 450px; */
   background-color: #fff;
   border: 1px solid #d6d6d6;
@@ -150,6 +150,9 @@
 }
 .QR-wrapper .QR_Innr .ant-tabs-tab[data-node-key="2"] {
   width: 50%;
+}
+.QR-wrapper .QR_Innr .ant-tabs-content-holder {
+  padding-bottom: 20px;
 }
 .QR-wrapper .QR_Innr .ant-tabs-tab {
   margin: 0px 20px 0px 20px !important;

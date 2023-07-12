@@ -18,6 +18,8 @@ import SelectionPage from "../common/MobileBAP/SelectionPages/selectionPages";
 import CityOfAfrica from "../welcome-page/CityOfAfrica/CityOfAfrica";
 import Osc from "../welcome-page/Osc/osc";
 import Pcm from "../welcome-page/Pcm/Pcm";
+import PcmFa from "../welcome-page/PcmFa/PcmFa";
+import OscFa from "../welcome-page/OscFa/OscFa";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -32,6 +34,8 @@ const AnimatedRoutes = () => {
         <Route path="/cityOfAfrica" element={<CityOfAfrica />} />
         <Route path="/OSC" element={<Osc />} />
         <Route path="/PCM" element={<Pcm />} />
+        <Route path="/PCM-Fa" element={<PcmFa />} />
+        <Route path="/OSC-Fa" element={<OscFa />} />
         <Route path="/select-experience" element={<SelectExperience />} />
         <Route path="/tabs" element={<TabsComponent />} />
         <Route path="/progress" element={<ProgressBar />} />
