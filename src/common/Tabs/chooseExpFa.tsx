@@ -11,8 +11,11 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
   languageFra,
   setTourismUrl,
 }: selectExpModalProps) => {
-  const [text, setText] = React.useState(
+  const [driverApk, setDriverApk] = React.useState(
     "https://pcm-apk.becknprotocol.io/pcm-apk/NammaYatri/AllianceTaxis.apk"
+  );
+  const [text, setText] = React.useState(
+    "https://pcm-apk.becknprotocol.io/pcm-apk/PCMApp-Dev.apk"
   );
   const cityOfAfrica = localStorage.getItem("name") === "cityOfAfrica";
   const OSC = localStorage.getItem("name") === "OSC";
@@ -121,7 +124,10 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                 className: "",
                 children: (
                   <div className="QR_custom">
-                    <QRCode className="QR_code_PCM_cust" value={text || "-"} />
+                    <QRCode
+                      className="QR_code_PCM_cust"
+                      value={driverApk || "-"}
+                    />
                     <p>Scannez pour voir comment!</p>
                   </div>
                 ),
