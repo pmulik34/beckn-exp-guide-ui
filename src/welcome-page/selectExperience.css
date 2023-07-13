@@ -9,7 +9,7 @@
     0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725),
     0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
   border-radius: 35px;
-  margin: 30px;
+  margin: 25px 10px;
 }
 .card-with-image img {
   width: 88%;
@@ -17,16 +17,14 @@
 .Beckn-image {
   height: 50px;
   width: 161px;
-  cursor: pointer;
-  position: absolute;
-  left: 100px;
-  top: 90px;
 }
 .headLogo-image {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  margin-top: 120px;
+  margin-bottom: unset !important;
+  width: 1280px;
+  margin: 100px auto;
 }
 .card-sub-containers {
   display: flex;
@@ -34,6 +32,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  margin-bottom: 20px;
 }
 .card-containers {
   display: flex;
@@ -47,6 +46,7 @@
   font-size: 24px;
   line-height: 30px;
   margin-top: 15px;
+  color: #4e4646;
 }
 .font-color {
   color: #4e4646;
@@ -72,9 +72,6 @@
   font-weight: 400;
   background: #e9ebed;
   width: 150px;
-  position: absolute;
-  right: 100px;
-  top: 90px;
 }
 
 /* -------fade-in---------------- */
@@ -118,7 +115,6 @@
 .fadeIns {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
-  margin-top: 120px;
 }
 
 .main-container {
@@ -128,16 +124,41 @@
   width: 100%;
   animation: fadeinout 4s;
 }
+.home-card-container {
+  overflow: auto;
+  height: 77vh;
+  margin: 35px auto;
+  margin-bottom: unset;
+}
+
+.home-card-container::-webkit-scrollbar {
+  width: 13px;
+}
+
+.home-card-container::-webkit-scrollbar-thumb {
+  background: url("/public/assets/scrollBar.svg");
+  border-radius: 10px;
+  background-size: 0 0;
+  background-repeat: no-repeat;
+}
+.home-card-container:hover::-webkit-scrollbar-thumb {
+  background-size: 100% 88%;
+}
 @keyframes main-container {
   100% {
     opacity: 0;
   }
 }
-@media screen and (min-width: 1025px) and (max-width: 1471px) {
-  .card-with-image {
-    margin: 45px;
+@media screen and (min-width: 320px) and (max-width: 1024px) {
+  .headLogo-image {
+    width: 90%;
   }
+}
+@media screen and (min-width: 1025px) and (max-width: 1471px) {
   .fadeIns {
     margin-top: 50px;
+  }
+  .headLogo-image {
+    width: 90%;
   }
 }

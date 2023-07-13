@@ -1,35 +1,26 @@
-import { QRCode, Space, Tabs } from "antd";
+import { QRCode, Tabs } from "antd";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./tabs.css";
-export interface selectExpModalProps {
-  textURL: string;
-  iframeURL?: string | undefined;
-  languageEng?: string;
-  languageFra?: string;
-  setTourismUrl?: Function;
-}
-const ChooseExperience: React.FC<selectExpModalProps> = ({
+import { selectExpModalProps } from "./chooseExperience";
+import TabsFa from "./tabsFa";
+
+const ChooseExpFa: React.FC<selectExpModalProps> = ({
   textURL,
   iframeURL,
   languageEng,
   languageFra,
   setTourismUrl,
 }: selectExpModalProps) => {
-  const osmEngUrl = process.env.REACT_APP_OSM_ENG_URL;
   const pcmDriverUrl = process.env.REACT_APP_PCM_DRIVER_URL;
   const pcmPcAppUrl = process.env.REACT_APP_PCM_PC_APP_URL;
   const cityOfLightFaUrl = process.env.REACT_APP_CITY_OF_LIGHT_FRENCH_URL;
-  const tourismAppStagingInfraUrl =
-    process.env.REACT_APP_TOURISM_APP_STAGING_INFRA_URL;
 
   const cityOfAfrica = localStorage.getItem("name") === "cityOfAfrica";
-  const cityOfLight = localStorage.getItem("name") === "cityOfLight";
   const OSC = localStorage.getItem("name") === "OSC";
   const PCM = localStorage.getItem("name") === "PCM";
   const navigate = useNavigate();
 
-  const [lang, setLang] = useState("english");
+  const [lang, setLang] = useState("francais");
 
   return (
     <div
@@ -49,15 +40,12 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
           >
             <span
               onClick={(e: any) => {
-                setLang(e.target.textContent);
-                setTourismUrl!(
-                  `${OSC ? { osmEngUrl } : { tourismAppStagingInfraUrl }}`
-                );
+                setTourismUrl!(`${OSC ? navigate("/OSC") : navigate("/PCM")}`);
               }}
               style={{
                 paddingRight: "8px",
                 cursor: "pointer",
-                fontWeight: `${lang === "english" ? "unset" : "300"}`,
+                fontWeight: `${lang === "francais" ? "300" : "unset"}`,
               }}
             >
               {languageEng}
@@ -70,12 +58,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                 cursor: "pointer",
               }}
               onClick={(e: any) => {
-                setLang(e.target.textContent);
-                setTourismUrl!(
-                  `${
-                    OSC ? navigate("/OSC-Fa") : PCM ? navigate("/PCM-Fa") : ""
-                  }`
-                );
+                setTourismUrl!(`${OSC ? "" : ""}`);
               }}
             >
               {!PCM && !OSC ? (
@@ -104,8 +87,11 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
               {
                 label: (
                   <div>
-                    <span style={{ color: "#696868" }}>
-                      pass Culture demo app
+                    <span style={{ color: "#696868", wordBreak: "break-word" }}>
+                      application de
+                      <br />
+                      démonstration du pass <br />
+                      Culture
                     </span>
                   </div>
                 ),
@@ -117,7 +103,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                       className="QR_code_PCM_cust"
                       value={pcmPcAppUrl || "-"}
                     />
-                    <p>scan to see how!</p>
+                    <p>Scannez pour voir comment!</p>
                   </div>
                 ),
               },
@@ -125,7 +111,11 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                 label: (
                   <div className="" style={{ display: "flex" }}>
                     <div>
-                      <span style={{ color: "#696868" }}>driver-side app</span>
+                      <span style={{ color: "#696868" }}>
+                        application côté
+                        <br />
+                        conducteur
+                      </span>
                     </div>
                   </div>
                 ),
@@ -137,7 +127,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                       className="QR_code_PCM_cust"
                       value={pcmDriverUrl || "-"}
                     />
-                    <p>scan to see how!</p>
+                    <p>Scannez pour voir comment!</p>
                   </div>
                 ),
               },
@@ -167,4 +157,4 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
   );
 };
 
-export default ChooseExperience;
+export default ChooseExpFa;

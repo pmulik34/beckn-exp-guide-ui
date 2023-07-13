@@ -21,6 +21,8 @@ const TabsComponent: React.FC<TabsComponentPropsModal> = ({
 
   const cityOfLight = localStorage.getItem("name") === "cityOfLight";
   const cityOfAfrica = localStorage.getItem("name") === "cityOfAfrica";
+  const PCM = localStorage.getItem("name") === "PCM";
+  const OSC = localStorage.getItem("name") === "OSC";
 
   const openCity = (evt: any, cityName: string) => {
     let i: number;
@@ -34,9 +36,57 @@ const TabsComponent: React.FC<TabsComponentPropsModal> = ({
 
   return (
     <>
-      {cityOfAfrica ? (
+      {PCM || OSC ? (
         <Tabs
-          className="tabsConatiner cityOfAfrica"
+          className={"tabsConatiner cityOfAfrica PCM_wrapper"}
+          defaultActiveKey="3"
+          items={[
+            {
+              label: (
+                <div>
+                  <img
+                    style={{ height: "35px", width: "135px" }}
+                    // src="/assets/logo2.png"
+
+                    src={"/assets/beckn_lg.svg"}
+                    alt={"Icon"}
+                    width={"98%"}
+                  />
+                </div>
+              ),
+              key: "1",
+              className: "tabs-style",
+              disabled: true,
+            },
+            {
+              label: (
+                <div className="tablinks" style={{ display: "flex" }}>
+                  <img src="/assets/bulbIcon.svg" alt={"Icon"} width={"25%"} />
+                  <div style={{ paddingLeft: "14.4px" }}>
+                    <span>experience a world with beckn</span>
+                  </div>
+                </div>
+              ),
+              key: "3",
+              className: "tabs-style",
+              children: secondProps,
+            },
+
+            {
+              label: (
+                <div>
+                  <img src="/assets/home.svg" alt={"Icon"} width={"98%"} />
+                </div>
+              ),
+              key: "6",
+              className: "home-tabs-style",
+              children: <Modal flag={flag} pathName={"/select-experience"} />,
+            },
+          ]}
+        />
+      ) : cityOfAfrica ? (
+        <Tabs
+          className={"tabsConatiner cityOfAfrica"}
           defaultActiveKey="2"
           items={[
             {
@@ -66,7 +116,7 @@ const TabsComponent: React.FC<TabsComponentPropsModal> = ({
                   <img src="/assets/worldIcon.svg" alt={"Icon"} width={"25%"} />
                   <div style={{ paddingLeft: "14.4px" }}>
                     <span style={{ width: "60% !important" }}>
-                      Imagine with us
+                      {"Imagine with us"}
                     </span>
                   </div>
                 </div>
