@@ -138,7 +138,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                 </Button>
                 <Modal
                   className="PCM_modal"
-                  title="Follow these steps for the best possible experience!"
+                  title="Follow these steps for the best possible experience as a customer!"
                   open={isModalOpenOSC}
                   onCancel={handleCancelOSC}
                 >
@@ -151,7 +151,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
             ) : (
               <>
                 <Button type="primary" onClick={showModalOSCretailer}>
-                  mode d'emploi
+                  instructions
                   <img
                     style={{ paddingLeft: "5px" }}
                     src="/assets/arrow_back.svg"
