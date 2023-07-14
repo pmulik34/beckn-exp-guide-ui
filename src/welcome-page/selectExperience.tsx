@@ -64,6 +64,21 @@ const SelectExperience = () => {
                   </p>
                 </div>
               </li>
+
+              <li onClick={() => handleNevigate("cityOfLight")}>
+                <div className="card-with-image">
+                  <img
+                    className="first-image-card"
+                    src="/assets/city-of-light.png"
+                    alt={"BecknLogoIcon"}
+                  />
+                  <p className="card-title-image">
+                    <span className="font-color">experience the</span>
+                    <br />
+                    <span className="font-color">city of lights</span>
+                  </p>
+                </div>
+              </li>
               <li onClick={() => handleNevigate("cityOfAfrica")}>
                 <div className="card-with-image">
                   <img
@@ -76,20 +91,6 @@ const SelectExperience = () => {
                     <span className="font-color">enabling smart</span>
                     <br />
                     <span className="font-color">gambia</span>
-                  </p>
-                </div>
-              </li>
-              <li onClick={() => handleNevigate("cityOfLight")}>
-                <div className="card-with-image">
-                  <img
-                    className="first-image-card"
-                    src="/assets/city-of-light.png"
-                    alt={"BecknLogoIcon"}
-                  />
-                  <p className="card-title-image">
-                    <span className="font-color">experience the</span>
-                    <br />
-                    <span className="font-color">city of lights</span>
                   </p>
                 </div>
               </li>

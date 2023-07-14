@@ -65,7 +65,34 @@ iframe .header-container .location-btn {
   margin-top: 45px;
   margin-bottom: 60px !important;
 }
-
+.osc_tab_change {
+  position: absolute;
+  top: 0;
+  right: -20%;
+}
+.for_cutm_name,
+.for_tetail_store {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 48px;
+  border-radius: 26px;
+  padding: 14px 24px;
+  margin: 10px 0;
+  background-color: #fff;
+  cursor: pointer;
+}
+.for_cutm_name img,
+.for_tetail_store img {
+  width: 26px;
+  height: 24px;
+  padding: 5px;
+}
+.osc_tab_change .active {
+  background-color: #992a4a;
+  color: #fff;
+}
 /* ----------------------------Media Query---------------------- */
 @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   .headLogo-image {
