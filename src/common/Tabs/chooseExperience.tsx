@@ -130,7 +130,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
             {!retailsModal ? (
               <>
                 <Button type="primary" onClick={showModalOSC}>
-                  mode d'emploi
+                  instructions
                   <img
                     style={{ paddingLeft: "5px" }}
                     src="/assets/arrow_back.svg"
