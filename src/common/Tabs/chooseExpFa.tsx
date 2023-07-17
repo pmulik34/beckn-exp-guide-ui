@@ -1,4 +1,4 @@
-import { QRCode, Tabs } from "antd";
+import { QRCode, Button, Modal, Tabs } from "antd";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { selectExpModalProps } from "./chooseExperience";
@@ -10,6 +10,7 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
   languageEng,
   languageFra,
   setTourismUrl,
+  retailsModal,
 }: selectExpModalProps) => {
   const pcmDriverUrl = process.env.REACT_APP_PCM_DRIVER_URL;
   const pcmPcAppUrl = process.env.REACT_APP_PCM_PC_APP_URL;
@@ -21,6 +22,36 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
   const navigate = useNavigate();
 
   const [lang, setLang] = useState("francais");
+  const [isModalOpenOSC, setIsModalOpenOSC] = useState(false);
+  const [isModalOpenPC, setIsModalOpenPC] = useState(false);
+  const [isModalOpenDriver, setSsModalOpenDriver] = useState(false);
+  const [isModalOpenOSCRetailer, setIsModalOpenOSCRetailer] = useState(false);
+
+  const showModalPC = () => {
+    setIsModalOpenPC(true);
+  };
+  const showModalDriver = () => {
+    setSsModalOpenDriver(true);
+  };
+  const showModalOSC = () => {
+    setIsModalOpenOSC(true);
+  };
+  const showModalOSCretailer = () => {
+    setIsModalOpenOSCRetailer(true);
+  };
+
+  const handleCancelPC = () => {
+    setIsModalOpenPC(false);
+  };
+  const handleCancelDriver = () => {
+    setSsModalOpenDriver(false);
+  };
+  const handleCancelOSC = () => {
+    setIsModalOpenOSC(false);
+  };
+  const handleCancelRetailer = () => {
+    setIsModalOpenOSCRetailer(false);
+  };
 
   return (
     <div
@@ -76,6 +107,53 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
             </span>
           </div>
         ) : null}
+        {OSC ? (
+          <div className="PCM_modal OSM_custom">
+            {!retailsModal ? (
+              <>
+                <Button type="primary" onClick={showModalOSC}>
+                  mode d'emploi
+                  <img
+                    style={{ paddingLeft: "5px" }}
+                    src="/assets/arrow_back.svg"
+                  />
+                </Button>
+                <Modal
+                  className="PCM_modal"
+                  title="Suivez les étapes suivantes pour une expérience optimale!"
+                  open={isModalOpenOSC}
+                  onCancel={handleCancelOSC}
+                >
+                  <img
+                    style={{ width: "100%" }}
+                    src="/assets/OSMmodal_french.svg"
+                  />
+                </Modal>
+              </>
+            ) : (
+              <>
+                <Button type="primary" onClick={showModalOSCretailer}>
+                  mode d'emploi
+                  <img
+                    style={{ paddingLeft: "5px" }}
+                    src="/assets/arrow_back.svg"
+                  />
+                </Button>
+                <Modal
+                  className="PCM_modal"
+                  title="suivez ces étapes pour une expérience optimale en tant que vendeur!"
+                  open={isModalOpenOSCRetailer}
+                  onCancel={handleCancelRetailer}
+                >
+                  <img
+                    style={{ width: "100%" }}
+                    src="/assets/BPPmodal_french.svg"
+                  />
+                </Modal>
+              </>
+            )}
+          </div>
+        ) : null}
       </div>
 
       {PCM ? (
@@ -88,10 +166,7 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                 label: (
                   <div>
                     <span style={{ color: "#696868", wordBreak: "break-word" }}>
-                      application de
-                      <br />
-                      démonstration du pass <br />
-                      Culture
+                      pass Culture
                     </span>
                   </div>
                 ),
@@ -103,7 +178,25 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                       className="QR_code_PCM_cust"
                       value={pcmPcAppUrl || "-"}
                     />
-                    <p>Scannez pour voir comment!</p>
+                    <p>scannez pour voir comment! </p>
+                    <Button type="primary" onClick={showModalPC}>
+                      mode d'emploi
+                      <img
+                        style={{ paddingLeft: "5px" }}
+                        src="/assets/arrow_back.svg"
+                      />
+                    </Button>
+                    <Modal
+                      className="PCM_modal"
+                      title="suivez ces étapes pour que votre expérience en tant que passager soit la meilleure possible !"
+                      open={isModalOpenPC}
+                      onCancel={handleCancelPC}
+                    >
+                      <img
+                        style={{ width: "100%" }}
+                        src="/assets/PCmodal_french.svg"
+                      />
+                    </Modal>
                   </div>
                 ),
               },
@@ -111,11 +204,7 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                 label: (
                   <div className="" style={{ display: "flex" }}>
                     <div>
-                      <span style={{ color: "#696868" }}>
-                        application côté
-                        <br />
-                        conducteur
-                      </span>
+                      <span style={{ color: "#696868" }}>alliance taxi</span>
                     </div>
                   </div>
                 ),
@@ -127,7 +216,30 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                       className="QR_code_PCM_cust"
                       value={pcmDriverUrl || "-"}
                     />
-                    <p>Scannez pour voir comment!</p>
+                    <p>scannez pour voir comment! </p>
+                    <Button type="primary" onClick={showModalDriver}>
+                      mode d'emploi
+                      <img
+                        style={{ paddingLeft: "5px" }}
+                        src="/assets/arrow_back.svg"
+                      />
+                    </Button>
+                    <Modal
+                      className="PCM_modal"
+                      title="suivez ces étapes pour que votre expérience de conducteur soit la meilleure possible !"
+                      open={isModalOpenDriver}
+                      // onOk={handleOk}
+                      onCancel={handleCancelDriver}
+                    >
+                      <img
+                        style={{
+                          display: "flex",
+                          justifyContent: "center",
+                          margin: "0 auto",
+                        }}
+                        src="/assets/driverModal_french.svg"
+                      />
+                    </Modal>
                   </div>
                 ),
               },
