@@ -29,7 +29,11 @@ const ProgressBar = () => {
         ? navigate("/cities")
         : localStorage.getItem("name") === "cityOfLight"
         ? navigate("/cityOfLight")
-        : navigate("/cityOfAfrica");
+        : localStorage.getItem("name") === "cityOfAfrica"
+        ? navigate("/cityOfAfrica")
+        : localStorage.getItem("name") === "OSC"
+        ? navigate("/OSC")
+        : navigate("/PCM");
     }
   });
 

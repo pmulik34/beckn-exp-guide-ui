@@ -1,6 +1,10 @@
 .welcome-Screen-container {
   display: flex;
   justify-content: center;
+  /* height: 100vh; */
+  overflow: hidden;
+  max-width: 1060px;
+  margin: 0 auto;
 }
 
 /*=== Trigger  ===*/
@@ -70,7 +74,7 @@ button {
   color: #0c0c0c;
   width: 228px;
   height: 55px;
-  background: #77AEDE;
+  background: #77aede;
   border: none;
   cursor: pointer;
 }
