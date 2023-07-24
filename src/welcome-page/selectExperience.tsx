@@ -43,9 +43,9 @@ const SelectExperience = () => {
                     alt={"BecknLogoIcon"}
                   />
                   <p className="card-title-image">
-                    <span className="font-color">introducing mobility</span>
+                    <span className="font-color">enriching pass Culture </span>
                     <br />
-                    <span className="font-color">to pass Culture</span>
+                    <span className="font-color">with mobility</span>
                   </p>
                 </div>
               </li>
@@ -58,9 +58,9 @@ const SelectExperience = () => {
                     alt={"BecknLogoIcon"}
                   />
                   <p className="card-title-image">
-                    <span className="font-color">commerce using</span>
+                    <span className="font-color">enabling commerce </span>
                     <br />
-                    <span className="font-color">OpenStreetMap</span>
+                    <span className="font-color">on OpenStreetMap</span>
                   </p>
                 </div>
               </li>
