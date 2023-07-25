@@ -399,7 +399,7 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                             <p style={{ fontWeight: "bolder" }}>
                               mot de passe:
                             </p>
-                            <p> tbVTgWgYV3_PF_zB</p>
+                            <p>Test@123</p>
                           </p>
                         </div>
                       }
