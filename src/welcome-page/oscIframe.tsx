@@ -19,7 +19,7 @@ const OscIframe = () => {
     setRetailsModal(true);
   };
   return (
-    <div>
+    <div style={{ position: "relative" }}>
       <ChooseExperience
         textURL={"/assets/OSCtext.svg"}
         setTourismUrl={setOpenStreetCom}

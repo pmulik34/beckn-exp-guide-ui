@@ -66,9 +66,16 @@ iframe .header-container .location-btn {
   margin-bottom: 60px !important;
 }
 .osc_tab_change {
+  display: flex;
   position: absolute;
-  top: 0;
-  right: -20%;
+  bottom: 23%;
+  left: 19%;
+}
+.osc_tab_change .for_cutm_name {
+  margin: 10px 25px;
+}
+.osc_tab_changeFa {
+  bottom: 21%;
 }
 .for_cutm_name,
 .for_tetail_store {

@@ -399,7 +399,9 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                             <p style={{ fontWeight: "bolder" }}>
                               mot de passe:
                             </p>
-                            <p>Test@123</p>
+                            <p style={{ textTransform: "capitalize" }}>
+                              Test@123
+                            </p>
                           </p>
                         </div>
                       }
