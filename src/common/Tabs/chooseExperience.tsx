@@ -392,7 +392,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                           <p style={{ paddingBottom: "10px" }}>
                             <p style={{ fontWeight: "bolder" }}>password:</p>
                             <p style={{ textTransform: "capitalize" }}>
-                              Test@123
+                              Test@1234567
                             </p>
                           </p>
                         </div>
