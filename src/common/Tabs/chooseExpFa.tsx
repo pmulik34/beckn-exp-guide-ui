@@ -400,7 +400,7 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                               mot de passe:
                             </p>
                             <p style={{ textTransform: "capitalize" }}>
-                              Test@123
+                              Test@1234567
                             </p>
                           </p>
                         </div>
