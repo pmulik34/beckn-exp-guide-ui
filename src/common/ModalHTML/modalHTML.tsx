@@ -51,9 +51,9 @@ const ModalHTML: React.FC<ModalHTMLProps> = (props) => {
           <div
             style={{
               height: "unset",
-              width: "188px",
+              width: "198px",
               borderRadius: "5px",
-              padding: "20px 4px",
+              padding: "20px 0px",
             }}
           >
             {props.step1Text}
@@ -76,15 +76,15 @@ const ModalHTML: React.FC<ModalHTMLProps> = (props) => {
           <div
             style={{
               height: "unset",
-              width: "188px",
+              width: "198px",
               borderRadius: "5px",
-              padding: "20px 4px",
+              padding: "20px 0px",
             }}
           >
             {props.step2Text}
           </div>
         </div>
-        <div>
+        <div className="steps_container">
           <div
             style={{
               textAlign: "center",
@@ -101,9 +101,9 @@ const ModalHTML: React.FC<ModalHTMLProps> = (props) => {
           <div
             style={{
               height: "unset",
-              width: "188px",
+              width: "198px",
               borderRadius: "5px",
-              padding: "20px 4px",
+              padding: "20px 0px",
             }}
           >
             {props.step3Text}
@@ -126,9 +126,9 @@ const ModalHTML: React.FC<ModalHTMLProps> = (props) => {
           <div
             style={{
               height: "unset",
-              width: "188px",
+              width: "198px",
               borderRadius: "5px",
-              padding: "20px 4px",
+              padding: "20px 0px",
             }}
           >
             {props.step4Text}
@@ -151,9 +151,9 @@ const ModalHTML: React.FC<ModalHTMLProps> = (props) => {
           <div
             style={{
               height: "unset",
-              width: "188px",
+              width: "198px",
               borderRadius: "5px",
-              padding: "20px 4px",
+              padding: "20px 0px",
             }}
           >
             {props.step5Text}

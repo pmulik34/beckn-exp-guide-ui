@@ -1,6 +1,6 @@
 .modal_inner_wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 .PCM_modal .ant-modal-content .ant-modal-header .ant-modal-title {
   text-align: center;
@@ -10,7 +10,7 @@
   color: #4e4646 !important;
 }
 .PCM_modal.ant-modal {
-  width: 1100px !important;
+  width: 1150px !important;
   height: 660px !important;
 }
 .PCM_modal.ant-modal .ant-modal-footer > button {
@@ -27,16 +27,21 @@
   height: 188px;
   width: 188px;
 }
+.steps_container > div:first-child {
+  color: #4e4646 !important;
+}
 .steps_container {
   display: flex;
   flex-direction: column;
-  width: 188px;
+  width: 198px;
+  margin: 10px;
 }
 .PCM_modal p {
   text-align: left !important;
   font-size: 11px;
   font-weight: 400;
   text-transform: lowercase;
+  color: #4e4646;
 }
 .PCM_modal ul li {
   text-align: left !important;
@@ -45,6 +50,10 @@
   margin-left: 10px;
   padding-bottom: 15px;
   text-transform: lowercase;
+  color: #4e4646;
+}
+.PCM_modal ul li:last-child {
+  padding-bottom: unset !important;
 }
 .none {
   display: none;

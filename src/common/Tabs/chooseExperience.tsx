@@ -154,11 +154,18 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                         provided:
                       </p>
                       <p style={{ paddingBottom: "10px" }}>
-                        <p style={{ fontWeight: "bolder" }}>phone number:</p>
+                        <p style={{ fontWeight: "bolder", color: "#000" }}>
+                          phone number:
+                        </p>
                         <p> 5678990532</p>
                       </p>
                       <p style={{ paddingBottom: "10px" }}>
-                        <p style={{ fontWeight: "bolder" }}>6 digit OTP</p>
+                        <p style={{ fontWeight: "bolder", color: "#000" }}>
+                          6 digit{" "}
+                          <span style={{ textTransform: "uppercase" }}>
+                            OTP
+                          </span>
+                        </p>
                         <p> 456012</p>
                       </p>
                     </div>
@@ -171,6 +178,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                       <p
                         style={{
                           fontWeight: "bolder",
+                          color: "#000",
                         }}
                       >
                         select location:
@@ -184,7 +192,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                         paris, france{" "}
                       </p>
                       <p style={{ paddingBottom: "10px" }}>
-                        <p style={{ fontWeight: "bolder" }}>
+                        <p style={{ fontWeight: "bolder", color: "#000" }}>
                           select the option:
                         </p>
                         <p>restaurant</p>
@@ -194,7 +202,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                         <p
                           style={{
                             fontWeight: "bolder",
-
+                            color: "#000",
                             paddingBottom: "10px",
                           }}
                         >
@@ -227,24 +235,34 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                       <p style={{ paddingBottom: "10px" }}>
                         Information you may need for placing your order
                       </p>
-                      <p style={{ paddingBottom: "5px" }}>
-                        <p style={{ fontWeight: "bolder" }}>Name:</p>
+                      <p>
+                        <p style={{ fontWeight: "bolder", color: "#000" }}>
+                          Name:
+                        </p>
                         <p>Lisa</p>
                       </p>
-                      <p style={{ paddingBottom: "5px" }}>
-                        <p style={{ fontWeight: "bolder" }}>Address:</p>
+                      <p>
+                        <p style={{ fontWeight: "bolder", color: "#000" }}>
+                          Address:
+                        </p>
                         <p>quai jacqus, paris, france</p>
                       </p>
-                      <p style={{ paddingBottom: "5px" }}>
-                        <p style={{ fontWeight: "bolder" }}>Phone Number:</p>
+                      <p>
+                        <p style={{ fontWeight: "bolder", color: "#000" }}>
+                          Phone Number:
+                        </p>
                         <p>5678990532</p>
                       </p>
-                      <p style={{ paddingBottom: "5px" }}>
-                        <p style={{ fontWeight: "bolder" }}>Email ID:</p>
+                      <p>
+                        <p style={{ fontWeight: "bolder", color: "#000" }}>
+                          Email ID:
+                        </p>
                         <p>lisa@email.com</p>
                       </p>
-                      <p style={{ paddingBottom: "5px" }}>
-                        <p style={{ fontWeight: "bolder" }}>Payment Method:</p>
+                      <p>
+                        <p style={{ fontWeight: "bolder", color: "#000" }}>
+                          Payment Method:
+                        </p>
                         <p>Cash on Delivery</p>
                       </p>
                     </div>
@@ -288,17 +306,21 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                         orders on the
                       </p>
                       <p style={{ paddingBottom: "10px" }}>
-                        <p style={{ fontWeight: "bolder" }}>
+                        <p style={{ fontWeight: "bolder", color: "#000" }}>
                           ‘Open Street Commerce’
                         </p>
                       </p>
-                      <p style={{ paddingBottom: "5px" }}>
-                        <p style={{ paddingBottom: "5px" }}>Login details:</p>
-                        <p style={{ fontWeight: "bolder" }}>phone number:</p>
+                      <p>
+                        <p>Login details:</p>
+                        <p style={{ fontWeight: "bolder", color: "#000" }}>
+                          phone number:
+                        </p>
                         <p> 9876543210</p>
                       </p>
-                      <p style={{ paddingBottom: "5px" }}>
-                        <p style={{ fontWeight: "bolder" }}>Password:</p>
+                      <p>
+                        <p style={{ fontWeight: "bolder", color: "#000" }}>
+                          Password:
+                        </p>
                         <p> 234567</p>
                       </p>
                     </div>
@@ -386,13 +408,15 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                             <br /> app using the provided:
                           </p>
                           <p style={{ paddingBottom: "10px" }}>
-                            <p style={{ fontWeight: "bolder" }}>
+                            <p style={{ fontWeight: "bolder", color: "#000" }}>
                               email address:
                             </p>
-                            <p> sindhuja@fide.org</p>
+                            <p>enterthefuture01@gmail.com</p>
                           </p>
                           <p style={{ paddingBottom: "10px" }}>
-                            <p style={{ fontWeight: "bolder" }}>password:</p>
+                            <p style={{ fontWeight: "bolder", color: "#000" }}>
+                              password:
+                            </p>
                             <p style={{ textTransform: "capitalize" }}>
                               Test@1234567
                             </p>
@@ -416,13 +440,15 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                           <p style={{ paddingBottom: "10px" }}>
                             from the reservation confirmation page select <br />{" "}
                             the third option: <br />{" "}
-                            <span style={{ fontWeight: "700" }}>
+                            <span style={{ fontWeight: "700", color: "#000" }}>
                               {""}
                               ‘Show travel options’
                               <br />{" "}
                             </span>
                             and select
-                            <span style={{ fontWeight: "700" }}>'taxi'</span>
+                            <span style={{ fontWeight: "700", color: "#000" }}>
+                              {""} 'taxi'
+                            </span>
                           </p>
                         </div>
                       }
@@ -434,12 +460,18 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                             ensure that you specify:
                           </p>
 
-                          <p style={{ fontWeight: "700" }}>
+                          <p style={{ fontWeight: "700", color: "#000" }}>
                             the pick-up location:
                           </p>
                           <p>quai jacques chirac, 75007 paris, france </p>
 
-                          <p style={{ fontWeight: "700", paddingTop: "15px" }}>
+                          <p
+                            style={{
+                              fontWeight: "700",
+                              paddingTop: "15px",
+                              color: "#000",
+                            }}
+                          >
                             the drop-off location:
                           </p>
                           <p>app will pick up this location. </p>
@@ -500,11 +532,18 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                             information:
                           </p>
                           <p style={{ paddingBottom: "10px" }}>
-                            <p style={{ fontWeight: "bolder" }}>phone number</p>
+                            <p style={{ fontWeight: "bolder", color: "#000" }}>
+                              phone number
+                            </p>
                             <p> 9493143166</p>
                           </p>
                           <p style={{ paddingBottom: "10px" }}>
-                            <p style={{ fontWeight: "bolder" }}>4 digit OTP</p>
+                            <p style={{ fontWeight: "bolder", color: "#000" }}>
+                              4 digit{" "}
+                              <span style={{ textTransform: "uppercase" }}>
+                                OTP
+                              </span>
+                            </p>
                             <p> 7891</p>
                           </p>
                         </div>
@@ -540,7 +579,14 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                         <div className="text_wrapper_modal">
                           <p style={{ paddingBottom: "10px" }}>
                             enter the{" "}
-                            <span style={{ fontWeight: "bolder" }}>OTP</span>{" "}
+                            <span
+                              style={{
+                                fontWeight: "bolder",
+                                textTransform: "uppercase",
+                              }}
+                            >
+                              OTP
+                            </span>{" "}
                             received from the passenger and start the ride.
                           </p>
                         </div>

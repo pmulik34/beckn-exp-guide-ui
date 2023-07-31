@@ -85,16 +85,18 @@ iframe .header-container .location-btn {
   width: 200px;
   height: 48px;
   border-radius: 26px;
-  padding: 14px 24px;
+  padding: 14px 15px;
   margin: 10px 0;
   background-color: #fff;
   cursor: pointer;
+  line-height: 16px;
+  font-size: 15px;
 }
 .for_cutm_name img,
 .for_tetail_store img {
-  width: 26px;
+  width: 24px;
   height: 24px;
-  padding: 5px;
+  margin: 0px 10px 0px 0px;
 }
 .osc_tab_change .active {
   background-color: #992a4a;

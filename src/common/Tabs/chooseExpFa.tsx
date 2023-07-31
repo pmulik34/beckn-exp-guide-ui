@@ -134,13 +134,18 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                         l'aide de l'identifiant fourni :
                       </p>
                       <p style={{ paddingBottom: "10px" }}>
-                        <p style={{ fontWeight: "bolder" }}>
+                        <p style={{ fontWeight: "bolder", color: "#000" }}>
                           numéro de téléphone:
                         </p>
                         <p> 5678990532</p>
                       </p>
                       <p style={{ paddingBottom: "10px" }}>
-                        <p style={{ fontWeight: "bolder" }}>OTP à 6 chiffres</p>
+                        <p style={{ fontWeight: "bolder", color: "#000" }}>
+                          <span style={{ textTransform: "uppercase" }}>
+                            OTP
+                          </span>{" "}
+                          à 6 chiffres
+                        </p>
                         <p> 456012</p>
                       </p>
                     </div>
@@ -155,6 +160,7 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                       <p
                         style={{
                           fontWeight: "bolder",
+                          color: "#000",
                         }}
                       >
                         sélectionnez l'emplacement:
@@ -167,7 +173,7 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                         {" <location name>"}
                       </p>
                       <p style={{ paddingBottom: "10px" }}>
-                        <p style={{ fontWeight: "bolder" }}>
+                        <p style={{ fontWeight: "bolder", color: "#000" }}>
                           sélectionnez l'option:
                         </p>
                         <p>‘Restaurant’</p>
@@ -177,7 +183,7 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                         <p
                           style={{
                             fontWeight: "bolder",
-
+                            color: "#000",
                             paddingBottom: "10px",
                           }}
                         >
@@ -188,6 +194,7 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                           <span
                             style={{
                               fontWeight: "bolder",
+                              color: "#000",
                             }}
                           >
                             'Acheter'
@@ -213,32 +220,36 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                   step4Img={"/assets/OSM_step4_img.svg"}
                   step4Text={
                     <div className="text_wrapper_modal">
-                      <p style={{ paddingBottom: "10px" }}>
+                      <p>
                         Informations dont vous pourriez avoir besoin pour passer
                         votre commande
                       </p>
-                      <p style={{ paddingBottom: "5px" }}>
-                        <p style={{ fontWeight: "bolder" }}>Nom:</p>
+                      <p>
+                        <p style={{ fontWeight: "bolder", color: "#000" }}>
+                          Nom:
+                        </p>
                         <p>Lisa</p>
                       </p>
-                      <p style={{ paddingBottom: "5px" }}>
-                        <p style={{ fontWeight: "bolder" }}>Adresse:</p>
+                      <p>
+                        <p style={{ fontWeight: "bolder", color: "#000" }}>
+                          Adresse:
+                        </p>
                         <p>{"<lonnng address of Paris>"}</p>
                       </p>
-                      <p style={{ paddingBottom: "5px" }}>
-                        <p style={{ fontWeight: "bolder" }}>
+                      <p>
+                        <p style={{ fontWeight: "bolder", color: "#000" }}>
                           Numéro de téléphone:
                         </p>
                         <p>5678990532</p>
                       </p>
-                      <p style={{ paddingBottom: "5px" }}>
-                        <p style={{ fontWeight: "bolder" }}>
+                      <p>
+                        <p style={{ fontWeight: "bolder", color: "#000" }}>
                           Adresse électronique:
                         </p>
                         <p>lisa@email.com</p>
                       </p>
-                      <p style={{ paddingBottom: "5px" }}>
-                        <p style={{ fontWeight: "bolder" }}>
+                      <p>
+                        <p style={{ fontWeight: "bolder", color: "#000" }}>
                           Mode de paiement:
                         </p>
                         <p>Paiement à la livraison</p>
@@ -282,22 +293,22 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                         'vendeur' pour ClicPaye. Cette application permet de
                         gérer les produits et de traiter les commandes sur le{" "}
                       </p>
-                      <p style={{ paddingBottom: "5px" }}>
-                        <p style={{ fontWeight: "bolder" }}>
+                      <p>
+                        <p style={{ fontWeight: "bolder", color: "#000" }}>
                           ‘Open Street Commerce’
                         </p>
                       </p>
-                      <p style={{ paddingBottom: "5px" }}>
-                        <p style={{ paddingBottom: "5px" }}>
-                          détails de connexion:
-                        </p>
-                        <p style={{ fontWeight: "bolder" }}>
+                      <p>
+                        <p>détails de connexion:</p>
+                        <p style={{ fontWeight: "bolder", color: "#000" }}>
                           numéro de téléphone::
                         </p>
                         <p> 9876543210</p>
                       </p>
-                      <p style={{ paddingBottom: "5px" }}>
-                        <p style={{ fontWeight: "bolder" }}>mot de passe:</p>
+                      <p>
+                        <p style={{ fontWeight: "bolder", color: "#000" }}>
+                          mot de passe:
+                        </p>
                         <p> 234567</p>
                       </p>
                     </div>
@@ -309,8 +320,8 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                       <p style={{ paddingBottom: "10px" }}>
                         Voici quelques exemples de ce que vous pouvez faire sur
                         {""}
-                        <span style={{ fontWeight: "bolder" }}>
-                          ClicPaye:
+                        <span style={{ fontWeight: "bolder", color: "#000" }}>
+                          {""} ClicPaye:
                         </span>{" "}
                       </p>
 
@@ -390,13 +401,13 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                             utilisant l'adresse fournie:
                           </p>
                           <p style={{ paddingBottom: "10px" }}>
-                            <p style={{ fontWeight: "bolder" }}>
+                            <p style={{ fontWeight: "bolder", color: "#000" }}>
                               adresse email:
                             </p>
-                            <p> sindhuja@fide.org</p>
+                            <p> enterthefuture01@gmail.com</p>
                           </p>
                           <p style={{ paddingBottom: "10px" }}>
-                            <p style={{ fontWeight: "bolder" }}>
+                            <p style={{ fontWeight: "bolder", color: "#000" }}>
                               mot de passe:
                             </p>
                             <p style={{ textTransform: "capitalize" }}>
@@ -411,7 +422,7 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                         <div className="text_wrapper_modal">
                           <p style={{ paddingBottom: "10px" }}>
                             en utilisant l'application{" "}
-                            <span style={{ fontWeight: "700" }}>
+                            <span style={{ fontWeight: "700", color: "#000" }}>
                               pass culture{" "}
                             </span>
                             rechercher un événement et le réserver
@@ -425,7 +436,7 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                           <p style={{ paddingBottom: "10px" }}>
                             sur la page de confirmation de la réservation,
                             sélectionnez la troisième option:{" "}
-                            <span style={{ fontWeight: "700" }}>
+                            <span style={{ fontWeight: "700", color: "#000" }}>
                               {" "}
                               ‘'Afficher les options de voyage'’
                             </span>{" "}
@@ -441,12 +452,18 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                             veillez à préciser
                           </p>
 
-                          <p style={{ fontWeight: "700" }}>
+                          <p style={{ fontWeight: "700", color: "#000" }}>
                             le lieu de prise en charge :
                           </p>
                           <p>quai jacques chirac, 75007 paris, france</p>
 
-                          <p style={{ fontWeight: "700", paddingTop: "15px" }}>
+                          <p
+                            style={{
+                              fontWeight: "700",
+                              paddingTop: "15px",
+                              color: "#000",
+                            }}
+                          >
                             le lieu de dépôt :
                           </p>
                           <p>l'application viendra chercher à cet endroit. </p>
@@ -507,14 +524,17 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                             les informations suivantes:
                           </p>
                           <p style={{ paddingBottom: "10px" }}>
-                            <p style={{ fontWeight: "bolder" }}>
+                            <p style={{ fontWeight: "bolder", color: "#000" }}>
                               numéro de téléphone
                             </p>
                             <p> 9493143166</p>
                           </p>
                           <p style={{ paddingBottom: "10px" }}>
-                            <p style={{ fontWeight: "bolder" }}>
-                              OTP à 4 chiffres
+                            <p style={{ fontWeight: "bolder", color: "#000" }}>
+                              <span style={{ textTransform: "uppercase" }}>
+                                OTP
+                              </span>{" "}
+                              à 4 chiffres
                             </p>
                             <p> 7891</p>
                           </p>
@@ -527,7 +547,7 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                           <p style={{ paddingBottom: "10px" }}>
                             La demande de trajet doit être déclenchée depuis
                             l'application{" "}
-                            <span style={{ fontWeight: "700" }}>
+                            <span style={{ fontWeight: "700", color: "#000" }}>
                               pass culture{" "}
                             </span>
                             et le bouton bascule doit être activé pour recevoir
@@ -550,8 +570,16 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                         <div className="text_wrapper_modal">
                           <p style={{ paddingBottom: "10px" }}>
                             entrez l{" "}
-                            <span style={{ fontWeight: "700" }}>'OTP</span> reçu
-                            du passager et commencez le trajet.
+                            <span
+                              style={{
+                                fontWeight: "700",
+                                color: "#000",
+                                textTransform: "uppercase",
+                              }}
+                            >
+                              'OTP
+                            </span>{" "}
+                            reçu du passager et commencez le trajet.
                           </p>
                         </div>
                       }
