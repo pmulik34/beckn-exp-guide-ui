@@ -66,9 +66,16 @@ iframe .header-container .location-btn {
   margin-bottom: 60px !important;
 }
 .osc_tab_change {
+  display: flex;
   position: absolute;
-  top: 0;
-  right: -20%;
+  bottom: 23%;
+  left: 19%;
+}
+.osc_tab_change .for_cutm_name {
+  margin: 10px 25px;
+}
+.osc_tab_changeFa {
+  bottom: 21%;
 }
 .for_cutm_name,
 .for_tetail_store {
@@ -78,16 +85,18 @@ iframe .header-container .location-btn {
   width: 200px;
   height: 48px;
   border-radius: 26px;
-  padding: 14px 24px;
+  padding: 14px 15px;
   margin: 10px 0;
   background-color: #fff;
   cursor: pointer;
+  line-height: 16px;
+  font-size: 15px;
 }
 .for_cutm_name img,
 .for_tetail_store img {
-  width: 26px;
+  width: 24px;
   height: 24px;
-  padding: 5px;
+  margin: 0px 10px 0px 0px;
 }
 .osc_tab_change .active {
   background-color: #992a4a;
@@ -157,8 +166,8 @@ iframe .header-container .location-btn {
     height: max-content;
   }
 }
-/* @media only screen and (min-height: 500px) and (max-height: 1023px) and (max-width: 3000px) {
-  .ChooseExpIframe {
-    height: 99%;
+/* @media only screen and (max-height: 1024px) and (max-width: 1600px) {
+  .beckn-app {
+    zoom: 90%;
   }
 } */

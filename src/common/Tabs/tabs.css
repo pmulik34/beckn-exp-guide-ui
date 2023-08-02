@@ -229,24 +229,22 @@
   margin: unset;
   margin-top: 20px;
 }
-.PCM_modal .ant-modal-content .ant-modal-header .ant-modal-title {
-  text-align: center;
-  padding-bottom: 30px;
-  font-size: 17px !important;
-  font-weight: 700 !important;
-  color: #4e4646 !important;
-}
-.PCM_modal.ant-modal {
-  width: 1100px !important;
-  height: 660px !important;
-}
-.PCM_modal.ant-modal .ant-modal-footer > button {
-  display: none;
-}
-.PCM_modal.ant-modal .ant-modal-content {
-  padding: 25px 20px;
-}
 
+.modal_width.PCM_modal.ant-modal {
+  width: 902px !important;
+}
+.modal_width.PCM_modal.ant-modal .modal_inner_wrapper {
+  justify-content: center !important;
+}
+.modal_width.PCM_modal.ant-modal .steps_container {
+  margin: 10px;
+}
+.text_wrapper_modal {
+  padding: 15px 25px 20px 25px;
+  border-radius: 5px;
+  background-color: #fff;
+  min-height: 260px;
+}
 @media screen and (min-width: 768px) and (max-width: 1085px) {
   .tabsConatiner {
     width: 96%;
