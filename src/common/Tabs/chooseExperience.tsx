@@ -428,7 +428,11 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                       step2Text={
                         <div className="text_wrapper_modal">
                           <p style={{ paddingBottom: "10px" }}>
-                            using pass Culture app search for an event and
+                            using{" "}
+                            <span style={{ fontWeight: "700", color: "#000" }}>
+                              pass Culture{" "}
+                            </span>{" "}
+                            app search for an event and
                             <br /> reserve
                           </p>
                         </div>
@@ -441,8 +445,11 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                             from the reservation confirmation page select <br />{" "}
                             the third option: <br />{" "}
                             <span style={{ fontWeight: "700", color: "#000" }}>
-                              {""}
-                              ‘Show travel options’
+                              {""}‘
+                              <span style={{ textTransform: "capitalize" }}>
+                                Show
+                              </span>{" "}
+                              travel options’
                               <br />{" "}
                             </span>
                             and select
@@ -559,7 +566,14 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                               pass Culture
                             </span>{" "}
                             app the toggle must be{" "}
-                            <span style={{ fontWeight: "bolder" }}>“ON” </span>
+                            <span
+                              style={{
+                                fontWeight: "bolder",
+                                textTransform: "capitalize",
+                              }}
+                            >
+                              “ON”{" "}
+                            </span>
                             to receive new ride requests.
                           </p>
                         </div>

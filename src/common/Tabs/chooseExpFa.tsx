@@ -438,8 +438,14 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                             sélectionnez la troisième option:{" "}
                             <span style={{ fontWeight: "700", color: "#000" }}>
                               {" "}
-                              ‘'Afficher les options de voyage'’
+                              <br />
+                              ‘'{" "}
+                              <span style={{ textTransform: "capitalize" }}>
+                                Afficher
+                              </span>{" "}
+                              les options de voyage'’
                             </span>{" "}
+                            <br />
                             et sélectionnez 'taxi'
                           </p>
                         </div>
