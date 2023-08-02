@@ -11,7 +11,7 @@ const CityOfLightIframe = () => {
       <ChooseExperience
         textURL={"/assets/city-of-light-text.png"}
         languageEng={"english"}
-        languageFra={"francais"}
+        languageFra={"français"}
         setTourismUrl={setTourismUrl}
         iframeURL={tourismUrl}
       />

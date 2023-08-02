@@ -22,7 +22,7 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
   const PCM = localStorage.getItem("name") === "PCM";
   const navigate = useNavigate();
 
-  const [lang, setLang] = useState("francais");
+  const [lang, setLang] = useState("français");
   const [isModalOpenOSC, setIsModalOpenOSC] = useState(false);
   const [isModalOpenPC, setIsModalOpenPC] = useState(false);
   const [isModalOpenDriver, setSsModalOpenDriver] = useState(false);
@@ -77,7 +77,7 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
               style={{
                 paddingRight: "8px",
                 cursor: "pointer",
-                fontWeight: `${lang === "francais" ? "300" : "unset"}`,
+                fontWeight: `${lang === "français" ? "300" : "unset"}`,
               }}
             >
               {languageEng}
@@ -86,7 +86,7 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
             <span
               style={{
                 paddingLeft: "8px",
-                fontWeight: `${lang === "francais" ? "unset" : "300"}`,
+                fontWeight: `${lang === "français" ? "unset" : "300"}`,
                 cursor: "pointer",
               }}
               onClick={(e: any) => {
@@ -123,7 +123,7 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                   open={isModalOpenOSC}
                   onCancel={handleCancelOSC}
                   modalHeading={
-                    "Suivez ces étapes pour que votre expérience en tant que client soit la meilleure possible !"
+                    "suivez ces étapes pour que votre expérience en tant que client soit la meilleure possible !"
                   }
                   step1={"Étape 1"}
                   step1Img={"/assets/OSM_step1_img.svg"}
@@ -179,7 +179,13 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                         <p>‘Restaurant’</p>
                       </p>
                       <p style={{}}>
-                        <p>Sélectionner le restaurant</p>
+                        <p>
+                          {" "}
+                          <span style={{ textTransform: "capitalize" }}>
+                            Sélectionner
+                          </span>{" "}
+                          le restaurant
+                        </p>
                         <p
                           style={{
                             fontWeight: "bolder",
@@ -195,6 +201,7 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                             style={{
                               fontWeight: "bolder",
                               color: "#000",
+                              textTransform: "capitalize",
                             }}
                           >
                             'Acheter'
@@ -261,7 +268,8 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                   step5Text={
                     <div className="text_wrapper_modal">
                       <p style={{ paddingBottom: "10px" }}>
-                        Une fois la commande passée, vous pouvez la suivre!
+                        <span style={{ textTransform: "capitalize" }}>Une</span>{" "}
+                        fois la commande passée, vous pouvez la suivre!
                       </p>
                     </div>
                   }
@@ -397,8 +405,11 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                       step1Text={
                         <div className="text_wrapper_modal">
                           <p style={{ paddingBottom: "10px" }}>
-                            Connectez-vous à l'application Pass Culture en
-                            utilisant l'adresse fournie:
+                            <span style={{ textTransform: "capitalize" }}>
+                              Connectez-vous
+                            </span>{" "}
+                            à l'application Pass Culture en utilisant l'adresse
+                            fournie:
                           </p>
                           <p style={{ paddingBottom: "10px" }}>
                             <p style={{ fontWeight: "bolder", color: "#000" }}>
@@ -526,8 +537,11 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                       step1Text={
                         <div className="text_wrapper_modal">
                           <p style={{ paddingBottom: "10px" }}>
-                            Connectez-vous en tant que "conducteur" en utilisant
-                            les informations suivantes:
+                            <span style={{ textTransform: "capitalize" }}>
+                              Connectez-vous
+                            </span>{" "}
+                            en tant que "conducteur" en utilisant les
+                            informations suivantes:
                           </p>
                           <p style={{ paddingBottom: "10px" }}>
                             <p style={{ fontWeight: "bolder", color: "#000" }}>
@@ -566,7 +580,10 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                       step3Text={
                         <div className="text_wrapper_modal">
                           <p style={{ paddingBottom: "10px" }}>
-                            Accepter le trajet
+                            <span style={{ textTransform: "capitalize" }}>
+                              Accepter
+                            </span>{" "}
+                            le trajet
                           </p>
                         </div>
                       }

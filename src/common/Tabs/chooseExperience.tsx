@@ -101,7 +101,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
             <span
               style={{
                 paddingLeft: "8px",
-                fontWeight: `${lang === "francais" ? "unset" : "300"}`,
+                fontWeight: `${lang === "français" ? "unset" : "300"}`,
                 cursor: "pointer",
               }}
               onClick={(e: any) => {
@@ -143,9 +143,9 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                   open={isModalOpenOSC}
                   onCancel={handleCancelOSC}
                   modalHeading={
-                    "Follow these steps for the best possible experience as a customer!"
+                    "follow these steps for the best possible experience as a customer!"
                   }
-                  step1={"Step 1"}
+                  step1={"step 1"}
                   step1Img={"/assets/OSM_step1_img.svg"}
                   step1Text={
                     <div className="text_wrapper_modal">
@@ -170,7 +170,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                       </p>
                     </div>
                   }
-                  step2={"Step 2"}
+                  step2={"step 2"}
                   step2Img={"/assets/OSM_step2_img.svg"}
                   step2Text={
                     <div className="text_wrapper_modal">
@@ -211,12 +211,19 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                         <p>
                           {" "}
                           Click{" "}
-                          <span style={{ fontWeight: "bolder" }}>‘Shop’ </span>
+                          <span
+                            style={{
+                              fontWeight: "bolder",
+                              textTransform: "capitalize",
+                            }}
+                          >
+                            ‘Shop’{" "}
+                          </span>
                         </p>
                       </p>
                     </div>
                   }
-                  step3={"Step 3"}
+                  step3={"step 3"}
                   step3Img={"/assets/OSM_step3-img.svg"}
                   step3Text={
                     <div className="text_wrapper_modal">
@@ -228,7 +235,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                       </p>
                     </div>
                   }
-                  step4={"Step 4"}
+                  step4={"step 4"}
                   step4Img={"/assets/OSM_step4_img.svg"}
                   step4Text={
                     <div className="text_wrapper_modal">
@@ -267,12 +274,16 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                       </p>
                     </div>
                   }
-                  step5={"Step 5"}
+                  step5={"step 5"}
                   step5Img={"/assets/OSM_step5_img.svg"}
                   step5Text={
                     <div className="text_wrapper_modal">
                       <p style={{ paddingBottom: "10px" }}>
-                        Once the order is placed, you can track your order!
+                        <span style={{ textTransform: "capitalize" }}>
+                          {" "}
+                          Once
+                        </span>{" "}
+                        the order is placed, you can track your order!
                       </p>
                     </div>
                   }
@@ -293,9 +304,9 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                   open={isModalOpenOSCRetailer}
                   onCancel={handleCancelRetailer}
                   modalHeading={
-                    "Follow these steps for the best possible experience as a seller!"
+                    "follow these steps for the best possible experience as a seller!"
                   }
-                  step1={"Step 1"}
+                  step1={"step 1"}
                   step1Img={"/assets/OSM_step1_img.svg"}
                   step1Text={
                     <div className="text_wrapper_modal">
@@ -325,7 +336,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                       </p>
                     </div>
                   }
-                  step2={"Step 2"}
+                  step2={"step 2"}
                   step2Img={"/assets/BPP_step2_img.svg"}
                   step2Text={
                     <div className="text_wrapper_modal">
@@ -341,7 +352,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                       </ul>
                     </div>
                   }
-                  step3={"Step 3"}
+                  step3={"step 3"}
                   step3Img={"/assets/BPP_step3_img.svg"}
                   step3Text={
                     <div className="text_wrapper_modal">
@@ -399,7 +410,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                       modalHeading={
                         "follow these steps for the best possible experience as a passenger!"
                       }
-                      step1={"Step 1"}
+                      step1={"step 1"}
                       step1Img={"/assets/PC_step1_img.svg"}
                       step1Text={
                         <div className="text_wrapper_modal">
@@ -423,7 +434,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                           </p>
                         </div>
                       }
-                      step2={"Step 2"}
+                      step2={"step 2"}
                       step2Img={"/assets/PC_step2_img.svg"}
                       step2Text={
                         <div className="text_wrapper_modal">
@@ -437,7 +448,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                           </p>
                         </div>
                       }
-                      step3={"Step 3"}
+                      step3={"step 3"}
                       step3Img={"/assets/PC_step3_img.svg"}
                       step3Text={
                         <div className="text_wrapper_modal">
@@ -459,7 +470,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                           </p>
                         </div>
                       }
-                      step4={"Step 4"}
+                      step4={"step 4"}
                       step4Img={"/assets/PC_step4_img.svg"}
                       step4Text={
                         <div className="text_wrapper_modal">
@@ -484,7 +495,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                           <p>app will pick up this location. </p>
                         </div>
                       }
-                      step5={"Step 5"}
+                      step5={"step 5"}
                       step5Img={"/assets/PC_step5_img.svg"}
                       step5Text={
                         <div className="text_wrapper_modal">
@@ -530,7 +541,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                       modalHeading={
                         "Follow these steps for the best possible experience as a driver!"
                       }
-                      step1={"Step 1"}
+                      step1={"step 1"}
                       step1Img={"/assets/driver_step1_img.svg"}
                       step1Text={
                         <div className="text_wrapper_modal">
@@ -555,7 +566,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                           </p>
                         </div>
                       }
-                      step2={"Step 2"}
+                      step2={"step 2"}
                       step2Img={"/assets/driver_step2_img.svg"}
                       step2Text={
                         <div className="text_wrapper_modal">
@@ -578,7 +589,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                           </p>
                         </div>
                       }
-                      step3={"Step 3"}
+                      step3={"step 3"}
                       step3Img={"/assets/driver_step3_img.svg"}
                       step3Text={
                         <div className="text_wrapper_modal">
@@ -587,7 +598,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                           </p>
                         </div>
                       }
-                      step4={"Step 4"}
+                      step4={"step 4"}
                       step4Img={"/assets/driver_step4_img.svg"}
                       step4Text={
                         <div className="text_wrapper_modal">
@@ -605,7 +616,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                           </p>
                         </div>
                       }
-                      step5={"Step 5"}
+                      step5={"step 5"}
                       step5Img={"/assets/driver_step5_img.svg"}
                       step5Text={
                         <div className="text_wrapper_modal">

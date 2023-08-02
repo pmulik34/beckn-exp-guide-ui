@@ -25,7 +25,7 @@ const OscIframe = () => {
         setTourismUrl={setOpenStreetCom}
         iframeURL={openStreetCom}
         languageEng={"english"}
-        languageFra={"francais"}
+        languageFra={"français"}
         retailsModal={retailsModal}
       />
       <div className="osc_tab_change osc_tab_changeFa">
