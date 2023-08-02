@@ -539,7 +539,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                       open={isModalOpenDriver}
                       onCancel={handleCancelDriver}
                       modalHeading={
-                        "Follow these steps for the best possible experience as a driver!"
+                        "follow these steps for the best possible experience as a driver!"
                       }
                       step1={"step 1"}
                       step1Img={"/assets/driver_step1_img.svg"}
