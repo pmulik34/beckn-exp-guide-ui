@@ -311,13 +311,13 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                         <p style={{ fontWeight: "bolder", color: "#000" }}>
                           numéro de téléphone::
                         </p>
-                        <p> 9876543210</p>
+                        <p> 9876522222</p>
                       </p>
                       <p>
                         <p style={{ fontWeight: "bolder", color: "#000" }}>
                           mot de passe:
                         </p>
-                        <p> 234567</p>
+                        <p> root123</p>
                       </p>
                     </div>
                   }
