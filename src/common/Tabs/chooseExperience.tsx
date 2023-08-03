@@ -195,7 +195,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                         <p style={{ fontWeight: "bolder", color: "#000" }}>
                           select the option:
                         </p>
-                        <p>restaurant</p>
+                        <p>'restaurant'</p>
                       </p>
                       <p style={{}}>
                         <p>select the restaurant</p>
