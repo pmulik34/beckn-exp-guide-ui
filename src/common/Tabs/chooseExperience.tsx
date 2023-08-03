@@ -385,7 +385,12 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
               {
                 label: (
                   <div>
-                    <span style={{ color: "#696868" }}>pass Culture</span>
+                    <span style={{ color: "#696868" }}>
+                      pass{" "}
+                      <span style={{ textTransform: "capitalize" }}>
+                        Culture
+                      </span>
+                    </span>
                   </div>
                 ),
                 key: "1",
@@ -415,7 +420,10 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                       step1Text={
                         <div className="text_wrapper_modal">
                           <p style={{ paddingBottom: "10px" }}>
-                            sign in to the pass culture
+                            sign in to the pass{" "}
+                            <span style={{ textTransform: "capitalize" }}>
+                              culture
+                            </span>
                             <br /> app using the provided:
                           </p>
                           <p style={{ paddingBottom: "10px" }}>
@@ -441,7 +449,10 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                           <p style={{ paddingBottom: "10px" }}>
                             using{" "}
                             <span style={{ fontWeight: "700", color: "#000" }}>
-                              pass Culture{" "}
+                              pass{" "}
+                              <span style={{ textTransform: "capitalize" }}>
+                                Culture
+                              </span>{" "}
                             </span>{" "}
                             app search for an event and
                             <br /> reserve
@@ -574,7 +585,10 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                             ride request needs to be triggered from{" "}
                             <span style={{ fontWeight: "bolder" }}>
                               {" "}
-                              pass Culture
+                              pass{" "}
+                              <span style={{ textTransform: "capitalize" }}>
+                                Culture
+                              </span>
                             </span>{" "}
                             app the toggle must be{" "}
                             <span
