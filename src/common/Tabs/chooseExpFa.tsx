@@ -372,7 +372,10 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                 label: (
                   <div>
                     <span style={{ color: "#696868", wordBreak: "break-word" }}>
-                      pass Culture
+                      pass{" "}
+                      <span style={{ textTransform: "capitalize" }}>
+                        Culture
+                      </span>
                     </span>
                   </div>
                 ),
@@ -408,8 +411,11 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                             <span style={{ textTransform: "capitalize" }}>
                               Connectez-vous
                             </span>{" "}
-                            à l'application Pass Culture en utilisant l'adresse
-                            fournie:
+                            à l'application Pass{" "}
+                            <span style={{ textTransform: "capitalize" }}>
+                              Culture
+                            </span>{" "}
+                            en utilisant l'adresse fournie:
                           </p>
                           <p style={{ paddingBottom: "10px" }}>
                             <p style={{ fontWeight: "bolder", color: "#000" }}>
@@ -434,7 +440,10 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                           <p style={{ paddingBottom: "10px" }}>
                             en utilisant l'application{" "}
                             <span style={{ fontWeight: "700", color: "#000" }}>
-                              pass culture{" "}
+                              pass{" "}
+                              <span style={{ textTransform: "capitalize" }}>
+                                culture
+                              </span>{" "}
                             </span>
                             rechercher un événement et le réserver
                           </p>
@@ -566,9 +575,13 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                         <div className="text_wrapper_modal">
                           <p style={{ paddingBottom: "10px" }}>
                             La demande de trajet doit être déclenchée depuis
-                            l'application{" "}
+                            l'application
                             <span style={{ fontWeight: "700", color: "#000" }}>
-                              pass culture{" "}
+                              {" "}
+                              pass{" "}
+                              <span style={{ textTransform: "capitalize" }}>
+                                culture
+                              </span>{" "}
                             </span>
                             et le bouton bascule doit être activé pour recevoir
                             de nouvelles demandes de trajet.
