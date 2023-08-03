@@ -19,16 +19,16 @@ const OscIframe = () => {
     setRetailsModal(true);
   };
   return (
-    <div>
+    <div style={{ position: "relative" }}>
       <ChooseExpFa
         textURL={"/assets/OSCtextFa.svg"}
         setTourismUrl={setOpenStreetCom}
         iframeURL={openStreetCom}
         languageEng={"english"}
-        languageFra={"francais"}
+        languageFra={"français"}
         retailsModal={retailsModal}
       />
-      <div className="osc_tab_change">
+      <div className="osc_tab_change osc_tab_changeFa">
         <div
           className={`for_cutm_name ${
             activeButton === "for_cutm_name" ? "active" : ""

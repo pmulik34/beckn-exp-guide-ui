@@ -1,6 +1,7 @@
 import { QRCode, Button, Modal, Tabs } from "antd";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import ModalHTML from "../ModalHTML/modalHTML";
 import "./tabs.css";
 export interface selectExpModalProps {
   textURL: string;
@@ -28,6 +29,8 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
   const cityOfAfrica = localStorage.getItem("name") === "cityOfAfrica";
   const cityOfLight = localStorage.getItem("name") === "cityOfLight";
   const OSC = localStorage.getItem("name") === "OSC";
+  const himalayas = localStorage.getItem("name") === "himalayas";
+  const cities = localStorage.getItem("name") === "cities";
   const PCM = localStorage.getItem("name") === "PCM";
   const navigate = useNavigate();
 
@@ -72,7 +75,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
       <div>
         <img src={textURL} alt="header-content-text" />
 
-        {!cityOfAfrica ? (
+        {!cityOfAfrica && !himalayas && !cities ? (
           <div
             style={{
               padding: "10px 0",
@@ -98,7 +101,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
             <span
               style={{
                 paddingLeft: "8px",
-                fontWeight: `${lang === "francais" ? "unset" : "300"}`,
+                fontWeight: `${lang === "français" ? "unset" : "300"}`,
                 cursor: "pointer",
               }}
               onClick={(e: any) => {
@@ -136,17 +139,155 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                     src="/assets/arrow_back.svg"
                   />
                 </Button>
-                <Modal
-                  className="PCM_modal"
-                  title="Follow these steps for the best possible experience as a customer!"
+                <ModalHTML
                   open={isModalOpenOSC}
                   onCancel={handleCancelOSC}
-                >
-                  <img
-                    style={{ width: "100%" }}
-                    src="/assets/OSMmodal-img.svg"
-                  />
-                </Modal>
+                  modalHeading={
+                    "follow these steps for the best possible experience as a customer!"
+                  }
+                  step1={"step 1"}
+                  step1Img={"/assets/OSM_step1_img.svg"}
+                  step1Text={
+                    <div className="text_wrapper_modal">
+                      <p style={{ paddingBottom: "10px" }}>
+                        Sign in to the Open Street Commerce app using the
+                        provided:
+                      </p>
+                      <p style={{ paddingBottom: "10px" }}>
+                        <p style={{ fontWeight: "bolder", color: "#000" }}>
+                          phone number:
+                        </p>
+                        <p> 5678990532</p>
+                      </p>
+                      <p style={{ paddingBottom: "10px" }}>
+                        <p style={{ fontWeight: "bolder", color: "#000" }}>
+                          6 digit{" "}
+                          <span style={{ textTransform: "uppercase" }}>
+                            OTP
+                          </span>
+                        </p>
+                        <p> 456012</p>
+                      </p>
+                    </div>
+                  }
+                  step2={"step 2"}
+                  step2Img={"/assets/OSM_step2_img.svg"}
+                  step2Text={
+                    <div className="text_wrapper_modal">
+                      <p style={{ paddingBottom: "10px" }}>From the map view</p>
+                      <p
+                        style={{
+                          fontWeight: "bolder",
+                          color: "#000",
+                        }}
+                      >
+                        select location:
+                      </p>
+                      <p
+                        style={{
+                          paddingBottom: "10px",
+                        }}
+                      >
+                        {" "}
+                        paris, france{" "}
+                      </p>
+                      <p style={{ paddingBottom: "10px" }}>
+                        <p style={{ fontWeight: "bolder", color: "#000" }}>
+                          select the option:
+                        </p>
+                        <p>restaurant</p>
+                      </p>
+                      <p style={{}}>
+                        <p>select the restaurant</p>
+                        <p
+                          style={{
+                            fontWeight: "bolder",
+                            color: "#000",
+                            paddingBottom: "10px",
+                          }}
+                        >
+                          benoit castle.
+                        </p>
+                        <p>
+                          {" "}
+                          Click{" "}
+                          <span
+                            style={{
+                              fontWeight: "bolder",
+                              textTransform: "capitalize",
+                            }}
+                          >
+                            ‘Shop’{" "}
+                          </span>
+                        </p>
+                      </p>
+                    </div>
+                  }
+                  step3={"step 3"}
+                  step3Img={"/assets/OSM_step3-img.svg"}
+                  step3Text={
+                    <div className="text_wrapper_modal">
+                      <p style={{ paddingBottom: "10px" }}>
+                        Order a cheesecake for yourself :)
+                      </p>
+                      <p style={{ paddingBottom: "10px" }}>
+                        There are multiple delivery services to choose from!
+                      </p>
+                    </div>
+                  }
+                  step4={"step 4"}
+                  step4Img={"/assets/OSM_step4_img.svg"}
+                  step4Text={
+                    <div className="text_wrapper_modal">
+                      <p style={{ paddingBottom: "10px" }}>
+                        Information you may need for placing your order
+                      </p>
+                      <p>
+                        <p style={{ fontWeight: "bolder", color: "#000" }}>
+                          Name:
+                        </p>
+                        <p>Lisa</p>
+                      </p>
+                      <p>
+                        <p style={{ fontWeight: "bolder", color: "#000" }}>
+                          Address:
+                        </p>
+                        <p>quai jacqus, paris, france</p>
+                      </p>
+                      <p>
+                        <p style={{ fontWeight: "bolder", color: "#000" }}>
+                          Phone Number:
+                        </p>
+                        <p>5678990532</p>
+                      </p>
+                      <p>
+                        <p style={{ fontWeight: "bolder", color: "#000" }}>
+                          Email ID:
+                        </p>
+                        <p>lisa@email.com</p>
+                      </p>
+                      <p>
+                        <p style={{ fontWeight: "bolder", color: "#000" }}>
+                          Payment Method:
+                        </p>
+                        <p>Cash on Delivery</p>
+                      </p>
+                    </div>
+                  }
+                  step5={"step 5"}
+                  step5Img={"/assets/OSM_step5_img.svg"}
+                  step5Text={
+                    <div className="text_wrapper_modal">
+                      <p style={{ paddingBottom: "10px" }}>
+                        <span style={{ textTransform: "capitalize" }}>
+                          {" "}
+                          Once
+                        </span>{" "}
+                        the order is placed, you can track your order!
+                      </p>
+                    </div>
+                  }
+                />
               </>
             ) : (
               <>
@@ -157,17 +298,78 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                     src="/assets/arrow_back.svg"
                   />
                 </Button>
-                <Modal
-                  className="PCM_modal"
-                  title="Follow these steps for the best possible experience as a seller!"
+                <ModalHTML
+                  className1="none"
+                  classNameWidth={"modal_width"}
                   open={isModalOpenOSCRetailer}
                   onCancel={handleCancelRetailer}
-                >
-                  <img
-                    style={{ width: "100%" }}
-                    src="/assets/BPPmodal-img.svg"
-                  />
-                </Modal>
+                  modalHeading={
+                    "follow these steps for the best possible experience as a seller!"
+                  }
+                  step1={"step 1"}
+                  step1Img={"/assets/OSM_step1_img.svg"}
+                  step1Text={
+                    <div className="text_wrapper_modal">
+                      <p style={{ paddingBottom: "10px" }}>
+                        You are about to login as a ‘seller’ for{" "}
+                        <span style={{ fontWeight: "bolder" }}>ClicPaye.</span>{" "}
+                        This application helps manage products and process
+                        orders on the
+                      </p>
+                      <p style={{ paddingBottom: "10px" }}>
+                        <p style={{ fontWeight: "bolder", color: "#000" }}>
+                          ‘Open Street Commerce’
+                        </p>
+                      </p>
+                      <p>
+                        <p>Login details:</p>
+                        <p style={{ fontWeight: "bolder", color: "#000" }}>
+                          phone number:
+                        </p>
+                        <p> 9876522222</p>
+                      </p>
+                      <p>
+                        <p style={{ fontWeight: "bolder", color: "#000" }}>
+                          Password:
+                        </p>
+                        <p> root123</p>
+                      </p>
+                    </div>
+                  }
+                  step2={"step 2"}
+                  step2Img={"/assets/BPP_step2_img.svg"}
+                  step2Text={
+                    <div className="text_wrapper_modal">
+                      <p style={{ paddingBottom: "10px" }}>
+                        Here are few things you can do on{""}{" "}
+                        <span style={{ fontWeight: "bolder" }}>ClicPaye:</span>{" "}
+                      </p>
+
+                      <ul>
+                        <li>View/manage orders placed in your store </li>
+                        <li>View all products in your store</li>
+                        <li>Manage all products in your store</li>
+                      </ul>
+                    </div>
+                  }
+                  step3={"step 3"}
+                  step3Img={"/assets/BPP_step3_img.svg"}
+                  step3Text={
+                    <div className="text_wrapper_modal">
+                      <p>
+                        The activities you perform on{" "}
+                        <span style={{ fontWeight: "bolder" }}>ClicPaye</span>{" "}
+                        gets reflected on the
+                      </p>
+                      <p style={{ paddingBottom: "10px" }}>
+                        <span style={{ fontWeight: "bolder" }}>
+                          ‘Open Street Commerce’{" "}
+                        </span>
+                        app.
+                      </p>
+                    </div>
+                  }
+                />
               </>
             )}
           </div>
@@ -183,7 +385,12 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
               {
                 label: (
                   <div>
-                    <span style={{ color: "#696868" }}>pass Culture</span>
+                    <span style={{ color: "#696868" }}>
+                      pass{" "}
+                      <span style={{ textTransform: "capitalize" }}>
+                        Culture
+                      </span>
+                    </span>
                   </div>
                 ),
                 key: "1",
@@ -202,17 +409,116 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                         src="/assets/arrow_back.svg"
                       />
                     </Button>
-                    <Modal
-                      className="PCM_modal"
-                      title="follow these steps for the best possible experience as a passenger!"
+                    <ModalHTML
                       open={isModalOpenPC}
                       onCancel={handleCancelPC}
-                    >
-                      <img
-                        style={{ width: "100%" }}
-                        src="/assets/PCmodal-img.svg"
-                      />
-                    </Modal>
+                      modalHeading={
+                        "follow these steps for the best possible experience as a passenger!"
+                      }
+                      step1={"step 1"}
+                      step1Img={"/assets/PC_step1_img.svg"}
+                      step1Text={
+                        <div className="text_wrapper_modal">
+                          <p style={{ paddingBottom: "10px" }}>
+                            sign in to the pass{" "}
+                            <span style={{ textTransform: "capitalize" }}>
+                              culture
+                            </span>
+                            <br /> app using the provided:
+                          </p>
+                          <p style={{ paddingBottom: "10px" }}>
+                            <p style={{ fontWeight: "bolder", color: "#000" }}>
+                              email address:
+                            </p>
+                            <p>enterthefuture01@gmail.com</p>
+                          </p>
+                          <p style={{ paddingBottom: "10px" }}>
+                            <p style={{ fontWeight: "bolder", color: "#000" }}>
+                              password:
+                            </p>
+                            <p style={{ textTransform: "capitalize" }}>
+                              Test@1234567
+                            </p>
+                          </p>
+                        </div>
+                      }
+                      step2={"step 2"}
+                      step2Img={"/assets/PC_step2_img.svg"}
+                      step2Text={
+                        <div className="text_wrapper_modal">
+                          <p style={{ paddingBottom: "10px" }}>
+                            using{" "}
+                            <span style={{ fontWeight: "700", color: "#000" }}>
+                              pass{" "}
+                              <span style={{ textTransform: "capitalize" }}>
+                                Culture
+                              </span>{" "}
+                            </span>{" "}
+                            app search for an event and
+                            <br /> reserve
+                          </p>
+                        </div>
+                      }
+                      step3={"step 3"}
+                      step3Img={"/assets/PC_step3_img.svg"}
+                      step3Text={
+                        <div className="text_wrapper_modal">
+                          <p style={{ paddingBottom: "10px" }}>
+                            from the reservation confirmation page select <br />{" "}
+                            the third option: <br />{" "}
+                            <span style={{ fontWeight: "700", color: "#000" }}>
+                              {""}‘
+                              <span style={{ textTransform: "capitalize" }}>
+                                Show
+                              </span>{" "}
+                              travel options’
+                              <br />{" "}
+                            </span>
+                            and select
+                            <span style={{ fontWeight: "700", color: "#000" }}>
+                              {""} 'taxi'
+                            </span>
+                          </p>
+                        </div>
+                      }
+                      step4={"step 4"}
+                      step4Img={"/assets/PC_step4_img.svg"}
+                      step4Text={
+                        <div className="text_wrapper_modal">
+                          <p style={{ paddingBottom: "10px" }}>
+                            ensure that you specify:
+                          </p>
+
+                          <p style={{ fontWeight: "700", color: "#000" }}>
+                            the pick-up location:
+                          </p>
+                          <p>quai jacques chirac, 75007 paris, france </p>
+
+                          <p
+                            style={{
+                              fontWeight: "700",
+                              paddingTop: "15px",
+                              color: "#000",
+                            }}
+                          >
+                            the drop-off location:
+                          </p>
+                          <p>app will pick up this location. </p>
+                        </div>
+                      }
+                      step5={"step 5"}
+                      step5Img={"/assets/PC_step5_img.svg"}
+                      step5Text={
+                        <div className="text_wrapper_modal">
+                          <p style={{ paddingBottom: "10px" }}>
+                            sit tight and wait for your <br /> cab to arrive,
+                            and you'll be <br /> all set to embark on your{" "}
+                            <br />
+                            journey!
+                          </p>
+                        </div>
+                      }
+                    />
                   </div>
                 ),
               },
@@ -240,21 +546,101 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                         src="/assets/arrow_back.svg"
                       />
                     </Button>
-                    <Modal
-                      className="PCM_modal"
-                      title="Follow these steps for the best possible experience as a driver!"
+                    <ModalHTML
                       open={isModalOpenDriver}
                       onCancel={handleCancelDriver}
-                    >
-                      <img
-                        style={{
-                          display: "flex",
-                          justifyContent: "center",
-                          margin: "0 auto",
-                        }}
-                        src="/assets/driverModal-img.svg"
-                      />
-                    </Modal>
+                      modalHeading={
+                        "follow these steps for the best possible experience as a driver!"
+                      }
+                      step1={"step 1"}
+                      step1Img={"/assets/driver_step1_img.svg"}
+                      step1Text={
+                        <div className="text_wrapper_modal">
+                          <p style={{ paddingBottom: "10px" }}>
+                            sign in as a ‘driver’ using <br /> the following
+                            information:
+                          </p>
+                          <p style={{ paddingBottom: "10px" }}>
+                            <p style={{ fontWeight: "bolder", color: "#000" }}>
+                              phone number
+                            </p>
+                            <p> 9493143166</p>
+                          </p>
+                          <p style={{ paddingBottom: "10px" }}>
+                            <p style={{ fontWeight: "bolder", color: "#000" }}>
+                              4 digit{" "}
+                              <span style={{ textTransform: "uppercase" }}>
+                                OTP
+                              </span>
+                            </p>
+                            <p> 7891</p>
+                          </p>
+                        </div>
+                      }
+                      step2={"step 2"}
+                      step2Img={"/assets/driver_step2_img.svg"}
+                      step2Text={
+                        <div className="text_wrapper_modal">
+                          <p style={{ paddingBottom: "10px" }}>
+                            ride request needs to be triggered from{" "}
+                            <span style={{ fontWeight: "bolder" }}>
+                              {" "}
+                              pass{" "}
+                              <span style={{ textTransform: "capitalize" }}>
+                                Culture
+                              </span>
+                            </span>{" "}
+                            app the toggle must be{" "}
+                            <span
+                              style={{
+                                fontWeight: "bolder",
+                                textTransform: "capitalize",
+                              }}
+                            >
+                              “ON”{" "}
+                            </span>
+                            to receive new ride requests.
+                          </p>
+                        </div>
+                      }
+                      step3={"step 3"}
+                      step3Img={"/assets/driver_step3_img.svg"}
+                      step3Text={
+                        <div className="text_wrapper_modal">
+                          <p style={{ paddingBottom: "10px" }}>
+                            accept the ride!
+                          </p>
+                        </div>
+                      }
+                      step4={"step 4"}
+                      step4Img={"/assets/driver_step4_img.svg"}
+                      step4Text={
+                        <div className="text_wrapper_modal">
+                          <p style={{ paddingBottom: "10px" }}>
+                            enter the{" "}
+                            <span
+                              style={{
+                                fontWeight: "bolder",
+                                textTransform: "uppercase",
+                              }}
+                            >
+                              OTP
+                            </span>{" "}
+                            received from the passenger and start the ride.
+                          </p>
+                        </div>
+                      }
+                      step5={"step 5"}
+                      step5Img={"/assets/driver_step5_img.svg"}
+                      step5Text={
+                        <div className="text_wrapper_modal">
+                          <p style={{ paddingBottom: "10px" }}>
+                            payment will be completed by customer after the
+                            ride!
+                          </p>
+                        </div>
+                      }
+                    />
                   </div>
                 ),
               },

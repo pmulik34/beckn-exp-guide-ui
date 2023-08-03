@@ -10,7 +10,7 @@ const PcmIframeFa = () => {
         textURL={"/assets/PCMtextFa.svg"}
         setTourismUrl={setOpenPcmLang}
         languageEng={"english"}
-        languageFra={"francais"}
+        languageFra={"français"}
       />
     </div>
   );
