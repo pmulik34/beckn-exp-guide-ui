@@ -408,10 +408,15 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                       step1Text={
                         <div className="text_wrapper_modal">
                           <p style={{ paddingBottom: "10px" }}>
-                            <span style={{ textTransform: "capitalize" }}>
-                              Connectez-vous
+                            <span
+                              style={{
+                                textTransform: "capitalize",
+                                color: "unset",
+                              }}
+                            >
+                              Connectez
                             </span>{" "}
-                            à l'application Pass{" "}
+                            -vous à l'application Pass{" "}
                             <span style={{ textTransform: "capitalize" }}>
                               Culture
                             </span>{" "}
@@ -546,10 +551,15 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                       step1Text={
                         <div className="text_wrapper_modal">
                           <p style={{ paddingBottom: "10px" }}>
-                            <span style={{ textTransform: "capitalize" }}>
-                              Connectez-vous
+                            <span
+                              style={{
+                                textTransform: "capitalize",
+                                color: "unset",
+                              }}
+                            >
+                              Connectez
                             </span>{" "}
-                            en tant que "conducteur" en utilisant les
+                            -vous en tant que "conducteur" en utilisant les
                             informations suivantes:
                           </p>
                           <p style={{ paddingBottom: "10px" }}>
@@ -574,7 +584,16 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                       step2Text={
                         <div className="text_wrapper_modal">
                           <p style={{ paddingBottom: "10px" }}>
-                            La demande de trajet doit être déclenchée depuis
+                            <span
+                              style={{
+                                textTransform: "capitalize",
+                                color: "unset",
+                              }}
+                            >
+                              {" "}
+                              La
+                            </span>{" "}
+                            demande de trajet doit être déclenchée depuis
                             l'application
                             <span style={{ fontWeight: "700", color: "#000" }}>
                               {" "}
