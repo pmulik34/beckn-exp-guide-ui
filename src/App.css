@@ -171,3 +171,9 @@ iframe .header-container .location-btn {
     zoom: 90%;
   }
 } */
+.card-with-image:hover {
+  background-color: #77aede;
+}
+.card-with-image:hover .font-color {
+  color: #fff !important;
+}
