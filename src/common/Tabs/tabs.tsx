@@ -61,6 +61,19 @@ const TabsComponent: React.FC<TabsComponentPropsModal> = ({
             {
               label: (
                 <div className="tablinks" style={{ display: "flex" }}>
+                  <img src="/assets/worldIcon.svg" alt={"Icon"} width={"25%"} />
+                  <div style={{ paddingLeft: "14.4px" }}>
+                    <span>behind the scenes</span>
+                  </div>
+                </div>
+              ),
+              key: "2",
+              className: "tabs-style",
+              children: firstProps,
+            },
+            {
+              label: (
+                <div className="tablinks" style={{ display: "flex" }}>
                   <img src="/assets/bulbIcon.svg" alt={"Icon"} width={"25%"} />
                   <div style={{ paddingLeft: "14.4px" }}>
                     <span>experience a world with beckn</span>
