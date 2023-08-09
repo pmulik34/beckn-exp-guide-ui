@@ -73,7 +73,9 @@
   background: #e9ebed;
   width: 150px;
 }
-
+.card-with-image {
+  cursor: pointer;
+}
 /* -------fade-in---------------- */
 
 .fadeinout {
