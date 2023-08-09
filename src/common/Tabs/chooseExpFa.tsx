@@ -170,7 +170,7 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                           paddingBottom: "10px",
                         }}
                       >
-                        {" <location name>"}
+                        Ménilmontant - Pelleport, Paris, France
                       </p>
                       <p style={{ paddingBottom: "10px" }}>
                         <p style={{ fontWeight: "bolder", color: "#000" }}>
