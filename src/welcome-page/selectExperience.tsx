@@ -77,7 +77,7 @@ const SelectExperience = () => {
                   </p>
                 </div>
               </li>
-              <li onClick={() => handleNevigate("PCM")}>
+              {/* <li onClick={() => handleNevigate("PCM")}>
                 <div className="card-with-image">
                   <img
                     style={{ borderRadius: "35px" }}
@@ -91,7 +91,7 @@ const SelectExperience = () => {
                     <span className="font-color">with mobility</span>
                   </p>
                 </div>
-              </li>
+              </li> */}
               <li onClick={() => handleNevigate("cityOfAfrica")}>
                 <div className="card-with-image">
                   <img
