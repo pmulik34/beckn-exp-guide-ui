@@ -25,9 +25,9 @@
     #DCDCDC 100%
   ); */
 }
-/* .cityOfAfrica.PCM_wrapper .ant-tabs-tab[data-node-key="3"] {
+.cityOfAfrica.DSEP_Wrapper .ant-tabs-tab[data-node-key="3"] {
   width: 800px;
-} */
+}
 .cityOfAfrica .ant-tabs-nav {
   width: unset;
 }
@@ -283,6 +283,9 @@
   }
   .cityOfAfrica .ant-tabs-tab[data-node-key="3"] {
     width: 40%;
+  }
+  .cityOfAfrica.DSEP_Wrapper .ant-tabs-tab[data-node-key="3"] {
+    width: 100%;
   }
   .tab-wrappper-content img {
     width: 100%;

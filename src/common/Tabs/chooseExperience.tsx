@@ -32,6 +32,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
   const himalayas = localStorage.getItem("name") === "himalayas";
   const cities = localStorage.getItem("name") === "cities";
   const PCM = localStorage.getItem("name") === "PCM";
+  const DSEP = localStorage.getItem("name") === "DSEP";
   const navigate = useNavigate();
 
   const [lang, setLang] = useState("english");
@@ -75,7 +76,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
       <div>
         <img src={textURL} alt="header-content-text" />
 
-        {!cityOfAfrica && !himalayas && !cities ? (
+        {!cityOfAfrica && !himalayas && !cities && !DSEP ? (
           <div
             style={{
               padding: "10px 0",

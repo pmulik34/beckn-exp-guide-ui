@@ -33,6 +33,8 @@ const ProgressBar = () => {
         ? navigate("/cityOfAfrica")
         : localStorage.getItem("name") === "OSC"
         ? navigate("/OSC")
+        : localStorage.getItem("name") === "DSEP"
+        ? navigate("/DSEP")
         : navigate("/PCM");
     }
   });

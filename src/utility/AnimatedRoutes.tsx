@@ -20,6 +20,7 @@ import Osc from "../welcome-page/Osc/osc";
 import Pcm from "../welcome-page/Pcm/Pcm";
 import PcmFa from "../welcome-page/PcmFa/PcmFa";
 import OscFa from "../welcome-page/OscFa/OscFa";
+import DSEP from "../welcome-page/DSEP/DSEP";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -33,6 +34,7 @@ const AnimatedRoutes = () => {
         <Route path="/cityOfLight" element={<CityOfLight />} />
         <Route path="/cityOfAfrica" element={<CityOfAfrica />} />
         <Route path="/OSC" element={<Osc />} />
+        <Route path="/DSEP" element={<DSEP />} />
         <Route path="/PCM" element={<Pcm />} />
         <Route path="/PCM-Fa" element={<PcmFa />} />
         <Route path="/OSC-Fa" element={<OscFa />} />

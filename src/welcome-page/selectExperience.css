@@ -31,7 +31,8 @@
   list-style-type: none;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  margin: 0 auto;
+  width: 94%;
   margin-bottom: 20px;
 }
 .card-containers {
