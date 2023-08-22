@@ -212,7 +212,8 @@
   height: 74vh;
 }
 .QR_custom > button,
-.OSM_custom > button {
+.OSM_custom > button,
+.DSEP-intruction > button {
   display: flex;
   justify-content: center;
   align-items: center;
