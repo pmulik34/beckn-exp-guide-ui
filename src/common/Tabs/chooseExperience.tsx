@@ -376,7 +376,6 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
           </div>
         ) : null}
       </div>
-
       {PCM ? (
         <div className="QR-wrapper">
           <Tabs
@@ -658,7 +657,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                 src={iframeURL}
                 frameBorder="0"
                 allowFullScreen
-                scrolling={!OSC ? "no" : "yes"}
+                scrolling={!OSC && !DSEP ? "no" : "yes"}
                 width={"100%"}
                 height={"100%"}
                 style={{ borderRadius: "36px" }}
