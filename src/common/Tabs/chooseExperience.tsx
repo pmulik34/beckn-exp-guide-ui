@@ -314,15 +314,16 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                       You
                     </span>{" "}
                     can start learning by <br />
-                    clicking
-                  </p>
-                  <p
-                    style={{
-                      fontWeight: "bolder",
-                      color: "#000",
-                    }}
-                  >
-                    "View Course Details"
+                    clicking {""}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                        textTransform: "capitalize",
+                      }}
+                    >
+                      "start course"
+                    </span>{" "}
                   </p>
                   <p>which will take you to the course details page.</p>
                 </div>
