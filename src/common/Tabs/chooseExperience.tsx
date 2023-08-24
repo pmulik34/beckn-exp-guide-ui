@@ -215,7 +215,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                       textTransform: "capitalize",
                     }}
                   >
-                    Data Analytics{" "}
+                    Design{" "}
                   </p>
                 </div>
               }
