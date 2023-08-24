@@ -42,7 +42,7 @@ const SelectExperience = () => {
                     alt={"BecknLogoIcon"}
                   />
                   <p className="card-title-image">
-                    <span className="font-color">Empowering limitless </span>
+                    <span className="font-color">empowering limitless </span>
                     <br />
                     <span className="font-color">online learning</span>
                   </p>
