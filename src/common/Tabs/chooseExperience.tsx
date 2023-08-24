@@ -207,15 +207,17 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                     From landing page <br />
                     search for course,
                   </p>
-                  <p>for example:</p>
-                  <p
-                    style={{
-                      fontWeight: "bolder",
-                      color: "#000",
-                      textTransform: "capitalize",
-                    }}
-                  >
-                    Design{" "}
+                  <p>
+                    e.g. :{""}{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                        textTransform: "capitalize",
+                      }}
+                    >
+                      Design{" "}
+                    </span>
                   </p>
                 </div>
               }
@@ -224,8 +226,8 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
               step3Text={
                 <div className="text_wrapper_modal">
                   <p>
-                    from your search list <br />
-                    select the course:
+                    from your search list select <br />
+                    the course e.g. :
                   </p>
                   <p style={{ paddingBottom: "10px" }}>
                     <p>
@@ -236,7 +238,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                           textTransform: "capitalize",
                         }}
                       >
-                        Data Analytics{" "}
+                        Design Thinking{" "}
                       </span>
                       and proceed with the checkout flow.
                     </p>
