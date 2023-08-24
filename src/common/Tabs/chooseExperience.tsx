@@ -203,11 +203,11 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
               step2Img={"/assets/DSEP_step2.svg"}
               step2Text={
                 <div className="text_wrapper_modal">
-                  <p style={{ paddingBottom: "2px" }}>
+                  <p>
                     From landing page <br />
-                    search for course:
+                    search for course,
                   </p>
-
+                  <p>for example:</p>
                   <p
                     style={{
                       fontWeight: "bolder",
