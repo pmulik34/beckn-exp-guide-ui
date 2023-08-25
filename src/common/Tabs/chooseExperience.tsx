@@ -262,7 +262,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                   >
                     name:
                   </p>
-                  <p>aanya verma</p>
+                  <p>Santosh Kumar</p>
                   <p
                     style={{
                       fontWeight: "bolder",
@@ -289,7 +289,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                   >
                     email id:
                   </p>
-                  <p>aanya.verma@gmail.com</p>
+                  <p>santosh.k@gmail.com</p>
                   <p
                     style={{
                       fontWeight: "bolder",
