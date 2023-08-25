@@ -34,6 +34,20 @@ const SelectExperience = () => {
         <div className="child-container">
           <div className="animates fadeIns fives home-card-container">
             <ul className="card-sub-containers">
+              <li onClick={() => handleNevigate("DSEP")}>
+                <div className="card-with-image">
+                  <img
+                    className="first-image-card"
+                    src="/assets/DSEP.svg"
+                    alt={"BecknLogoIcon"}
+                  />
+                  <p className="card-title-image">
+                    <span className="font-color">empowering limitless </span>
+                    <br />
+                    <span className="font-color">online learning</span>
+                  </p>
+                </div>
+              </li>
               <li onClick={() => handleNevigate("himalayas")}>
                 <div className="card-with-image">
                   <img
@@ -61,7 +75,7 @@ const SelectExperience = () => {
                     <span className="font-color">smart cities</span>
                   </p>
                 </div>
-              </li>{" "}
+              </li>
               <li onClick={() => handleNevigate("OSC")}>
                 <div className="card-with-image">
                   <img
