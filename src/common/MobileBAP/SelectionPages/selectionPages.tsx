@@ -23,7 +23,7 @@ const SelectionPages = () => {
       </div>
       <div className="selectionPage_wrapper_innr">
         <a
-          href={`https://retail-app-staging-infra.becknprotocol.io??external_url=${orderObjectUrl}`}
+          href={`https://retail-app-dev.becknprotocol.io/?lang=en&external_url=${orderObjectUrl}`}
           target=""
           rel="noopener noreferrer"
         >
@@ -36,7 +36,7 @@ const SelectionPages = () => {
           </div>
         </a>
         <a
-          href={`https://mobility-app-staging-infra.becknprotocol.io??external_url=${orderObjectUrl}`}
+          href={`https://mobility-app-staging-infra.becknprotocol.io?external_url=${orderObjectUrl}`}
           target=""
           rel="noopener noreferrer"
         >
