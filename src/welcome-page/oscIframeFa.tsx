@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ChooseExpFa from "../common/Tabs/chooseExpFa";
+// import ChooseExpFa from "../common/Tabs/chooseExpFa";
 
 const OscIframe = () => {
   const osmFaUrl = process.env.REACT_APP_OSM_FAR_URL;
@@ -20,14 +20,14 @@ const OscIframe = () => {
   };
   return (
     <div style={{ position: "relative" }}>
-      <ChooseExpFa
+      {/* <ChooseExpFa
         textURL={"/assets/OSCtextFa.svg"}
         setTourismUrl={setOpenStreetCom}
         iframeURL={openStreetCom}
         languageEng={"english"}
         languageFra={"français"}
         retailsModal={retailsModal}
-      />
+      /> */}
       <div className="osc_tab_change osc_tab_changeFa">
         <div
           className={`for_cutm_name ${

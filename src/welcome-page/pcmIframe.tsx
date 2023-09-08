@@ -1,16 +1,16 @@
 import React, { useState } from "react";
-import ChooseExperience from "../common/Tabs/chooseExperience";
+// import ChooseExperience from "../common/Tabs/chooseExperience";
 
 const PcmIframe = () => {
   const [openPcmLang, setOpenPcmLang] = useState("");
   return (
     <div>
-      <ChooseExperience
+      {/* <ChooseExperience
         textURL={"/assets/PCMtext.svg"}
         setTourismUrl={setOpenPcmLang}
         languageEng={"english"}
         languageFra={"français"}
-      />
+      /> */}
     </div>
   );
 };
