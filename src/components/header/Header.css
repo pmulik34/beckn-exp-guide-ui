@@ -1,0 +1,30 @@
+.header_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1280px;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+.header_img,
+.header_home_icon {
+  cursor: pointer;
+}
+
+.header_home_icon {
+  background: #e9ebed;
+  border-radius: 30px;
+  width: 45px;
+  height: 45px;
+  position: relative;
+}
+.header_home_icon img {
+  position: absolute;
+  bottom: 30%;
+  left: 25%;
+}
+@media screen and (min-width: 320px) and (max-width: 1471px) {
+  .header_wrapper {
+    width: 90%;
+  }
+}
