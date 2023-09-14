@@ -1,14 +1,14 @@
 import React from "react";
-// import ChooseExperience from "../common/Tabs/chooseExperience";
+import ChooseExperience from "../common/Tabs/chooseExperience";
 
 const CityOfAfricaIframe = () => {
   const cityofAfricaUrl = process.env.REACT_APP_CITY_OF_AFRICA_URL;
   return (
     <div>
-      {/* <ChooseExperience
+      <ChooseExperience
         textURL={"/assets/smartCityGambia.svg"}
         iframeURL={cityofAfricaUrl}
-      /> */}
+      />
     </div>
   );
 };
