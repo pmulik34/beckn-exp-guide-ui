@@ -94,13 +94,14 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
               onClick={(e: any) => {
                 setLang(e.target.textContent);
                 setTourismUrl!(
-                  `${OSC ? { osmEngUrl } : { tourismAppStagingInfraUrl }}`
+                  `${OSC ? { osmEngUrl } : { tourismAppStagingInfraUrl }} `
                 );
               }}
               style={{
                 paddingRight: "8px",
                 cursor: "pointer",
                 fontWeight: `${lang === "english" ? "unset" : "300"}`,
+                pointerEvents: `${lang === "english" ? "none" : "unset"}`,
               }}
             >
               {languageEng}
@@ -110,29 +111,25 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
               style={{
                 paddingLeft: "8px",
                 fontWeight: `${lang === "français" ? "unset" : "300"}`,
+                pointerEvents: `${lang === "français" ? "none" : "unset"}`,
                 cursor: "pointer",
               }}
               onClick={(e: any) => {
                 setLang(e.target.textContent);
                 setTourismUrl!(
                   `${
-                    OSC ? navigate("/OSC-Fa") : PCM ? navigate("/PCM-Fa") : ""
+                    OSC
+                      ? navigate("/OSC-Fa")
+                      : PCM
+                      ? navigate("/PCM-Fa")
+                      : cityOfLight
+                      ? navigate("/CityOfLightFa")
+                      : ""
                   }`
                 );
               }}
             >
-              {!PCM && !OSC ? (
-                <a
-                  style={{ color: "#000" }}
-                  href={cityOfLightFaUrl}
-                  target="_self"
-                  rel="noreferrer"
-                >
-                  {languageFra}
-                </a>
-              ) : (
-                `${languageFra}`
-              )}
+              {languageFra}
             </span>
           </div>
         ) : null}
