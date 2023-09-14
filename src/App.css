@@ -7,6 +7,8 @@
 }
 
 .beckn-app {
+  /* background: url("./assets/experience_bg.svg");
+  background-size: cover; */
   background: rgb(243, 243, 243);
   background: linear-gradient(
     90deg,
@@ -23,10 +25,6 @@
   font-style: normal;
   color: white;
   font-weight: 275;
-}
-.choosingExp_wrapper {
-  width: 1080px;
-  margin: 0 auto;
 }
 /* -----------------Card.tsx-------------------------------- */
 .image-url-containers img:nth-child(2) {
@@ -59,7 +57,6 @@ iframe .header-container .location-btn {
 .ant-tabs-nav {
   margin: 0 auto !important;
   margin-top: 45px !important;
-  margin-bottom: 54px !important;
 }
 .videoScreen {
   margin-top: 45px !important;
@@ -71,7 +68,7 @@ iframe .header-container .location-btn {
 .osc_tab_change {
   display: flex;
   position: absolute;
-  bottom: 24%;
+  bottom: 23%;
   left: 19%;
 }
 .osc_tab_change .for_cutm_name {
@@ -104,302 +101,6 @@ iframe .header-container .location-btn {
 .osc_tab_change .active {
   background-color: #992a4a;
   color: #fff;
-}
-
-.card-sub-containers li:hover {
-  scale: 1.03;
-}
-/* ////////Tab css/////////// */
-.tab-wrappper-content {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  align-items: center;
-  margin: 0px auto;
-}
-
-.ant-tabs-nav {
-  width: 1080px;
-  height: 86px;
-  background: #ffffff;
-  box-shadow: 8px 10px 42px rgba(0, 0, 0, 0.42);
-  border-radius: 5px;
-  display: flex;
-  justify-content: space-around;
-}
-.cityOfAfrica.DSEP_Wrapper .ant-tabs-tab[data-node-key="3"] {
-  width: 800px;
-}
-.cityOfAfrica .ant-tabs-nav {
-  width: unset;
-}
-.cityOfAfrica .ant-tabs-tab {
-  width: 260px;
-}
-.cityOfAfrica .ant-tabs-tab[data-node-key="1"] {
-  width: 196px;
-}
-.cityOfAfrica .ant-tabs-tab[data-node-key="2"] {
-  width: 400px;
-}
-.cityOfAfrica .ant-tabs-tab[data-node-key="3"] {
-  width: 400px;
-}
-.cityOfAfrica .ant-tabs-tab[data-node-key="6"] {
-  width: 83px;
-}
-.cityOfAfrica .ant-tabs-tab .ant-tabs-tab-btn {
-  margin: 0 auto;
-}
-:where(.css-dev-only-do-not-override-ixblex).ant-tabs
-  .ant-tabs-tab
-  + .ant-tabs-tab {
-  margin: unset !important;
-}
-.ant-tabs-tab {
-  padding: 15px 15px 15px 30px !important;
-}
-.ant-tabs-tab {
-  font-family: "Poppins" !important;
-  font-style: normal !important;
-  font-weight: 400 !important;
-  font-size: 16px !important;
-  line-height: 100%;
-  border-left: 0.5px solid #c7c7c7 !important;
-}
-/* The device with borders */
-.smartphone-wrapper {
-  position: relative;
-  width: 393px;
-  height: 686px;
-  border: 4px solid #ffffff;
-  border-radius: 36px;
-}
-.smartphone {
-  position: relative;
-  width: 360px;
-  height: 640px;
-  margin: auto;
-  border: 4px #d9d9d9 solid;
-  border-top-width: 4px;
-  border-bottom-width: 4px;
-  border-radius: 36px;
-  margin-top: 1px;
-}
-
-/* The horizontal line on the top of the device */
-.smartphone:before {
-  content: "";
-  display: block;
-  width: 12px;
-  height: 12px;
-  position: absolute;
-  top: 10px;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: #d9d9d9;
-  border-radius: 50%;
-  z-index: 99;
-}
-
-/* The screen (or content) of the device */
-.smartphone {
-  width: 383px;
-  height: 678px;
-  background: white;
-}
-.content {
-  width: 375px;
-  height: 666px;
-  overflow: hidden;
-  margin-top: 1px;
-}
-.ant-tabs-tab.ant-tabs-tab-active {
-  /* border-bottom: 10px solid #77aede !important; */
-  z-index: 99;
-}
-.ant-tabs-tab.ant-tabs-tab-active[data-node-key="6"] {
-  border-bottom-width: 10px !important;
-  padding: 34px !important;
-}
-.ant-tabs-ink-bar {
-  border-bottom: 10px solid #77aede !important;
-}
-.ant-tabs-ink-bar[data-node-key="6"] {
-  width: 60px !important;
-}
-.ant-tabs-ink-bar[data-node-key="6"] {
-  border-bottom-right-radius: 36px !important;
-}
-/* .ant-tabs .ant-tabs-tab + .ant-tabs-tab {
-  margin: unset !important;
-} */
-.QR-wrapper {
-  display: flex;
-  justify-content: space-between;
-  background-color: #fff;
-  border: 1px solid #d6d6d6;
-  border-radius: 5px;
-  box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07),
-    0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198),
-    0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275),
-    0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035),
-    0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725),
-    0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
-}
-.QR-wrapper .QR_Innr .ant-tabs-tab[data-node-key="1"] {
-  width: 50%;
-  margin-right: unset !important;
-}
-.QR-wrapper .QR_Innr .ant-tabs-tab[data-node-key="2"] {
-  width: 50%;
-}
-.QR-wrapper .QR_Innr .ant-tabs-content-holder {
-  padding-bottom: 15px;
-}
-.QR-wrapper .QR_Innr .ant-tabs-tab {
-  margin: 0px 20px 0px 20px !important;
-  padding: 20px 10px 30px 10px !important;
-  border-left: unset !important;
-}
-.QR-wrapper .QR_Innr .ant-tabs {
-  width: 100%;
-}
-.QR-wrapper .QR_Innr .ant-tabs-nav-wrap {
-  margin-bottom: -10px;
-}
-.QR-wrapper .ant-tabs .QR_Innr .ant-tabs-nav {
-  height: unset !important;
-  margin-top: 2px !important;
-  box-shadow: unset !important;
-  border-radius: unset !important;
-  border-bottom: 1px solid #d6d6d6;
-}
-.QR-wrapper .ant-tabs .ant-tabs-nav {
-  height: unset !important;
-  margin-top: 2px !important;
-  box-shadow: unset !important;
-  border-radius: unset !important;
-  border-bottom: 1px solid #d6d6d6;
-  width: unset !important;
-  margin-bottom: unset !important;
-}
-.QR-wrapper .QR_Innr .ant-tabs-nav-list::before,
-.QR-wrapper .QR_Innr .ant-tabs-nav-list::after {
-  position: unset !important;
-}
-.QR-wrapper .QR_Innr .ant-tabs-tab.ant-tabs-tab-active span {
-  color: unset !important;
-}
-
-.QR_code_PCM_cust canvas {
-  width: 100% !important;
-  height: unset !important;
-}
-.QR_custom p {
-  font-size: 20px;
-  font-weight: 300;
-}
-.QR_custom .ant-qrcode {
-  width: 200px !important;
-  height: 200px !important;
-  margin: 45px auto;
-  margin-bottom: 8px;
-  padding: 10px !important;
-  border: unset !important;
-  border-radius: unset !important;
-}
-
-.PCM_details {
-  height: 74vh;
-}
-.QR_custom > button,
-.OSM_custom > button,
-.DSEP-intruction > button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 20px auto;
-  left: unset;
-  border-radius: 5px;
-  background-color: #77aede !important;
-  width: 200px !important;
-  font-size: 18px !important;
-  height: 40px !important;
-  padding: 4px 10px !important;
-}
-.OSM_custom > button {
-  margin: unset;
-  margin-top: 20px;
-}
-
-.modal_width.PCM_modal.ant-modal {
-  width: 902px !important;
-}
-.modal_width.PCM_modal.ant-modal .modal_inner_wrapper {
-  justify-content: center !important;
-}
-.modal_width.PCM_modal.ant-modal .steps_container {
-  margin: 10px;
-}
-.text_wrapper_modal {
-  padding: 15px 25px 20px 25px;
-  border-radius: 5px;
-  background-color: #fff;
-  min-height: 260px;
-}
-
-/* /////////////////////////////////// */
-
-.ant-tabs-tab[data-node-key="ForHomeIcon"] {
-  width: 82px;
-  margin-left: 15px !important;
-}
-.ant-tabs-tab[data-node-key="ForHomeIcon"] img {
-  padding-left: 5px;
-}
-.DSEP-tab .ant-tabs-tab[data-node-key="forDSEP"] {
-  width: 800px;
-}
-.DSEP-tab .ant-tabs-tab[data-node-key="forDSEP"] > .ant-tabs-tab-btn {
-  margin: 0 auto;
-}
-.himalyas-tab .ant-tabs-tab[data-node-key="2"],
-.himalyas-tab .ant-tabs-tab[data-node-key="3"],
-.himalyas-tab .ant-tabs-tab[data-node-key="4"],
-.himalyas-tab .ant-tabs-tab[data-node-key="5"] {
-  width: 200px;
-  white-space: break-spaces;
-  line-height: 20px;
-}
-.OSC-tab .ant-tabs-tab[data-node-key="2"],
-.OSC-tab .ant-tabs-tab[data-node-key="3"] {
-  width: 400px;
-  white-space: break-spaces;
-  line-height: 20px;
-}
-.ant-tabs-nav-operations {
-  display: none !important;
-}
-.tablinks img {
-  width: 24px;
-}
-.ant-tabs-tab-btn {
-  margin: 0 auto;
-}
-.exit-icon {
-  position: fixed;
-  right: 5%;
-  bottom: 10px;
-  display: flex;
-  height: 60px;
-  width: 60px;
-  border-radius: 50%;
-  background: #fff;
-}
-.exit-icon img {
-  width: 60%;
-  margin: 0 auto;
 }
 /* ----------------------------Media Query---------------------- */
 @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
@@ -464,4 +165,12 @@ iframe .header-container .location-btn {
     min-height: 100vh;
     height: max-content;
   }
+}
+/* @media only screen and (max-height: 1024px) and (max-width: 1600px) {
+  .beckn-app {
+    zoom: 90%;
+  }
+} */
+.card-sub-containers li:hover {
+  scale: 1.03;
 }
