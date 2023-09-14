@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// import ChooseExperience from "../common/Tabs/chooseExperience";
+import ChooseExperience from "../common/Tabs/chooseExperience";
 
 const OscIframe = () => {
   const osmEngUrl = process.env.REACT_APP_OSM_ENG_URL;
@@ -20,14 +20,14 @@ const OscIframe = () => {
   };
   return (
     <div style={{ position: "relative" }}>
-      {/* <ChooseExperience
+      <ChooseExperience
         textURL={"/assets/OSCtext.svg"}
         setTourismUrl={setOpenStreetCom}
         iframeURL={openStreetCom}
         languageEng={"english"}
         languageFra={"français"}
         retailsModal={retailsModal}
-      /> */}
+      />
       <div className="osc_tab_change">
         <div
           className={`for_cutm_name ${
