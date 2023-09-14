@@ -17,6 +17,8 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
   const pcmPcAppUrl = process.env.REACT_APP_PCM_PC_APP_URL;
   const cityOfLightFaUrl = process.env.REACT_APP_CITY_OF_LIGHT_FRENCH_URL;
 
+  const cityOfLight = localStorage.getItem("name") === "cityOfLight";
+
   const cityOfAfrica = localStorage.getItem("name") === "cityOfAfrica";
   const OSC = localStorage.getItem("name") === "OSC";
   const PCM = localStorage.getItem("name") === "PCM";
@@ -72,7 +74,17 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
           >
             <span
               onClick={(e: any) => {
-                setTourismUrl!(`${OSC ? navigate("/OSC") : navigate("/PCM")}`);
+                setTourismUrl!(
+                  `${
+                    OSC
+                      ? navigate("/OSC")
+                      : PCM
+                      ? navigate("/PCM")
+                      : cityOfLight
+                      ? navigate("/CityOfLight")
+                      : ""
+                  }`
+                );
               }}
               style={{
                 paddingRight: "8px",
@@ -87,24 +99,14 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
               style={{
                 paddingLeft: "8px",
                 fontWeight: `${lang === "français" ? "unset" : "300"}`,
+                pointerEvents: `${lang === "français" ? "none" : "unset"}`,
                 cursor: "pointer",
               }}
               onClick={(e: any) => {
                 setTourismUrl!(`${OSC ? "" : ""}`);
               }}
             >
-              {!PCM && !OSC ? (
-                <a
-                  style={{ color: "#000" }}
-                  href={cityOfLightFaUrl}
-                  target="_self"
-                  rel="noreferrer"
-                >
-                  {languageFra}
-                </a>
-              ) : (
-                `${languageFra}`
-              )}
+              {languageFra}
             </span>
           </div>
         ) : null}
