@@ -21,6 +21,7 @@ import Pcm from "../welcome-page/Pcm/Pcm";
 import PcmFa from "../welcome-page/PcmFa/PcmFa";
 import OscFa from "../welcome-page/OscFa/OscFa";
 import DSEP from "../welcome-page/DSEP/DSEP";
+import CityOfLightFa from "../welcome-page/CityOfLightFa/cityOfLightFa";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -38,6 +39,7 @@ const AnimatedRoutes = () => {
         <Route path="/PCM" element={<Pcm />} />
         <Route path="/PCM-Fa" element={<PcmFa />} />
         <Route path="/OSC-Fa" element={<OscFa />} />
+        <Route path="/CityOfLightFa" element={<CityOfLightFa />} />
         <Route path="/select-experience" element={<SelectExperience />} />
         <Route path="/tabs" element={<TabsComponent />} />
         <Route path="/progress" element={<ProgressBar />} />

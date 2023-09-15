@@ -13,6 +13,9 @@ const SelectionPages = () => {
     }
   }, []);
 
+  const retailAppUrl = process.env.REACT_APP_RETAIL_APP;
+  const mobilityAppUrl = process.env.REACT_APP_MOBILITY_APP;
+
   return (
     <div className="selectionPage_wrapper">
       <div className="beckn_logo">
@@ -23,7 +26,7 @@ const SelectionPages = () => {
       </div>
       <div className="selectionPage_wrapper_innr">
         <a
-          href={`https://retail-app-staging-infra.becknprotocol.io??external_url=${orderObjectUrl}`}
+          href={`${retailAppUrl}/?lang=en&external_url=${orderObjectUrl}`}
           target=""
           rel="noopener noreferrer"
         >
@@ -36,7 +39,7 @@ const SelectionPages = () => {
           </div>
         </a>
         <a
-          href={`https://mobility-app-staging-infra.becknprotocol.io??external_url=${orderObjectUrl}`}
+          href={`${mobilityAppUrl}?external_url=${orderObjectUrl}`}
           target=""
           rel="noopener noreferrer"
         >
