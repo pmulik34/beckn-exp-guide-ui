@@ -35,6 +35,8 @@ const ProgressBar = () => {
         ? navigate("/OSC")
         : localStorage.getItem("name") === "DSEP"
         ? navigate("/DSEP")
+        : localStorage.getItem("name") === "UEI"
+        ? navigate("/UEI")
         : navigate("/PCM");
     }
   });
