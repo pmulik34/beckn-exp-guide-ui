@@ -10,6 +10,7 @@ export interface selectExpModalProps {
   languageFra?: string;
   setTourismUrl?: Function;
   retailsModal?: boolean;
+  pulseEnergy?: string;
 }
 const ChooseExperience: React.FC<selectExpModalProps> = ({
   textURL,
@@ -18,6 +19,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
   languageFra,
   setTourismUrl,
   retailsModal,
+  pulseEnergy,
 }: selectExpModalProps) => {
   const osmEngUrl = process.env.REACT_APP_OSM_ENG_URL;
   const pcmDriverUrl = process.env.REACT_APP_PCM_DRIVER_URL;
@@ -25,6 +27,8 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
   const cityOfLightFaUrl = process.env.REACT_APP_CITY_OF_LIGHT_FRENCH_URL;
   const tourismAppStagingInfraUrl =
     process.env.REACT_APP_TOURISM_APP_STAGING_INFRA_URL;
+  const pulseEnergyWhatsappUrl =
+    process.env.REACT_APP_PULSE_ENERGY_WHATSAPP_URL;
 
   const cityOfAfrica = localStorage.getItem("name") === "cityOfAfrica";
   const cityOfLight = localStorage.getItem("name") === "cityOfLight";
@@ -78,7 +82,11 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
   return (
     <div
       className={
-        PCM ? "tab-wrappper-content PCM_details" : "tab-wrappper-content"
+        PCM
+          ? "tab-wrappper-content PCM_details"
+          : pulseEnergy
+          ? "tab-wrappper-content pulse_energy"
+          : "tab-wrappper-content"
       }
     >
       <div>
@@ -846,6 +854,23 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
               },
             ]}
           />
+        </div>
+      ) : pulseEnergy ? (
+        <div className="QR-wrapper">
+          <div className="QR_custom QR_custom_pulse_energy">
+            <QRCode
+              className="QR_code_pulse_energy"
+              value={pulseEnergyWhatsappUrl || "_"}
+            />
+            <p style={{ paddingBottom: "15px" }}>Or</p>
+            <a
+              href={pulseEnergyWhatsappUrl || "_"}
+              target={"/"}
+              style={{ cursor: "pointer" }}
+            >
+              <img src="/assets/whatsappImg.svg" />
+            </a>
+          </div>
         </div>
       ) : (
         <div className="smartphone-wrapper">

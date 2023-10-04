@@ -128,6 +128,16 @@ iframe .header-container .location-btn {
   background-color: #4498e8;
   color: #fff;
 }
+.pulse_energy {
+  height: 686px;
+}
+.QR_custom_pulse_energy {
+  padding: 38px;
+}
+.QR_custom_pulse_energy canvas {
+  height: 100% !important;
+  width: 100% !important;
+}
 
 /* ----------------------------Media Query---------------------- */
 @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
