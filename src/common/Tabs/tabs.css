@@ -207,6 +207,10 @@
   border: unset !important;
   border-radius: unset !important;
 }
+.ant-qrcode.QR_code_pulse_energy {
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
 
 .PCM_details {
   height: 74vh;
