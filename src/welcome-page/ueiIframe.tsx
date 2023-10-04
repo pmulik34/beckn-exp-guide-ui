@@ -1,28 +1,34 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ChooseExperience from "../common/Tabs/chooseExperience";
 
 const UeiIframe = () => {
   const sheruAppUrl = process.env.REACT_APP_SHERU_APP_URL;
-  const pulseEnergyUrl = process.env.REACT_APP_PULSE_ENERGY_URL;
   const turnoAppUrl = process.env.REACT_APP_TURNO_APP_URL;
-  const [activeButton, setActiveButton] = useState("for_sheru_app");
+  const [activeButton, setActiveButton] = useState("for_pulse_energy");
+  const [pulseEnergy, setPulseEnergy] = useState("");
   const [activeUrl, setActiveUrl] = useState(sheruAppUrl);
 
   const handleSheruApp = (e: any) => {
     setActiveButton("for_sheru_app");
     setActiveUrl(sheruAppUrl);
+    setPulseEnergy("");
   };
   const handlePulseEnergy = (e: any) => {
     setActiveButton("for_pulse_energy");
-    setActiveUrl(pulseEnergyUrl);
+    setPulseEnergy("pulse_energy");
   };
   const handleTurnoApp = (e: any) => {
     setActiveButton("for_turno_app");
     setActiveUrl(turnoAppUrl);
+    setPulseEnergy("");
   };
+  useEffect(() => {
+    setPulseEnergy("pulse_energy");
+  }, []);
   return (
     <div>
       <ChooseExperience
+        pulseEnergy={pulseEnergy}
         textURL={"/assets/UEI_text.svg"}
         iframeURL={activeUrl}
       />
