@@ -48,7 +48,7 @@
   font-size: 11px;
   font-weight: 400;
   margin-left: 10px;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
   text-transform: lowercase;
   color: #4e4646;
 }
@@ -56,5 +56,5 @@
   padding-bottom: unset !important;
 }
 .none {
-  display: none;
+  display: none !important;
 }
