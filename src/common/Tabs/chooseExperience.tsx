@@ -39,11 +39,13 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
   const PCM = localStorage.getItem("name") === "PCM";
   const DSEP = localStorage.getItem("name") === "DSEP";
   const UEI = localStorage.getItem("name") === "UEI";
+  const dsepUnified = localStorage.getItem("name") === "dsepUnified";
   const navigate = useNavigate();
 
   const [lang, setLang] = useState("english");
   const [isModalOpenOSC, setIsModalOpenOSC] = useState(false);
   const [isModalOpenPulseEnergy, setIsModalOpenPulseEnergy] = useState(false);
+  const [isModalOpenDsepUnified, setIsModalOpenDsepUnified] = useState(false);
   const [isModalOpenPC, setIsModalOpenPC] = useState(false);
   const [isModalOpenDriver, setSsModalOpenDriver] = useState(false);
   const [isModalOpenOSCRetailer, setIsModalOpenOSCRetailer] = useState(false);
@@ -60,6 +62,9 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
   };
   const showModalPulseEnergy = () => {
     setIsModalOpenPulseEnergy(true);
+  };
+  const showModalDsepUnified = () => {
+    setIsModalOpenDsepUnified(true);
   };
 
   const showModalOSCretailer = () => {
@@ -80,6 +85,9 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
   };
   const handleCancelPulseEnergy = () => {
     setIsModalOpenPulseEnergy(false);
+  };
+  const handleCancelDsepUnified = () => {
+    setIsModalOpenDsepUnified(false);
   };
 
   const handleCancelRetailer = () => {
@@ -104,7 +112,12 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
       <div className="text_wrapper">
         <img src={textURL} alt="header-content-text" />
 
-        {!cityOfAfrica && !himalayas && !cities && !DSEP && !UEI ? (
+        {!cityOfAfrica &&
+        !himalayas &&
+        !cities &&
+        !DSEP &&
+        !UEI &&
+        !dsepUnified ? (
           <div
             style={{
               padding: "10px 0",
@@ -928,6 +941,491 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                   <p>details include: battery id, </p>
                   <p style={{ paddingBottom: "10px" }}>
                     capacity of units it can fulfill, and price.
+                  </p>
+                </div>
+              </>
+            </ModalSlider>
+          </div>
+        ) : null}
+
+        {dsepUnified ? (
+          <div className="PCM_modal OSM_custom">
+            <Button type="primary" onClick={showModalDsepUnified}>
+              instructions
+              <img
+                style={{ paddingLeft: "5px" }}
+                src="/assets/arrow_back.svg"
+              />
+            </Button>
+            <ModalSlider
+              open={isModalOpenDsepUnified}
+              onCancel={handleCancelDsepUnified}
+              modalHeading={
+                "follow these steps for the best possible experience as a customer!"
+              }
+            >
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 1
+                </h3>
+                <img src={"/assets/unified_dsep_step1.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    use{" "}
+                    <span style={{ fontWeight: "bolder", color: "#000" }}>
+                      ‘google id’
+                    </span>{" "}
+                    to sign in to the{" "}
+                    <span style={{ fontWeight: "bolder", color: "#000" }}>
+                      SkillUp
+                    </span>{" "}
+                    app.
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 2
+                </h3>
+                <img src={"/assets/unified_dsep_step2.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    create a profile using the provided details:
+                  </p>
+
+                  <p>
+                    name:{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {"<placeholder text>"}
+                    </span>
+                  </p>
+                  <p>
+                    email id:{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {"<placeholder text>"}
+                    </span>
+                  </p>
+                  <p>
+                    phone no:{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {"<placeholder text>"}
+                    </span>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    address:{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {"<placeholder text>"}
+                    </span>
+                  </p>
+                  <p
+                    style={{
+                      paddingBottom: "10px",
+                      fontWeight: "bold",
+                      color: "#000",
+                    }}
+                  >
+                    upload documents
+                  </p>
+                  <p>
+                    and click{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘create profile’
+                    </span>
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 3
+                </h3>
+                <img src={"/assets/unified_dsep_step3.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    on the landing page, click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘courses’
+                    </span>{" "}
+                    or{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘search for courses’
+                    </span>{" "}
+                    with{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘place holder text’
+                    </span>{" "}
+                    for yourself :)
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 4
+                </h3>
+                <img src={"/assets/unified_dsep_step4.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    from your search list, choose the course{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘place holder text’
+                    </span>{" "}
+                    and click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘add to cart’
+                    </span>
+                  </p>
+
+                  <p style={{ paddingBottom: "10px" }}>
+                    you can{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      'check for scholarship'
+                    </span>{" "}
+                    for this course on the cart
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 5
+                </h3>
+                <img src={"/assets/unified_dsep_step5.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    by clicking on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘search more scholarships’
+                    </span>
+                    , select{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘place holder text’
+                    </span>{" "}
+                    scholarship from the list and{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘apply’
+                    </span>{" "}
+                    with the given details
+                  </p>
+                  <p>
+                    name:{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {"<placeholder text>"}
+                    </span>
+                  </p>
+                  <p>
+                    email id:{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {"<placeholder text>"}
+                    </span>
+                  </p>
+                  <p>
+                    phone no:{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {"<placeholder text>"}
+                    </span>
+                  </p>
+                  <p>
+                    address:{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {"<placeholder text>"}
+                    </span>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>upload documents</p>
+                  <p>
+                    and click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘submit’
+                    </span>{" "}
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 6
+                </h3>
+                <img src={"/assets/unified_dsep_step6.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    once your scholarship is approved, you can{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘complete your course payment’
+                    </span>{" "}
+                    with{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘approved scholarship’
+                    </span>{" "}
+                    from scholarship list
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 7
+                </h3>
+                <img src={"/assets/unified_dsep_step7.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    once your course is reserved, you can find course in{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘my learnings’.{" "}
+                    </span>
+                  </p>
+
+                  <p
+                    style={{
+                      paddingBottom: "10px",
+                    }}
+                  >
+                    select your course and start learning
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 8
+                </h3>
+                <img src={"/assets/unified_dsep_step8.svg"} alt={`StepImage`} />
+
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    after finishing the course, you can begin applying for{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘jobs’
+                    </span>{" "}
+                    from the landing page.
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 9
+                </h3>
+                <img src={"/assets/unified_dsep_step9.svg"} alt={`StepImage`} />
+
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    click on the suitable job{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ’place holder text’
+                    </span>{" "}
+                    from{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘jobs’
+                    </span>{" "}
+                    list.
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    read the job description and proceed with{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘apply now’
+                    </span>
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 10
+                </h3>
+                <img
+                  src={"/assets/unified_dsep_step10.svg"}
+                  alt={`StepImage`}
+                />
+
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    you will need the following details to apply for the job:
+                  </p>
+                  <p>
+                    name:{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {"<placeholder text>"}
+                    </span>
+                  </p>
+                  <p>
+                    email id:{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {"<placeholder text>"}
+                    </span>
+                  </p>
+                  <p>
+                    phone no:{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {"<placeholder text>"}
+                    </span>
+                  </p>
+                  <p>
+                    address:{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {"<placeholder text>"}
+                    </span>
+                  </p>
+                  <p>
+                    documents:{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘pre populated document’
+                    </span>{" "}
+                    and click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ’submit application’
+                    </span>
                   </p>
                 </div>
               </>
