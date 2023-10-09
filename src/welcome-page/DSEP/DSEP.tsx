@@ -8,7 +8,7 @@ const DSEP = () => {
   const [openModal, setOpenModal] = useState(false);
   const navigate = useNavigate();
   return (
-    <div style={{ display: "flex", justifyContent: "center" }}>
+    <div style={{ display: "flex", justifyContent: "center", height: "100vh" }}>
       <Tabs secondProps={<DSEPIframe />} />
       <div className="exit-icon">
         {!openModal ? (

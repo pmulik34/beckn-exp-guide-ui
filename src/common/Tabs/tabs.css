@@ -250,6 +250,15 @@
   background-color: #fff;
   min-height: 260px;
 }
+.UEI_modal {
+  position: absolute;
+  bottom: -125px;
+}
+.pulse_energy .text_wrapper,
+.UEI .text_wrapper {
+  margin-top: -100px;
+  position: relative;
+}
 @media screen and (min-width: 768px) and (max-width: 1085px) {
   .tabsConatiner {
     width: 96%;
