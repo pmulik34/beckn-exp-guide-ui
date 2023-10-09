@@ -769,7 +769,16 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                 <img src={"/assets/UEI_step6.svg"} alt={`StepImage`} />
                 <div className="text_wrapper_modal">
                   <p style={{ paddingBottom: "10px" }}>
-                    on Sheru App landing page,{" "}
+                    <p>login to sheru app:</p>
+                    <p>
+                      email-{" "}
+                      <span style={{ textDecoration: "underline" }}>
+                        ueidemo@sheru.se
+                      </span>
+                    </p>
+                    <p>password - ueidemo</p>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
                     <span style={{ fontWeight: "bolder", color: "#000" }}>
                       select{" "}
                     </span>
