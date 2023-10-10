@@ -9,7 +9,7 @@ const PcmFa = () => {
   const [openModal, setOpenModal] = useState(false);
   const navigate = useNavigate();
   return (
-    <div style={{ display: "flex", justifyContent: "center" }}>
+    <div style={{ display: "flex", justifyContent: "center", height: "100vh" }}>
       <TabsFa
         firstProps={
           <VideoTemplate mainIconUrl="https://player.vimeo.com/video/852615647?h=58b430f362&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" />

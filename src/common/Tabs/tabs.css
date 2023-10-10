@@ -207,6 +207,10 @@
   border: unset !important;
   border-radius: unset !important;
 }
+.ant-qrcode.QR_code_pulse_energy {
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
 
 .PCM_details {
   height: 74vh;
@@ -245,6 +249,15 @@
   border-radius: 5px;
   background-color: #fff;
   min-height: 260px;
+}
+.UEI_modal {
+  position: absolute;
+  bottom: -125px;
+}
+.pulse_energy .text_wrapper,
+.UEI .text_wrapper {
+  margin-top: -100px;
+  position: relative;
 }
 @media screen and (min-width: 768px) and (max-width: 1085px) {
   .tabsConatiner {

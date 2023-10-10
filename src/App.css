@@ -102,6 +102,43 @@ iframe .header-container .location-btn {
   background-color: #992a4a;
   color: #fff;
 }
+.UEI_tab_change {
+  display: flex;
+  position: absolute;
+  left: 0;
+  bottom: 144px;
+}
+.for_sheru_app,
+.for_pulse_energy,
+.for_turno_app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 163px;
+  height: 48px;
+  border-radius: 26px;
+  padding: 14px 15px;
+  margin: 20px 20px 20px 0;
+  background-color: #fff;
+  cursor: pointer;
+  line-height: 16px;
+  font-size: 15px;
+}
+.UEI_tab_change .active {
+  background-color: #4498e8;
+  color: #fff;
+}
+.pulse_energy {
+  height: 686px;
+}
+.QR_custom_pulse_energy {
+  padding: 38px;
+}
+.QR_custom_pulse_energy canvas {
+  height: 100% !important;
+  width: 100% !important;
+}
+
 /* ----------------------------Media Query---------------------- */
 @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   .headLogo-image {
