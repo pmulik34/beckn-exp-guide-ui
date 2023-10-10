@@ -203,11 +203,7 @@ iframe .header-container .location-btn {
     height: max-content;
   }
 }
-/* @media only screen and (max-height: 1024px) and (max-width: 1600px) {
-  .beckn-app {
-    zoom: 90%;
-  }
-} */
+
 .card-sub-containers li:hover {
   scale: 1.03;
 }

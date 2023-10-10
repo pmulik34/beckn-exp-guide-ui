@@ -23,6 +23,7 @@ import OscFa from "../welcome-page/OscFa/OscFa";
 import DSEP from "../welcome-page/DSEP/DSEP";
 import CityOfLightFa from "../welcome-page/CityOfLightFa/cityOfLightFa";
 import UEI from "../welcome-page/UEI/UEI";
+import DsepUnified from "../welcome-page/DsepUnified/DsepUnified";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -42,6 +43,7 @@ const AnimatedRoutes = () => {
         <Route path="/OSC-Fa" element={<OscFa />} />
         <Route path="/UEI" element={<UEI />} />
         <Route path="/CityOfLightFa" element={<CityOfLightFa />} />
+        <Route path="/dsep-unified" element={<DsepUnified />} />
         <Route path="/select-experience" element={<SelectExperience />} />
         <Route path="/tabs" element={<TabsComponent />} />
         <Route path="/progress" element={<ProgressBar />} />
