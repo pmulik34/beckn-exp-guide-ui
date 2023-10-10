@@ -547,13 +547,13 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                         <p style={{ fontWeight: "bolder", color: "#000" }}>
                           phone number:
                         </p>
-                        <p> 9876522222</p>
+                        <p> 9845114558</p>
                       </p>
                       <p>
                         <p style={{ fontWeight: "bolder", color: "#000" }}>
                           Password:
                         </p>
-                        <p> root123</p>
+                        <p> venky12</p>
                       </p>
                     </div>
                   }
