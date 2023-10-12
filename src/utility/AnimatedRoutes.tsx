@@ -25,6 +25,7 @@ import CityOfLightFa from "../welcome-page/CityOfLightFa/cityOfLightFa";
 import UEI from "../welcome-page/UEI/UEI";
 import DsepUnified from "../welcome-page/DsepUnified/DsepUnified";
 import Dsnp from "../welcome-page/DSNP/Dsnp";
+import DHP from "../welcome-page/DHP/DHP";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -42,6 +43,7 @@ const AnimatedRoutes = () => {
         <Route path="/PCM" element={<Pcm />} />
         <Route path="/PCM-Fa" element={<PcmFa />} />
         <Route path="/OSC-Fa" element={<OscFa />} />
+        <Route path="/DHP" element={<DHP />} />
         <Route path="/UEI" element={<UEI />} />
         <Route path="/DSNP" element={<Dsnp />} />
         <Route path="/CityOfLightFa" element={<CityOfLightFa />} />

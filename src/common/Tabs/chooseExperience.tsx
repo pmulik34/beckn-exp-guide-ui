@@ -43,13 +43,14 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
   const DSNP = localStorage.getItem("name") === "DSNP";
   const isDsnpFeed = iframeURL === process.env.REACT_APP_DSNP_APP_URL;
 
-
+  const DHP = localStorage.getItem("name") === "DHP";
   const navigate = useNavigate();
 
   const [lang, setLang] = useState("english");
   const [isModalOpenOSC, setIsModalOpenOSC] = useState(false);
   const [isModalOpenPulseEnergy, setIsModalOpenPulseEnergy] = useState(false);
   const [isModalOpenDsepUnified, setIsModalOpenDsepUnified] = useState(false);
+  const [isModalOpenDHP, setIsModalOpenDHP] = useState(false);
   const [isModalOpenDSNP, setIsModalOpenDSNP] = useState(false);
   const [isModalOpenPC, setIsModalOpenPC] = useState(false);
   const [isModalOpenDriver, setSsModalOpenDriver] = useState(false);
@@ -70,6 +71,9 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
   };
   const showModalDsepUnified = () => {
     setIsModalOpenDsepUnified(true);
+  };
+  const showModalDHP = () => {
+    setIsModalOpenDHP(true);
   };
   const showModalDSNP = () => {
     setIsModalOpenDSNP(true);
@@ -100,6 +104,9 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
   const handleCancelDSNP = () => {
     setIsModalOpenDSNP(false);
   };
+  const handleCancelDHP = () => {
+    setIsModalOpenDHP(false);
+  };
 
   const handleCancelRetailer = () => {
     setIsModalOpenOSCRetailer(false);
@@ -129,7 +136,8 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
         !DSEP &&
         !UEI &&
         !dsepUnified &&
-        !DSNP ? (
+        !DSNP &&
+        !DHP ? (
           <div
             style={{
               padding: "10px 0",
@@ -1475,7 +1483,8 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                       </span>{" "}
                       <a
                         href="https://polkadot.js.org/extension/"
-                        target="_blank" rel="noreferrer"
+                        target="_blank"
+                        rel="noreferrer"
                       >
                         Click here
                       </a>{" "}
@@ -1742,6 +1751,626 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                         Enter username and password
                       </p>
                     </p>
+                  </p>
+                </div>
+              </>
+            </ModalSlider>
+          </div>
+        ) : null}
+        {DHP ? (
+          <div className="PCM_modal OSM_custom">
+            <Button type="primary" onClick={showModalDHP}>
+              instructions
+              <img
+                style={{ paddingLeft: "5px" }}
+                src="/assets/arrow_back.svg"
+              />
+            </Button>
+            <ModalSlider
+              open={isModalOpenDHP}
+              onCancel={handleCancelDHP}
+              modalHeading={
+                "follow these steps for the best possible experience as a customer!"
+              }
+            >
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 1
+                </h3>
+                <img src={"/assets/unified_dsep_step1.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    login to the{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      GeneHale
+                    </span>{" "}
+                    app using the provided:
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    <p>phone number: </p>
+                    <p
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      7000507343
+                    </p>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    <p>6 digit OTP:</p>
+                    <p
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      726345
+                    </p>
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 2
+                </h3>
+                <img src={"/assets/DHP_step2.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    <p>From landing page search for specialization of doctor</p>
+                    <p>
+                      e.g. :{" "}
+                      <span
+                        style={{
+                          fontWeight: "bolder",
+                          color: "#000",
+                        }}
+                      >
+                        {"<placeholder text>"}
+                      </span>
+                    </p>
+                  </p>
+
+                  <p>
+                    select the following doctor:
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {"<doctor name>"}
+                    </span>{" "}
+                    from the search results and click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      book appointment.
+                    </span>
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 3
+                </h3>
+                <img src={"/assets/DHP_step3.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p>
+                    on booking appointment screen{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      select a date and time slot
+                    </span>
+                  </p>
+                  <p>
+                    Click{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      Confirm booking
+                    </span>{" "}
+                    to proceed
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 4
+                </h3>
+                <img src={"/assets/DHP_step4.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    <p>billing & checkout details:</p>
+                    <p>
+                      Name:
+                      <span
+                        style={{
+                          fontWeight: "bolder",
+                          color: "#000",
+                        }}
+                      >
+                        {" <placeholder>"}
+                      </span>
+                    </p>
+                    <p>
+                      Address:
+                      <span
+                        style={{
+                          fontWeight: "bolder",
+                          color: "#000",
+                        }}
+                      >
+                        {"<placeholder long text format>"}
+                      </span>
+                    </p>
+                    <p>
+                      Phone Number:
+                      <span
+                        style={{
+                          fontWeight: "bolder",
+                          color: "#000",
+                        }}
+                      >
+                        {"<placeholder>"}
+                      </span>
+                    </p>
+                    <p>
+                      Email ID:
+                      <span
+                        style={{
+                          fontWeight: "bolder",
+                          color: "#000",
+                        }}
+                      >
+                        {"<placeholder text>"}
+                      </span>
+                    </p>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    Click{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘save billing details’
+                    </span>
+                  </p>
+                  <p>and click on </p>
+                  <p
+                    style={{
+                      fontWeight: "bolder",
+                      color: "#000",
+                    }}
+                  >
+                    proceed to payment
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 5
+                </h3>
+                <img src={"/assets/DHP_step5.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    select payment method as{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘cash on arrival’
+                    </span>{" "}
+                    and click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘continue’
+                    </span>
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 6
+                </h3>
+                <img src={"/assets/DHP_step6.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    Your doctor would have provided a prescription on your last
+                    appointment.
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    You can see that by going to{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘My Appointments’
+                    </span>{" "}
+                    and then click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘view prescriptions’
+                    </span>
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 7
+                </h3>
+                <img src={"/assets/DHP_step7.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    <p>select the diagnostic lab </p>
+                    <p
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {"<placeholder text>"}
+                    </p>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    on booking appointment screen{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      select a date and time slot{" "}
+                    </span>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    Click{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      Confirm booking
+                    </span>{" "}
+                    to proceed
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 8
+                </h3>
+                <img src={"/assets/DHP_step8.svg"} alt={`StepImage`} />
+
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    enter billing details:
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    <p>
+                      Name:{" "}
+                      <span
+                        style={{
+                          fontWeight: "bolder",
+                          color: "#000",
+                        }}
+                      >
+                        {"<placholder>"}
+                      </span>
+                    </p>
+                    <p>
+                      Address:{" "}
+                      <span
+                        style={{
+                          fontWeight: "bolder",
+                          color: "#000",
+                        }}
+                      >
+                        {" <long placholder text format for address>"}
+                      </span>
+                    </p>
+                    <p>
+                      Phone:{" "}
+                      <span
+                        style={{
+                          fontWeight: "bolder",
+                          color: "#000",
+                        }}
+                      >
+                        {"<placeholder>"}
+                      </span>
+                    </p>
+                    <p>
+                      Email ID:{" "}
+                      <span
+                        style={{
+                          fontWeight: "bolder",
+                          color: "#000",
+                        }}
+                      >
+                        {"<placeholder>"}
+                      </span>
+                    </p>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    click Save billing details
+                  </p>
+                  <p>
+                    click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      continue
+                    </span>{" "}
+                    to proceed to payment
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 9
+                </h3>
+                <img src={"/assets/DHP_step9.svg"} alt={`StepImage`} />
+
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    <p>Select payment method as</p>
+                    <p
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      cash on delivery
+                    </p>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    and click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      confirm order
+                    </span>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    on confirmation page click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      view order details
+                    </span>{" "}
+                    to check order details and fulfilments status of your order.
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 10
+                </h3>
+                <img src={"/assets/DHP_step10.svg"} alt={`StepImage`} />
+
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    Your doctor would have also recommended you to get some
+                    tests done
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    You can see that by going to{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘My Appointments’
+                    </span>{" "}
+                    and then click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {"<test name>"}
+                    </span>{" "}
+                    and continue to{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘search for labs’
+                    </span>
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 11
+                </h3>
+                <img src={"/assets/DHP_step11.svg"} alt={`StepImage`} />
+
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    <p>
+                      on booking appointment screen{" "}
+                      <span
+                        style={{
+                          fontWeight: "bolder",
+                          color: "#000",
+                        }}
+                      >
+                        select a date and time slot{" "}
+                      </span>
+                    </p>
+                    <p>
+                      Click{" "}
+                      <span
+                        style={{
+                          fontWeight: "bolder",
+                          color: "#000",
+                        }}
+                      >
+                        Confirm booking
+                      </span>{" "}
+                      to proceed
+                    </p>
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 12
+                </h3>
+                <img src={"/assets/DHP_step12.svg"} alt={`StepImage`} />
+
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    enter billing details:
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    <p>
+                      Name:{" "}
+                      <span
+                        style={{
+                          fontWeight: "bolder",
+                          color: "#000",
+                        }}
+                      >
+                        {"<placholder>"}
+                      </span>
+                    </p>
+                    <p>
+                      Address:{" "}
+                      <span
+                        style={{
+                          fontWeight: "bolder",
+                          color: "#000",
+                        }}
+                      >
+                        {" <long placholder text format for address>"}
+                      </span>
+                    </p>
+                    <p>
+                      Phone:{" "}
+                      <span
+                        style={{
+                          fontWeight: "bolder",
+                          color: "#000",
+                        }}
+                      >
+                        {"<placeholder>"}
+                      </span>
+                    </p>
+                    <p>
+                      Email ID:{" "}
+                      <span
+                        style={{
+                          fontWeight: "bolder",
+                          color: "#000",
+                        }}
+                      >
+                        {"<placeholder>"}
+                      </span>
+                    </p>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    click Save billing details
+                  </p>
+                  <p>
+                    click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      continue
+                    </span>{" "}
+                    to proceed to payment
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 13
+                </h3>
+                <img src={"/assets/DHP_step13.svg"} alt={`StepImage`} />
+
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    <p>Select payment method as</p>
+                    <p
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      cash on arrival
+                    </p>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    and click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      confirm order
+                    </span>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    on confirmation page click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      view order details
+                    </span>{" "}
+                    to check order details
                   </p>
                 </div>
               </>
@@ -2056,7 +2685,9 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                 src={iframeURL}
                 frameBorder="0"
                 allowFullScreen
-                scrolling={DSNP && isDsnpFeed ? 'yes' : (!OSC && !DSEP   ? "no" : "yes")}
+                scrolling={
+                  DSNP && isDsnpFeed ? "yes" : !OSC && !DSEP ? "no" : "yes"
+                }
                 width={"100%"}
                 height={"100%"}
                 style={{ borderRadius: "36px" }}

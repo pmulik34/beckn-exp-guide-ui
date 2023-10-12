@@ -41,6 +41,8 @@ const ProgressBar = () => {
         ? navigate("/dsep-unified")
         : localStorage.getItem("name") === "DSNP"
         ? navigate("/DSNP")
+        : localStorage.getItem("name") === "DHP"
+        ? navigate("/DHP")
         : navigate("/PCM");
     }
   });

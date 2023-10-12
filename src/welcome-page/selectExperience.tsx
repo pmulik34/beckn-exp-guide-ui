@@ -74,6 +74,20 @@ const SelectExperience = () => {
                   </p>
                 </div>
               </li>
+              <li onClick={() => handleNevigate("DHP")}>
+                <div className="card-with-image">
+                  <img
+                    className="first-image-card"
+                    src="/assets/DHP_card.svg"
+                    alt={"dsep_cardImg"}
+                  />
+                  <p className="card-title-image">
+                    <span className="font-color">Healthcare Hub: </span>
+                    <br />
+                    <span className="font-color">Doctor, Meds, Labs</span>
+                  </p>
+                </div>
+              </li>
               <li onClick={() => handleNevigate("DSEP")}>
                 <div className="card-with-image">
                   <img
