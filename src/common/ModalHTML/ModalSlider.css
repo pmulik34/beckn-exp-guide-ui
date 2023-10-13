@@ -95,3 +95,9 @@
 .ant-modal-body {
   margin: 0 10px;
 }
+.text_wrapper_modal {
+  min-height: 332px;
+}
+.ant-modal-content {
+  padding-bottom: 5px !important;
+}

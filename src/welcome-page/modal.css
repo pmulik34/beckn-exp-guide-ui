@@ -13,33 +13,33 @@ p {
   line-height: 17px;
   color: #4e4646;
 }
-.ant-modal-footer{
-    text-align: center !important;
+.ant-modal-footer {
+  text-align: center !important;
 }
-.ant-btn{
-    width: 158px !important;
+.ant-btn {
+  width: 158px !important;
 }
-.ant-btn >span{
-  color: #FFFF;
+.ant-btn > span {
+  color: #ffff;
 }
-.ant-btn-default > span{
-  color:#4e4646;
+.ant-btn-default > span {
+  color: #4e4646;
 }
-.ant-btn-primary{
-    background-color: #83B5E0 !important;
-    position: relative;
-    left: 15px;
+.ant-btn-primary {
+  background-color: #83b5e0 !important;
+  position: relative;
+  left: 15px;
 }
-.ant-btn-default{
-    border-color: #554e4e !important;
-    position: relative;
-    right: 15px;
-   
+.ant-btn-default {
+  border-color: #554e4e !important;
+  position: relative;
+  right: 15px;
 }
-.ant-modal{
+.ant-modal {
   margin-top: 70px !important;
+  top: unset !important;
 }
-.ant-modal-mask{
+.ant-modal-mask {
   backdrop-filter: blur(32px) !important;
   width: 100% !important;
 }

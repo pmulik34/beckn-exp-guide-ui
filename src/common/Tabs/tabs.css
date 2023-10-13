@@ -221,7 +221,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px auto;
+  margin: 30px auto;
   left: unset;
   border-radius: 5px;
   background-color: #77aede !important;
@@ -250,15 +250,7 @@
   background-color: #fff;
   min-height: 260px;
 }
-.UEI_modal {
-  position: absolute;
-  bottom: -125px;
-}
-.pulse_energy .text_wrapper,
-.UEI .text_wrapper {
-  margin-top: -100px;
-  position: relative;
-}
+
 @media screen and (min-width: 768px) and (max-width: 1085px) {
   .tabsConatiner {
     width: 96%;
@@ -319,4 +311,18 @@
   }
 }
 @media screen and (min-width: 1085px) and (max-width: 1200px) {
+}
+.heading_description {
+  margin: 15px 20px -25px;
+  padding: 15px 90px;
+  border: 1px solid #cacb8b;
+  background-color: #fffbd7;
+  border-radius: 4px;
+}
+.heading_description p > a {
+  text-decoration: underline;
+}
+.heading_description > p {
+  font-size: 15px !important;
+  text-transform: unset !important;
 }
