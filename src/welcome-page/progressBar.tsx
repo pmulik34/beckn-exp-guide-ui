@@ -39,6 +39,8 @@ const ProgressBar = () => {
         ? navigate("/UEI")
         : localStorage.getItem("name") === "dsepUnified"
         ? navigate("/dsep-unified")
+        : localStorage.getItem("name") === "DSNP"
+        ? navigate("/DSNP")
         : navigate("/PCM");
     }
   });

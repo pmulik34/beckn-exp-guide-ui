@@ -384,7 +384,7 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                 key: "1",
                 className: "",
                 children: (
-                  <div className="QR_custom">
+                  <div className="QR_custom PCM_card">
                     <QRCode
                       className="QR_code_PCM_cust"
                       value={pcmPcAppUrl || "-"}
@@ -392,7 +392,11 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                     <p>
                       scannez pour voir <br /> comment!{" "}
                     </p>
-                    <Button type="primary" onClick={showModalPC}>
+                    <Button
+                      type="primary"
+                      onClick={showModalPC}
+                      className="PCM_card_btn"
+                    >
                       mode d'emploi
                       <img
                         style={{ paddingLeft: "5px" }}
@@ -527,7 +531,7 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                 key: "2",
                 className: "",
                 children: (
-                  <div className="QR_custom">
+                  <div className="QR_custom PCM_card">
                     <QRCode
                       className="QR_code_PCM_cust"
                       value={pcmDriverUrl || "-"}
@@ -535,7 +539,11 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                     <p>
                       scannez pour voir <br /> comment!{" "}
                     </p>
-                    <Button type="primary" onClick={showModalDriver}>
+                    <Button
+                      type="primary"
+                      onClick={showModalDriver}
+                      className="PCM_card_btn"
+                    >
                       mode d'emploi
                       <img
                         style={{ paddingLeft: "5px" }}

@@ -40,12 +40,14 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
   const DSEP = localStorage.getItem("name") === "DSEP";
   const UEI = localStorage.getItem("name") === "UEI";
   const dsepUnified = localStorage.getItem("name") === "dsepUnified";
+  const DSNP = localStorage.getItem("name") === "DSNP";
   const navigate = useNavigate();
 
   const [lang, setLang] = useState("english");
   const [isModalOpenOSC, setIsModalOpenOSC] = useState(false);
   const [isModalOpenPulseEnergy, setIsModalOpenPulseEnergy] = useState(false);
   const [isModalOpenDsepUnified, setIsModalOpenDsepUnified] = useState(false);
+  const [isModalOpenDSNP, setIsModalOpenDSNP] = useState(false);
   const [isModalOpenPC, setIsModalOpenPC] = useState(false);
   const [isModalOpenDriver, setSsModalOpenDriver] = useState(false);
   const [isModalOpenOSCRetailer, setIsModalOpenOSCRetailer] = useState(false);
@@ -65,6 +67,9 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
   };
   const showModalDsepUnified = () => {
     setIsModalOpenDsepUnified(true);
+  };
+  const showModalDSNP = () => {
+    setIsModalOpenDSNP(true);
   };
 
   const showModalOSCretailer = () => {
@@ -88,6 +93,9 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
   };
   const handleCancelDsepUnified = () => {
     setIsModalOpenDsepUnified(false);
+  };
+  const handleCancelDSNP = () => {
+    setIsModalOpenDSNP(false);
   };
 
   const handleCancelRetailer = () => {
@@ -117,7 +125,8 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
         !cities &&
         !DSEP &&
         !UEI &&
-        !dsepUnified ? (
+        !dsepUnified &&
+        !DSNP ? (
           <div
             style={{
               padding: "10px 0",
@@ -612,7 +621,11 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
 
         {UEI ? (
           <div className="PCM_modal OSM_custom UEI_modal">
-            <Button type="primary" onClick={showModalPulseEnergy}>
+            <Button
+              type="primary"
+              onClick={showModalPulseEnergy}
+              style={{ marginTop: "116px" }}
+            >
               instructions
               <img
                 style={{ paddingLeft: "5px" }}
@@ -1432,6 +1445,306 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
             </ModalSlider>
           </div>
         ) : null}
+        {DSNP ? (
+          <div className="DSEP-intruction">
+            <Button
+              type="primary"
+              onClick={showModalDSNP}
+              style={{ left: "unset", margin: "unset", marginTop: "116px" }}
+            >
+              instructions
+              <img
+                style={{ paddingLeft: "5px" }}
+                src="/assets/arrow_back.svg"
+              />
+            </Button>
+            <ModalSlider
+              open={isModalOpenDSNP}
+              onCancel={handleCancelDSNP}
+              modalHeading={
+                <>
+                  "follow these steps for the best possible experience as a
+                  customer!"
+                  <div className="heading_description">
+                    <p>
+                      <span style={{ fontWeight: "bolder", color: "#000" }}>
+                        Pre-requisites:
+                      </span>{" "}
+                      <a
+                        href="https://polkadot.js.org/extension/"
+                        target="_blank"
+                      >
+                        Click here
+                      </a>{" "}
+                      to install{" "}
+                      <span style={{ fontWeight: "bolder", color: "#000" }}>
+                        "Polkadot JS"
+                      </span>{" "}
+                      (a browser add-on). Polkadot allows account creation and
+                      import from blockchain ledger devices for extrinsic
+                      signature.
+                    </p>
+                    <div
+                      style={{
+                        display: "flex",
+                        alignItems: "flex-start",
+                        paddingTop: "5px",
+                      }}
+                    >
+                      <img
+                        src="/assets/!Icon.svg"
+                        alt=""
+                        style={{
+                          paddingTop: "1px",
+                        }}
+                      />
+                      <p
+                        style={{
+                          fontWeight: "500",
+                          fontSize: "15px",
+                          paddingLeft: "8px",
+                          textTransform: "unset",
+                        }}
+                      >
+                        Please keep note of your generated username, password,
+                        and secret key for ‘Polkadot JS’ account recovery
+                      </p>
+                    </div>
+                  </div>
+                </>
+              }
+            >
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 1
+                </h3>
+                <img src={"/assets/DSNP_step1.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    use{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘google id’
+                    </span>{" "}
+                    to sign in to the{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘app name’
+                    </span>{" "}
+                    app.
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    on the landing page,{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      search for
+                    </span>{" "}
+                    ‘sunglasses’
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    Select the product you wish to buy.
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 2
+                </h3>
+                <img src={"/assets/DSNP_step2.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p>proceed to payment and checkout. Details you may need:</p>
+
+                  <p
+                    style={{
+                      fontWeight: "bolder",
+                      color: "#000",
+                      textTransform: "capitalize",
+                    }}
+                  >
+                    name:
+                  </p>
+
+                  <p>{"<name>"}</p>
+                  <p
+                    style={{
+                      fontWeight: "bolder",
+                      color: "#000",
+                      textTransform: "capitalize",
+                    }}
+                  >
+                    Address:
+                  </p>
+
+                  <p>{"<address>"}</p>
+                  <p
+                    style={{
+                      fontWeight: "bolder",
+                      color: "#000",
+                      textTransform: "capitalize",
+                    }}
+                  >
+                    Phone Number:
+                  </p>
+
+                  <p>{"<phone no>"}</p>
+                  <p
+                    style={{
+                      fontWeight: "bolder",
+                      color: "#000",
+                      textTransform: "capitalize",
+                    }}
+                  >
+                    Email ID:
+                  </p>
+
+                  <p style={{ paddingBottom: "20px" }}>
+                    {"<sample@email.com>"}
+                  </p>
+                  <p
+                    style={{
+                      fontWeight: "bolder",
+                      color: "#000",
+                      textTransform: "capitalize",
+                    }}
+                  >
+                    Payment Method:
+                  </p>
+
+                  <p>Cash on Delivery</p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 3
+                </h3>
+                <img src={"/assets/DSNP_step3.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    once the order is placed, you can give feedback and rating
+                    for each individual product by clicking on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘submit review’
+                    </span>{" "}
+                    button.
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    This will land on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      DSNP ID
+                    </span>{" "}
+                    login page
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 4
+                </h3>
+                <img src={"/assets/DSNP_step4.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    <p>visits DSNP ID creation and login page.</p>
+                    <p>If you have a DSNP ID, input the handle and continue.</p>
+                  </p>
+
+                  <p
+                    style={{
+                      fontWeight: "bolder",
+                      color: "#000",
+                    }}
+                  >
+                    Don't have a DSNP ID?
+                  </p>
+                  <ul>
+                    <li>create new Handle.</li>
+                    <li>
+                      Select the Polkadot JS extension account from the
+                      dropdown.
+                    </li>
+                    <li>
+                      The Polkadot JS plugin will require account
+                      authentication.
+                    </li>
+                    <li>Enter username and password</li>
+                  </ul>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 5
+                </h3>
+                <img src={"/assets/DSNP_step5.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    <p>visits DSNP ID creation and login page.</p>
+                    <p>
+                      If you have a DSNP ID, input the handle and continue.{" "}
+                    </p>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    <p
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                        textTransform: "none",
+                      }}
+                    >
+                      Don't have a DSNP ID?
+                    </p>
+                    <p>
+                      <p>create new Handle.</p>
+                      <p
+                        style={{
+                          textTransform: "none",
+                        }}
+                      >
+                        Select the Polkadot JS extension account from the
+                        dropdown.
+                      </p>
+                      <p
+                        style={{
+                          textTransform: "none",
+                        }}
+                      >
+                        The Polkadot JS plugin will require account
+                        authentication.{" "}
+                      </p>
+                      <p
+                        style={{
+                          textTransform: "none",
+                        }}
+                      >
+                        Enter username and password
+                      </p>
+                    </p>
+                  </p>
+                </div>
+              </>
+            </ModalSlider>
+          </div>
+        ) : null}
       </div>
 
       {PCM ? (
@@ -1454,13 +1767,17 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                 key: "1",
                 className: "",
                 children: (
-                  <div className="QR_custom">
+                  <div className="QR_custom PCM_card">
                     <QRCode
                       className="QR_code_PCM_cust"
                       value={pcmPcAppUrl || "-"}
                     />
                     <p style={{ textAlign: "center" }}>scan to see how!</p>
-                    <Button type="primary" onClick={showModalPC}>
+                    <Button
+                      type="primary"
+                      onClick={showModalPC}
+                      className="PCM_card_btn"
+                    >
                       instructions
                       <img
                         style={{ paddingLeft: "5px" }}
@@ -1591,13 +1908,17 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                 key: "2",
                 className: "",
                 children: (
-                  <div className="QR_custom">
+                  <div className="QR_custom PCM_card">
                     <QRCode
                       className="QR_code_PCM_cust"
                       value={pcmDriverUrl || "-"}
                     />
                     <p>scan to see how!</p>
-                    <Button type="primary" onClick={showModalDriver}>
+                    <Button
+                      type="primary"
+                      onClick={showModalDriver}
+                      className="PCM_card_btn"
+                    >
                       instructions
                       <img
                         style={{ paddingLeft: "5px" }}
