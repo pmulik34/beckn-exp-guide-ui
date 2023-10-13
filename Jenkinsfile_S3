@@ -3,30 +3,10 @@ pipeline {
   tools {
     nodejs 'nodejs14'
   }
-  environment {
-        REACT_APP_OSM_ENG_URL="${react_app_osm_eng_url}"
-        REACT_APP_OSM_FAR_URL="${react_app_osm_far_url}"
-        REACT_APP_PCM_DRIVER_URL="${react_app_pcm_driver_url}"
-        REACT_APP_PCM_PC_APP_URL="${react_app_pcm_pc_app_url}"
-        REACT_APP_CITY_OF_AFRICA_URL="${react_app_city_of_africa_url}"
-        REACT_APP_CITY_OF_LIGHT_URL="${react_app_city_of_light_url}"
-        REACT_APP_CITY_OF_LIGHT_FRENCH_URL="${react_app_city_of_light_french_url}"
-        REACT_APP_HIMALAYAS_URL="${react_app_himalayas_url}"
-        REACT_APP_SMART_CITIES_URL="${react_app_smart_cities_url}"
-        REACT_APP_TOURISM_APP_STAGING_INFRA_URL="${react_app_tourism_app_staging_infra_url}"
-  }
   stages {
-    stage('Checkout') {
-      steps {
-        sh 'rm -rf beckn-exp-guide-ui'
-        sh 'git clone https://github.com/beckn/beckn-exp-guide-ui.git'
-      }
-    }
     stage('Build') {
       steps {
         sh ''' 
-        cd beckn-exp-guide-ui
-        git checkout "${GIT_BRANCH}"
         rm package-lock.json
         npm install
         CI=false npm run-script build 
@@ -36,7 +16,6 @@ pipeline {
     stage('Deploy') {
       steps {
         sh '''
-        cd beckn-exp-guide-ui
         aws s3 cp --recursive build/ "${S3_BUCKET}"
         aws cloudfront create-invalidation --distribution-id "${DISTRIBUTION_ID}" --paths "/*"
         '''
@@ -45,12 +24,7 @@ pipeline {
   }
   post {
     always {
-        cleanWs(cleanWhenNotBuilt: true,
-            deleteDirs: true,
-            disableDeferredWipeout: true,
-            notFailBuild: true,
-            patterns: [[pattern: '.gitignore', type: 'INCLUDE'],
-            [pattern: '.propsfile', type: 'EXCLUDE']])
+        cleanWs()
         }
     }
 }
