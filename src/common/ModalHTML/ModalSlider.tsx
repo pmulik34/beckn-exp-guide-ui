@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "./ModalSlider.css";
 
 export interface ModalHTMLProps {
-  modalHeading?: string;
+  modalHeading?: string | JSX.Element;
   open: boolean;
   onCancel: () => void;
   className1?: string;
