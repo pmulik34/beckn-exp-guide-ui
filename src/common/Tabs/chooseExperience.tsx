@@ -41,6 +41,9 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
   const UEI = localStorage.getItem("name") === "UEI";
   const dsepUnified = localStorage.getItem("name") === "dsepUnified";
   const DSNP = localStorage.getItem("name") === "DSNP";
+  const isDsnpFeed = iframeURL === process.env.REACT_APP_DSNP_APP_URL;
+
+
   const navigate = useNavigate();
 
   const [lang, setLang] = useState("english");
@@ -1472,7 +1475,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                       </span>{" "}
                       <a
                         href="https://polkadot.js.org/extension/"
-                        target="_blank"
+                        target="_blank" rel="noreferrer"
                       >
                         Click here
                       </a>{" "}
@@ -2053,7 +2056,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                 src={iframeURL}
                 frameBorder="0"
                 allowFullScreen
-                scrolling={!OSC && !DSEP ? "no" : "yes"}
+                scrolling={DSNP && isDsnpFeed ? 'yes' : (!OSC && !DSEP   ? "no" : "yes")}
                 width={"100%"}
                 height={"100%"}
                 style={{ borderRadius: "36px" }}
