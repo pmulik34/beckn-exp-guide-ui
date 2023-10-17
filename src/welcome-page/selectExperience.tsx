@@ -48,6 +48,32 @@ const SelectExperience = () => {
                   </p>
                 </div>
               </li>
+              <li onClick={() => handleNevigate("dsepUnified")}>
+                <div className="card-with-image">
+                  <img
+                    className="first-image-card"
+                    src="/assets/dsep_card.svg"
+                    alt={"dsep_cardImg"}
+                  />
+                  <p className="card-title-image">
+                    <span className="font-color">grow your career</span>
+                    <br />
+                    <span className="font-color">with SkillUp</span>
+                  </p>
+                </div>
+              </li>
+              <li onClick={() => handleNevigate("DSNP")}>
+                <div className="card-with-image">
+                  <img
+                    className="first-image-card"
+                    src="/assets/DSNP_card.svg"
+                    alt={"dsep_cardImg"}
+                  />
+                  <p className="card-title-image">
+                    <span className="font-color">Beckn & DSNP</span>
+                  </p>
+                </div>
+              </li>
               <li onClick={() => handleNevigate("DSEP")}>
                 <div className="card-with-image">
                   <img

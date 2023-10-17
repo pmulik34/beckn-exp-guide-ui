@@ -75,7 +75,7 @@ iframe .header-container .location-btn {
   margin: 10px 25px;
 }
 .osc_tab_changeFa {
-  bottom: 21%;
+  bottom: 20.5%;
 }
 .for_cutm_name,
 .for_tetail_store {
@@ -106,7 +106,7 @@ iframe .header-container .location-btn {
   display: flex;
   position: absolute;
   left: 0;
-  bottom: 144px;
+  bottom: 23%;
 }
 .for_sheru_app,
 .for_pulse_energy,
@@ -138,7 +138,9 @@ iframe .header-container .location-btn {
   height: 100% !important;
   width: 100% !important;
 }
-
+.PCM_card .PCM_card_btn {
+  margin: 20px auto;
+}
 /* ----------------------------Media Query---------------------- */
 @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   .headLogo-image {
@@ -203,11 +205,28 @@ iframe .header-container .location-btn {
     height: max-content;
   }
 }
-/* @media only screen and (max-height: 1024px) and (max-width: 1600px) {
-  .beckn-app {
-    zoom: 90%;
-  }
-} */
+
 .card-sub-containers li:hover {
   scale: 1.03;
+}
+.osc_tab_change.dsnp_url_tab {
+  bottom: 32%;
+  left: 0;
+}
+.dsnp_retail_store,
+.for_dsnp_app {
+  width: 168px;
+}
+.dsnp_url_tab .for_dsnp_app {
+  margin: 10px auto;
+}
+.dsnp_url_tab .dsnp_retail_store {
+  margin: 10px 25px 0 0;
+}
+.dsnp_url_tab .active_dsnp {
+  background-color: #c2621a;
+  color: #fff;
+}
+.cust_modal .ant-modal-content {
+  padding-bottom: 20px !important;
 }
