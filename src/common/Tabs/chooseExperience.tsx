@@ -56,6 +56,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
   const [isModalOpenDriver, setSsModalOpenDriver] = useState(false);
   const [isModalOpenOSCRetailer, setIsModalOpenOSCRetailer] = useState(false);
   const [isModalOpenDSEP, setIsModalOpenDSEP] = useState(false);
+  const [isModalOpenCityOfAfrica, setIsModalOpenCityOfAfrica] = useState(false);
 
   const showModalPC = () => {
     setIsModalOpenPC(true);
@@ -77,6 +78,9 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
   };
   const showModalDSNP = () => {
     setIsModalOpenDSNP(true);
+  };
+  const showModalCityOfAfrica = () => {
+    setIsModalOpenCityOfAfrica(true);
   };
 
   const showModalOSCretailer = () => {
@@ -106,6 +110,9 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
   };
   const handleCancelDHP = () => {
     setIsModalOpenDHP(false);
+  };
+  const handleCancelCityOfAfrica = () => {
+    setIsModalOpenCityOfAfrica(false);
   };
 
   const handleCancelRetailer = () => {
@@ -2371,6 +2378,280 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                       view order details
                     </span>{" "}
                     to check order details
+                  </p>
+                </div>
+              </>
+            </ModalSlider>
+          </div>
+        ) : null}
+        {cityOfAfrica ? (
+          <div className="DSEP-intruction">
+            <Button
+              type="primary"
+              onClick={showModalCityOfAfrica}
+              style={{ left: "unset", margin: "unset", marginTop: "30px" }}
+            >
+              instructions
+              <img
+                style={{ paddingLeft: "5px" }}
+                src="/assets/arrow_back.svg"
+              />
+            </Button>
+            <ModalSlider
+              open={isModalOpenCityOfAfrica}
+              onCancel={handleCancelCityOfAfrica}
+              modalHeading={
+                "follow these steps for the best possible experience as a customer!"
+              }
+            >
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 1
+                </h3>
+                <img src={"/assets/gambia_step6.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    open{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      Travel buddy
+                    </span>{" "}
+                    app ,
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    your pickup location will be your current location{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      banjul, the gambia
+                    </span>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    select your drop off location as{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      serekunda, the gambia
+                    </span>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      search rides
+                    </span>
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 2
+                </h3>
+                <img src={"/assets/driver_step1_img.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    select rides offered by{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      “mo’s taxi / musa taxi”
+                    </span>{" "}
+                    and proceed,
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ride now to
+                    </span>{" "}
+                    enter{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      “your name”
+                    </span>{" "}
+                    &
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {" "}
+                      mobile number”
+                    </span>{" "}
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    then click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      “confirm & proceed”
+                    </span>{" "}
+                    to confirm your order.
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 3
+                </h3>
+                <img src={"/assets/driver_step5_img.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    select payment method as{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      “cash”
+                    </span>{" "}
+                    and click on book now
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    your ride is now confirmed
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    now you will be able to see driver details along with
+                    vehicle registration number, make and model of car.
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 4
+                </h3>
+                <img src={"/assets/gambia_step4.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    click on the{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      driver name
+                    </span>{" "}
+                    to view call and contact support options.
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    also, you will be able to see{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      cancel ride
+                    </span>{" "}
+                    option
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 5
+                </h3>
+                <img src={"/assets/gambia_step5.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    click on the{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      cancel ride
+                    </span>{" "}
+                    to cancel ongoing ride, and select your reason form the list
+                    for the cancellation.
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    then click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      cancel ride
+                    </span>{" "}
+                    option
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    you will get an confirmation that your booking has been
+                    cancelled, click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      okay
+                    </span>
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 6
+                </h3>
+                <img src={"/assets/gambia_step6.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    on click of ok, you will be presented with two options,{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      go back home
+                    </span>{" "}
+                    and
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {" "}
+                      continue ride
+                    </span>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    click on any option of your choice to end the flow.
                   </p>
                 </div>
               </>
