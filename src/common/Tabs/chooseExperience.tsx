@@ -43,18 +43,20 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
   const DSNP = localStorage.getItem("name") === "DSNP";
   const isDsnpFeed = iframeURL === process.env.REACT_APP_DSNP_APP_URL;
 
-
+  const DHP = localStorage.getItem("name") === "DHP";
   const navigate = useNavigate();
 
   const [lang, setLang] = useState("english");
   const [isModalOpenOSC, setIsModalOpenOSC] = useState(false);
   const [isModalOpenPulseEnergy, setIsModalOpenPulseEnergy] = useState(false);
   const [isModalOpenDsepUnified, setIsModalOpenDsepUnified] = useState(false);
+  const [isModalOpenDHP, setIsModalOpenDHP] = useState(false);
   const [isModalOpenDSNP, setIsModalOpenDSNP] = useState(false);
   const [isModalOpenPC, setIsModalOpenPC] = useState(false);
   const [isModalOpenDriver, setSsModalOpenDriver] = useState(false);
   const [isModalOpenOSCRetailer, setIsModalOpenOSCRetailer] = useState(false);
   const [isModalOpenDSEP, setIsModalOpenDSEP] = useState(false);
+  const [isModalOpenCityOfAfrica, setIsModalOpenCityOfAfrica] = useState(false);
 
   const showModalPC = () => {
     setIsModalOpenPC(true);
@@ -71,8 +73,14 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
   const showModalDsepUnified = () => {
     setIsModalOpenDsepUnified(true);
   };
+  const showModalDHP = () => {
+    setIsModalOpenDHP(true);
+  };
   const showModalDSNP = () => {
     setIsModalOpenDSNP(true);
+  };
+  const showModalCityOfAfrica = () => {
+    setIsModalOpenCityOfAfrica(true);
   };
 
   const showModalOSCretailer = () => {
@@ -99,6 +107,12 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
   };
   const handleCancelDSNP = () => {
     setIsModalOpenDSNP(false);
+  };
+  const handleCancelDHP = () => {
+    setIsModalOpenDHP(false);
+  };
+  const handleCancelCityOfAfrica = () => {
+    setIsModalOpenCityOfAfrica(false);
   };
 
   const handleCancelRetailer = () => {
@@ -129,7 +143,8 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
         !DSEP &&
         !UEI &&
         !dsepUnified &&
-        !DSNP ? (
+        !DSNP &&
+        !DHP ? (
           <div
             style={{
               padding: "10px 0",
@@ -1475,7 +1490,8 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                       </span>{" "}
                       <a
                         href="https://polkadot.js.org/extension/"
-                        target="_blank" rel="noreferrer"
+                        target="_blank"
+                        rel="noreferrer"
                       >
                         Click here
                       </a>{" "}
@@ -1523,155 +1539,21 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                 </h3>
                 <img src={"/assets/DSNP_step1.svg"} alt={`StepImage`} />
                 <div className="text_wrapper_modal">
-                  <p style={{ paddingBottom: "10px" }}>
-                    use{" "}
-                    <span
-                      style={{
-                        fontWeight: "bolder",
-                        color: "#000",
-                      }}
+                  <p>
+                    visits DSNP ID creation and login page from{" "}
+                    <a
+                      style={{ textDecoration: "underline" }}
+                      href="https://dsnp-social-web.becknprotocol.io/feed"
+                      target="_blank"
+                      rel="noreferrer"
                     >
-                      ‘google id’
-                    </span>{" "}
-                    to sign in to the{" "}
-                    <span
-                      style={{
-                        fontWeight: "bolder",
-                        color: "#000",
-                      }}
-                    >
-                      ‘app name’
-                    </span>{" "}
-                    app.
+                      here
+                    </a>
+                    .
                   </p>
                   <p style={{ paddingBottom: "10px" }}>
-                    on the landing page,{" "}
-                    <span
-                      style={{
-                        fontWeight: "bolder",
-                        color: "#000",
-                      }}
-                    >
-                      search for
-                    </span>{" "}
-                    ‘sunglasses’
+                    If you have a DSNP ID, input the handle and continue.
                   </p>
-                  <p style={{ paddingBottom: "10px" }}>
-                    Select the product you wish to buy.
-                  </p>
-                </div>
-              </>
-              <>
-                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
-                  step 2
-                </h3>
-                <img src={"/assets/DSNP_step2.svg"} alt={`StepImage`} />
-                <div className="text_wrapper_modal">
-                  <p>proceed to payment and checkout. Details you may need:</p>
-
-                  <p
-                    style={{
-                      fontWeight: "bolder",
-                      color: "#000",
-                      textTransform: "capitalize",
-                    }}
-                  >
-                    name:
-                  </p>
-
-                  <p>{"<name>"}</p>
-                  <p
-                    style={{
-                      fontWeight: "bolder",
-                      color: "#000",
-                      textTransform: "capitalize",
-                    }}
-                  >
-                    Address:
-                  </p>
-
-                  <p>{"<address>"}</p>
-                  <p
-                    style={{
-                      fontWeight: "bolder",
-                      color: "#000",
-                      textTransform: "capitalize",
-                    }}
-                  >
-                    Phone Number:
-                  </p>
-
-                  <p>{"<phone no>"}</p>
-                  <p
-                    style={{
-                      fontWeight: "bolder",
-                      color: "#000",
-                      textTransform: "capitalize",
-                    }}
-                  >
-                    Email ID:
-                  </p>
-
-                  <p style={{ paddingBottom: "20px" }}>
-                    {"<sample@email.com>"}
-                  </p>
-                  <p
-                    style={{
-                      fontWeight: "bolder",
-                      color: "#000",
-                      textTransform: "capitalize",
-                    }}
-                  >
-                    Payment Method:
-                  </p>
-
-                  <p>Cash on Delivery</p>
-                </div>
-              </>
-              <>
-                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
-                  step 3
-                </h3>
-                <img src={"/assets/DSNP_step3.svg"} alt={`StepImage`} />
-                <div className="text_wrapper_modal">
-                  <p style={{ paddingBottom: "10px" }}>
-                    once the order is placed, you can give feedback and rating
-                    for each individual product by clicking on{" "}
-                    <span
-                      style={{
-                        fontWeight: "bolder",
-                        color: "#000",
-                      }}
-                    >
-                      ‘submit review’
-                    </span>{" "}
-                    button.
-                  </p>
-                  <p style={{ paddingBottom: "10px" }}>
-                    This will land on{" "}
-                    <span
-                      style={{
-                        fontWeight: "bolder",
-                        color: "#000",
-                      }}
-                    >
-                      DSNP ID
-                    </span>{" "}
-                    login page
-                  </p>
-                </div>
-              </>
-              <>
-                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
-                  step 4
-                </h3>
-                <img src={"/assets/DSNP_step4.svg"} alt={`StepImage`} />
-                <div className="text_wrapper_modal">
-                  <p style={{ paddingBottom: "10px" }}>
-                    <p>visits DSNP ID creation and login page.</p>
-                    <p>If you have a DSNP ID, input the handle and continue.</p>
-                  </p>
-
                   <p
                     style={{
                       fontWeight: "bolder",
@@ -1690,8 +1572,174 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                       The Polkadot JS plugin will require account
                       authentication.
                     </li>
-                    <li>Enter username and password</li>
+                    <li>
+                      Enter username and password then navigate to experience
+                      center
+                    </li>
                   </ul>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 2
+                </h3>
+                <img src={"/assets/DSNP_step2.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "20px" }}>
+                    select{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘retail store’
+                    </span>{" "}
+                    tab on the landing page.
+                  </p>
+                  <p style={{ paddingBottom: "20px" }}>
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘sign up and login’{" "}
+                    </span>{" "}
+                    to ‘open common’ retail app.
+                  </p>
+                  <p style={{ paddingBottom: "20px" }}>
+                    on the landing page,{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      search for ‘sunglasses’
+                    </span>
+                  </p>
+                  <p style={{ paddingBottom: "20px" }}>
+                    Select the product you wish to buy.
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 3
+                </h3>
+                <img src={"/assets/DSNP_step3.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    proceed to payment and checkout. Details you may need:
+                  </p>
+                  <p
+                    style={{
+                      fontWeight: "bolder",
+                      color: "#000",
+                      textTransform: "capitalize",
+                    }}
+                  >
+                    Name:
+                  </p>
+                  <p>{"<your name>"}</p>
+                  <p
+                    style={{
+                      fontWeight: "bolder",
+                      color: "#000",
+                      textTransform: "capitalize",
+                    }}
+                  >
+                    Address:
+                  </p>
+                  <p>{"<your address>"}</p>
+                  <p
+                    style={{
+                      fontWeight: "bolder",
+                      color: "#000",
+                      textTransform: "capitalize",
+                    }}
+                  >
+                    Phone Number:
+                  </p>
+                  <p>{"<your phone no>"}</p>
+                  <p
+                    style={{
+                      fontWeight: "bolder",
+                      color: "#000",
+                      textTransform: "capitalize",
+                    }}
+                  >
+                    Email ID:
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    {"<yourname@email.com>"}
+                  </p>
+                  <p
+                    style={{
+                      fontWeight: "bolder",
+                      color: "#000",
+                      textTransform: "capitalize",
+                    }}
+                  >
+                    Payment Method:
+                  </p>
+                  <p>Cash on Delivery</p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 4
+                </h3>
+                <img src={"/assets/DSNP_step4.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    once the order is placed, you can give feedback and rating
+                    for the product by clicking on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘submit review’
+                    </span>{" "}
+                    button.
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    system will ask user for permission to post a review on DSNP
+                    social feed, user selects{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘OK’
+                    </span>
+                    , user then select{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘check review’
+                    </span>{" "}
+                    to see the review posted on social feed.
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    user can also see the same by selecting the tab{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘dsnp app’
+                    </span>
+                    .{" "}
+                  </p>
                 </div>
               </>
               <>
@@ -1701,47 +1749,930 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                 <img src={"/assets/DSNP_step5.svg"} alt={`StepImage`} />
                 <div className="text_wrapper_modal">
                   <p style={{ paddingBottom: "10px" }}>
-                    <p>visits DSNP ID creation and login page.</p>
-                    <p>
-                      If you have a DSNP ID, input the handle and continue.{" "}
-                    </p>
+                    on the social feed page, you can see the review of the item
+                    and sees the tag{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘verified purchase’
+                    </span>
                   </p>
                   <p style={{ paddingBottom: "10px" }}>
+                    to logout, user can select there{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘username’
+                    </span>{" "}
+                    & select{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘sign out’
+                    </span>
+                  </p>
+                </div>
+              </>
+            </ModalSlider>
+          </div>
+        ) : null}
+        {DHP ? (
+          <div className="PCM_modal OSM_custom">
+            <Button type="primary" onClick={showModalDHP}>
+              instructions
+              <img
+                style={{ paddingLeft: "5px" }}
+                src="/assets/arrow_back.svg"
+              />
+            </Button>
+            <ModalSlider
+              open={isModalOpenDHP}
+              onCancel={handleCancelDHP}
+              modalHeading={
+                "follow these steps for the best possible experience as a customer!"
+              }
+            >
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 1
+                </h3>
+                <img src={"/assets/unified_dsep_step1.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    login to the{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      GeneHale
+                    </span>{" "}
+                    app using the provided:
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    <p>phone number: </p>
                     <p
                       style={{
                         fontWeight: "bolder",
                         color: "#000",
-                        textTransform: "none",
                       }}
                     >
-                      Don't have a DSNP ID?
+                      7000507343
+                    </p>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    <p>6 digit OTP:</p>
+                    <p
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      726345
+                    </p>
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 2
+                </h3>
+                <img src={"/assets/DHP_step2.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    <p>From landing page search for specialization of doctor</p>
+                    <p>
+                      e.g. :{" "}
+                      <span
+                        style={{
+                          fontWeight: "bolder",
+                          color: "#000",
+                        }}
+                      >
+                        {"<placeholder text>"}
+                      </span>
+                    </p>
+                  </p>
+
+                  <p>
+                    select the following doctor:
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {"<doctor name>"}
+                    </span>{" "}
+                    from the search results and click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      book appointment.
+                    </span>
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 3
+                </h3>
+                <img src={"/assets/DHP_step3.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p>
+                    on booking appointment screen{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      select a date and time slot
+                    </span>
+                  </p>
+                  <p>
+                    Click{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      Confirm booking
+                    </span>{" "}
+                    to proceed
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 4
+                </h3>
+                <img src={"/assets/DHP_step4.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    <p>billing & checkout details:</p>
+                    <p>
+                      Name:
+                      <span
+                        style={{
+                          fontWeight: "bolder",
+                          color: "#000",
+                        }}
+                      >
+                        {" <placeholder>"}
+                      </span>
                     </p>
                     <p>
-                      <p>create new Handle.</p>
-                      <p
+                      Address:
+                      <span
                         style={{
-                          textTransform: "none",
+                          fontWeight: "bolder",
+                          color: "#000",
                         }}
                       >
-                        Select the Polkadot JS extension account from the
-                        dropdown.
-                      </p>
-                      <p
-                        style={{
-                          textTransform: "none",
-                        }}
-                      >
-                        The Polkadot JS plugin will require account
-                        authentication.{" "}
-                      </p>
-                      <p
-                        style={{
-                          textTransform: "none",
-                        }}
-                      >
-                        Enter username and password
-                      </p>
+                        {"<placeholder long text format>"}
+                      </span>
                     </p>
+                    <p>
+                      Phone Number:
+                      <span
+                        style={{
+                          fontWeight: "bolder",
+                          color: "#000",
+                        }}
+                      >
+                        {"<placeholder>"}
+                      </span>
+                    </p>
+                    <p>
+                      Email ID:
+                      <span
+                        style={{
+                          fontWeight: "bolder",
+                          color: "#000",
+                        }}
+                      >
+                        {"<placeholder text>"}
+                      </span>
+                    </p>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    Click{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘save billing details’
+                    </span>
+                  </p>
+                  <p>and click on </p>
+                  <p
+                    style={{
+                      fontWeight: "bolder",
+                      color: "#000",
+                    }}
+                  >
+                    proceed to payment
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 5
+                </h3>
+                <img src={"/assets/DHP_step5.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    select payment method as{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘cash on arrival’
+                    </span>{" "}
+                    and click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘continue’
+                    </span>
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 6
+                </h3>
+                <img src={"/assets/DHP_step6.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    Your doctor would have provided a prescription on your last
+                    appointment.
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    You can see that by going to{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘My Appointments’
+                    </span>{" "}
+                    and then click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘view prescriptions’
+                    </span>
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 7
+                </h3>
+                <img src={"/assets/DHP_step7.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    <p>select the diagnostic lab </p>
+                    <p
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {"<placeholder text>"}
+                    </p>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    on booking appointment screen{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      select a date and time slot{" "}
+                    </span>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    Click{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      Confirm booking
+                    </span>{" "}
+                    to proceed
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 8
+                </h3>
+                <img src={"/assets/DHP_step8.svg"} alt={`StepImage`} />
+
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    enter billing details:
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    <p>
+                      Name:{" "}
+                      <span
+                        style={{
+                          fontWeight: "bolder",
+                          color: "#000",
+                        }}
+                      >
+                        {"<placholder>"}
+                      </span>
+                    </p>
+                    <p>
+                      Address:{" "}
+                      <span
+                        style={{
+                          fontWeight: "bolder",
+                          color: "#000",
+                        }}
+                      >
+                        {" <long placholder text format for address>"}
+                      </span>
+                    </p>
+                    <p>
+                      Phone:{" "}
+                      <span
+                        style={{
+                          fontWeight: "bolder",
+                          color: "#000",
+                        }}
+                      >
+                        {"<placeholder>"}
+                      </span>
+                    </p>
+                    <p>
+                      Email ID:{" "}
+                      <span
+                        style={{
+                          fontWeight: "bolder",
+                          color: "#000",
+                        }}
+                      >
+                        {"<placeholder>"}
+                      </span>
+                    </p>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    click Save billing details
+                  </p>
+                  <p>
+                    click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      continue
+                    </span>{" "}
+                    to proceed to payment
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 9
+                </h3>
+                <img src={"/assets/DHP_step9.svg"} alt={`StepImage`} />
+
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    <p>Select payment method as</p>
+                    <p
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      cash on delivery
+                    </p>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    and click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      confirm order
+                    </span>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    on confirmation page click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      view order details
+                    </span>{" "}
+                    to check order details and fulfilments status of your order.
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 10
+                </h3>
+                <img src={"/assets/DHP_step10.svg"} alt={`StepImage`} />
+
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    Your doctor would have also recommended you to get some
+                    tests done
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    You can see that by going to{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘My Appointments’
+                    </span>{" "}
+                    and then click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {"<test name>"}
+                    </span>{" "}
+                    and continue to{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘search for labs’
+                    </span>
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 11
+                </h3>
+                <img src={"/assets/DHP_step11.svg"} alt={`StepImage`} />
+
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    <p>
+                      on booking appointment screen{" "}
+                      <span
+                        style={{
+                          fontWeight: "bolder",
+                          color: "#000",
+                        }}
+                      >
+                        select a date and time slot{" "}
+                      </span>
+                    </p>
+                    <p>
+                      Click{" "}
+                      <span
+                        style={{
+                          fontWeight: "bolder",
+                          color: "#000",
+                        }}
+                      >
+                        Confirm booking
+                      </span>{" "}
+                      to proceed
+                    </p>
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 12
+                </h3>
+                <img src={"/assets/DHP_step12.svg"} alt={`StepImage`} />
+
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    enter billing details:
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    <p>
+                      Name:{" "}
+                      <span
+                        style={{
+                          fontWeight: "bolder",
+                          color: "#000",
+                        }}
+                      >
+                        {"<placholder>"}
+                      </span>
+                    </p>
+                    <p>
+                      Address:{" "}
+                      <span
+                        style={{
+                          fontWeight: "bolder",
+                          color: "#000",
+                        }}
+                      >
+                        {" <long placholder text format for address>"}
+                      </span>
+                    </p>
+                    <p>
+                      Phone:{" "}
+                      <span
+                        style={{
+                          fontWeight: "bolder",
+                          color: "#000",
+                        }}
+                      >
+                        {"<placeholder>"}
+                      </span>
+                    </p>
+                    <p>
+                      Email ID:{" "}
+                      <span
+                        style={{
+                          fontWeight: "bolder",
+                          color: "#000",
+                        }}
+                      >
+                        {"<placeholder>"}
+                      </span>
+                    </p>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    click Save billing details
+                  </p>
+                  <p>
+                    click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      continue
+                    </span>{" "}
+                    to proceed to payment
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 13
+                </h3>
+                <img src={"/assets/DHP_step13.svg"} alt={`StepImage`} />
+
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    <p>Select payment method as</p>
+                    <p
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      cash on arrival
+                    </p>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    and click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      confirm order
+                    </span>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    on confirmation page click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      view order details
+                    </span>{" "}
+                    to check order details
+                  </p>
+                </div>
+              </>
+            </ModalSlider>
+          </div>
+        ) : null}
+        {cityOfAfrica ? (
+          <div className="DSEP-intruction">
+            <Button
+              type="primary"
+              onClick={showModalCityOfAfrica}
+              style={{ left: "unset", margin: "unset", marginTop: "30px" }}
+            >
+              instructions
+              <img
+                style={{ paddingLeft: "5px" }}
+                src="/assets/arrow_back.svg"
+              />
+            </Button>
+            <ModalSlider
+              open={isModalOpenCityOfAfrica}
+              onCancel={handleCancelCityOfAfrica}
+              modalHeading={
+                "follow these steps for the best possible experience as a customer!"
+              }
+            >
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 1
+                </h3>
+                <img src={"/assets/gambia_step6.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    open{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      Travel buddy
+                    </span>{" "}
+                    app ,
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    your pickup location will be your current location{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      banjul, the gambia
+                    </span>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    select your drop off location as{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      serekunda, the gambia
+                    </span>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      search rides
+                    </span>
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 2
+                </h3>
+                <img src={"/assets/driver_step1_img.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    select rides offered by{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      “mo’s taxi / musa taxi”
+                    </span>{" "}
+                    and proceed,
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ride now to
+                    </span>{" "}
+                    enter{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      “your name”
+                    </span>{" "}
+                    &
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {" "}
+                      mobile number”
+                    </span>{" "}
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    then click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      “confirm & proceed”
+                    </span>{" "}
+                    to confirm your order.
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 3
+                </h3>
+                <img src={"/assets/driver_step5_img.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    select payment method as{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      “cash”
+                    </span>{" "}
+                    and click on book now
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    your ride is now confirmed
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    now you will be able to see driver details along with
+                    vehicle registration number, make and model of car.
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 4
+                </h3>
+                <img src={"/assets/gambia_step4.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    click on the{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      driver name
+                    </span>{" "}
+                    to view call and contact support options.
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    also, you will be able to see{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      cancel ride
+                    </span>{" "}
+                    option
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 5
+                </h3>
+                <img src={"/assets/gambia_step5.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    click on the{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      cancel ride
+                    </span>{" "}
+                    to cancel ongoing ride, and select your reason form the list
+                    for the cancellation.
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    then click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      cancel ride
+                    </span>{" "}
+                    option
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    you will get an confirmation that your booking has been
+                    cancelled, click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      okay
+                    </span>
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 6
+                </h3>
+                <img src={"/assets/gambia_step6.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    on click of ok, you will be presented with two options,{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      go back home
+                    </span>{" "}
+                    and
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {" "}
+                      continue ride
+                    </span>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    click on any option of your choice to end the flow.
                   </p>
                 </div>
               </>
@@ -2056,7 +2987,9 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                 src={iframeURL}
                 frameBorder="0"
                 allowFullScreen
-                scrolling={DSNP && isDsnpFeed ? 'yes' : (!OSC && !DSEP   ? "no" : "yes")}
+                scrolling={
+                  DSNP && isDsnpFeed ? "yes" : !OSC && !DSEP ? "no" : "yes"
+                }
                 width={"100%"}
                 height={"100%"}
                 style={{ borderRadius: "36px" }}

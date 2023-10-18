@@ -27,6 +27,7 @@ const TabsComponent: React.FC<TabsComponentPropsModal> = ({
   const UEI = localStorage.getItem("name") === "UEI";
   const isDsepUnified = localStorage.getItem("name") === "dsepUnified";
   const DSNP = localStorage.getItem("name") === "DSNP";
+  const DHP = localStorage.getItem("name") === "DHP";
 
   const openCity = (evt: any, cityName: string) => {
     let i: number;
@@ -40,7 +41,7 @@ const TabsComponent: React.FC<TabsComponentPropsModal> = ({
 
   return (
     <>
-      {DSEP || UEI || isDsepUnified || DSNP ? (
+      {DSEP || UEI || isDsepUnified || DSNP || DHP ? (
         <Tabs
           className={"tabsConatiner cityOfAfrica DSEP_Wrapper"}
           defaultActiveKey="3"
