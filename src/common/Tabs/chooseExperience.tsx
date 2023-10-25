@@ -1,8 +1,12 @@
+import React, { useState, useRef } from "react";
 import { QRCode, Button, Modal, Tabs } from "antd";
-import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ModalHTML from "../ModalHTML/modalHTML";
 import ModalSlider from "../ModalHTML/ModalSlider";
+import { signCiTransaction, signPayloadWithExtension } from "../../utility/signTransaction";
+import { web3Enable, web3Accounts } from '@polkadot/extension-dapp'
+
+
 import "./tabs.css";
 export interface selectExpModalProps {
   textURL: string;
@@ -12,6 +16,7 @@ export interface selectExpModalProps {
   setTourismUrl?: Function;
   retailsModal?: boolean;
   pulseEnergy?: string;
+  iframeRef?: any;
 }
 const ChooseExperience: React.FC<selectExpModalProps> = ({
   textURL,
@@ -21,6 +26,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
   setTourismUrl,
   retailsModal,
   pulseEnergy,
+  iframeRef
 }: selectExpModalProps) => {
   const osmEngUrl = process.env.REACT_APP_OSM_ENG_URL;
   const pcmDriverUrl = process.env.REACT_APP_PCM_DRIVER_URL;
@@ -41,7 +47,8 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
   const UEI = localStorage.getItem("name") === "UEI";
   const dsepUnified = localStorage.getItem("name") === "dsepUnified";
   const DSNP = localStorage.getItem("name") === "DSNP";
-  const isDsnpFeed = iframeURL === process.env.REACT_APP_DSNP_APP_URL;
+  const isDsnpFeed = iframeURL === process.env.REACT_APP_DSNP_APP_URL_FEED;
+
 
   const DHP = localStorage.getItem("name") === "DHP";
   const navigate = useNavigate();
@@ -57,6 +64,50 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
   const [isModalOpenOSCRetailer, setIsModalOpenOSCRetailer] = useState(false);
   const [isModalOpenDSEP, setIsModalOpenDSEP] = useState(false);
   const [isModalOpenCityOfAfrica, setIsModalOpenCityOfAfrica] = useState(false);
+
+
+
+
+
+
+  // TODO Improve polka extension connect logic
+  React.useEffect(() => {
+    async function handleMessage(event: MessageEvent) {
+      if (`${event.origin}/` !== process.env.REACT_APP_DSNP_APP_URL || !event.data.type) return;
+      const iframeWindow = iframeRef.current.contentWindow;
+      switch (event.data.type) {
+        case 'enablePolka':
+          let enabled = await web3Enable("Social Web Example Client");
+          if (enabled.length > 0) {
+            const allAccounts = await web3Accounts();
+            iframeWindow.postMessage({ type: 'polkaAccounts', data: allAccounts }, '*');
+          }
+          break;
+        case 'signTransaction':
+          const signedChallenge = await signPayloadWithExtension(
+            event.data.data.selectedAccount,
+            event.data.data.challenge,
+          );
+          iframeWindow.postMessage({ type: 'signTransaction', data: { signedChallenge } }, '*');
+          break;
+        case 'signCiTransaction':
+          const {handleSignature,addProviderSignature} = await signCiTransaction(event.data.data)
+          iframeWindow.postMessage({ type: 'signCiTransaction', data: { handleSignature,addProviderSignature,handle:event.data.data.handle,signingAccount:event.data.data.signingAccount } }, '*');
+          break;
+        default:
+          console.log("No event")
+          break;
+      }
+    }
+
+    window.addEventListener('message', handleMessage);
+
+    return () => {
+      window.removeEventListener('message', handleMessage);
+    };
+  }, []);
+
+
 
   const showModalPC = () => {
     setIsModalOpenPC(true);
@@ -128,16 +179,17 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
         PCM
           ? "tab-wrappper-content PCM_details"
           : pulseEnergy
-          ? "tab-wrappper-content pulse_energy "
-          : UEI
-          ? "tab-wrappper-content UEI"
-          : "tab-wrappper-content"
+            ? "tab-wrappper-content pulse_energy "
+            : UEI
+              ? "tab-wrappper-content UEI"
+              : "tab-wrappper-content"
       }
     >
       <div className="text_wrapper">
         <img src={textURL} alt="header-content-text" />
 
         {!cityOfAfrica &&
+<<<<<<< Updated upstream
         !himalayas &&
         !cities &&
         !DSEP &&
@@ -145,6 +197,14 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
         !dsepUnified &&
         !DSNP &&
         !DHP ? (
+=======
+          !himalayas &&
+          !cities &&
+          !DSEP &&
+          !UEI &&
+          !dsepUnified &&
+          !DSNP ? (
+>>>>>>> Stashed changes
           <div
             style={{
               padding: "10px 0",
@@ -178,14 +238,13 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
               onClick={(e: any) => {
                 setLang(e.target.textContent);
                 setTourismUrl!(
-                  `${
-                    OSC
-                      ? navigate("/OSC-Fa")
-                      : PCM
+                  `${OSC
+                    ? navigate("/OSC-Fa")
+                    : PCM
                       ? navigate("/PCM-Fa")
                       : cityOfLight
-                      ? navigate("/CityOfLightFa")
-                      : ""
+                        ? navigate("/CityOfLightFa")
+                        : ""
                   }`
                 );
               }}
@@ -2982,14 +3041,20 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
           <div className="smartphone">
             <div className="content">
               <iframe
+                //@ts-ignore
+                ref={iframeRef}
                 className="ChooseExpIframe"
                 allow="clipboard-read; clipboard-write; geolocation"
                 src={iframeURL}
                 frameBorder="0"
                 allowFullScreen
+<<<<<<< Updated upstream
                 scrolling={
                   DSNP && isDsnpFeed ? "yes" : !OSC && !DSEP ? "no" : "yes"
                 }
+=======
+                scrolling={DSNP && isDsnpFeed ? 'yes' : (!OSC && !DSEP ? "no" : "yes")}
+>>>>>>> Stashed changes
                 width={"100%"}
                 height={"100%"}
                 style={{ borderRadius: "36px" }}

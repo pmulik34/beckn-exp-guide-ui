@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, { useState,useRef } from "react";
 import ChooseExperience from "../common/Tabs/chooseExperience";
 
 const DsnpIframe = () => {
-  const DsnpUrl = process.env.REACT_APP_DSNP_APP_URL;
+  const DsnpUrl = process.env.REACT_APP_DSNP_APP_URL_FEED;
   const retailStoreUrl = process.env.REACT_APP_RETAIL_APP_URL;
   const [dsnpUrl, setDsnpUrl] = useState(retailStoreUrl);
   const [activeButton, setActiveButton] = useState("for_tetail_store");
+  const iframeRef = useRef(HTMLIFrameElement);
+
 
   const handleRetailStore = (e: any) => {
     setDsnpUrl(retailStoreUrl);
@@ -16,12 +18,17 @@ const DsnpIframe = () => {
     setActiveButton("for_cutm_name");
   };
 
+
+
+
+
   return (
     <div style={{ position: "relative" }}>
       <ChooseExperience
         textURL={"/assets/DSNP_text.svg"}
         setTourismUrl={setDsnpUrl}
         iframeURL={dsnpUrl}
+        iframeRef={iframeRef}
       />
       <div className="osc_tab_change dsnp_url_tab">
         <div
@@ -50,6 +57,8 @@ const DsnpIframe = () => {
           )}
           DSNP app
         </div>
+        
+
       </div>
     </div>
   );
