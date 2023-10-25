@@ -189,7 +189,6 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
         <img src={textURL} alt="header-content-text" />
 
         {!cityOfAfrica &&
-<<<<<<< Updated upstream
         !himalayas &&
         !cities &&
         !DSEP &&
@@ -197,14 +196,6 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
         !dsepUnified &&
         !DSNP &&
         !DHP ? (
-=======
-          !himalayas &&
-          !cities &&
-          !DSEP &&
-          !UEI &&
-          !dsepUnified &&
-          !DSNP ? (
->>>>>>> Stashed changes
           <div
             style={{
               padding: "10px 0",
@@ -3027,13 +3018,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                 src={iframeURL}
                 frameBorder="0"
                 allowFullScreen
-<<<<<<< Updated upstream
-                scrolling={
-                  DSNP && isDsnpFeed ? "yes" : !OSC && !DSEP ? "no" : "yes"
-                }
-=======
                 scrolling={DSNP && isDsnpFeed ? 'yes' : (!OSC && !DSEP ? "no" : "yes")}
->>>>>>> Stashed changes
                 width={"100%"}
                 height={"100%"}
                 style={{ borderRadius: "36px" }}
