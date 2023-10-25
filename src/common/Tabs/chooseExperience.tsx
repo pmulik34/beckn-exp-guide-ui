@@ -1,8 +1,12 @@
+import React, { useState, useRef } from "react";
 import { QRCode, Button, Modal, Tabs } from "antd";
-import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ModalHTML from "../ModalHTML/modalHTML";
 import ModalSlider from "../ModalHTML/ModalSlider";
+import { signCiTransaction, signPayloadWithExtension } from "../../utility/signTransaction";
+import { web3Enable, web3Accounts } from '@polkadot/extension-dapp'
+
+
 import "./tabs.css";
 export interface selectExpModalProps {
   textURL: string;
@@ -12,6 +16,7 @@ export interface selectExpModalProps {
   setTourismUrl?: Function;
   retailsModal?: boolean;
   pulseEnergy?: string;
+  iframeRef?: any;
 }
 const ChooseExperience: React.FC<selectExpModalProps> = ({
   textURL,
@@ -21,6 +26,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
   setTourismUrl,
   retailsModal,
   pulseEnergy,
+  iframeRef
 }: selectExpModalProps) => {
   const osmEngUrl = process.env.REACT_APP_OSM_ENG_URL;
   const pcmDriverUrl = process.env.REACT_APP_PCM_DRIVER_URL;
@@ -41,7 +47,8 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
   const UEI = localStorage.getItem("name") === "UEI";
   const dsepUnified = localStorage.getItem("name") === "dsepUnified";
   const DSNP = localStorage.getItem("name") === "DSNP";
-  const isDsnpFeed = iframeURL === process.env.REACT_APP_DSNP_APP_URL;
+  const isDsnpFeed = iframeURL === process.env.REACT_APP_DSNP_APP_URL_FEED;
+
 
   const DHP = localStorage.getItem("name") === "DHP";
   const navigate = useNavigate();
@@ -57,6 +64,50 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
   const [isModalOpenOSCRetailer, setIsModalOpenOSCRetailer] = useState(false);
   const [isModalOpenDSEP, setIsModalOpenDSEP] = useState(false);
   const [isModalOpenCityOfAfrica, setIsModalOpenCityOfAfrica] = useState(false);
+
+
+
+
+
+
+  // TODO Improve polka extension connect logic
+  React.useEffect(() => {
+    async function handleMessage(event: MessageEvent) {
+      if (`${event.origin}/` !== process.env.REACT_APP_DSNP_APP_URL || !event.data.type) return;
+      const iframeWindow = iframeRef.current.contentWindow;
+      switch (event.data.type) {
+        case 'enablePolka':
+          let enabled = await web3Enable("Social Web Example Client");
+          if (enabled.length > 0) {
+            const allAccounts = await web3Accounts();
+            iframeWindow.postMessage({ type: 'polkaAccounts', data: allAccounts }, '*');
+          }
+          break;
+        case 'signTransaction':
+          const signedChallenge = await signPayloadWithExtension(
+            event.data.data.selectedAccount,
+            event.data.data.challenge,
+          );
+          iframeWindow.postMessage({ type: 'signTransaction', data: { signedChallenge } }, '*');
+          break;
+        case 'signCiTransaction':
+          const {handleSignature,addProviderSignature} = await signCiTransaction(event.data.data)
+          iframeWindow.postMessage({ type: 'signCiTransaction', data: { handleSignature,addProviderSignature,handle:event.data.data.handle,signingAccount:event.data.data.signingAccount } }, '*');
+          break;
+        default:
+          console.log("No event")
+          break;
+      }
+    }
+
+    window.addEventListener('message', handleMessage);
+
+    return () => {
+      window.removeEventListener('message', handleMessage);
+    };
+  }, []);
+
+
 
   const showModalPC = () => {
     setIsModalOpenPC(true);
@@ -128,16 +179,17 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
         PCM
           ? "tab-wrappper-content PCM_details"
           : pulseEnergy
-          ? "tab-wrappper-content pulse_energy "
-          : UEI
-          ? "tab-wrappper-content UEI"
-          : "tab-wrappper-content"
+            ? "tab-wrappper-content pulse_energy "
+            : UEI
+              ? "tab-wrappper-content UEI"
+              : "tab-wrappper-content"
       }
     >
       <div className="text_wrapper">
         <img src={textURL} alt="header-content-text" />
 
         {!cityOfAfrica &&
+<<<<<<< Updated upstream
         !himalayas &&
         !cities &&
         !DSEP &&
@@ -145,6 +197,14 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
         !dsepUnified &&
         !DSNP &&
         !DHP ? (
+=======
+          !himalayas &&
+          !cities &&
+          !DSEP &&
+          !UEI &&
+          !dsepUnified &&
+          !DSNP ? (
+>>>>>>> Stashed changes
           <div
             style={{
               padding: "10px 0",
@@ -178,14 +238,13 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
               onClick={(e: any) => {
                 setLang(e.target.textContent);
                 setTourismUrl!(
-                  `${
-                    OSC
-                      ? navigate("/OSC-Fa")
-                      : PCM
+                  `${OSC
+                    ? navigate("/OSC-Fa")
+                    : PCM
                       ? navigate("/PCM-Fa")
                       : cityOfLight
-                      ? navigate("/CityOfLightFa")
-                      : ""
+                        ? navigate("/CityOfLightFa")
+                        : ""
                   }`
                 );
               }}
@@ -1539,21 +1598,155 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                 </h3>
                 <img src={"/assets/DSNP_step1.svg"} alt={`StepImage`} />
                 <div className="text_wrapper_modal">
-                  <p>
-                    visits DSNP ID creation and login page from{" "}
-                    <a
-                      style={{ textDecoration: "underline" }}
-                      href="https://dsnp-social-web.becknprotocol.io/feed"
-                      target="_blank"
-                      rel="noreferrer"
+                  <p style={{ paddingBottom: "10px" }}>
+                    use{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
                     >
-                      here
-                    </a>
-                    .
+                      ‘google id’
+                    </span>{" "}
+                    to sign in to the{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘app name’
+                    </span>{" "}
+                    app.
                   </p>
                   <p style={{ paddingBottom: "10px" }}>
-                    If you have a DSNP ID, input the handle and continue.
+                    on the landing page,{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      search for
+                    </span>{" "}
+                    ‘sunglasses’
                   </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    Select the product you wish to buy.
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 2
+                </h3>
+                <img src={"/assets/DSNP_step2.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p>proceed to payment and checkout. Details you may need:</p>
+
+                  <p
+                    style={{
+                      fontWeight: "bolder",
+                      color: "#000",
+                      textTransform: "capitalize",
+                    }}
+                  >
+                    name:
+                  </p>
+
+                  <p>{"<name>"}</p>
+                  <p
+                    style={{
+                      fontWeight: "bolder",
+                      color: "#000",
+                      textTransform: "capitalize",
+                    }}
+                  >
+                    Address:
+                  </p>
+
+                  <p>{"<address>"}</p>
+                  <p
+                    style={{
+                      fontWeight: "bolder",
+                      color: "#000",
+                      textTransform: "capitalize",
+                    }}
+                  >
+                    Phone Number:
+                  </p>
+
+                  <p>{"<phone no>"}</p>
+                  <p
+                    style={{
+                      fontWeight: "bolder",
+                      color: "#000",
+                      textTransform: "capitalize",
+                    }}
+                  >
+                    Email ID:
+                  </p>
+
+                  <p style={{ paddingBottom: "20px" }}>
+                    {"<sample@email.com>"}
+                  </p>
+                  <p
+                    style={{
+                      fontWeight: "bolder",
+                      color: "#000",
+                      textTransform: "capitalize",
+                    }}
+                  >
+                    Payment Method:
+                  </p>
+
+                  <p>Cash on Delivery</p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 3
+                </h3>
+                <img src={"/assets/DSNP_step3.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    once the order is placed, you can give feedback and rating
+                    for each individual product by clicking on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘submit review’
+                    </span>{" "}
+                    button.
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    This will land on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      DSNP ID
+                    </span>{" "}
+                    login page
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 4
+                </h3>
+                <img src={"/assets/DSNP_step4.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    <p>visits DSNP ID creation and login page.</p>
+                    <p>If you have a DSNP ID, input the handle and continue.</p>
+                  </p>
+
                   <p
                     style={{
                       fontWeight: "bolder",
@@ -1572,174 +1765,8 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                       The Polkadot JS plugin will require account
                       authentication.
                     </li>
-                    <li>
-                      Enter username and password then navigate to experience
-                      center
-                    </li>
+                    <li>Enter username and password</li>
                   </ul>
-                </div>
-              </>
-              <>
-                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
-                  step 2
-                </h3>
-                <img src={"/assets/DSNP_step2.svg"} alt={`StepImage`} />
-                <div className="text_wrapper_modal">
-                  <p style={{ paddingBottom: "20px" }}>
-                    select{" "}
-                    <span
-                      style={{
-                        fontWeight: "bolder",
-                        color: "#000",
-                      }}
-                    >
-                      ‘retail store’
-                    </span>{" "}
-                    tab on the landing page.
-                  </p>
-                  <p style={{ paddingBottom: "20px" }}>
-                    <span
-                      style={{
-                        fontWeight: "bolder",
-                        color: "#000",
-                      }}
-                    >
-                      ‘sign up and login’{" "}
-                    </span>{" "}
-                    to ‘open common’ retail app.
-                  </p>
-                  <p style={{ paddingBottom: "20px" }}>
-                    on the landing page,{" "}
-                    <span
-                      style={{
-                        fontWeight: "bolder",
-                        color: "#000",
-                      }}
-                    >
-                      search for ‘sunglasses’
-                    </span>
-                  </p>
-                  <p style={{ paddingBottom: "20px" }}>
-                    Select the product you wish to buy.
-                  </p>
-                </div>
-              </>
-              <>
-                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
-                  step 3
-                </h3>
-                <img src={"/assets/DSNP_step3.svg"} alt={`StepImage`} />
-                <div className="text_wrapper_modal">
-                  <p style={{ paddingBottom: "10px" }}>
-                    proceed to payment and checkout. Details you may need:
-                  </p>
-                  <p
-                    style={{
-                      fontWeight: "bolder",
-                      color: "#000",
-                      textTransform: "capitalize",
-                    }}
-                  >
-                    Name:
-                  </p>
-                  <p>{"<your name>"}</p>
-                  <p
-                    style={{
-                      fontWeight: "bolder",
-                      color: "#000",
-                      textTransform: "capitalize",
-                    }}
-                  >
-                    Address:
-                  </p>
-                  <p>{"<your address>"}</p>
-                  <p
-                    style={{
-                      fontWeight: "bolder",
-                      color: "#000",
-                      textTransform: "capitalize",
-                    }}
-                  >
-                    Phone Number:
-                  </p>
-                  <p>{"<your phone no>"}</p>
-                  <p
-                    style={{
-                      fontWeight: "bolder",
-                      color: "#000",
-                      textTransform: "capitalize",
-                    }}
-                  >
-                    Email ID:
-                  </p>
-                  <p style={{ paddingBottom: "10px" }}>
-                    {"<yourname@email.com>"}
-                  </p>
-                  <p
-                    style={{
-                      fontWeight: "bolder",
-                      color: "#000",
-                      textTransform: "capitalize",
-                    }}
-                  >
-                    Payment Method:
-                  </p>
-                  <p>Cash on Delivery</p>
-                </div>
-              </>
-              <>
-                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
-                  step 4
-                </h3>
-                <img src={"/assets/DSNP_step4.svg"} alt={`StepImage`} />
-                <div className="text_wrapper_modal">
-                  <p style={{ paddingBottom: "10px" }}>
-                    once the order is placed, you can give feedback and rating
-                    for the product by clicking on{" "}
-                    <span
-                      style={{
-                        fontWeight: "bolder",
-                        color: "#000",
-                      }}
-                    >
-                      ‘submit review’
-                    </span>{" "}
-                    button.
-                  </p>
-                  <p style={{ paddingBottom: "10px" }}>
-                    system will ask user for permission to post a review on DSNP
-                    social feed, user selects{" "}
-                    <span
-                      style={{
-                        fontWeight: "bolder",
-                        color: "#000",
-                      }}
-                    >
-                      ‘OK’
-                    </span>
-                    , user then select{" "}
-                    <span
-                      style={{
-                        fontWeight: "bolder",
-                        color: "#000",
-                      }}
-                    >
-                      ‘check review’
-                    </span>{" "}
-                    to see the review posted on social feed.
-                  </p>
-                  <p style={{ paddingBottom: "10px" }}>
-                    user can also see the same by selecting the tab{" "}
-                    <span
-                      style={{
-                        fontWeight: "bolder",
-                        color: "#000",
-                      }}
-                    >
-                      ‘dsnp app’
-                    </span>
-                    .{" "}
-                  </p>
                 </div>
               </>
               <>
@@ -1749,36 +1776,47 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                 <img src={"/assets/DSNP_step5.svg"} alt={`StepImage`} />
                 <div className="text_wrapper_modal">
                   <p style={{ paddingBottom: "10px" }}>
-                    on the social feed page, you can see the review of the item
-                    and sees the tag{" "}
-                    <span
-                      style={{
-                        fontWeight: "bolder",
-                        color: "#000",
-                      }}
-                    >
-                      ‘verified purchase’
-                    </span>
+                    <p>visits DSNP ID creation and login page.</p>
+                    <p>
+                      If you have a DSNP ID, input the handle and continue.{" "}
+                    </p>
                   </p>
                   <p style={{ paddingBottom: "10px" }}>
-                    to logout, user can select there{" "}
-                    <span
+                    <p
                       style={{
                         fontWeight: "bolder",
                         color: "#000",
+                        textTransform: "none",
                       }}
                     >
-                      ‘username’
-                    </span>{" "}
-                    & select{" "}
-                    <span
-                      style={{
-                        fontWeight: "bolder",
-                        color: "#000",
-                      }}
-                    >
-                      ‘sign out’
-                    </span>
+                      Don't have a DSNP ID?
+                    </p>
+                    <p>
+                      <p>create new Handle.</p>
+                      <p
+                        style={{
+                          textTransform: "none",
+                        }}
+                      >
+                        Select the Polkadot JS extension account from the
+                        dropdown.
+                      </p>
+                      <p
+                        style={{
+                          textTransform: "none",
+                        }}
+                      >
+                        The Polkadot JS plugin will require account
+                        authentication.{" "}
+                      </p>
+                      <p
+                        style={{
+                          textTransform: "none",
+                        }}
+                      >
+                        Enter username and password
+                      </p>
+                    </p>
                   </p>
                 </div>
               </>
@@ -2982,14 +3020,20 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
           <div className="smartphone">
             <div className="content">
               <iframe
+                //@ts-ignore
+                ref={iframeRef}
                 className="ChooseExpIframe"
                 allow="clipboard-read; clipboard-write; geolocation"
                 src={iframeURL}
                 frameBorder="0"
                 allowFullScreen
+<<<<<<< Updated upstream
                 scrolling={
                   DSNP && isDsnpFeed ? "yes" : !OSC && !DSEP ? "no" : "yes"
                 }
+=======
+                scrolling={DSNP && isDsnpFeed ? 'yes' : (!OSC && !DSEP ? "no" : "yes")}
+>>>>>>> Stashed changes
                 width={"100%"}
                 height={"100%"}
                 style={{ borderRadius: "36px" }}
