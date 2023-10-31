@@ -6,7 +6,9 @@ const CityOfAfricaIframe = () => {
   return (
     <div>
       <ChooseExperience
+        headingText="enabling"
         textURL={"/assets/smartCityGambia.svg"}
+        descriptionText="discover for yourself how easy it is to  travel around Gambia."
         iframeURL={cityofAfricaUrl}
       />
     </div>

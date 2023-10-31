@@ -9,7 +9,9 @@ const CityOfLightFaIframe = () => {
   return (
     <div>
       <ChooseExpFa
-        textURL={"/assets/city-of-light-text.png"}
+        headingText="experience the"
+        textURL={"/assets/city-of-light-text.svg"}
+        descriptionText="experience for yourself how seamless a trip to Paris can be."
         languageEng={"english"}
         languageFra={"français"}
         setTourismUrl={setTourismUrlFa}

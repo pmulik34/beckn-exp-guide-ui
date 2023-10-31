@@ -11,7 +11,10 @@ import { web3Enable, web3Accounts } from "@polkadot/extension-dapp";
 
 import "./tabs.css";
 export interface selectExpModalProps {
+  headingText?: string;
+  btmHeading?: string;
   textURL: string;
+  descriptionText?: string;
   iframeURL?: string | undefined;
   languageEng?: string;
   languageFra?: string;
@@ -21,7 +24,10 @@ export interface selectExpModalProps {
   iframeRef?: any;
 }
 const ChooseExperience: React.FC<selectExpModalProps> = ({
+  headingText,
+  btmHeading,
   textURL,
+  descriptionText,
   iframeURL,
   languageEng,
   languageFra,
@@ -202,7 +208,16 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
       }
     >
       <div className="text_wrapper">
-        <img src={textURL} alt="header-content-text" />
+        <div className="heading-text">{headingText}</div>
+        <img
+          src={textURL}
+          alt="header-content-text"
+          style={{ marginBottom: "-10px" }}
+        />
+        <div className="heading-text" style={{ lineHeight: "unset" }}>
+          {btmHeading}
+        </div>
+        <div className="description-text">{descriptionText}</div>
 
         {!cityOfAfrica &&
         !himalayas &&

@@ -8,7 +8,20 @@
 .tabsConatiner {
   width: 1080px;
 }
-
+.text_wrapper {
+  padding-right: 90px;
+}
+.description-text {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 36px;
+}
+.heading-text {
+  line-height: 0;
+  font-weight: 400;
+  font-size: 36px;
+  padding-bottom: 10px;
+}
 .ant-tabs-nav {
   width: 1080px;
   height: 86px;
