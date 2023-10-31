@@ -30,6 +30,7 @@ const UeiIframe = () => {
       <ChooseExperience
         pulseEnergy={pulseEnergy}
         textURL={"/assets/UEI_text.svg"}
+        descriptionText="Building a global network of distributed batteries to boost renewable energy adoption, improve grid reliability, and reduce fossil fuel dependency."
         iframeURL={activeUrl}
       />
       <div className="UEI_tab_change">

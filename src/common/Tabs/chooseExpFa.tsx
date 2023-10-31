@@ -6,7 +6,10 @@ import { selectExpModalProps } from "./chooseExperience";
 import TabsFa from "./tabsFa";
 
 const ChooseExpFa: React.FC<selectExpModalProps> = ({
+  descriptionText,
+  btmHeading,
   textURL,
+  headingText,
   iframeURL,
   languageEng,
   languageFra,
@@ -62,8 +65,17 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
         PCM ? "tab-wrappper-content PCM_details" : "tab-wrappper-content"
       }
     >
-      <div>
-        <img src={textURL} alt="header-content-text" />
+      <div className="text_wrapper">
+        <div className="heading-text">{headingText}</div>
+        <img
+          src={textURL}
+          alt="header-content-text"
+          style={{ marginBottom: "-10px" }}
+        />
+        <div className="heading-text" style={{ lineHeight: "unset" }}>
+          {btmHeading}
+        </div>
+        <div className="description-text">{descriptionText}</div>
 
         {!cityOfAfrica ? (
           <div

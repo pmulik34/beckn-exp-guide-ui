@@ -21,7 +21,9 @@ const OscIframe = () => {
   return (
     <div style={{ position: "relative" }}>
       <ChooseExpFa
-        textURL={"/assets/OSCtextFa.svg"}
+        headingText="permettre le commerce sur "
+        textURL={"/assets/OSCtext.svg"}
+        descriptionText="explorez les délices qui vous entourent. Trouvez ce que vous aimez et faites-vous livrer à votre convenance."
         setTourismUrl={setOpenStreetCom}
         iframeURL={openStreetCom}
         languageEng={"english"}

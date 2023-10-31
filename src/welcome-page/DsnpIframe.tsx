@@ -1,4 +1,4 @@
-import React, { useState,useRef } from "react";
+import React, { useState, useRef } from "react";
 import ChooseExperience from "../common/Tabs/chooseExperience";
 
 const DsnpIframe = () => {
@@ -7,7 +7,6 @@ const DsnpIframe = () => {
   const [dsnpUrl, setDsnpUrl] = useState(retailStoreUrl);
   const [activeButton, setActiveButton] = useState("for_tetail_store");
   const iframeRef = useRef(HTMLIFrameElement);
-
 
   const handleRetailStore = (e: any) => {
     setDsnpUrl(retailStoreUrl);
@@ -18,14 +17,11 @@ const DsnpIframe = () => {
     setActiveButton("for_cutm_name");
   };
 
-
-
-
-
   return (
     <div style={{ position: "relative" }}>
       <ChooseExperience
         textURL={"/assets/DSNP_text.svg"}
+        descriptionText="building a decentralized social networking protocol for the buyer's who can purchase trusted products based on social proof"
         setTourismUrl={setDsnpUrl}
         iframeURL={dsnpUrl}
         iframeRef={iframeRef}
@@ -57,8 +53,6 @@ const DsnpIframe = () => {
           )}
           DSNP app
         </div>
-        
-
       </div>
     </div>
   );
