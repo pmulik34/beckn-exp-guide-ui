@@ -7,7 +7,10 @@ const PcmIframeFa = () => {
   return (
     <div>
       <ChooseExpFa
-        textURL={"/assets/PCMtextFa.svg"}
+        headingText="enrichissant"
+        textURL={"/assets/PCMtext.svg"}
+        btmHeading="avec mobilité"
+        descriptionText="Découvrez comment vous pouvez vous rendre rapidement sur le lieu de votre événement grâce à l'application pass Culture et au réseau de mobilité de Paris."
         setTourismUrl={setOpenPcmLang}
         languageEng={"english"}
         languageFra={"français"}

@@ -6,7 +6,10 @@ const PcmIframe = () => {
   return (
     <div>
       <ChooseExperience
+        headingText="enriching "
         textURL={"/assets/PCMtext.svg"}
+        descriptionText="see how you can quickly reach your event venue using the pass Culture app and Paris' mobility network."
+        btmHeading="with mobility"
         setTourismUrl={setOpenPcmLang}
         languageEng={"english"}
         languageFra={"français"}

@@ -21,7 +21,9 @@ const OscIframe = () => {
   return (
     <div style={{ position: "relative" }}>
       <ChooseExperience
+        headingText="enabling commerce on  "
         textURL={"/assets/OSCtext.svg"}
+        descriptionText="explore the delicacies around you. find what you like and get it delivered at your convenience. "
         setTourismUrl={setOpenStreetCom}
         iframeURL={openStreetCom}
         languageEng={"english"}
