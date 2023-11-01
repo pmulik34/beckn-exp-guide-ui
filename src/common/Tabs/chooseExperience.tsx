@@ -106,10 +106,8 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
           );
           break;
         case "signCiTransaction":
-          const {
-            handleSignature,
-            addProviderSignature,
-          } = await signCiTransaction(event.data.data);
+          const { handleSignature, addProviderSignature } =
+            await signCiTransaction(event.data.data);
           iframeWindow.postMessage(
             {
               type: "signCiTransaction",
@@ -248,7 +246,6 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
         !DSEP &&
         !UEI &&
         !dsepUnified &&
-        !cityOfLight &&
         !DSNP &&
         !DHP ? (
           <div
@@ -1106,7 +1103,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                 <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
                   step 1
                 </h3>
-                <img src={"/assets/cityOfLightstep1.svg"} alt={`StepImage`} />
+                <img src={"/assets/himalayas_step1.svg"} alt={`StepImage`} />
                 <div className="text_wrapper_modal">
                   <p style={{ paddingBottom: "10px" }}>
                     using of
