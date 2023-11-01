@@ -73,6 +73,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
   const [isModalOpenCityOfAfrica, setIsModalOpenCityOfAfrica] = useState(false);
   const [isModalOpenhimalayas, setIsModalOpenhimalayas] = useState(false);
   const [isModalOpencities, setIsModalOpencities] = useState(false);
+  const [isModalOpenCityOfLight, setIsModalOpenCityOfLight] = useState(false);
 
   // TODO Improve polka extension connect logic
   React.useEffect(() => {
@@ -105,8 +106,10 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
           );
           break;
         case "signCiTransaction":
-          const { handleSignature, addProviderSignature } =
-            await signCiTransaction(event.data.data);
+          const {
+            handleSignature,
+            addProviderSignature,
+          } = await signCiTransaction(event.data.data);
           iframeWindow.postMessage(
             {
               type: "signCiTransaction",
@@ -148,6 +151,9 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
   const showModalDsepUnified = () => {
     setIsModalOpenDsepUnified(true);
   };
+  const showModalCityOfLight = () => {
+    setIsModalOpenCityOfLight(true);
+  };
   const showModalDHP = () => {
     setIsModalOpenDHP(true);
   };
@@ -185,6 +191,9 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
   };
   const handleCancelDsepUnified = () => {
     setIsModalOpenDsepUnified(false);
+  };
+  const handleCancelCitiOfLight = () => {
+    setIsModalOpenCityOfLight(false);
   };
   const handleCancelDSNP = () => {
     setIsModalOpenDSNP(false);
@@ -239,6 +248,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
         !DSEP &&
         !UEI &&
         !dsepUnified &&
+        !cityOfLight &&
         !DSNP &&
         !DHP ? (
           <div
@@ -1075,6 +1085,704 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
           </div>
         ) : null}
 
+        {cityOfLight ? (
+          <div className="PCM_modal OSM_custom">
+            <Button type="primary" onClick={showModalCityOfLight}>
+              instructions
+              <img
+                style={{ paddingLeft: "5px" }}
+                src="/assets/arrow_back.svg"
+                alt="arrowback"
+              />
+            </Button>
+            <ModalSlider
+              open={isModalOpenCityOfLight}
+              onCancel={handleCancelCitiOfLight}
+              modalHeading={
+                "follow these steps for the best possible experience as a traveller!"
+              }
+            >
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 1
+                </h3>
+                <img src={"/assets/cityOfLightstep1.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    using of
+                    <span style={{ fontWeight: "bolder", color: "#000" }}>
+                      {" "}
+                      city of lights
+                    </span>{" "}
+                    app, search for{" "}
+                    <span style={{ fontWeight: "bolder", color: "#000" }}>
+                      paris, france{" "}
+                    </span>
+                    from the search results select:
+                    <p style={{ paddingTop: "10px", paddingBottom: "10px" }}>
+                      <span
+                        style={{
+                          fontWeight: "bolder",
+                          color: "#000",
+                        }}
+                      >
+                        molière's the miser - theatrical - each
+                      </span>
+                    </p>
+                    <p style={{ paddingBottom: "10px" }}>
+                      <span>click on </span>{" "}
+                      <span style={{ fontWeight: "bolder", color: "#000" }}>
+                        book now
+                      </span>{" "}
+                      & set number of traveler’s to{" "}
+                      <span style={{ fontWeight: "bolder", color: "#000" }}>
+                        02
+                      </span>
+                    </p>
+                    <span>
+                      and then click on{" "}
+                      <span style={{ fontWeight: "bolder", color: "#000" }}>
+                        checkout
+                      </span>{" "}
+                      to continue.
+                    </span>
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 2
+                </h3>
+                <img
+                  src={"/assets/cityOfLightstep2.svg"}
+                  alt={`StepImage`}
+                  style={{ borderRadius: "100px" }}
+                />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    enter traveller details:
+                  </p>
+                  <p>
+                    <p>
+                      name:{" "}
+                      <span
+                        style={{
+                          fontWeight: "bolder",
+                          color: "#000",
+                        }}
+                      >
+                        matheo ;
+                      </span>{" "}
+                      <span>
+                        age:
+                        <span
+                          style={{
+                            fontWeight: "bolder",
+                            color: "#000",
+                          }}
+                        >
+                          19
+                        </span>
+                      </span>
+                    </p>
+                    <span>
+                      mobile:{" "}
+                      <span
+                        style={{
+                          fontWeight: "bolder",
+                          color: "#000",
+                        }}
+                      >
+                        0143077537
+                      </span>
+                    </span>
+                  </p>
+                  <p>
+                    pincode:{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      750122
+                    </span>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    address:
+                    <br />
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      12 rue rottembourg, paris 750122
+                    </span>
+                  </p>
+                  <p>
+                    flat Number:
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      b21202
+                    </span>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    landmark:
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      xavier school
+                    </span>
+                  </p>
+                  <p>
+                    click on
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      “save traveler details”
+                    </span>
+                    button.
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 3
+                </h3>
+                <img src={"/assets/cityOfLightstep3.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p>
+                    click on
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      “proceed to pay”{" "}
+                    </span>
+                    button .
+                    <br />
+                    select
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      “pay on arrival”
+                    </span>
+                    as your payment methodand click on
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ”confirm”
+                    </span>
+                    to continue
+                    <br />
+                    click on
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {" "}
+                      view booking”{" "}
+                    </span>
+                    “ button to view booking details
+                    <br />
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      scan qr code
+                    </span>
+                    to import your order into retail application.
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 4
+                </h3>
+                <img src={"/assets/cityOfLightstep4.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p>
+                    <p style={{ paddingBottom: "10px" }}>
+                      click on{" "}
+                      <span
+                        style={{
+                          fontWeight: "bolder",
+                          color: "#000",
+                        }}
+                      >
+                        “yes! show me the list”{" "}
+                      </span>{" "}
+                      button to get the AI generated list of items that you
+                      might require for your travel.select :{" "}
+                      <span
+                        style={{
+                          fontWeight: "bolder",
+                          color: "#000",
+                        }}
+                      >
+                        {"<item names> "}{" "}
+                      </span>{" "}
+                      from the list
+                    </p>
+                    <p>
+                      click on{" "}
+                      <span
+                        style={{
+                          fontWeight: "bolder",
+                          color: "#000",
+                        }}
+                      >
+                        select delivery location{" "}
+                      </span>
+                      button & select the delivery location
+                    </p>
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 5
+                </h3>
+                <img src={"/assets/cityOfLightstep5.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    add{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      2 items
+                    </span>
+                    to the cart from the list,
+                  </p>
+                  <br />
+                  <p>
+                    click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      view & billing{" "}
+                    </span>
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 6
+                </h3>
+                <img
+                  src={"/assets/cityOfLightstep6new.svg"}
+                  alt={`StepImage`}
+                />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    enter billing details:
+                  </p>
+                  <p>
+                    <p>
+                      name:{" "}
+                      <span
+                        style={{
+                          fontWeight: "bolder",
+                          color: "#000",
+                        }}
+                      >
+                        matheo ;
+                      </span>{" "}
+                      <span>
+                        age:
+                        <span
+                          style={{
+                            fontWeight: "bolder",
+                            color: "#000",
+                          }}
+                        >
+                          19
+                        </span>
+                      </span>
+                    </p>
+                    <span>
+                      mobile:{" "}
+                      <span
+                        style={{
+                          fontWeight: "bolder",
+                          color: "#000",
+                        }}
+                      >
+                        0143077537
+                      </span>
+                    </span>
+                  </p>
+                  <p>
+                    pincode:{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      750122
+                    </span>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    address:
+                    <br />
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      12 rue rottembourg, paris 750122
+                    </span>
+                  </p>
+                  <p>
+                    flat Number:
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      b21202
+                    </span>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    landmark:
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      xavier school
+                    </span>
+                  </p>
+                  <p>
+                    click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {" "}
+                      “save billing details”{" "}
+                    </span>
+                    button.
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 7
+                </h3>
+                <img src={"/assets/cityOfLightstep6.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    enter shipping details:
+                  </p>
+                  <p>
+                    <p>
+                      name:{" "}
+                      <span
+                        style={{
+                          fontWeight: "bolder",
+                          color: "#000",
+                        }}
+                      >
+                        matheo ;
+                      </span>{" "}
+                      <span>
+                        age:
+                        <span
+                          style={{
+                            fontWeight: "bolder",
+                            color: "#000",
+                          }}
+                        >
+                          19
+                        </span>
+                      </span>
+                    </p>
+                    <span>
+                      mobile:{" "}
+                      <span
+                        style={{
+                          fontWeight: "bolder",
+                          color: "#000",
+                        }}
+                      >
+                        0143077537
+                      </span>
+                    </span>
+                  </p>
+                  <p>
+                    pincode:{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      750122
+                    </span>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    address:
+                    <br />
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      12 rue rottembourg, paris 750122
+                    </span>
+                  </p>
+                  <p>
+                    flat Number:
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      b21202
+                    </span>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    landmark:
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      xavier school
+                    </span>
+                  </p>
+                  <p>
+                    click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {" "}
+                      “save shipping details”{" "}
+                    </span>
+                    button.
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 8
+                </h3>
+                <img src={"/assets/cityOfLightstep10.svg"} alt={`StepImage`} />
+
+                <div className="text_wrapper_modal">
+                  <p>
+                    click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {" "}
+                      “confirm”{" "}
+                    </span>
+                    <p style={{ marginTop: "10px", paddingBottom: "10px" }}>
+                      select payment mode as{" "}
+                      <span
+                        style={{
+                          fontWeight: "bolder",
+                          color: "#000",
+                        }}
+                      >
+                        “cash on delivery” .{" "}
+                      </span>
+                    </p>
+                    click on view order to{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {" "}
+                      view order{" "}
+                    </span>{" "}
+                    details
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 9
+                </h3>
+                <img src={"/assets/cityOfLightstep8.svg"} alt={`StepImage`} />
+
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      scan qr code{" "}
+                    </span>
+                    from travelio app again to import your order into mobility
+                    application.
+                  </p>
+                  <p>
+                    click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {" "}
+                      “yes! let’s go”{" "}
+                    </span>
+                    button to see best travel options to reach your location
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 10
+                </h3>
+                <img src={"/assets/cityOfLightstep9.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    your pickup location will be your current location{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {"<location name>"}
+                    </span>
+                    <p style={{ margin: "10px 0px" }}>
+                      select your drop off location as
+                      <span
+                        style={{
+                          fontWeight: "bolder",
+                          color: "#000",
+                        }}
+                      >
+                        {" "}
+                        {"<location name>"}
+                      </span>{" "}
+                      and then click on
+                      <span
+                        style={{
+                          fontWeight: "bolder",
+                          color: "#000",
+                        }}
+                      >
+                        {" "}
+                        “search rides”
+                      </span>
+                    </p>
+                    select rides offered by
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {" "}
+                      alpha Taxi{" "}
+                    </span>
+                    from the search results
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 11
+                </h3>
+                <img src={"/assets/cityOfLightstep11.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p>
+                    select payment method as{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {" "}
+                      cash”{" "}
+                    </span>
+                    “ and click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {" "}
+                      “book now”{" "}
+                    </span>
+                    <p style={{ margin: "10px 0px" }}>
+                      as soon as driver accepts the ride request your ride will
+                      start.
+                    </p>
+                    as soon as you reach your destination please{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {" "}
+                      pay your driver by cash{" "}
+                    </span>{" "}
+                    to the end ride.
+                  </p>
+                </div>
+              </>
+            </ModalSlider>
+          </div>
+        ) : null}
+
         {dsepUnified ? (
           <div className="PCM_modal OSM_custom">
             <Button type="primary" onClick={showModalDsepUnified}>
@@ -1082,6 +1790,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
               <img
                 style={{ paddingLeft: "5px" }}
                 src="/assets/arrow_back.svg"
+                alt="arrowback"
               />
             </Button>
             <ModalSlider
@@ -1559,6 +2268,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
             </ModalSlider>
           </div>
         ) : null}
+
         {DSNP ? (
           <div className="DSEP-intruction">
             <Button
