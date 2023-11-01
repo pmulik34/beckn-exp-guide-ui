@@ -71,6 +71,8 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
   const [isModalOpenOSCRetailer, setIsModalOpenOSCRetailer] = useState(false);
   const [isModalOpenDSEP, setIsModalOpenDSEP] = useState(false);
   const [isModalOpenCityOfAfrica, setIsModalOpenCityOfAfrica] = useState(false);
+  const [isModalOpenhimalayas, setIsModalOpenhimalayas] = useState(false);
+  const [isModalOpencities, setIsModalOpencities] = useState(false);
 
   // TODO Improve polka extension connect logic
   React.useEffect(() => {
@@ -155,6 +157,12 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
   const showModalCityOfAfrica = () => {
     setIsModalOpenCityOfAfrica(true);
   };
+  const showModalhimalayas = () => {
+    setIsModalOpenhimalayas(true);
+  };
+  const showModalcities = () => {
+    setIsModalOpencities(true);
+  };
 
   const showModalOSCretailer = () => {
     setIsModalOpenOSCRetailer(true);
@@ -186,6 +194,12 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
   };
   const handleCancelCityOfAfrica = () => {
     setIsModalOpenCityOfAfrica(false);
+  };
+  const handleCancelhimalayas = () => {
+    setIsModalOpenhimalayas(false);
+  };
+  const handleCancelcities = () => {
+    setIsModalOpencities(false);
   };
 
   const handleCancelRetailer = () => {
@@ -2755,6 +2769,611 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                   </p>
                   <p style={{ paddingBottom: "10px" }}>
                     click on any option of your choice to end the flow.
+                  </p>
+                </div>
+              </>
+            </ModalSlider>
+          </div>
+        ) : null}
+        {himalayas ? (
+          <div className="DSEP-intruction">
+            <Button
+              type="primary"
+              onClick={showModalhimalayas}
+              style={{ left: "unset", margin: "unset", marginTop: "30px" }}
+            >
+              instructions
+              <img
+                style={{ paddingLeft: "5px" }}
+                src="/assets/arrow_back.svg"
+              />
+            </Button>
+            <ModalSlider
+              open={isModalOpenhimalayas}
+              onCancel={handleCancelhimalayas}
+              modalHeading={
+                "follow these steps for the best possible experience as a traveller!"
+              }
+            >
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 1
+                </h3>
+                <img src={"/assets/himalayas_step1.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    open app , search for{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘manali’.
+                    </span>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    from search results select:{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      hampta pass trek
+                    </span>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    view trip details and click{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘book now’
+                    </span>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    set no. of traveler’s to{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      2
+                    </span>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    continue to{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      checkout
+                    </span>
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 2
+                </h3>
+                <img src={"/assets/himalayas_step2.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    enter traveller details:
+                  </p>
+                  <p>
+                    name:{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {" <your name>"}
+                    </span>
+                  </p>
+                  <p>
+                    mobile:{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      9191223433
+                    </span>
+                  </p>
+                  <p>
+                    pin code:{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      560078
+                    </span>
+                  </p>
+                  <p>
+                    address:{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      bengaluru, bengaluru urban, bangalore division, karnataka
+                    </span>
+                  </p>
+                  <p>
+                    flat number: b
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      21202
+                    </span>
+                  </p>
+                  <p>
+                    landmark:{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      xavier school
+                    </span>
+                  </p>
+                  <p style={{ paddingTop: "10px" }}>
+                    click{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      “proceed to pay”{" "}
+                    </span>
+                    to continue
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 3
+                </h3>
+                <img src={"/assets/UEI_step1.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      “view booking”
+                    </span>{" "}
+                    button to view booking details
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      scan qr code
+                    </span>{" "}
+                    to import your order into retail application.
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    retail app will ask if you want travel-based shopping list.
+                    confirm this action.
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 4
+                </h3>
+                <img src={"/assets/himalayas_step4.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p>
+                    using generative AI app will create a shopping list for your
+                    booked travel.
+                  </p>
+                  <p>select :</p>
+                  <p
+                    style={{
+                      fontWeight: "bolder",
+                      color: "#000",
+                    }}
+                  >
+                    sunglasses,
+                  </p>
+                  <p
+                    style={{
+                      fontWeight: "bolder",
+                      color: "#000",
+                      paddingBottom: "10px",
+                    }}
+                  >
+                    {" "}
+                    backpack{" "}
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    select a delivery location, based on which a catalog page
+                    will be generated
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      view & billing
+                    </span>{" "}
+                    to continue
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 5
+                </h3>
+                <img src={"/assets/himalayas_step5.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    enter shipping details:
+                  </p>
+                  <p>
+                    name:{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {" <username>"}
+                    </span>
+                  </p>
+                  <p>
+                    mobile:{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      9191223433
+                    </span>
+                  </p>
+                  <p>
+                    pin code:{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      560078
+                    </span>
+                  </p>
+                  <p>
+                    address:{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      bengaluru, bengaluru urban, bangalore division, karnataka
+                    </span>
+                  </p>
+                  <p>
+                    building name & floor:{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      B2 1202
+                    </span>
+                  </p>
+                  <p>
+                    landmark:{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      xavier school
+                    </span>
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 6
+                </h3>
+                <img src={"/assets/driver_step5_img.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      “confirm”
+                    </span>{" "}
+                    and select payment mode as{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      “cash on delivery” .
+                    </span>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    you can see your order details on click of{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      view order
+                    </span>
+                  </p>
+                </div>
+              </>
+            </ModalSlider>
+          </div>
+        ) : null}
+        {cities ? (
+          <div className="DSEP-intruction">
+            <Button
+              type="primary"
+              onClick={showModalcities}
+              style={{ left: "unset", margin: "unset", marginTop: "30px" }}
+            >
+              instructions
+              <img
+                style={{ paddingLeft: "5px" }}
+                src="/assets/arrow_back.svg"
+              />
+            </Button>
+            <ModalSlider
+              open={isModalOpencities}
+              onCancel={handleCancelcities}
+              modalHeading={
+                "follow these steps for the best possible experience as a traveller!"
+              }
+            >
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 1
+                </h3>
+                <img src={"/assets/himalayas_step1.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    open{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      travel buddy{" "}
+                    </span>
+                    app ,
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    your pickup location will be your current location{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      conrad hotel, bengaluru
+                    </span>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    select your drop off location as{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      kempegowda international airport, karnataka
+                    </span>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>and search for rides</p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 2
+                </h3>
+                <img src={"/assets/cities_step2.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    alert message for violation of policy:
+                  </p>
+
+                  <p style={{ paddingBottom: "10px" }}>
+                    click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      “ok, i understand”{" "}
+                    </span>
+                    to continue.
+                  </p>
+                  <p>go back and set your drop off location as:</p>
+                  <p
+                    style={{
+                      paddingBottom: "10px",
+                      fontWeight: "bolder",
+                      color: "#000",
+                    }}
+                  >
+                    byappanahalli
+                  </p>
+                  <p>and now search for rides</p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 3
+                </h3>
+                <img src={"/assets/cities_step3.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    select rides offered by{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      “best taxi”{" "}
+                    </span>
+                    and proceed,
+                  </p>
+
+                  <p style={{ paddingBottom: "10px" }}>
+                    enter
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {" "}
+                      your name{" "}
+                    </span>
+                    &{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {" "}
+                      mobile number{" "}
+                    </span>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    then click on
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {" "}
+                      “confirm & proceed”{" "}
+                    </span>
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 4
+                </h3>
+                <img src={"/assets/cities_step4.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    select payment mode as{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      cash .
+                    </span>
+                  </p>
+                  <p>click on</p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {" "}
+                      book now{" "}
+                    </span>
+                    to proceed.
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 5
+                </h3>
+                <img src={"/assets/cities_step5.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    wait while driver accepts your ride.
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    driver will accept your ride request.
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 6
+                </h3>
+                <img src={"/assets/cities_step6.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      pay driver by cash
+                    </span>{" "}
+                    at the end of the ride
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      rate{" "}
+                    </span>
+                    the ride experience and provide feedback!
                   </p>
                 </div>
               </>
