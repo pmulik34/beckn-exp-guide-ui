@@ -2,6 +2,7 @@ import { QRCode, Button, Modal, Tabs } from "antd";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ModalHTML from "../ModalHTML/modalHTML";
+import ModalSlider from "../ModalHTML/ModalSlider";
 import { selectExpModalProps } from "./chooseExperience";
 import TabsFa from "./tabsFa";
 
@@ -32,6 +33,7 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
   const [isModalOpenPC, setIsModalOpenPC] = useState(false);
   const [isModalOpenDriver, setSsModalOpenDriver] = useState(false);
   const [isModalOpenOSCRetailer, setIsModalOpenOSCRetailer] = useState(false);
+  const [isModalOpenCityOfLight, setIsModalOpenCityOfLight] = useState(false);
 
   const showModalPC = () => {
     setIsModalOpenPC(true);
@@ -45,6 +47,9 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
   const showModalOSCretailer = () => {
     setIsModalOpenOSCRetailer(true);
   };
+  const showModalCityOfLight = () => {
+    setIsModalOpenCityOfLight(true);
+  };
 
   const handleCancelPC = () => {
     setIsModalOpenPC(false);
@@ -57,6 +62,9 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
   };
   const handleCancelRetailer = () => {
     setIsModalOpenOSCRetailer(false);
+  };
+  const handleCancelCitiOfLight = () => {
+    setIsModalOpenCityOfLight(false);
   };
 
   return (
@@ -372,6 +380,694 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                 />
               </>
             )}
+          </div>
+        ) : null}
+        {cityOfLight ? (
+          <div className="PCM_modal OSM_custom">
+            <Button type="primary" onClick={showModalCityOfLight}>
+              mode d'emploi
+              <img
+                style={{ paddingLeft: "5px" }}
+                src="/assets/arrow_back.svg"
+                alt="arrowback"
+              />
+            </Button>
+            <ModalSlider
+              open={isModalOpenCityOfLight}
+              onCancel={handleCancelCitiOfLight}
+              className1=" Fa-modal"
+              modalHeading={
+                "Suivez ces étapes pour vivre la meilleure expérience possible en tant que voyageur !"
+              }
+            >
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  L'étape 1
+                </h3>
+                <img src={"/assets/himalayas_step1.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    en utilisant
+                    <span style={{ fontWeight: "bolder", color: "#000" }}>
+                      {" "}
+                      «La Ville des Lumières»
+                    </span>{" "}
+                    application Rechercher{" "}
+                    <span style={{ fontWeight: "bolder", color: "#000" }}>
+                      Paris, France{" "}
+                    </span>
+                    à partir des résultats de recherche selectionner:
+                    <p style={{ paddingTop: "10px", paddingBottom: "10px" }}>
+                      <span
+                        style={{
+                          fontWeight: "bolder",
+                          color: "#000",
+                        }}
+                      >
+                        moliere's the miser- theatral - chaque
+                      </span>
+                    </p>
+                    <p style={{ paddingBottom: "10px" }}>
+                      <span>click sur </span>{" "}
+                      <span style={{ fontWeight: "bolder", color: "#000" }}>
+                        «reserver maintenant»
+                      </span>{" "}
+                      et ensemble nombre de voyageurs à deux{" "}
+                    </p>
+                    <p>
+                      cliquez sur{" "}
+                      <span style={{ fontWeight: "bolder", color: "#000" }}>
+                        vérifier
+                      </span>{" "}
+                      pour continuer
+                    </p>
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  L'étape 2
+                </h3>
+                <img
+                  src={"/assets/cityOfLightstep2.svg"}
+                  alt={`StepImage`}
+                  style={{ borderRadius: "100px" }}
+                />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    Saisir les détails du voyageur
+                  </p>
+                  <p>
+                    <p>
+                      Prenom:{" "}
+                      <span
+                        style={{
+                          fontWeight: "bolder",
+                          color: "#000",
+                        }}
+                      >
+                        Matheo;
+                      </span>{" "}
+                      <span>
+                        Âge:{" "}
+                        <span
+                          style={{
+                            fontWeight: "bolder",
+                            color: "#000",
+                          }}
+                        >
+                          19
+                        </span>
+                      </span>
+                    </p>
+                    <span>
+                      Mobile:{" "}
+                      <span
+                        style={{
+                          fontWeight: "bolder",
+                          color: "#000",
+                        }}
+                      >
+                        0143077537
+                      </span>
+                    </span>
+                  </p>
+                  <p>
+                    Code PIN:{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      750122{" "}
+                    </span>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    Adresse: <br />
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      12 rue rottembourg, paris 750122
+                    </span>
+                  </p>
+                  <p>
+                    Numéro d'appartement:{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      B21202
+                    </span>{" "}
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    Point de repère:{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      L'école xavier{" "}
+                    </span>
+                  </p>
+                  <p>
+                    Cliquez sur le bouton « enregistrer les détails du voyageur
+                    »
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  L'étape 3
+                </h3>
+                <img src={"/assets/cityOfLightstep3.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p>
+                    Cliquez sur le bouton
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      « procéder au paiement »{" "}
+                    </span>
+                    <br />
+                    Sélectionnez{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      « payer à l'arrivée »{" "}
+                    </span>
+                    comme mode de paiement et <br />
+                    Cliquez sur{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      «confirmer »{" "}
+                    </span>
+                    pour continuer <br />
+                    Cliquez sur le bouton{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {" "}
+                      « voir la réservation »{" "}
+                    </span>
+                    pour voir les détails de la réservation
+                    <br />
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      Scannez le code QR{" "}
+                    </span>
+                    pour importer votre commande dans l'application de vente au
+                    détail{" "}
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  L'étape 4
+                </h3>
+                <img src={"/assets/cityOfLightstep4.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p>
+                    <p style={{ paddingBottom: "10px" }}>
+                      Cliquez sur{" "}
+                      <span
+                        style={{
+                          fontWeight: "bolder",
+                          color: "#000",
+                        }}
+                      >
+                        « oui ! montrez-moi la liste »{" "}
+                      </span>{" "}
+                      pour obtenir la liste générée par l'IA des articles dont
+                      vous pourriez avoir besoin pour votre voyage.{" "}
+                    </p>
+                    <p style={{ paddingBottom: "10px" }}>
+                      Sélectionnez:{" "}
+                      <span
+                        style={{
+                          fontWeight: "bolder",
+                          color: "#000",
+                        }}
+                      >
+                        {"<noms d'éléments>"}{" "}
+                      </span>{" "}
+                      dans la liste
+                    </p>
+                    <p>
+                      Cliquez sur le bouton{" "}
+                      <span
+                        style={{
+                          fontWeight: "bolder",
+                          color: "#000",
+                        }}
+                      >
+                        « sélectionner le lieu de livraison »{" "}
+                      </span>
+                      et sélectionnez le lieu de livraison
+                    </p>
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  L'étape 5
+                </h3>
+                <img src={"/assets/cityOfLightstep5.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    Ajoutez{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      2 articles
+                    </span>
+                    au panier depuis la liste,
+                  </p>
+                  <br />
+                  <p>
+                    Cliquez{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      sur voir et facturer
+                    </span>
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  L'étape 6
+                </h3>
+                <img
+                  src={"/assets/cityOfLightstep6new.svg"}
+                  alt={`StepImage`}
+                />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    Entrez les détails de facturation
+                  </p>
+                  <p>
+                    <p>
+                      Prenom:{" "}
+                      <span
+                        style={{
+                          fontWeight: "bolder",
+                          color: "#000",
+                        }}
+                      >
+                        matheo ;
+                      </span>{" "}
+                      <span>
+                        Âge:{" "}
+                        <span
+                          style={{
+                            fontWeight: "bolder",
+                            color: "#000",
+                          }}
+                        >
+                          19
+                        </span>
+                      </span>
+                    </p>
+                    <span>
+                      Mobile:{" "}
+                      <span
+                        style={{
+                          fontWeight: "bolder",
+                          color: "#000",
+                        }}
+                      >
+                        0143077537{" "}
+                      </span>
+                    </span>
+                  </p>
+                  <p>
+                    Code PIN:{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      750122{" "}
+                    </span>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    Adresse: <br />
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      12 rue rottembourg, paris 750122{" "}
+                    </span>
+                  </p>
+                  <p>
+                    Numéro d'appartement:{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      B21202{" "}
+                    </span>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    Point de repère:{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      L'école xavier{" "}
+                    </span>
+                  </p>
+                  <p>
+                    Cliquez sur le bouton{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {" "}
+                      « enregistrer les détails de facturation »{" "}
+                    </span>
+                    .
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  L'étape 7
+                </h3>
+                <img src={"/assets/cityOfLightstep6.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    Entrez les détails d'expédition:
+                  </p>
+                  <p>
+                    <p>
+                      Prenom:{" "}
+                      <span
+                        style={{
+                          fontWeight: "bolder",
+                          color: "#000",
+                        }}
+                      >
+                        matheo ;
+                      </span>{" "}
+                      <span>
+                        Âge:{" "}
+                        <span
+                          style={{
+                            fontWeight: "bolder",
+                            color: "#000",
+                          }}
+                        >
+                          19
+                        </span>
+                      </span>
+                    </p>
+                    <span>
+                      Mobile:{" "}
+                      <span
+                        style={{
+                          fontWeight: "bolder",
+                          color: "#000",
+                        }}
+                      >
+                        0143077537{" "}
+                      </span>
+                    </span>
+                  </p>
+                  <p>
+                    Code PIN:{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      750122
+                    </span>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    Adresse: <br />
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      12 rue rottembourg, paris 750122
+                    </span>
+                  </p>
+                  <p>
+                    Numéro d'appartement:{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      B21202{" "}
+                    </span>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    Point de repère:{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      L'école xavier{" "}
+                    </span>
+                  </p>
+                  <p>
+                    Cliquez sur le bouton{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {" "}
+                      « enregistrer les détails de l'expédition »{" "}
+                    </span>
+                    .
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  L'étape 8
+                </h3>
+                <img src={"/assets/cityOfLightstep10.svg"} alt={`StepImage`} />
+
+                <div className="text_wrapper_modal">
+                  <p>
+                    Cliquez sur{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {" "}
+                      « confirmer »{" "}
+                    </span>
+                    <p style={{ marginTop: "10px", paddingBottom: "10px" }}>
+                      Sélectionnez le mode de paiement{" "}
+                      <span
+                        style={{
+                          fontWeight: "bolder",
+                          color: "#000",
+                        }}
+                      >
+                        « contre remboursement »{" "}
+                      </span>
+                      .
+                    </p>
+                    Cliquez sur{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {" "}
+                      Afficher la commande{" "}
+                    </span>{" "}
+                    pour voir les détails de la commande
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  L'étape 9
+                </h3>
+                <img src={"/assets/cityOfLightstep8.svg"} alt={`StepImage`} />
+
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      Scannez à nouveau le code QR{" "}
+                    </span>
+                    depuis l'application travelio pour importer votre commande
+                    dans l'application de mobilité.
+                  </p>
+                  <p>
+                    Cliquez sur{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {" "}
+                      « oui ! Allons-y »{" "}
+                    </span>
+                    pour voir les meilleures options de voyage pour atteindre
+                    votre position
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  L'étape 10
+                </h3>
+                <img src={"/assets/cityOfLightstep9.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    Votre lieu de prise en charge sera votre emplacement actuel{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {"<nom de l'emplacement>"}
+                    </span>
+                    <p style={{ margin: "10px 0px" }}>
+                      Sélectionnez votre lieu de dépôt comme
+                      <span
+                        style={{
+                          fontWeight: "bolder",
+                          color: "#000",
+                        }}
+                      >
+                        {" "}
+                        {"<nom du lieu>"}
+                      </span>{" "}
+                      puis cliquez sur
+                      <span
+                        style={{
+                          fontWeight: "bolder",
+                          color: "#000",
+                        }}
+                      >
+                        {" "}
+                        « rechercher des courses »
+                      </span>
+                    </p>
+                    Sélectionnez les trajets proposés par
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {" "}
+                      alpha Taxi{" "}
+                    </span>
+                    dans les résultats de recherche
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  L'étape 11
+                </h3>
+                <img src={"/assets/cityOfLightstep11.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p>
+                    Sélectionnez le mode de paiement{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {" "}
+                      « en espèces »{" "}
+                    </span>
+                    et cliquez sur{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {" "}
+                      « réserver maintenant »{" "}
+                    </span>
+                    <p style={{ margin: "10px 0px" }}>
+                      Dès que le conducteur accepte la demande de trajet, votre
+                      trajet commencera.
+                    </p>
+                    Dès que vous atteignez votre destination,{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {" "}
+                      veuillez payer votre chauffeur pour terminer le voyage{" "}
+                    </span>{" "}
+                  </p>
+                </div>
+              </>
+            </ModalSlider>
           </div>
         ) : null}
       </div>

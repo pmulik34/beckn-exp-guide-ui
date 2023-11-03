@@ -47,6 +47,9 @@
   text-transform: lowercase;
   color: #4e4646;
 }
+.Fa-modal p {
+  text-transform: unset !important;
+}
 .PCM_modal ul li {
   text-align: left !important;
   font-size: 11px;

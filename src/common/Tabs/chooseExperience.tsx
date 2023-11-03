@@ -1260,7 +1260,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                 <img src={"/assets/cityOfLightstep3.svg"} alt={`StepImage`} />
                 <div className="text_wrapper_modal">
                   <p>
-                    click on
+                    click on{" "}
                     <span
                       style={{
                         fontWeight: "bolder",
@@ -1271,26 +1271,25 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                     </span>
                     button .
                     <br />
-                    select
+                    select{" "}
                     <span
                       style={{
                         fontWeight: "bolder",
                         color: "#000",
                       }}
                     >
-                      “pay on arrival”
+                      “pay on arrival”{" "}
                     </span>
-                    as your payment methodand click on
+                    as your payment methodand click on{" "}
                     <span
                       style={{
                         fontWeight: "bolder",
                         color: "#000",
                       }}
                     >
-                      ”confirm”
+                      ”confirm”{" "}
                     </span>
-                    to continue
-                    <br />
+                    to continue <br />
                     click on
                     <span
                       style={{
@@ -1299,9 +1298,9 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                       }}
                     >
                       {" "}
-                      view booking”{" "}
+                      “view booking”{" "}
                     </span>
-                    “ button to view booking details
+                    button to view booking details
                     <br />
                     <span
                       style={{
@@ -1309,9 +1308,9 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                         color: "#000",
                       }}
                     >
-                      scan qr code
+                      scan qr code{" "}
                     </span>
-                    to import your order into retail application.
+                    to import your order into retail application.{" "}
                   </p>
                 </div>
               </>
@@ -1746,9 +1745,9 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                       }}
                     >
                       {" "}
-                      cash”{" "}
+                      “cash”{" "}
                     </span>
-                    “ and click on{" "}
+                    and click on{" "}
                     <span
                       style={{
                         fontWeight: "bolder",
