@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif !important;
-  color: #000000;
+  color: #4e4646;
 }
 
 .beckn-app {
@@ -68,15 +68,13 @@ iframe .header-container .location-btn {
 .osc_tab_change {
   display: flex;
   position: absolute;
-  bottom: 23%;
+  bottom: 26%;
   left: 19%;
 }
 .osc_tab_change .for_cutm_name {
   margin: 10px 25px;
 }
-.osc_tab_changeFa {
-  bottom: 20.5%;
-}
+
 .for_cutm_name,
 .for_tetail_store {
   display: flex;
@@ -229,4 +227,7 @@ iframe .header-container .location-btn {
 }
 .cust_modal .ant-modal-content {
   padding-bottom: 20px !important;
+}
+.osc_tab_changeFa {
+  bottom: 23% !important;
 }

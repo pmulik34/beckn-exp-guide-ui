@@ -6,7 +6,9 @@ const CitiesIframe = () => {
   return (
     <div>
       <ChooseExperience
+        headingText="enabling"
         textURL={"/assets/CityTextes.svg"}
+        descriptionText="see for yourself how dynamic information enable smart cities."
         iframeURL={smartCitiesUrl}
       />
     </div>
