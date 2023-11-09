@@ -74,6 +74,20 @@ const SelectExperience = () => {
                   </p>
                 </div>
               </li>
+              <li onClick={() => handleNevigate("industry4.0")}>
+                <div className="card-with-image">
+                  <img
+                    className="first-image-card"
+                    src="/assets/industry-card.svg"
+                    alt={"industry_cardImg"}
+                  />
+                  <p className="card-title-image">
+                    <span className="font-color">revolutionizing with</span>
+                    <br />
+                    <span className="font-color">Industry 4.0 </span>
+                  </p>
+                </div>
+              </li>
               {/* <li onClick={() => handleNevigate("DHP")}>
                 <div className="card-with-image">
                   <img
