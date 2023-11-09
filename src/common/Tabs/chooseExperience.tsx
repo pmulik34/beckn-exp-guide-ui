@@ -58,6 +58,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
   const isDsnpFeed = iframeURL === process.env.REACT_APP_DSNP_APP_URL_FEED;
 
   const DHP = localStorage.getItem("name") === "DHP";
+  const isIndustry = localStorage.getItem("name") === "industry4.0";
   const navigate = useNavigate();
 
   const [lang, setLang] = useState("english");
@@ -74,6 +75,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
   const [isModalOpenhimalayas, setIsModalOpenhimalayas] = useState(false);
   const [isModalOpencities, setIsModalOpencities] = useState(false);
   const [isModalOpenCityOfLight, setIsModalOpenCityOfLight] = useState(false);
+  const [isModalOpenisIndustry, setIsModalOpenisIndustry] = useState(false);
 
   // TODO Improve polka extension connect logic
   React.useEffect(() => {
@@ -167,6 +169,9 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
   const showModalcities = () => {
     setIsModalOpencities(true);
   };
+  const showModalisIndustry = () => {
+    setIsModalOpenisIndustry(true);
+  };
 
   const showModalOSCretailer = () => {
     setIsModalOpenOSCRetailer(true);
@@ -208,6 +213,9 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
   const handleCancelcities = () => {
     setIsModalOpencities(false);
   };
+  const handleCancelisIndustry = () => {
+    setIsModalOpenisIndustry(false);
+  };
 
   const handleCancelRetailer = () => {
     setIsModalOpenOSCRetailer(false);
@@ -247,7 +255,8 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
         !UEI &&
         !dsepUnified &&
         !DSNP &&
-        !DHP ? (
+        !DHP &&
+        !isIndustry ? (
           <div
             style={{
               padding: "10px 0",
@@ -4080,6 +4089,392 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                       rate{" "}
                     </span>
                     the ride experience and provide feedback!
+                  </p>
+                </div>
+              </>
+            </ModalSlider>
+          </div>
+        ) : null}
+        {isIndustry ? (
+          <div className="DSEP-intruction">
+            <Button
+              type="primary"
+              onClick={showModalisIndustry}
+              style={{ left: "unset", margin: "unset", marginTop: "30px" }}
+            >
+              instructions
+              <img
+                style={{ paddingLeft: "5px" }}
+                src="/assets/arrow_back.svg"
+              />
+            </Button>
+            <ModalSlider
+              open={isModalOpenisIndustry}
+              onCancel={handleCancelisIndustry}
+              modalHeading={
+                "follow these steps for the best possible experience as a customer!"
+              }
+            >
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 1
+                </h3>
+                <img src={"/assets/industry_step1.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    sign in to the{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      suppliflow{" "}
+                    </span>
+                    app using the provided:
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    <p
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      email address:{" "}
+                    </p>
+                    <p>{"<enterthefuture01@gmail.com>"}</p>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    password:{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {"<Test@1234567>"}
+                    </span>
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 2
+                </h3>
+                <img src={"/assets/industry_step2.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    set your location to{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {"<location name>"}{" "}
+                    </span>
+                    and
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    search for{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {"<service name>"}{" "}
+                    </span>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    and select{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {"<manufacturer name>"}{" "}
+                    </span>
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 3
+                </h3>
+                <img src={"/assets/industry_step3.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      “book”{" "}
+                    </span>
+                    button to add assembly details ,
+                  </p>
+                  <p>enter following details:</p>
+
+                  <p>
+                    select type:
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {" "}
+                      {" < type >"}{" "}
+                    </span>
+                  </p>
+                  <p>
+                    enter colour:{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {"< colour >"}{" "}
+                    </span>
+                  </p>
+                  <p>
+                    enter length (in mm): <br />
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {"< length >"}{" "}
+                    </span>
+                  </p>
+                  <p>
+                    enter width (in mm): <br />
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {" < width >"}{" "}
+                    </span>
+                  </p>
+                  <p>
+                    enter colour:{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {"< colour >"}{" "}
+                    </span>
+                  </p>
+                  <p>
+                    enter quantity:{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {"< quantity >"}{" "}
+                    </span>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    enter weight ( in Kgs): <br />
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {"< weight >"}{" "}
+                    </span>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      “add shipping details”{" "}
+                    </span>
+                    to continue
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 4
+                </h3>
+                <img src={"/assets/industry_step4.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p>enter following details as shipping details:</p>
+
+                  <p>
+                    name:
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {" "}
+                      {" < username >"}{" "}
+                    </span>
+                  </p>
+                  <p>
+                    mobile:{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {"< 9191223433 >"}{" "}
+                    </span>
+                  </p>
+                  <p>
+                    pin code:{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {"< 560078 >"}{" "}
+                    </span>
+                  </p>
+                  <p>
+                    address:{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {
+                        " <Bengaluru, Bengaluru Urban, Bangalore Division, Karnataka>"
+                      }{" "}
+                    </span>
+                  </p>
+                  <p>
+                    building name & floor: <br />
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                        textTransform: "capitalize",
+                      }}
+                    >
+                      {" <B2 1202>"}{" "}
+                    </span>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    landmark:{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      {" <xavier school>"}{" "}
+                    </span>
+                  </p>
+
+                  <p style={{ paddingBottom: "10px" }}>
+                    click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      “proceed”{" "}
+                    </span>
+                    and select payment mode as{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      “cash on delivery” .{" "}
+                    </span>
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 5
+                </h3>
+                <img src={"/assets/industry_step5.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      view details{" "}
+                    </span>
+                    to view & track order details
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    on the 3-dot menu on homepage you can:
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    check{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      order history{" "}
+                    </span>
+                    &{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      invoice details
+                    </span>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      scan QR code{" "}
+                    </span>
+                    to export your order into other apps.
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    or select on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      “help and support”{" "}
+                    </span>
+                    option to get the support related to your order via chatbot.
                   </p>
                 </div>
               </>
