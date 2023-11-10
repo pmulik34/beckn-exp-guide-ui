@@ -232,5 +232,5 @@ iframe .header-container .location-btn {
   bottom: 23% !important;
 }
 .ant-tabs-nav-operations {
-  display: none;
+  display: none !important;
 }
