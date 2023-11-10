@@ -231,3 +231,6 @@ iframe .header-container .location-btn {
 .osc_tab_changeFa {
   bottom: 23% !important;
 }
+.ant-tabs-nav-operations {
+  display: none;
+}
