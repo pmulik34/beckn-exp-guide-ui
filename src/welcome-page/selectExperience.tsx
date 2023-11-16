@@ -74,7 +74,7 @@ const SelectExperience = () => {
                   </p>
                 </div>
               </li>
-              <li onClick={() => handleNevigate("industry4.0")}>
+              {/* <li onClick={() => handleNevigate("industry4.0")}>
                 <div className="card-with-image">
                   <img
                     className="first-image-card"
@@ -87,7 +87,7 @@ const SelectExperience = () => {
                     <span className="font-color">Industry 4.0 </span>
                   </p>
                 </div>
-              </li>
+              </li> */}
               {/* <li onClick={() => handleNevigate("DHP")}>
                 <div className="card-with-image">
                   <img
