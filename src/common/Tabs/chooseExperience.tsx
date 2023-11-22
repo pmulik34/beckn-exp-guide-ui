@@ -56,7 +56,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
   const dsepUnified = localStorage.getItem("name") === "dsepUnified";
   const DSNP = localStorage.getItem("name") === "DSNP";
   const isDsnpFeed = iframeURL === process.env.REACT_APP_DSNP_APP_URL_FEED;
-
+  const ODR = localStorage.getItem("name") === "ODR";
   const DHP = localStorage.getItem("name") === "DHP";
   const isIndustry = localStorage.getItem("name") === "industry4.0";
   const navigate = useNavigate();
@@ -76,6 +76,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
   const [isModalOpencities, setIsModalOpencities] = useState(false);
   const [isModalOpenCityOfLight, setIsModalOpenCityOfLight] = useState(false);
   const [isModalOpenisIndustry, setIsModalOpenisIndustry] = useState(false);
+  const [isModalOpenisODR, setIsModalOpenisODR] = useState(false);
 
   // TODO Improve polka extension connect logic
   React.useEffect(() => {
@@ -172,6 +173,9 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
   const showModalisIndustry = () => {
     setIsModalOpenisIndustry(true);
   };
+  const showModalisODR = () => {
+    setIsModalOpenisODR(true);
+  };
 
   const showModalOSCretailer = () => {
     setIsModalOpenOSCRetailer(true);
@@ -216,6 +220,9 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
   const handleCancelisIndustry = () => {
     setIsModalOpenisIndustry(false);
   };
+  const handleCancelisODR = () => {
+    setIsModalOpenisODR(false);
+  };
 
   const handleCancelRetailer = () => {
     setIsModalOpenOSCRetailer(false);
@@ -256,7 +263,8 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
         !dsepUnified &&
         !DSNP &&
         !DHP &&
-        !isIndustry ? (
+        !isIndustry &&
+        !ODR ? (
           <div
             style={{
               padding: "10px 0",
@@ -4475,6 +4483,629 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                       “help and support”{" "}
                     </span>
                     option to get the support related to your order via chatbot.
+                  </p>
+                </div>
+              </>
+            </ModalSlider>
+          </div>
+        ) : null}
+        {ODR ? (
+          <div className="DSEP-intruction">
+            <Button
+              type="primary"
+              onClick={showModalisODR}
+              style={{ left: "unset", margin: "unset", marginTop: "30px" }}
+            >
+              instructions
+              <img
+                style={{ paddingLeft: "5px" }}
+                src="/assets/arrow_back.svg"
+              />
+            </Button>
+            <ModalSlider
+              open={isModalOpenisODR}
+              onCancel={handleCancelisODR}
+              modalHeading={
+                "follow these steps for the best possible experience for discovering legal services online"
+              }
+            >
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 1
+                </h3>
+                <img src={"/assets/ODR_step1.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    sign in to the{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      LegalEasy{" "}
+                    </span>
+                    app using the provided:
+                  </p>
+                  <p>
+                    <p
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      email address:{" "}
+                    </p>
+                    <p>{"<name@gmail.com>"}</p>
+                  </p>
+                  <p
+                    style={{
+                      paddingBottom: "20px",
+                      fontWeight: "bolder",
+                      color: "#000",
+                    }}
+                  >
+                    password: <span>{"<Test@1234567>"}</span>
+                  </p>
+                  <p
+                    style={{
+                      paddingBottom: "20px",
+                    }}
+                  >
+                    or
+                  </p>
+                  <p>sign up using below details:</p>
+                  <p
+                    style={{
+                      fontWeight: "bolder",
+                      color: "#000",
+                    }}
+                  >
+                    name:{" "}
+                    <span
+                      style={{
+                        fontWeight: "400",
+                      }}
+                    >
+                      {"<Marie>"}
+                    </span>
+                  </p>
+
+                  <p
+                    style={{
+                      fontWeight: "bolder",
+                      color: "#000",
+                    }}
+                  >
+                    email address:{" "}
+                  </p>
+                  <p>{"<name@gmail.com> "}</p>
+                  <p
+                    style={{
+                      fontWeight: "bolder",
+                      color: "#000",
+                    }}
+                  >
+                    password:{" "}
+                    <span
+                      style={{
+                        fontWeight: "400",
+                      }}
+                    >
+                      {"<Test@1234567>"}
+                    </span>
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 2
+                </h3>
+                <img src={"/assets/ODR_step2.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    on landing screen select category as{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘Family Disputes{" "}
+                    </span>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    enter{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘Mediation’{" "}
+                    </span>
+                    in search box and click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘Search’{" "}
+                    </span>
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 3
+                </h3>
+                <img src={"/assets/ODR_step3.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    from the results select{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘Harvey Spectre Law Firm’{" "}
+                    </span>
+                    as your service provider.
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    on the details screen click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘Proceed’{" "}
+                    </span>
+                    button to add details related to your dispute.
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 4
+                </h3>
+                <img src={"/assets/ODR_step4.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘Add Complainant Details’{" "}
+                    </span>
+                    to add complainant and billing details:
+                  </p>
+                  <p
+                    style={{
+                      fontWeight: "bolder",
+                      color: "#000",
+                    }}
+                  >
+                    name:{" "}
+                    <span
+                      style={{
+                        fontWeight: "400",
+                      }}
+                    >
+                      {"<name of complainant>"}
+                    </span>
+                  </p>
+                  <p
+                    style={{
+                      fontWeight: "bolder",
+                      color: "#000",
+                    }}
+                  >
+                    mobile number:{" "}
+                    <span
+                      style={{
+                        fontWeight: "400",
+                      }}
+                    >
+                      {"<mobile number>"}
+                    </span>
+                  </p>
+                  <p
+                    style={{
+                      fontWeight: "bolder",
+                      color: "#000",
+                    }}
+                  >
+                    email id:{" "}
+                    <span
+                      style={{
+                        fontWeight: "400",
+                      }}
+                    >
+                      {"<email id>"}
+                    </span>
+                  </p>
+                  <p
+                    style={{
+                      fontWeight: "bolder",
+                      color: "#000",
+                    }}
+                  >
+                    address:{" "}
+                    <span
+                      style={{
+                        fontWeight: "400",
+                      }}
+                    >
+                      {"<address>"}
+                    </span>
+                  </p>
+                  <p
+                    style={{
+                      paddingBottom: "10px",
+                      fontWeight: "bolder",
+                      color: "#000",
+                    }}
+                  >
+                    zipcode:{" "}
+                    <span
+                      style={{
+                        fontWeight: "400",
+                      }}
+                    >
+                      {"<zipcode>"}
+                    </span>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    and click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      Save{" "}
+                    </span>
+                    to continue
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 5
+                </h3>
+                <img src={"/assets/ODR_step5.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘Add Respondent Details’{" "}
+                    </span>
+                    to add respondent details:
+                  </p>
+                  <p
+                    style={{
+                      fontWeight: "bolder",
+                      color: "#000",
+                    }}
+                  >
+                    name:{" "}
+                    <span
+                      style={{
+                        fontWeight: "400",
+                      }}
+                    >
+                      {"<name of complainant>"}
+                    </span>
+                  </p>
+                  <p
+                    style={{
+                      fontWeight: "bolder",
+                      color: "#000",
+                    }}
+                  >
+                    mobile number:{" "}
+                    <span
+                      style={{
+                        fontWeight: "400",
+                      }}
+                    >
+                      {"<mobile number>"}
+                    </span>
+                  </p>
+                  <p
+                    style={{
+                      fontWeight: "bolder",
+                      color: "#000",
+                    }}
+                  >
+                    email id:{" "}
+                    <span
+                      style={{
+                        fontWeight: "400",
+                      }}
+                    >
+                      {"<email id>"}
+                    </span>
+                  </p>
+                  <p
+                    style={{
+                      fontWeight: "bolder",
+                      color: "#000",
+                    }}
+                  >
+                    address:{" "}
+                    <span
+                      style={{
+                        fontWeight: "400",
+                      }}
+                    >
+                      {"<address>"}
+                    </span>
+                  </p>
+                  <p
+                    style={{
+                      paddingBottom: "10px",
+                      fontWeight: "bolder",
+                      color: "#000",
+                    }}
+                  >
+                    zipcode:{" "}
+                    <span
+                      style={{
+                        fontWeight: "400",
+                      }}
+                    >
+                      {"<zipcode>"}
+                    </span>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    and click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      Save{" "}
+                    </span>
+                    to continue
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 6
+                </h3>
+                <img src={"/assets/ODR_step6.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘Add Dispute Details’{" "}
+                    </span>
+                    to add dispute related details and documents:
+                  </p>
+                  <p
+                    style={{
+                      fontWeight: "bolder",
+                      color: "#000",
+                    }}
+                  >
+                    dispute details:{" "}
+                    <span
+                      style={{
+                        fontWeight: "400",
+                      }}
+                    >
+                      {"<enter dispute details in brief>"}
+                    </span>
+                  </p>
+                  <p
+                    style={{
+                      fontWeight: "bolder",
+                      color: "#000",
+                    }}
+                  >
+                    claim value(optional):{" "}
+                    <span
+                      style={{
+                        fontWeight: "400",
+                      }}
+                    >
+                      {"<claim value>"}
+                    </span>
+                  </p>
+                  <p
+                    style={{
+                      fontWeight: "bolder",
+                      color: "#000",
+                    }}
+                  >
+                    {"<fieldname>:"}{" "}
+                    <span
+                      style={{
+                        fontWeight: "400",
+                      }}
+                    >
+                      {"<placeholder text>"}
+                    </span>
+                  </p>
+
+                  <p style={{ paddingBottom: "10px" }}>
+                    click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      upload files{" "}
+                    </span>
+                    to upload documents related to the dispute
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    and click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      Save{" "}
+                    </span>
+                    to continue
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 7
+                </h3>
+                <img src={"/assets/ODR_step7.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘Fill Consent Form’{" "}
+                    </span>
+                    to agree to the terms and conditions from service provider
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    <p>enter the following details:</p>
+                    <p
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      name:{" "}
+                      <span
+                        style={{
+                          fontWeight: "400",
+                        }}
+                      >
+                        Marie
+                      </span>
+                    </p>
+                    <p
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      place:{" "}
+                      <span
+                        style={{
+                          fontWeight: "400",
+                        }}
+                      >
+                        HSR Layout, Sector 2, Bangalore
+                      </span>
+                    </p>
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    click on digital signature checkbox to provide consent
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    and click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      Confirm{" "}
+                    </span>
+                    to continue
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 8
+                </h3>
+                <img src={"/assets/ODR_step8.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      Confirm{" "}
+                    </span>
+                    to submit your case details to officially register a case
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 9
+                </h3>
+                <img src={"/assets/ODR_step9.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    On confirmation screen you will receive Case ID along with
+                    case manager details.
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘View Case Details’{" "}
+                    </span>
+                  </p>
+                </div>
+              </>
+              <>
+                <h3 style={{ paddingBottom: "20px", textAlign: "center" }}>
+                  step 10
+                </h3>
+                <img src={"/assets/ODR_step10.svg"} alt={`StepImage`} />
+                <div className="text_wrapper_modal">
+                  <p style={{ paddingBottom: "10px" }}>
+                    You will be able to view and track the progress of your
+                    case. After dispute is resolved,
+                  </p>
+                  <p style={{ paddingBottom: "10px" }}>
+                    click on{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      ‘Rate us’{" "}
+                    </span>
+                    to rate the experience
                   </p>
                 </div>
               </>
