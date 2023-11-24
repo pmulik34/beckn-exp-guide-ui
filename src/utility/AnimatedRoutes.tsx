@@ -27,6 +27,7 @@ import DsepUnified from "../welcome-page/DsepUnified/DsepUnified";
 import Dsnp from "../welcome-page/DSNP/Dsnp";
 import DHP from "../welcome-page/DHP/DHP";
 import IndustryComp from "../welcome-page/Industry4.0/IndustryComp";
+import ODR from "../welcome-page/ODR/ODR";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -47,6 +48,7 @@ const AnimatedRoutes = () => {
         <Route path="/DHP" element={<DHP />} />
         <Route path="/industry4.0" element={<IndustryComp />} />
         <Route path="/UEI" element={<UEI />} />
+        <Route path="/ODR" element={<ODR />} />
         <Route path="/DSNP" element={<Dsnp />} />
         <Route path="/CityOfLightFa" element={<CityOfLightFa />} />
         <Route path="/dsep-unified" element={<DsepUnified />} />
