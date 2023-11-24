@@ -45,6 +45,8 @@ const ProgressBar = () => {
         ? navigate("/DHP")
         : localStorage.getItem("name") === "industry4.0"
         ? navigate("/industry4.0")
+        : localStorage.getItem("name") === "ODR"
+        ? navigate("/ODR")
         : navigate("/PCM");
     }
   });
