@@ -424,7 +424,7 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                           color: "#000",
                         }}
                       >
-                        moliere's the miser- theatral - chaque
+                        Louvre Museum Exhibition - EACH
                       </span>
                     </p>
                     <p style={{ paddingBottom: "10px" }}>
@@ -466,7 +466,7 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                           color: "#000",
                         }}
                       >
-                        Matheo;
+                        Antoine Dubois
                       </span>{" "}
                       <span>
                         Âge:{" "}
@@ -488,7 +488,7 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                           color: "#000",
                         }}
                       >
-                        0143077537
+                        0612345678
                       </span>
                     </span>
                   </p>
@@ -500,10 +500,10 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                         color: "#000",
                       }}
                     >
-                      750122{" "}
+                      75001{" "}
                     </span>
                   </p>
-                  <p style={{ paddingBottom: "10px" }}>
+                  <p>
                     Adresse: <br />
                     <span
                       style={{
@@ -511,7 +511,7 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                         color: "#000",
                       }}
                     >
-                      12 rue rottembourg, paris 750122
+                      15 Rue du Soleil, Paris, France
                     </span>
                   </p>
                   <p>
@@ -525,7 +525,7 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                       B21202
                     </span>{" "}
                   </p>
-                  <p style={{ paddingBottom: "10px" }}>
+                  {/* <p style={{ paddingBottom: "10px" }}>
                     Point de repère:{" "}
                     <span
                       style={{
@@ -535,8 +535,8 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                     >
                       L'école xavier{" "}
                     </span>
-                  </p>
-                  <p>
+                  </p> */}
+                  <p style={{ paddingTop: "10px" }}>
                     Cliquez sur le bouton « enregistrer les détails du voyageur
                     »
                   </p>
