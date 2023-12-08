@@ -4936,35 +4936,8 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                       {"<claim value>"}
                     </span>
                   </p>
-                  <p
-                    style={{
-                      fontWeight: "bolder",
-                      color: "#000",
-                    }}
-                  >
-                    {"<fieldname>:"}{" "}
-                    <span
-                      style={{
-                        fontWeight: "400",
-                      }}
-                    >
-                      {"<placeholder text>"}
-                    </span>
-                  </p>
 
-                  <p style={{ paddingBottom: "10px" }}>
-                    click on{" "}
-                    <span
-                      style={{
-                        fontWeight: "bolder",
-                        color: "#000",
-                      }}
-                    >
-                      upload files{" "}
-                    </span>
-                    to upload documents related to the dispute
-                  </p>
-                  <p style={{ paddingBottom: "10px" }}>
+                  <p style={{ paddingTop: "10px" }}>
                     and click on{" "}
                     <span
                       style={{
