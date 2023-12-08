@@ -4523,7 +4523,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                         color: "#000",
                       }}
                     >
-                      LegalEasy{" "}
+                      LegalEase{" "}
                     </span>
                     app using the provided:
                   </p>
@@ -4545,7 +4545,10 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                       color: "#000",
                     }}
                   >
-                    password: <span>{"<Test@1234567>"}</span>
+                    password:{" "}
+                    <span style={{ textTransform: "capitalize" }}>
+                      {"<Test@1234567>"}
+                    </span>
                   </p>
                   <p
                     style={{
@@ -4590,6 +4593,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                     <span
                       style={{
                         fontWeight: "400",
+                        textTransform: "capitalize",
                       }}
                     >
                       {"<Test@1234567>"}
