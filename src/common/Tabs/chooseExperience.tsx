@@ -4654,7 +4654,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                         color: "#000",
                       }}
                     >
-                      ‘Harvey Spectre Law Firm’{" "}
+                      ‘Mediation Service’{" "}
                     </span>
                     as your service provider.
                   </p>
