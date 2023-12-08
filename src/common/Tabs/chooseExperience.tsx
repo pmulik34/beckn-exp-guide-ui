@@ -1140,7 +1140,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                           color: "#000",
                         }}
                       >
-                        molière's the miser - theatrical - each
+                        Louvre Museum Exhibition - EACH
                       </span>
                     </p>
                     <p style={{ paddingBottom: "10px" }}>
@@ -1185,7 +1185,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                           color: "#000",
                         }}
                       >
-                        matheo ;
+                        Antoine Dubois
                       </span>{" "}
                       <span>
                         age:
@@ -1207,7 +1207,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                           color: "#000",
                         }}
                       >
-                        0143077537
+                        0612345678
                       </span>
                     </span>
                   </p>
@@ -1219,10 +1219,10 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                         color: "#000",
                       }}
                     >
-                      750122
+                      75001
                     </span>
                   </p>
-                  <p style={{ paddingBottom: "10px" }}>
+                  <p>
                     address:
                     <br />
                     <span
@@ -1231,7 +1231,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                         color: "#000",
                       }}
                     >
-                      12 rue rottembourg, paris 750122
+                      15 Rue du Soleil, Paris, France
                     </span>
                   </p>
                   <p>
@@ -1245,7 +1245,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                       b21202
                     </span>
                   </p>
-                  <p style={{ paddingBottom: "10px" }}>
+                  {/* <p style={{ paddingBottom: "10px" }}>
                     landmark:
                     <span
                       style={{
@@ -1255,8 +1255,8 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                     >
                       xavier school
                     </span>
-                  </p>
-                  <p>
+                  </p> */}
+                  <p style={{ paddingTop: "10px" }}>
                     click on
                     <span
                       style={{
