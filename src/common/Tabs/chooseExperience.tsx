@@ -3917,7 +3917,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                         color: "#000",
                       }}
                     >
-                      conrad hotel, bengaluru
+                      Taj Hotel, Delhi
                     </span>
                   </p>
                   <p style={{ paddingBottom: "10px" }}>
@@ -3928,7 +3928,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                         color: "#000",
                       }}
                     >
-                      kempegowda international airport, karnataka
+                      Indira Gandhi International Airport
                     </span>
                   </p>
                   <p style={{ paddingBottom: "10px" }}>and search for rides</p>
