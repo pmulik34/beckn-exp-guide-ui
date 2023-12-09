@@ -4747,7 +4747,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                         fontWeight: "400",
                       }}
                     >
-                      {"<address>"}
+                      {"343, B Block, Sector 4, Rohini, Delhi "}
                     </span>
                   </p>
                   <p
@@ -4763,7 +4763,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                         fontWeight: "400",
                       }}
                     >
-                      {"<zipcode>"}
+                      {"110042"}
                     </span>
                   </p>
                   <p style={{ paddingBottom: "10px" }}>
@@ -4855,7 +4855,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                         fontWeight: "400",
                       }}
                     >
-                      {"<address>"}
+                      {"23, East end , sector 10, Pritampura, Delhi"}
                     </span>
                   </p>
                   <p
@@ -4871,7 +4871,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                         fontWeight: "400",
                       }}
                     >
-                      {"<zipcode>"}
+                      {"110034"}
                     </span>
                   </p>
                   <p style={{ paddingBottom: "10px" }}>
@@ -4998,7 +4998,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                           fontWeight: "400",
                         }}
                       >
-                        HSR Layout, Sector 2, Bangalore
+                        343, B Block, Sector 4, Rohini, Delhi - 110042
                       </span>
                     </p>
                   </p>

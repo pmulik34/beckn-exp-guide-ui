@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Typography, Button } from "antd";
 import { DownloadOutlined } from "@ant-design/icons";
@@ -9,15 +9,15 @@ const WelcomeScreen = () => {
   const [size, setSize] = useState<SizeType>("large");
   const navigate = useNavigate();
 
+  useEffect(() => {
+    localStorage.clear();
+  }, []);
+
   return (
     <div className="welcome-Screen-container">
       <div className="child-container">
         <div className="headLogo">
-          <img
-            className="Beckn-logo"
-            src="/assets/beckn_lg.svg"
-            alt={"Logo"}
-          />
+          <img className="Beckn-logo" src="/assets/beckn_lg.svg" alt={"Logo"} />
         </div>
         <div className="animate fadeIn five">
           <Typography className="welcomeQuote">welcome to the</Typography>
