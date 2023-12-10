@@ -8,10 +8,16 @@ import { Typography } from "antd";
 
 const SelectExperience = () => {
   const navigate = useNavigate();
+
   const handleNevigate = (id: any) => {
     localStorage.setItem("name", id);
     navigate("/progress");
   };
+
+  useEffect(() => {
+    localStorage.clear();
+  }, []);
+
   return (
     <div style={{ overflow: "hidden" }}>
       <div className="headLogo-image">
