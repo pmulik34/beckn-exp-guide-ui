@@ -78,15 +78,19 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
   const [isModalOpenisIndustry, setIsModalOpenisIndustry] = useState(false);
   const [isModalOpenisODR, setIsModalOpenisODR] = useState(false);
 
+
+
+
   // TODO Improve polka extension connect logic
   React.useEffect(() => {
     async function handleMessage(event: MessageEvent) {
       if (
-        `${event.origin}/` !== process.env.REACT_APP_DSNP_APP_URL ||
+        (`${event.origin}/` !== process.env.REACT_APP_DSNP_APP_URL && `${event.origin}/` !== process.env.REACT_APP_RETAIL_APP_URL) ||
         !event.data.type
       )
         return;
       const iframeWindow = iframeRef.current.contentWindow;
+      console.log('From iframe',event.origin,event.data)
       switch (event.data.type) {
         case "enablePolka":
           let enabled = await web3Enable("Social Web Example Client");
