@@ -62,6 +62,13 @@
 .cityOfAfrica .ant-tabs-tab .ant-tabs-tab-btn {
   margin: 0 auto;
 }
+
+.ONDC .ant-tabs-tab[data-node-key="2"],
+.ant-tabs-tab[data-node-key="3"],
+.ant-tabs-tab[data-node-key="4"] {
+  width: 267px;
+}
+
 :where(.css-dev-only-do-not-override-ixblex).ant-tabs
   .ant-tabs-tab
   + .ant-tabs-tab {
@@ -263,7 +270,9 @@
   background-color: #fff;
   min-height: 260px;
 }
-
+.chooseRegenAgExp_wrapper {
+  align-items: unset;
+}
 @media screen and (min-width: 768px) and (max-width: 1085px) {
   .tabsConatiner {
     width: 96%;
