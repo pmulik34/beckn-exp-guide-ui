@@ -273,6 +273,13 @@
 .chooseRegenAgExp_wrapper {
   align-items: unset;
 }
+.regenAg-intruction > img {
+  position: absolute;
+  right: -100px;
+  margin-top: 20px;
+  cursor: pointer;
+  width: unset !important;
+}
 @media screen and (min-width: 768px) and (max-width: 1085px) {
   .tabsConatiner {
     width: 96%;
@@ -347,4 +354,16 @@
 .heading_description > p {
   font-size: 15px !important;
   text-transform: unset !important;
+}
+@media screen and (min-width: 768px) and (max-width: 1360px) {
+  .beckn-app {
+    overflow-x: scroll;
+  }
+
+  .tabsConatiner {
+    margin: 0 20px;
+  }
+  .beckn-app .regenerative_container .exit-icon {
+    right: -80px !important;
+  }
 }
