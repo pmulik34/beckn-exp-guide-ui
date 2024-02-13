@@ -1,4 +1,4 @@
-import React, { ReactElement, useEffect } from "react";
+import React, { ReactElement, useEffect, useState } from "react";
 import {
   signCiTransaction,
   signPayloadWithExtension,
@@ -7,6 +7,9 @@ import { web3Enable, web3Accounts } from "@polkadot/extension-dapp";
 
 import "./tabs.css";
 import { JsxElement } from "typescript";
+import ModalSlider from "../ModalHTML/ModalSlider";
+import { Button } from "antd";
+import RegenerativeInstruction from "../../welcome-page/RegenerativeAgriculture/regenerativeInstruction";
 export interface selectExpModalProps {
   headingText?: string;
   btmHeading?: string;
@@ -25,7 +28,12 @@ const ChooseRegenAgExp: React.FC<selectExpModalProps> = ({
   iframeRef,
   appDashboard,
 }: selectExpModalProps) => {
-  //   const ONDC = localStorage.getItem("name") === "ONDC";
+  const regenerativeAgriculture =
+    localStorage.getItem("name") === "regenerativeAgriculture";
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isRegenerativeAgriculture, setIsRegenerativeAgriculture] =
+    useState<boolean>(false);
 
   useEffect(() => {
     async function handleMessage(event: MessageEvent) {
@@ -85,6 +93,16 @@ const ChooseRegenAgExp: React.FC<selectExpModalProps> = ({
     };
   }, []);
 
+  useEffect(() => {
+    const regenerative =
+      localStorage.getItem("name") === "regenerativeAgriculture";
+    setIsRegenerativeAgriculture(regenerative);
+  }, []);
+
+  const handleToggleModal = () => {
+    setIsModalOpen((prevState) => !prevState);
+  };
+
   return (
     <div className="tab-wrappper-content chooseRegenAgExp_wrapper">
       <div className="smartphone-wrapper">
@@ -105,7 +123,22 @@ const ChooseRegenAgExp: React.FC<selectExpModalProps> = ({
           </div>
         </div>
       </div>
-      <div>{appDashboard}</div>
+      <div>
+        {appDashboard}
+        {regenerativeAgriculture ? (
+          <div className="regenAg-intruction">
+            <img
+              onClick={handleToggleModal}
+              src="/assets/instruction_icon.svg"
+              alt="Instruction Icon"
+            />
+            <RegenerativeInstruction
+              isModalOpen={isModalOpen}
+              setIsModalRegenerativeAgriculture={setIsModalOpen}
+            />
+          </div>
+        ) : null}
+      </div>
     </div>
   );
 };

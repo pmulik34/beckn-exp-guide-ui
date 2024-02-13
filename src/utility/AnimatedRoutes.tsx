@@ -30,6 +30,7 @@ import IndustryComp from "../welcome-page/Industry4.0/IndustryComp";
 import ODR from "../welcome-page/ODR/ODR";
 import RegenAg from "../welcome-page/RegenAg/regenAg";
 import ONDC from "../welcome-page/ONDC/ONDC";
+import RegenerativeAgriculture from "../welcome-page/RegenerativeAgriculture/regenerativeAgriculture";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -62,6 +63,10 @@ const AnimatedRoutes = () => {
         <Route path="/videoTemplate" element={<VideoTemplate />} />
         <Route path="/selectionPage" element={<SelectionPage />} />
         <Route path="/ONDC" element={<ONDC />} />
+        <Route
+          path="/regenerativeAgriculture"
+          element={<RegenerativeAgriculture />}
+        />
         <Route
           path="*"
           element={

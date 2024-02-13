@@ -1,0 +1,17 @@
+.RA_wrapper {
+  width: 670px;
+}
+.RA_wrapper iframe {
+  width: 670px;
+  height: 400px;
+}
+.RA_wrapper .video-container {
+  height: 400px;
+}
+.regenerative_container .exit-icon {
+  position: absolute !important;
+  right: -100px !important;
+  bottom: 150px !important;
+  width: 77px !important;
+  height: 75px !important;
+}

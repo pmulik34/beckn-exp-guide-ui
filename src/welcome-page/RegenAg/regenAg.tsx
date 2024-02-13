@@ -10,7 +10,7 @@ const CardList = [
   },
   {
     key: "UEI",
-    cardImg: "/assets/UEI_cardImg.svg",
+    cardImg: "/assets/UEI_cardImgAR.svg",
     cardText: "Unified Energy Interface",
   },
   {
