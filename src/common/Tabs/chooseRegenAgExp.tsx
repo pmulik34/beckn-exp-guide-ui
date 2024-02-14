@@ -4,12 +4,14 @@ import {
   signPayloadWithExtension,
 } from "../../utility/signTransaction";
 import { web3Enable, web3Accounts } from "@polkadot/extension-dapp";
+import ExitModal from "../../welcome-page/modal";
 
 import "./tabs.css";
 import { JsxElement } from "typescript";
 import ModalSlider from "../ModalHTML/ModalSlider";
-import { Button } from "antd";
+import { Button, QRCode } from "antd";
 import RegenerativeInstruction from "../../welcome-page/RegenerativeAgriculture/regenerativeInstruction";
+import RegenUEIFlow from "./regenUEIFlow";
 export interface selectExpModalProps {
   headingText?: string;
   btmHeading?: string;
@@ -30,10 +32,12 @@ const ChooseRegenAgExp: React.FC<selectExpModalProps> = ({
 }: selectExpModalProps) => {
   const regenerativeAgriculture =
     localStorage.getItem("name") === "regenerativeAgriculture";
+  const isRegenUEI = localStorage.getItem("name") === "regenUEI";
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isRegenerativeAgriculture, setIsRegenerativeAgriculture] =
     useState<boolean>(false);
+  const [openModal, setOpenModal] = useState(false);
 
   useEffect(() => {
     async function handleMessage(event: MessageEvent) {
@@ -104,25 +108,35 @@ const ChooseRegenAgExp: React.FC<selectExpModalProps> = ({
   };
 
   return (
-    <div className="tab-wrappper-content chooseRegenAgExp_wrapper">
-      <div className="smartphone-wrapper">
-        <div className="smartphone">
-          <div className="content">
-            <iframe
-              ref={iframeRef}
-              className="ChooseExpIframe"
-              allow="clipboard-read; clipboard-write; geolocation"
-              src={iframeURL}
-              frameBorder="0"
-              allowFullScreen
-              scrolling={"no"}
-              width={"100%"}
-              height={"100%"}
-              style={{ borderRadius: "36px" }}
-            />
+    <div
+      className={
+        isRegenUEI
+          ? "tab-wrappper-content"
+          : "tab-wrappper-content chooseRegenAgExp_wrapper"
+      }
+    >
+      {isRegenUEI ? (
+        <RegenUEIFlow />
+      ) : (
+        <div className="smartphone-wrapper">
+          <div className="smartphone">
+            <div className="content">
+              <iframe
+                ref={iframeRef}
+                className="ChooseExpIframe"
+                allow="clipboard-read; clipboard-write; geolocation"
+                src={iframeURL}
+                frameBorder="0"
+                allowFullScreen
+                scrolling={"no"}
+                width={"100%"}
+                height={"100%"}
+                style={{ borderRadius: "36px" }}
+              />
+            </div>
           </div>
         </div>
-      </div>
+      )}
       <div>
         {appDashboard}
         {regenerativeAgriculture ? (
@@ -136,6 +150,18 @@ const ChooseRegenAgExp: React.FC<selectExpModalProps> = ({
               isModalOpen={isModalOpen}
               setIsModalRegenerativeAgriculture={setIsModalOpen}
             />
+
+            <div>
+              {!openModal ? (
+                <img
+                  onClick={() => setOpenModal(true)}
+                  src="/assets/exit-Btn_icon.svg"
+                  alt="curvedArrow"
+                />
+              ) : (
+                <ExitModal flag={openModal} pathName={"/ThankYou"} />
+              )}
+            </div>
           </div>
         ) : null}
       </div>

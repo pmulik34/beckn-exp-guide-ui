@@ -273,13 +273,93 @@
 .chooseRegenAgExp_wrapper {
   align-items: unset;
 }
-.regenAg-intruction > img {
+.regenAg-intruction {
   position: absolute;
-  right: -100px;
+  right: -80px;
   margin-top: 20px;
   cursor: pointer;
   width: unset !important;
 }
+.regenAg-intruction > img {
+  margin-bottom: 16px;
+}
+
+.regenUEI_flow {
+  width: 849px;
+  height: 546px;
+  border-radius: 18px !important;
+}
+.regenUEI_flow_QRcode {
+  margin-left: -80px;
+}
+.regenUEI_flow_Iframe {
+  margin-left: -140px;
+}
+.regenUEI_flow_QR {
+  padding: 26px;
+}
+.regenUEI_flow_wrapper {
+  margin-left: 86px;
+}
+.regenUEI_flow_btn {
+  display: flex;
+  align-items: center;
+  margin: 40px 0;
+}
+.regenUEI_flow_btn .active {
+  background-color: #4498e8;
+  color: #fff;
+}
+.regenUEI_flow_btn div {
+  width: 163px;
+  height: 48px;
+  background-color: #fff;
+  margin: 0 12px;
+  border-radius: 36px;
+  display: grid;
+  align-content: center;
+  text-align: center;
+  cursor: pointer;
+}
+.Moneyflow_view_text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+.Moneyflow_view_text span {
+  font-size: 22px;
+  height: 64px;
+  padding: 8px;
+  font-weight: 600;
+}
+.Moneyflow_view {
+  width: 849px;
+  height: 546px;
+  border-radius: 18px;
+  border: 1px solid;
+  margin-bottom: 40px;
+}
+.regenUEI_flow_iframe {
+  max-height: 69vh;
+  overflow-y: scroll;
+}
+.regenUEI_flow_iframe::-webkit-scrollbar {
+  display: none;
+}
+.instructions_btns {
+  position: absolute;
+  right: -210px;
+  top: 500px;
+}
+.instructions_btns_seru {
+  top: 408px !important;
+}
+.instructions_btns div {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
 @media screen and (min-width: 768px) and (max-width: 1085px) {
   .tabsConatiner {
     width: 96%;
@@ -355,7 +435,15 @@
   font-size: 15px !important;
   text-transform: unset !important;
 }
-@media screen and (min-width: 768px) and (max-width: 1360px) {
+@media screen and (min-width: 768px) and (max-width: 1440px) {
+  .ondc_dashboard {
+    margin-left: 40px;
+  }
+  .ONDC_exit {
+    margin-left: 40px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1504px) {
   .beckn-app {
     overflow-x: scroll;
   }
