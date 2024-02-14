@@ -156,7 +156,9 @@ const RegenUEIFlow = () => {
             <span>&#8964;</span>Scroll Down to see Moneyflow Video
             <span>&#8964;</span>
           </div>
-          <div className="Moneyflow_view"></div>
+          <div className="Moneyflow_view">
+            <VideoTemplate mainIconUrl="https://player.vimeo.com/video/808586015?h=aa4c79b136&amp;badge=0&amp;player_id=0&amp;app_id=58479" />
+          </div>
         </div>
       </div>
 
