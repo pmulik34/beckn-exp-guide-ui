@@ -9,7 +9,7 @@ const CardList = [
     cardText: "Open Network for Digital Commerce",
   },
   {
-    key: "UEI",
+    key: "regenUEI",
     cardImg: "/assets/UEI_cardImgAR.svg",
     cardText: "Unified Energy Interface",
   },

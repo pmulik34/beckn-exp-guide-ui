@@ -33,6 +33,7 @@ const TabsComponent: React.FC<TabsComponentPropsModal> = ({
   const ONDC = localStorage.getItem("name") === "ONDC";
   const isRegenerativeAgriculture =
     localStorage.getItem("name") === "regenerativeAgriculture";
+  const isRegenUEI = localStorage.getItem("name") === "regenUEI";
 
   const openCity = (evt: any, cityName: string) => {
     let i: number;
@@ -223,7 +224,7 @@ const TabsComponent: React.FC<TabsComponentPropsModal> = ({
             },
           ]}
         />
-      ) : ONDC || isRegenerativeAgriculture ? (
+      ) : ONDC || isRegenerativeAgriculture || isRegenUEI ? (
         <Tabs
           className={"tabsConatiner ONDC PCM_wrapper"}
           defaultActiveKey="3"

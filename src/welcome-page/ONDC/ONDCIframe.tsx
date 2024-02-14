@@ -2,24 +2,43 @@ import { Modal } from "antd";
 import React, { useState } from "react";
 import ChooseRegenAgExp from "../../common/Tabs/chooseRegenAgExp";
 import VideoTemplate from "../../common/videoTemplate/videoTemplate";
+import ExitModal from "../modal";
 import "./ONDC.css";
 
 const ONDCIframe = () => {
+  const [openModal, setOpenModal] = useState(false);
   const [open, setOpen] = useState(false);
-  const ODRUrl = process.env.REACT_APP_ODR_APP_URL;
+  const ONDCUrl = process.env.REACT_APP_ONDC_APP_URL;
 
   return (
     <div>
       <ChooseRegenAgExp
-        iframeURL={ODRUrl}
+        iframeURL={ONDCUrl}
         appDashboard={
           <div className="ondc_wrapper">
             <div className="ondc_dashboard">
               {"< Placeholder for ONDC Dashboard > "}
             </div>
-            <div className="ondc_demo_btn" onClick={() => setOpen(true)}>
-              <img src="/assets/playIcon.svg" alt={"playIcon"} />
-              watch demo
+            <div className="ONDC_exit">
+              <div className="ondc_demo_btn" onClick={() => setOpen(true)}>
+                <img
+                  style={{ width: "unset" }}
+                  src="/assets/playIcon.svg"
+                  alt={"playIcon"}
+                />
+                watch demo
+              </div>
+              <div className="exit_btn_ondc">
+                {!openModal ? (
+                  <img
+                    onClick={() => setOpenModal(true)}
+                    src="/assets/exit-Btn_icon.svg"
+                    alt="curvedArrow"
+                  />
+                ) : (
+                  <ExitModal flag={openModal} pathName={"/ThankYou"} />
+                )}
+              </div>
             </div>
             <Modal
               centered
