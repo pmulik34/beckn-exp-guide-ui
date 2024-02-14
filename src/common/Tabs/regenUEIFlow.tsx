@@ -8,7 +8,7 @@ import RegenUEIInstruction from "../../welcome-page/RegenUEI/regenUEIInstruction
 const RegenUEIFlow = () => {
   const pulseEnergyWhatsappUrl =
     process.env.REACT_APP_PULSE_ENERGY_WHATSAPP_URL;
-  const ODRUrl = process.env.REACT_APP_ODR_APP_URL;
+  const UEIChartFlow = process.env.REACT_APP_UEI_CHART_APP_URL;
   const sheruAppUrl = process.env.REACT_APP_SHERU_APP_URL;
   const turnoAppUrl = process.env.REACT_APP_TURNO_APP_URL;
   const [pulseEnergy, setPulseEnergy] = useState("");
@@ -107,7 +107,7 @@ const RegenUEIFlow = () => {
           <iframe
             className="ChooseExpIframe regenUEI_flow"
             allow="clipboard-read; clipboard-write; geolocation"
-            src={ODRUrl}
+            src={UEIChartFlow}
             frameBorder="0"
             allowFullScreen
             scrolling={"no"}
@@ -148,7 +148,7 @@ const RegenUEIFlow = () => {
                   alt="curvedArrow"
                 />
               ) : (
-                <ExitModal flag={openModal} pathName={"/ThankYou"} />
+                <ExitModal flag={openModal} pathName={"/RegenAg"} />
               )}
             </div>
           </div>
