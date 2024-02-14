@@ -303,7 +303,7 @@ const TabsComponent: React.FC<TabsComponentPropsModal> = ({
               ),
               key: "6",
               className: "home-tabs-style",
-              children: <Modal flag={flag} pathName={"/select-experience"} />,
+              children: <Modal flag={flag} pathName={"/RegenAg"} />,
             },
           ]}
         />

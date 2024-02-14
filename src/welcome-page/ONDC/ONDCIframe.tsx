@@ -36,7 +36,7 @@ const ONDCIframe = () => {
                     alt="curvedArrow"
                   />
                 ) : (
-                  <ExitModal flag={openModal} pathName={"/ThankYou"} />
+                  <ExitModal flag={openModal} pathName={"/RegenAg"} />
                 )}
               </div>
             </div>

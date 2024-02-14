@@ -30,7 +30,7 @@ const RegenAg = () => {
     <div style={{ overflow: "hidden" }}>
       <div className="headLogo-image">
         <img className="Beckn-image" src="/assets/beckn_lg.svg" alt={"Logo"} />
-        <button
+        {/* <button
           onClick={() => navigate("/")}
           style={{ width: "55px", marginTop: "-10px" }}
           className="home-buttom-nevigate"
@@ -42,7 +42,7 @@ const RegenAg = () => {
               alt=""
             />
           </span>
-        </button>
+        </button> */}
       </div>
       <div className="welcome-Screen-container">
         <div className="child-container">
