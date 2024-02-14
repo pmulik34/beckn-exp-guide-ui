@@ -30,6 +30,10 @@ const TabsComponent: React.FC<TabsComponentPropsModal> = ({
   const DHP = localStorage.getItem("name") === "DHP";
   const isIndustry = localStorage.getItem("name") === "industry4.0";
   const ODR = localStorage.getItem("name") === "ODR";
+  const ONDC = localStorage.getItem("name") === "ONDC";
+  const isRegenerativeAgriculture =
+    localStorage.getItem("name") === "regenerativeAgriculture";
+  const isRegenUEI = localStorage.getItem("name") === "regenUEI";
 
   const openCity = (evt: any, cityName: string) => {
     let i: number;
@@ -217,6 +221,89 @@ const TabsComponent: React.FC<TabsComponentPropsModal> = ({
               key: "6",
               className: "home-tabs-style",
               children: <Modal flag={flag} pathName={"/select-experience"} />,
+            },
+          ]}
+        />
+      ) : ONDC || isRegenerativeAgriculture || isRegenUEI ? (
+        <Tabs
+          className={"tabsConatiner ONDC PCM_wrapper"}
+          defaultActiveKey="3"
+          items={[
+            {
+              label: (
+                <div>
+                  <img
+                    style={{ height: "35px", width: "135px" }}
+                    // src="/assets/logo2.png"
+
+                    src={"/assets/beckn_lg.svg"}
+                    alt={"Icon"}
+                    width={"98%"}
+                  />
+                </div>
+              ),
+              key: "1",
+              className: "tabs-style",
+              disabled: true,
+            },
+            {
+              label: (
+                <div
+                  className="tablinks"
+                  style={{ display: "flex", alignItems: "center" }}
+                >
+                  <img src="/assets/worldIcon.svg" alt={"Icon"} width={"25%"} />
+                  <div style={{ paddingLeft: "14.4px" }}>
+                    <span>a world without BECKN</span>
+                  </div>
+                </div>
+              ),
+              key: "2",
+              className: "tabs-style",
+              children: firstProps,
+            },
+            {
+              label: (
+                <div
+                  className="tablinks"
+                  style={{ display: "flex", alignItems: "center" }}
+                >
+                  <img src="/assets/bulbIcon.svg" alt={"Icon"} width={"25%"} />
+                  <div style={{ paddingLeft: "14.4px" }}>
+                    <span>a world with BECKN</span>
+                  </div>
+                </div>
+              ),
+              key: "3",
+              className: "tabs-style",
+              children: secondProps,
+            },
+            {
+              label: (
+                <div
+                  className="tablinks"
+                  style={{ display: "flex", alignItems: "center" }}
+                >
+                  <img src="/assets/videoIcon.svg" alt={"Icon"} width={"25%"} />
+                  <div style={{ paddingLeft: "14.4px" }}>
+                    <span>behind the scenes</span>
+                  </div>
+                </div>
+              ),
+              key: "4",
+              className: "tabs-style",
+              children: thirdProps,
+            },
+
+            {
+              label: (
+                <div>
+                  <img src="/assets/home.svg" alt={"Icon"} width={"98%"} />
+                </div>
+              ),
+              key: "6",
+              className: "home-tabs-style",
+              children: <Modal flag={flag} pathName={"/RegenAg"} />,
             },
           ]}
         />

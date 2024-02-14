@@ -28,6 +28,10 @@ import Dsnp from "../welcome-page/DSNP/Dsnp";
 import DHP from "../welcome-page/DHP/DHP";
 import IndustryComp from "../welcome-page/Industry4.0/IndustryComp";
 import ODR from "../welcome-page/ODR/ODR";
+import RegenAg from "../welcome-page/RegenAg/regenAg";
+import ONDC from "../welcome-page/ONDC/ONDC";
+import RegenUEI from "../welcome-page/RegenUEI/regenUEI";
+import RegenerativeAgriculture from "../welcome-page/RegenerativeAgriculture/regenerativeAgriculture";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -35,6 +39,7 @@ const AnimatedRoutes = () => {
     <AnimatePresence initial={false}>
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<WelcomeScreen />} />
+        <Route path="/regenAg" element={<RegenAg />} />
         <Route path="/wallet" element={<Wallet />} />
         <Route path="/himalayas" element={<Himalayas />} />
         <Route path="/cities" element={<Cities />} />
@@ -58,6 +63,12 @@ const AnimatedRoutes = () => {
         <Route path="/ThankYou" element={<ThankYou />} />
         <Route path="/videoTemplate" element={<VideoTemplate />} />
         <Route path="/selectionPage" element={<SelectionPage />} />
+        <Route path="/ONDC" element={<ONDC />} />
+        <Route path="/regenUEI" element={<RegenUEI />} />
+        <Route
+          path="/regenerativeAgriculture"
+          element={<RegenerativeAgriculture />}
+        />
         <Route
           path="*"
           element={
