@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Tabs from "../../common/Tabs/tabs";
 import VideoTemplate from "../../common/videoTemplate/videoTemplate";
-import Modal from "../modal";
+import ExitModal from "../modal";
 import ONDCIframe from "./regenerativeAgricultureIframe";
 import "./regenerativeAgriculture.css";
 
@@ -10,8 +10,11 @@ const RegenerativeAgriculture = () => {
   return (
     <div
       style={{
-        margin: "0 auto",
+        display: "flex",
+        justifyContent: "center",
+        height: "100vh",
         position: "relative",
+        margin: "0 auto",
       }}
       className="regenerative_container"
     >
@@ -24,6 +27,18 @@ const RegenerativeAgriculture = () => {
           <VideoTemplate mainIconUrl="https://player.vimeo.com/video/808586015?h=aa4c79b136&amp;badge=0&amp;player_id=0&amp;app_id=58479" />
         }
       />
+
+      <div className=" regen_exit_btn">
+        {!openModal ? (
+          <img
+            onClick={() => setOpenModal(true)}
+            src="/assets/exit-Btn_icon.svg"
+            alt="curvedArrow"
+          />
+        ) : (
+          <ExitModal flag={openModal} pathName={"/RegenAg"} />
+        )}
+      </div>
     </div>
   );
 };

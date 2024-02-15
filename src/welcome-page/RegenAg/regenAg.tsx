@@ -24,7 +24,18 @@ const RegenAg = () => {
   const navigate = useNavigate();
   const handleNevigate = (id: any) => {
     localStorage.setItem("name", id);
-    navigate("/progress");
+    const name = localStorage.getItem("name");
+    switch (name) {
+      case "ONDC":
+        navigate("/ONDC");
+        break;
+      case "regenerativeAgriculture":
+        navigate("/regenerativeAgriculture");
+        break;
+      case "regenUEI":
+        navigate("/regenUEI");
+        break;
+    }
   };
   return (
     <div style={{ overflow: "hidden" }}>

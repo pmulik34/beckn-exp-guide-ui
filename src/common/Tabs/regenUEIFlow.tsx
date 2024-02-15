@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Modal, QRCode } from "antd";
-import ExitModal from "../../welcome-page/modal";
 import "./tabs.css";
 import VideoTemplate from "../videoTemplate/videoTemplate";
 import RegenUEIInstruction from "../../welcome-page/RegenUEI/regenUEIInstruction";
@@ -17,7 +16,6 @@ const RegenUEIFlow = () => {
   const [open, setOpen] = useState(false);
   const [isUEIInstructionModalOpen, setIsUEIInstructionModalOpen] =
     useState(false);
-  const [openModal, setOpenModal] = useState(false);
 
   const handleButtonClick = (buttonName: any) => {
     setActiveButton(buttonName);
@@ -115,21 +113,11 @@ const RegenUEIFlow = () => {
             height={"100%"}
             style={{ borderRadius: "36px" }}
           />
-          <div
-            className={
-              activeButton === "Sheru App"
-                ? "instructions_btns instructions_btns_seru"
-                : "instructions_btns"
-            }
-          >
-            {activeButton === "Sheru App" && (
-              <div onClick={() => {}}>
-                <img
-                  src="/assets/seru_demand_btn.svg"
-                  alt={"seru demand icon"}
-                />
-              </div>
-            )}
+          <div className={"instructions_btns"}>
+            <div onClick={() => {}}>
+              <img src="/assets/seru_demand_btn.svg" alt={"seru demand icon"} />
+            </div>
+
             <div onClick={handleInstructionModal}>
               <img src="/assets/instruction_icon.svg" alt={"instuction icon"} />
             </div>
@@ -139,17 +127,6 @@ const RegenUEIFlow = () => {
             />
             <div onClick={() => setOpen(true)}>
               <img src="/assets/playIcon_Large.svg" alt={"playIcon"} />
-            </div>
-            <div>
-              {!openModal ? (
-                <img
-                  onClick={() => setOpenModal(true)}
-                  src="/assets/exit-Btn_icon.svg"
-                  alt="curvedArrow"
-                />
-              ) : (
-                <ExitModal flag={openModal} pathName={"/RegenAg"} />
-              )}
             </div>
           </div>
           <div className="Moneyflow_view_text">

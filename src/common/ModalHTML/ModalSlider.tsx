@@ -60,7 +60,7 @@ const ModalSlider: React.FC<ModalHTMLProps> = (props) => {
       visible={props.open}
       onCancel={props.onCancel}
     >
-      <div className="modal_inner_wrapper">
+      <div className="modal_inner_wrapper modalSlider">
         {sliderVisible ? (
           <Slider {...settings} ref={sliderRef}>
             {props.children.map((child, index) => (
