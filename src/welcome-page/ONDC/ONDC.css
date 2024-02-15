@@ -41,3 +41,13 @@
 .ONDC_exit .exit_btn_ondc {
   margin-right: -100px;
 }
+.ondcExit_btn {
+  position: absolute;
+  bottom: 300px;
+  width: 1080px;
+  cursor: pointer;
+}
+.ondcExit_btn img {
+  position: absolute;
+  right: -130px;
+}

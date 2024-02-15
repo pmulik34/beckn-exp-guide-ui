@@ -33,6 +33,16 @@
 .ondc_video_modal .ant-modal-body {
   margin: unset;
 }
+.uei_exitBtn {
+  position: absolute;
+  bottom: 136px;
+  width: 1080px;
+  cursor: pointer;
+}
+.uei_exitBtn img {
+  position: absolute;
+  right: -210px;
+}
 @media screen and (min-width: 768px) and (max-width: 1366px) {
   .regenUEI_tab_wrappe {
     margin-left: 80px;

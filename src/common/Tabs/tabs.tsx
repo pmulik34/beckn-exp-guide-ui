@@ -227,7 +227,7 @@ const TabsComponent: React.FC<TabsComponentPropsModal> = ({
       ) : ONDC || isRegenerativeAgriculture || isRegenUEI ? (
         <Tabs
           className={"tabsConatiner ONDC PCM_wrapper"}
-          defaultActiveKey="3"
+          defaultActiveKey="2"
           items={[
             {
               label: (
@@ -254,7 +254,7 @@ const TabsComponent: React.FC<TabsComponentPropsModal> = ({
                 >
                   <img src="/assets/worldIcon.svg" alt={"Icon"} width={"25%"} />
                   <div style={{ paddingLeft: "14.4px" }}>
-                    <span>a world without BECKN</span>
+                    <span>a world without Beckn</span>
                   </div>
                 </div>
               ),
@@ -270,7 +270,7 @@ const TabsComponent: React.FC<TabsComponentPropsModal> = ({
                 >
                   <img src="/assets/bulbIcon.svg" alt={"Icon"} width={"25%"} />
                   <div style={{ paddingLeft: "14.4px" }}>
-                    <span>a world with BECKN</span>
+                    <span>a world with Beckn</span>
                   </div>
                 </div>
               ),
