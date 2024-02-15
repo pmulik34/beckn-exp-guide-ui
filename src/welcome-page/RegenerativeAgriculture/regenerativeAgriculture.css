@@ -17,11 +17,12 @@
 }
 .regen_exit_btn {
   position: absolute;
-  bottom: 300px;
+  bottom: 200px;
   width: 1080px;
   cursor: pointer;
+  right: unset !important;
 }
 .regen_exit_btn img {
   position: absolute;
-  right: 60px;
+  right: -115px;
 }

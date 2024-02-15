@@ -304,7 +304,7 @@
 .regenUEI_flow_btn {
   display: flex;
   align-items: center;
-  margin: 40px 0;
+  margin: 0px -10px 40px;
 }
 .regenUEI_flow_btn .active {
   background-color: #4498e8;
@@ -329,10 +329,11 @@
   align-items: center;
   justify-content: center;
   font-weight: 600;
+  height: 40px;
 }
 .Moneyflow_view_text span {
   font-size: 22px;
-  height: 64px;
+  margin-top: -12px;
   padding: 8px;
   font-weight: 600;
 }
@@ -346,7 +347,7 @@
   height: 477px;
 }
 .regenUEI_flow_iframe {
-  max-height: 69vh;
+  max-height: 70vh;
   overflow-y: scroll;
 }
 .regenUEI_flow_iframe::-webkit-scrollbar {
@@ -355,10 +356,10 @@
 .instructions_btns {
   position: absolute;
   right: -210px;
-  top: 408px !important;
+  top: 342px !important;
 }
 .instructions_btns_seru {
-  top: 408px !important;
+  top: 342px !important;
 }
 .instructions_btns div {
   margin-bottom: 10px;
