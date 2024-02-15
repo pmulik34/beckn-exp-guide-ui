@@ -92,7 +92,7 @@
   display: none !important;
 }
 
-.slick-slide {
+.modalSlider .slick-slide {
   width: unset !important;
 }
 .ant-modal-body {

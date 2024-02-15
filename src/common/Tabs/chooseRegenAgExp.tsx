@@ -4,10 +4,8 @@ import {
   signPayloadWithExtension,
 } from "../../utility/signTransaction";
 import { web3Enable, web3Accounts } from "@polkadot/extension-dapp";
-import ExitModal from "../../welcome-page/modal";
 
 import "./tabs.css";
-import { JsxElement } from "typescript";
 import ModalSlider from "../ModalHTML/ModalSlider";
 import { Button, QRCode } from "antd";
 import RegenerativeInstruction from "../../welcome-page/RegenerativeAgriculture/regenerativeInstruction";
@@ -37,7 +35,6 @@ const ChooseRegenAgExp: React.FC<selectExpModalProps> = ({
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isRegenerativeAgriculture, setIsRegenerativeAgriculture] =
     useState<boolean>(false);
-  const [openModal, setOpenModal] = useState(false);
 
   useEffect(() => {
     async function handleMessage(event: MessageEvent) {
@@ -111,7 +108,7 @@ const ChooseRegenAgExp: React.FC<selectExpModalProps> = ({
     <div
       className={
         isRegenUEI
-          ? "tab-wrappper-content"
+          ? "tab-wrappper-content "
           : "tab-wrappper-content chooseRegenAgExp_wrapper"
       }
     >
@@ -150,18 +147,6 @@ const ChooseRegenAgExp: React.FC<selectExpModalProps> = ({
               isModalOpen={isModalOpen}
               setIsModalRegenerativeAgriculture={setIsModalOpen}
             />
-
-            <div>
-              {!openModal ? (
-                <img
-                  onClick={() => setOpenModal(true)}
-                  src="/assets/exit-Btn_icon.svg"
-                  alt="curvedArrow"
-                />
-              ) : (
-                <ExitModal flag={openModal} pathName={"/RegenAg"} />
-              )}
-            </div>
           </div>
         ) : null}
       </div>
