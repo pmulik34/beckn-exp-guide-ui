@@ -276,7 +276,8 @@
 .regenAg-intruction {
   position: absolute;
   right: -116px;
-  margin-top: 20px;
+  /* margin-top: 20px; */
+  bottom: -10px;
   cursor: pointer;
   width: unset !important;
 }
@@ -330,6 +331,8 @@
   justify-content: center;
   font-weight: 600;
   height: 40px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 .Moneyflow_view_text span {
   font-size: 22px;
