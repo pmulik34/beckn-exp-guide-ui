@@ -64,8 +64,8 @@
 }
 
 .ONDC .ant-tabs-tab[data-node-key="2"],
-.ant-tabs-tab[data-node-key="3"],
-.ant-tabs-tab[data-node-key="4"] {
+.ONDC .ant-tabs-tab[data-node-key="3"],
+.ONDC .ant-tabs-tab[data-node-key="4"] {
   width: 267px;
 }
 
@@ -465,7 +465,7 @@ p.ondc_Qr_text {
 
 .ondc_network_flow > .ondc_network_tab_wrapper .ant-tabs-nav-wrap {
   justify-content: center;
-  margin-left: 40px;
+  padding-left: 40px;
 }
 .ondc_network_flow > .ondc_network_tab_wrapper .ant-tabs-content {
   padding: 0 26px;
@@ -630,6 +630,9 @@ p.ondc_Qr_text {
   margin: 12px;
 }
 .ondc_network_tab_wrapper .ant-tabs-top > .ant-tabs-nav::before {
+  border-bottom: unset !important;
+}
+.tabsConatiner .ant-tabs-top > .ant-tabs-nav::before {
   border-bottom: unset !important;
 }
 @media screen and (min-width: 768px) and (max-width: 1085px) {
