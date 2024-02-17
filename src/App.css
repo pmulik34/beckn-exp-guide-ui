@@ -234,3 +234,47 @@ iframe .header-container .location-btn {
 .ant-tabs-nav-operations {
   display: none !important;
 }
+.UEI_NewFlow_container {
+  width: 1440px;
+  margin: 0 auto;
+}
+.QR-wrapper.regenUEI_flow_QRcode_new_flow {
+  width: 307px;
+  height: 377px;
+}
+.UEI_newFlow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.UEI_newFlow .video-container,
+.UEI_newFlow .video-container iframe,
+.regenUEI_flow_QRcode_new_flow_wrrp .video-container,
+.regenUEI_flow_QRcode_new_flow_wrrp .video-container iframe {
+  width: 930px;
+  height: 532px;
+}
+.UEI_text {
+  font-size: 40px;
+  font-weight: 400;
+  color: #4e7796;
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+.regenUEI_flow_QRcode_new_flow_wrrp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+.UEI_NewFlow_container_innr {
+  margin: 0 auto;
+  width: 1400px;
+  margin-top: 60px;
+}
+.UEI_QrFlow_container_innr {
+  width: 1340px;
+}
+.UEI_newFlow_btn {
+  margin-bottom: 60px !important;
+}

@@ -32,13 +32,14 @@ import RegenAg from "../welcome-page/RegenAg/regenAg";
 import ONDC from "../welcome-page/ONDC/ONDC";
 import RegenUEI from "../welcome-page/RegenUEI/regenUEI";
 import RegenerativeAgriculture from "../welcome-page/RegenerativeAgriculture/regenerativeAgriculture";
+import RegenUEINewFlow from "../welcome-page/regenUEINewFlow";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
   return (
     <AnimatePresence initial={false}>
       <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<WelcomeScreen />} />
+        <Route path="/" element={<RegenUEINewFlow />} />
         <Route path="/regenAg" element={<RegenAg />} />
         <Route path="/wallet" element={<Wallet />} />
         <Route path="/himalayas" element={<Himalayas />} />
@@ -65,6 +66,7 @@ const AnimatedRoutes = () => {
         <Route path="/selectionPage" element={<SelectionPage />} />
         <Route path="/ONDC" element={<ONDC />} />
         <Route path="/regenUEI" element={<RegenUEI />} />
+        <Route path="/UEI-flow" element={<RegenUEINewFlow />} />
         <Route
           path="/regenerativeAgriculture"
           element={<RegenerativeAgriculture />}
