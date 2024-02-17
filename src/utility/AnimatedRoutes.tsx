@@ -32,6 +32,7 @@ import RegenAg from "../welcome-page/RegenAg/regenAg";
 import ONDC from "../welcome-page/ONDC/ONDC";
 import RegenUEI from "../welcome-page/RegenUEI/regenUEI";
 import RegenerativeAgriculture from "../welcome-page/RegenerativeAgriculture/regenerativeAgriculture";
+import RegenUEINewFlow from "../welcome-page/regenUEINewFlow";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -65,6 +66,7 @@ const AnimatedRoutes = () => {
         <Route path="/selectionPage" element={<SelectionPage />} />
         <Route path="/ONDC" element={<ONDC />} />
         <Route path="/regenUEI" element={<RegenUEI />} />
+        <Route path="/UEI-new" element={<RegenUEINewFlow />} />
         <Route
           path="/regenerativeAgriculture"
           element={<RegenerativeAgriculture />}
