@@ -124,7 +124,7 @@ const RegenUEINewFlow = () => {
             <VideoTemplate mainIconUrl={activeVideoUrl} />
             <div className="UEI_footer_new">
               <div className="UEI_footer_icons">
-                <img src="/assets/UEI_Icon_Img.svg" alt="UEI logo" />
+                <img src="/assets/uei_logo_new_logo.svg" alt="UEI logo" />
               </div>
               <div className="UEI_footer_icons">
                 <img src="/assets/pulseIconImage.svg" />
