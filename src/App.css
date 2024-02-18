@@ -309,6 +309,7 @@ iframe .header-container .location-btn {
 .UEI_footer_icons {
   display: flex;
   align-items: center;
+  color: #000;
 }
 .UEI_footer_icons img {
   padding-right: 8px;

@@ -98,7 +98,7 @@ const RegenUEINewFlow = () => {
                     : "UEI_new_btn"
                 }
               >
-                Pulse energy
+                Pulse Energy
               </div>
               <div
                 onClick={handleSheruApp}
@@ -108,7 +108,7 @@ const RegenUEINewFlow = () => {
                     : "UEI_new_btn"
                 }
               >
-                Sheru App
+                Sheru
               </div>
               <div
                 onClick={handleTurnoApp}
@@ -118,7 +118,7 @@ const RegenUEINewFlow = () => {
                     : "UEI_new_btn"
                 }
               >
-                Turno app
+                Turno
               </div>
             </div>
             <VideoTemplate mainIconUrl={activeVideoUrl} />
@@ -134,12 +134,12 @@ const RegenUEINewFlow = () => {
                 <img src="/assets/sheruIconImg.svg" />
               </div>
               <div className="UEI_footer_icons">
-                <img src="/assets/kazamIconImg.svg" />
-                Kazam
-              </div>
-              <div className="UEI_footer_icons">
                 <img src="/assets/turnoIconImg.svg" />
                 Turno
+              </div>
+              <div className="UEI_footer_icons">
+                <img src="/assets/kazamIconImg.svg" />
+                Kazam
               </div>
             </div>
           </div>
