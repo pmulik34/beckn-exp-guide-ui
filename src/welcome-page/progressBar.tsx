@@ -47,6 +47,12 @@ const ProgressBar = () => {
         ? navigate("/industry4.0")
         : localStorage.getItem("name") === "ODR"
         ? navigate("/ODR")
+        : localStorage.getItem("name") === "ONDC"
+        ? navigate("/ONDC")
+        : localStorage.getItem("name") === "regenerativeAgriculture"
+        ? navigate("/regenerativeAgriculture")
+        : localStorage.getItem("name") === "regenUEI"
+        ? navigate("/regenUEI")
         : navigate("/PCM");
     }
   });
