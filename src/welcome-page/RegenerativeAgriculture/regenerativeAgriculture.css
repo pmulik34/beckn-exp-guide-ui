@@ -1,0 +1,33 @@
+.RA_wrapper {
+  width: 670px;
+}
+.RA_wrapper iframe {
+  width: 670px;
+  height: 400px;
+}
+.RA_wrapper .video-container {
+  height: 400px;
+  margin-top: 110px;
+}
+.regenerative_container .exit-icon {
+  position: absolute !important;
+  right: -100px !important;
+  bottom: 150px !important;
+  width: 77px !important;
+  height: 75px !important;
+}
+.regen_exit_btn {
+  position: absolute;
+  bottom: 200px;
+  width: 1080px;
+  cursor: pointer;
+  right: unset !important;
+}
+.regen_exit_btn img {
+  position: absolute;
+  right: -115px;
+}
+.regen_text_description {
+  font-size: 24px;
+  font-weight: 300;
+}
