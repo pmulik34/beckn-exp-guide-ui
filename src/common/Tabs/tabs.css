@@ -325,6 +325,14 @@
   text-align: center;
   cursor: pointer;
 }
+.regenUEI_flow_btn .add_text_UEI_btn {
+  width: unset;
+  height: unset;
+  background-color: unset;
+}
+.regenUEI_flow_btn .add_text_UEI_btn p {
+  padding-top: 10px;
+}
 .Moneyflow_view_text {
   display: flex;
   align-items: center;

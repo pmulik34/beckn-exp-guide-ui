@@ -42,9 +42,7 @@ const RegenUEINewFlow = () => {
       >
         <div className="beckn_logo_UEI">
           <img src="/assets/becknImageNew.svg" alt="beckn logo" />
-          <div className="UEI_text">
-            welcome to the unified energy interface
-          </div>
+          <div className="UEI_text">welcome to open networks for energy</div>
         </div>
         <div className="UEI_newFlow">
           {activeButton === "Pulse energy" ? (
@@ -89,36 +87,45 @@ const RegenUEINewFlow = () => {
             </div>
           )}
           <div className="UEI_newFlow_right_section">
-            <div className="regenUEI_flow_btn UEI_newFlow_btn">
-              <div
-                onClick={handlePulseEnergy}
-                className={
-                  activeButton === "Pulse energy"
-                    ? "active UEI_new_btn"
-                    : "UEI_new_btn"
-                }
-              >
-                Pulse Energy
+            <div className="regenUEI_flow_btn UEI_newFlow_btn UEI_flow_btn_text">
+              <div className="add_text_UEI_btn">
+                <div
+                  onClick={handlePulseEnergy}
+                  className={
+                    activeButton === "Pulse energy"
+                      ? "active UEI_new_btn"
+                      : "UEI_new_btn"
+                  }
+                >
+                  Pulse Energy
+                </div>
+                <p>ev charging aggregator</p>
               </div>
-              <div
-                onClick={handleSheruApp}
-                className={
-                  activeButton === "Sheru App"
-                    ? "active UEI_new_btn"
-                    : "UEI_new_btn"
-                }
-              >
-                Sheru
+              <div className="add_text_UEI_btn">
+                <div
+                  onClick={handleSheruApp}
+                  className={
+                    activeButton === "Sheru App"
+                      ? "active UEI_new_btn"
+                      : "UEI_new_btn"
+                  }
+                >
+                  Sheru
+                </div>
+                <p>virtual energy aggregator</p>
               </div>
-              <div
-                onClick={handleTurnoApp}
-                className={
-                  activeButton === "Turno app"
-                    ? "active UEI_new_btn"
-                    : "UEI_new_btn"
-                }
-              >
-                Turno
+              <div className="add_text_UEI_btn">
+                <div
+                  onClick={handleTurnoApp}
+                  className={
+                    activeButton === "Turno app"
+                      ? "active UEI_new_btn"
+                      : "UEI_new_btn"
+                  }
+                >
+                  Turno
+                </div>
+                <p>battery aggregator</p>
               </div>
             </div>
             <VideoTemplate mainIconUrl={activeVideoUrl} />
