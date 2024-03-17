@@ -356,3 +356,10 @@ iframe .header-container .location-btn {
     margin-right: 120px;
   }
 } */
+.UEI_NewFlow_container {
+  position: relative;
+}
+.UEI_NewFlow_container .exit-icon {
+  position: absolute;
+  right: -60px;
+}
