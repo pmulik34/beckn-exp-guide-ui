@@ -3270,7 +3270,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                         color: "#000",
                       }}
                     >
-                      banjul, the gambia
+                      Serekunda Market
                     </span>
                   </p>
                   <p style={{ paddingBottom: "10px" }}>
@@ -3281,7 +3281,7 @@ const ChooseExperience: React.FC<selectExpModalProps> = ({
                         color: "#000",
                       }}
                     >
-                      serekunda, the gambia
+                      Banjul International Airport
                     </span>
                   </p>
                   <p style={{ paddingBottom: "10px" }}>
