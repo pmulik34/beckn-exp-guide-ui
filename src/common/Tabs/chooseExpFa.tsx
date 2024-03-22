@@ -257,25 +257,25 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                         <p style={{ fontWeight: "bolder", color: "#000" }}>
                           Nom:
                         </p>
-                        <p>Lisa</p>
+                        <p>Antoine Dubois</p>
                       </p>
                       <p>
                         <p style={{ fontWeight: "bolder", color: "#000" }}>
                           Adresse:
                         </p>
-                        <p>{"<lonnng address of Paris>"}</p>
+                        <p>15 Rue du Soleil, Paris, France</p>
                       </p>
                       <p>
                         <p style={{ fontWeight: "bolder", color: "#000" }}>
                           Numéro de téléphone:
                         </p>
-                        <p>5678990532</p>
+                        <p>0612345678</p>
                       </p>
                       <p>
                         <p style={{ fontWeight: "bolder", color: "#000" }}>
                           Adresse électronique:
                         </p>
-                        <p>lisa@email.com</p>
+                        <p>antoine.dubois@gmail.com</p>
                       </p>
                       <p>
                         <p style={{ fontWeight: "bolder", color: "#000" }}>
@@ -466,19 +466,8 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                           color: "#000",
                         }}
                       >
-                        Antoine Dubois
+                        Lisa
                       </span>{" "}
-                      <span>
-                        Âge:{" "}
-                        <span
-                          style={{
-                            fontWeight: "bolder",
-                            color: "#000",
-                          }}
-                        >
-                          19
-                        </span>
-                      </span>
                     </p>
                     <span>
                       Mobile:{" "}
@@ -490,6 +479,17 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                       >
                         0612345678
                       </span>
+                    </span>
+                  </p>
+                  <p>
+                    adresse électronique::{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      lisa.k@gmail.com
                     </span>
                   </p>
                   <p>
@@ -514,28 +514,7 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                       15 Rue du Soleil, Paris, France
                     </span>
                   </p>
-                  <p>
-                    Numéro d'appartement:{" "}
-                    <span
-                      style={{
-                        fontWeight: "bolder",
-                        color: "#000",
-                      }}
-                    >
-                      B21202
-                    </span>{" "}
-                  </p>
-                  {/* <p style={{ paddingBottom: "10px" }}>
-                    Point de repère:{" "}
-                    <span
-                      style={{
-                        fontWeight: "bolder",
-                        color: "#000",
-                      }}
-                    >
-                      L'école xavier{" "}
-                    </span>
-                  </p> */}
+
                   <p style={{ paddingTop: "10px" }}>
                     Cliquez sur le bouton « enregistrer les détails du voyageur
                     »
@@ -632,7 +611,7 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                           color: "#000",
                         }}
                       >
-                        {"<noms d'éléments>"}{" "}
+                        art{" "}
                       </span>{" "}
                       dans la liste
                     </p>
@@ -665,7 +644,7 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                         color: "#000",
                       }}
                     >
-                      2 articles
+                      articles{" "}
                     </span>
                     au panier depuis la liste,
                   </p>
@@ -704,19 +683,8 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                           color: "#000",
                         }}
                       >
-                        matheo ;
+                        Lisa
                       </span>{" "}
-                      <span>
-                        Âge:{" "}
-                        <span
-                          style={{
-                            fontWeight: "bolder",
-                            color: "#000",
-                          }}
-                        >
-                          19
-                        </span>
-                      </span>
                     </p>
                     <span>
                       Mobile:{" "}
@@ -726,8 +694,19 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                           color: "#000",
                         }}
                       >
-                        0143077537{" "}
+                        0612345678
                       </span>
+                    </span>
+                  </p>
+                  <p>
+                    adresse électronique::{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      lisa.k@gmail.com
                     </span>
                   </p>
                   <p>
@@ -738,10 +717,10 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                         color: "#000",
                       }}
                     >
-                      750122{" "}
+                      75001{" "}
                     </span>
                   </p>
-                  <p style={{ paddingBottom: "10px" }}>
+                  <p>
                     Adresse: <br />
                     <span
                       style={{
@@ -749,32 +728,10 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                         color: "#000",
                       }}
                     >
-                      12 rue rottembourg, paris 750122{" "}
+                      15 Rue du Soleil, Paris, France
                     </span>
                   </p>
-                  <p>
-                    Numéro d'appartement:{" "}
-                    <span
-                      style={{
-                        fontWeight: "bolder",
-                        color: "#000",
-                      }}
-                    >
-                      B21202{" "}
-                    </span>
-                  </p>
-                  <p style={{ paddingBottom: "10px" }}>
-                    Point de repère:{" "}
-                    <span
-                      style={{
-                        fontWeight: "bolder",
-                        color: "#000",
-                      }}
-                    >
-                      L'école xavier{" "}
-                    </span>
-                  </p>
-                  <p>
+                  <p style={{ marginTop: "15px" }}>
                     Cliquez sur le bouton{" "}
                     <span
                       style={{
@@ -807,19 +764,8 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                           color: "#000",
                         }}
                       >
-                        matheo ;
+                        Lisa
                       </span>{" "}
-                      <span>
-                        Âge:{" "}
-                        <span
-                          style={{
-                            fontWeight: "bolder",
-                            color: "#000",
-                          }}
-                        >
-                          19
-                        </span>
-                      </span>
                     </p>
                     <span>
                       Mobile:{" "}
@@ -829,8 +775,19 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                           color: "#000",
                         }}
                       >
-                        0143077537{" "}
+                        0612345678
                       </span>
+                    </span>
+                  </p>
+                  <p>
+                    adresse électronique::{" "}
+                    <span
+                      style={{
+                        fontWeight: "bolder",
+                        color: "#000",
+                      }}
+                    >
+                      lisa.k@gmail.com
                     </span>
                   </p>
                   <p>
@@ -841,10 +798,10 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                         color: "#000",
                       }}
                     >
-                      750122
+                      75001{" "}
                     </span>
                   </p>
-                  <p style={{ paddingBottom: "10px" }}>
+                  <p>
                     Adresse: <br />
                     <span
                       style={{
@@ -852,32 +809,10 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                         color: "#000",
                       }}
                     >
-                      12 rue rottembourg, paris 750122
+                      15 Rue du Soleil, Paris, France
                     </span>
                   </p>
-                  <p>
-                    Numéro d'appartement:{" "}
-                    <span
-                      style={{
-                        fontWeight: "bolder",
-                        color: "#000",
-                      }}
-                    >
-                      B21202{" "}
-                    </span>
-                  </p>
-                  <p style={{ paddingBottom: "10px" }}>
-                    Point de repère:{" "}
-                    <span
-                      style={{
-                        fontWeight: "bolder",
-                        color: "#000",
-                      }}
-                    >
-                      L'école xavier{" "}
-                    </span>
-                  </p>
-                  <p>
+                  <p style={{ marginTop: "15px" }}>
                     Cliquez sur le bouton{" "}
                     <span
                       style={{
@@ -985,7 +920,8 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                         color: "#000",
                       }}
                     >
-                      {"<nom de l'emplacement>"}
+                      'Paris Charles de Gaulle Airport (CDG), Roissy-en-France,
+                      France'
                     </span>
                     <p style={{ margin: "10px 0px" }}>
                       Sélectionnez votre lieu de dépôt comme
@@ -996,7 +932,7 @@ const ChooseExpFa: React.FC<selectExpModalProps> = ({
                         }}
                       >
                         {" "}
-                        {"<nom du lieu>"}
+                        'Eiffel Tower, Avenue Anatole France, Paris, France '
                       </span>{" "}
                       puis cliquez sur
                       <span
