@@ -12,14 +12,14 @@ const ClimateResilience: React.FC = () => {
     // <-- Specified type for 'id'
     localStorage.setItem("name", id);
     switch (id) {
-      case "climate1":
-        navigate("/climate1");
+      case "forest1":
+        navigate("/forest1");
         break;
-      case "climate2":
-        navigate("/climate2");
+      case "forest2":
+        navigate("/forest2");
         break;
-      case "climate3":
-        navigate("/climate3");
+      case "forest3":
+        navigate("/forest3");
         break;
       default:
         navigate("/");
@@ -80,7 +80,7 @@ const ClimateResilience: React.FC = () => {
         <div className="child-container">
           <div className="animates fadeIns fives home-card-container">
             <ul className="card-sub-containers">
-              <li onClick={() => handleNavigate("climate1")}>
+              <li onClick={() => handleNavigate("forest1")}>
                 <div className="card-with-image">
                   <img
                     className="first-image-card"
@@ -95,7 +95,7 @@ const ClimateResilience: React.FC = () => {
                   </p>
                 </div>
               </li>
-              <li onClick={() => handleNavigate("climate2")}>
+              <li onClick={() => handleNavigate("forest2")}>
                 <div className="card-with-image">
                   <img
                     className="first-image-card"
@@ -109,7 +109,7 @@ const ClimateResilience: React.FC = () => {
                   </p>
                 </div>
               </li>
-              <li onClick={() => handleNavigate("climate3")}>
+              <li onClick={() => handleNavigate("forest3")}>
                 <div className="card-with-image">
                   <img
                     className="first-image-card"

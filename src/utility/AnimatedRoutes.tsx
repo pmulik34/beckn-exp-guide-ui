@@ -38,6 +38,9 @@ import Climate2 from "../welcome-page/Climate/Climate2";
 import Climate3 from "../welcome-page/Climate/Climate3";
 import ClimateResilience from "../welcome-page/ClimateResilience/ClimateResilience";
 import ForestConservation from "../welcome-page/ForestConservation/ForestConservation";
+import Forest1 from "../welcome-page/ForestConservation/Forest1";
+import Forest2 from "../welcome-page/ForestConservation/Forest2";
+import Forest3 from "../welcome-page/ForestConservation/Forest3";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -77,6 +80,9 @@ const AnimatedRoutes = () => {
         <Route path="/climate3" element={<Climate3 />} />
         <Route path="/climateresilience" element={<ClimateResilience />} />
         <Route path="/forestconservation" element={<ForestConservation />} />
+        <Route path="/forest1" element={<Forest1 />} />
+        <Route path="/forest2" element={<Forest2 />} />
+        <Route path="/forest3" element={<Forest3 />} />
         <Route
           path="/regenerativeAgriculture"
           element={<RegenerativeAgriculture />}

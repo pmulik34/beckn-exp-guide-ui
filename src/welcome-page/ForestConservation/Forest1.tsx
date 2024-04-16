@@ -7,8 +7,8 @@ const Forest1 = () => {
     <>
       <ClimateHeader
         logoSrc='/assets/beckn_lg.svg'
-        headingLine1='An FMCG company delivers flood-resilient'
-        headingLine2 = 'farming advisory to its contract farmers'
+        headingLine1='Detect and measure forest degradation &'
+        headingLine2 = 'facilitate intervention'
       />
       <div className="climate-container">
         <div className="desktop-wrapper">
