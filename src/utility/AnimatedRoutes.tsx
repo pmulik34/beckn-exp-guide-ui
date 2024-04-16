@@ -33,6 +33,11 @@ import ONDC from "../welcome-page/ONDC/ONDC";
 import RegenUEI from "../welcome-page/RegenUEI/regenUEI";
 import RegenerativeAgriculture from "../welcome-page/RegenerativeAgriculture/regenerativeAgriculture";
 import RegenUEINewFlow from "../welcome-page/regenUEINewFlow";
+import Climate1 from "../welcome-page/Climate/Climate1";
+import Climate2 from "../welcome-page/Climate/Climate2";
+import Climate3 from "../welcome-page/Climate/Climate3";
+import ClimateResilience from "../welcome-page/ClimateResilience/ClimateResilience";
+import ForestConservation from "../welcome-page/ForestConservation/ForestConservation";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -67,6 +72,11 @@ const AnimatedRoutes = () => {
         <Route path="/ONDC" element={<ONDC />} />
         <Route path="/regenUEI" element={<RegenUEI />} />
         <Route path="/UEI-new" element={<RegenUEINewFlow />} />
+        <Route path="/climate1" element={<Climate1 />} />
+        <Route path="/climate2" element={<Climate2 />} />
+        <Route path="/climate3" element={<Climate3 />} />
+        <Route path="/climateresilience" element={<ClimateResilience />} />
+        <Route path="/forestconservation" element={<ForestConservation />} />
         <Route
           path="/regenerativeAgriculture"
           element={<RegenerativeAgriculture />}

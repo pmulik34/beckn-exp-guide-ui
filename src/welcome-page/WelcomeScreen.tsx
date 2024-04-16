@@ -26,19 +26,26 @@ const WelcomeScreen = () => {
           </Typography>
         </div>
         <div className="animate fadeIn five">
-          <button
-            onClick={() => navigate("/select-experience")}
-            className="welcom-begin-button"
-          >
-            <span style={{ paddingRight: "5px", color: "#FFFF" }}>begin</span>
-            <span style={{ paddingLeft: "5px" }}>
-              <img
-                style={{ width: "16px" }}
-                src="/assets/tiltArrow.svg"
-                alt=""
-              />
-            </span>
-          </button>
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+            <button
+              onClick={() => navigate("/select-experience")}
+              className="welcom-begin-button"
+            >
+              <span style={{ paddingRight: "5px", color: "#FFFF" }}>begin</span>
+              <span style={{ paddingLeft: "5px" }}>
+                <img
+                  style={{ width: "16px" }}
+                  src="/assets/tiltArrow.svg"
+                  alt=""
+                />
+              </span>
+            </button>
+            <img
+              src="/assets/jica.png" 
+              alt="Logo"
+              style={{ width: "99px", height: "80px", marginTop: "3rem" }}
+            />
+          </div>
         </div>
       </div>
     </div>

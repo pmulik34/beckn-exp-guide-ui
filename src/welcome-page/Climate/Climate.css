@@ -1,0 +1,77 @@
+/* Keep existing styles for desktop view */
+.header-container {
+  display: flex;
+  align-items: center;
+  padding: 50px 50px;
+  background-color: transparent;
+}
+
+.header-left {
+  width: 130px; /* Fixed width for the header-left div */
+}
+
+.logo {
+  height: 40px;
+  margin-right: 20px;
+}
+
+.heading {
+  font-family: "Poppins";
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 36px;
+  text-align: center;
+  color: rgba(78, 119, 150, 1);
+  margin: 0 auto; /* Center the heading */
+}
+
+/* Add mobile responsive styles */
+@media screen and (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+
+  .header-left {
+    width: auto; /* Allow header-left to expand */
+    margin-bottom: 20px;
+  }
+}
+
+/* The device with borders */
+.desktop-wrapper {
+  position: relative;
+  width: auto;
+  height: 500px;
+  border: 4px solid #ffffff;
+  border-radius: 36px;
+}
+.desktop {
+  position: relative;
+  width: auto;
+  height: 500px;
+  margin: auto;
+  border: 4px #d9d9d9 solid;
+  border-top-width: 4px;
+  border-bottom-width: 4px;
+  border-radius: 36px;
+  margin-top: 1px;
+}
+
+.climate-container {
+  padding: 50px 147px;
+}
+.content {
+  width: auto;
+  height: 480px;
+  overflow: hidden;
+  margin-top: 1px;
+}
+
+.sub-heading {
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
+    color: #4E7796;
+  }

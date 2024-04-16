@@ -1,23 +1,25 @@
 import { Link } from "react-router-dom";
-import Title from "../common/title";
-import Card from "../common/Cards/card";
 import { useNavigate } from "react-router-dom";
-import "./selectExperience.css";
+import "../../welcome-page/selectExperience.css";
 import { useEffect } from "react";
 import { Typography } from "antd";
-import Header from "../common/Header";
 
-const SelectExperience = () => {
+const ClimateResilience: React.FC = () => {
+  // <-- Corrected component declaration
   const navigate = useNavigate();
 
-  const handleNavigate = (id: any) => {
+  const handleNavigate = (id: string) => {
+    // <-- Specified type for 'id'
     localStorage.setItem("name", id);
     switch (id) {
-      case "ClimateResilience":
-        navigate("/climateresilience");
+      case "climate1":
+        navigate("/climate1");
         break;
-      case "ForestConservation":
-        navigate("/forestconservation");
+      case "climate2":
+        navigate("/climate2");
+        break;
+      case "climate3":
+        navigate("/climate3");
         break;
       default:
         navigate("/");
@@ -44,7 +46,8 @@ const SelectExperience = () => {
               fontWeight: "600",
             }}
           >
-            Climate Resilience Data Highways Themes
+            Climate Resilience Data Highways for <br />
+            Disaster Resilience
           </Typography.Title>
           <Typography.Paragraph
             style={{
@@ -55,7 +58,7 @@ const SelectExperience = () => {
               fontWeight: "600",
             }}
           >
-            {/* A decentralized network for secure access to reliable data */}
+            A decentralized network for secure access to reliable data
           </Typography.Paragraph>
         </div>
         <button
@@ -77,30 +80,45 @@ const SelectExperience = () => {
         <div className="child-container">
           <div className="animates fadeIns fives home-card-container">
             <ul className="card-sub-containers">
-              <li onClick={() => handleNavigate("ClimateResilience")}>
+              <li onClick={() => handleNavigate("climate1")}>
                 <div className="card-with-image">
                   <img
                     className="first-image-card"
-                    src="/assets/climate_resilience.svg"
+                    src="/assets/forest_degradation.svg"
                     alt={"BecknLogoIcon"}
                   />
                   <p className="card-title-image">
                     <span className="font-color">
-                      Enhancing resilience to climate-induced disasters
+                      detect and measure forest degradation & facilitate
+                      intervention
                     </span>
                   </p>
                 </div>
               </li>
-              <li onClick={() => handleNavigate("ForestConservation")}>
+              <li onClick={() => handleNavigate("climate2")}>
                 <div className="card-with-image">
                   <img
                     className="first-image-card"
-                    src="/assets/forest_conservation.svg"
+                    src="/assets/forestrestoration.svg"
                     alt={"BecknLogoIcon"}
                   />
                   <p className="card-title-image">
                     <span className="font-color">
-                      Tackling climate change through forest conservation
+                    forest restoration project to ensure ecological health and sustainability
+                    </span>
+                  </p>
+                </div>
+              </li>
+              <li onClick={() => handleNavigate("climate3")}>
+                <div className="card-with-image">
+                  <img
+                    className="first-image-card"
+                    src="/assets/leadingfoodandbeveragecompany.svg"
+                    alt={"BecknLogoIcon"}
+                  />
+                  <p className="card-title-image">
+                    <span className="font-color">
+                    a leading food and beverage company with an ambitious sustainability agenda
                     </span>
                   </p>
                 </div>
@@ -113,4 +131,4 @@ const SelectExperience = () => {
   );
 };
 
-export default SelectExperience;
+export default ClimateResilience;
