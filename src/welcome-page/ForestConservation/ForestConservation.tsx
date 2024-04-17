@@ -8,28 +8,16 @@ const ClimateResilience: React.FC = () => {
   // <-- Corrected component declaration
   const navigate = useNavigate();
 
-  const handleNavigate = (id: string) => {
-    // <-- Specified type for 'id'
+  const handleNevigate = (id: any) => {
     localStorage.setItem("name", id);
-    switch (id) {
-      case "forest1":
-        navigate("/forest1");
-        break;
-      case "forest2":
-        navigate("/forest2");
-        break;
-      case "forest3":
-        navigate("/forest3");
-        break;
-      default:
-        navigate("/");
-        break;
-    }
+    navigate("/progress");
   };
 
   useEffect(() => {
     localStorage.clear();
   }, []);
+
+  
 
   return (
     <div style={{ overflow: "hidden" }}>
@@ -74,7 +62,7 @@ const ClimateResilience: React.FC = () => {
         <div className="child-container">
           <div className="animates fadeIns fives home-card-container">
             <ul className="card-sub-containers">
-              <li onClick={() => handleNavigate("forest1")}>
+              <li onClick={() => handleNevigate("FOREST1")}>
                 <div className="card-with-image">
                   <img
                     className="first-image-card"
@@ -89,7 +77,7 @@ const ClimateResilience: React.FC = () => {
                   </p>
                 </div>
               </li>
-              <li onClick={() => handleNavigate("forest2")}>
+              <li onClick={() => handleNevigate("FOREST2")}>
                 <div className="card-with-image">
                   <img
                     className="first-image-card"
@@ -104,7 +92,7 @@ const ClimateResilience: React.FC = () => {
                   </p>
                 </div>
               </li>
-              <li onClick={() => handleNavigate("forest3")}>
+              <li onClick={() => handleNevigate("FOREST3")}>
                 <div className="card-with-image">
                   <img
                     className="first-image-card"

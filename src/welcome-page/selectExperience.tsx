@@ -9,19 +9,9 @@ import { Typography } from "antd";
 const SelectExperience = () => {
   const navigate = useNavigate();
 
-  const handleNavigate = (id: any) => {
+  const handleNevigate = (id: any) => {
     localStorage.setItem("name", id);
-    switch (id) {
-      case "ClimateResilience":
-        navigate("/climateresilience");
-        break;
-      case "ForestConservation":
-        navigate("/forestconservation");
-        break;
-      default:
-        navigate("/");
-        break;
-    }
+    navigate("/progress");
   };
 
   useEffect(() => {
@@ -84,7 +74,7 @@ const SelectExperience = () => {
         <div className="child-container">
           <div className="animates fadeIns fives home-card-container">
             <ul className="card-sub-containers">
-              <li onClick={() => handleNavigate("ClimateResilience")}>
+              <li onClick={() => handleNevigate("ClimateResilience")}>
                 <div className="card-with-image">
                   <img
                     className="first-image-card"
@@ -98,7 +88,7 @@ const SelectExperience = () => {
                   </p>
                 </div>
               </li>
-              <li onClick={() => handleNavigate("ForestConservation")}>
+              <li onClick={() => handleNevigate("ForestConservation")}>
                 <div className="card-with-image">
                   <img
                     className="first-image-card"

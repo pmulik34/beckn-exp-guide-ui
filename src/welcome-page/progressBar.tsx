@@ -49,6 +49,24 @@ const ProgressBar = () => {
         ? navigate("/ODR")
         : localStorage.getItem("name") === "ONDC"
         ? navigate("/ONDC")
+        //new routes
+        : localStorage.getItem("name") === "ClimateResilience"
+        ? navigate("/climateresilience")
+        : localStorage.getItem("name") === "ForestConservation"
+        ? navigate("/forestconservation")
+        : localStorage.getItem("name") === "CLIMATE1"
+        ? navigate("/climate1")
+        : localStorage.getItem("name") === "CLIMATE2"
+        ? navigate("/climate2")
+        : localStorage.getItem("name") === "CLIMATE3"
+        ? navigate("/climate3")
+        : localStorage.getItem("name") === "FOREST1"
+        ? navigate("/forest1")
+        : localStorage.getItem("name") === "FOREST2"
+        ? navigate("/forest2")
+        : localStorage.getItem("name") === "FOREST3"
+        ? navigate("/forest3")
+
         : localStorage.getItem("name") === "regenerativeAgriculture"
         ? navigate("/regenerativeAgriculture")
         : localStorage.getItem("name") === "regenUEI"

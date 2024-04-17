@@ -6,22 +6,9 @@ import { Link } from "react-router-dom";
 const ClimateResilience: React.FC = () => {
   const navigate = useNavigate();
 
-  const handleNavigate = (id: string) => {
+  const handleNevigate = (id: any) => {
     localStorage.setItem("name", id);
-    switch (id) {
-      case "climate1":
-        navigate("/climate1");
-        break;
-      case "climate2":
-        navigate("/climate2");
-        break;
-      case "climate3":
-        navigate("/climate3");
-        break;
-      default:
-        navigate("/");
-        break;
-    }
+    navigate("/progress");
   };
 
   useEffect(() => {
@@ -71,7 +58,7 @@ const ClimateResilience: React.FC = () => {
         <div className="child-container">
           <div className="animates fadeIns fives home-card-container">
             <ul className="card-sub-containers">
-              <li onClick={() => handleNavigate("climate1")}>
+              <li onClick={() => handleNevigate("CLIMATE1")}>
                 <div className="card-with-image">
                   <img
                     className="first-image-card"
@@ -86,7 +73,7 @@ const ClimateResilience: React.FC = () => {
                   </p>
                 </div>
               </li>
-              <li onClick={() => handleNavigate("climate2")}>
+              <li onClick={() => handleNevigate("CLIMATE2")}>
                 <div className="card-with-image">
                   <img
                     className="first-image-card"
@@ -101,7 +88,7 @@ const ClimateResilience: React.FC = () => {
                   </p>
                 </div>
               </li>
-              <li onClick={() => handleNavigate("climate3")}>
+              <li onClick={() => handleNevigate("CLIMATE3")}>
                 <div className="card-with-image">
                   <img
                     className="first-image-card"
