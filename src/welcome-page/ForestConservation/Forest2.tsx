@@ -1,11 +1,12 @@
 import React from 'react';
-import ClimateHeader from "../Climate/ClimateHeader";
+import Header from '../../common/Header/Header';
+import '../../welcome-page/ClimateResiliance.css';
 
 const Forest2 = () => {
 
   return (
     <>
-      <ClimateHeader
+      <Header
         logoSrc='/assets/beckn_lg.svg'
         headingLine1='Forest restoration project to ensure'
         headingLine2 = 'ecological health and sustainability'
@@ -17,7 +18,7 @@ const Forest2 = () => {
               <iframe
                 className="ChooseExpIframe"
                 allow="clipboard-read; clipboard-write; geolocation"
-                src="https://workspace.google.com/intl/en_in/solutions/ai/"
+                src="https://workspace.google.com/security/"
                 frameBorder="0"
                 allowFullScreen
                 width={"100%"}

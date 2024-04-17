@@ -1,15 +1,12 @@
-import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import "../../welcome-page/selectExperience.css";
 import { useEffect } from "react";
 import { Typography } from "antd";
+import { Link } from "react-router-dom";
 
 const ClimateResilience: React.FC = () => {
-  // <-- Corrected component declaration
   const navigate = useNavigate();
 
   const handleNavigate = (id: string) => {
-    // <-- Specified type for 'id'
     localStorage.setItem("name", id);
     switch (id) {
       case "climate1":
@@ -34,7 +31,13 @@ const ClimateResilience: React.FC = () => {
   return (
     <div style={{ overflow: "hidden" }}>
       <div className="headLogo-image">
-        <img className="Beckn-image" src="/assets/beckn_lg.svg" alt={"Logo"} />
+        <Link to="/select-experience">
+          <img
+            className="Beckn-image"
+            src="/assets/beckn_lg.svg"
+            alt={"Logo"}
+          />
+        </Link>
         <div className="heading-container">
           <Typography.Title
             level={3}
@@ -61,19 +64,7 @@ const ClimateResilience: React.FC = () => {
             A decentralized network for secure access to reliable data
           </Typography.Paragraph>
         </div>
-        <button
-          onClick={() => navigate("/")}
-          style={{ width: "55px", marginTop: "-10px", background: "none" }}
-          className="home-button-navigate"
-        >
-          <span>
-            <img
-              style={{ width: "24px", position: "relative" }}
-              src="/assets/home.svg"
-              alt=""
-            />
-          </span>
-        </button>
+        <img src="/assets/jica.png" alt="Logo" />
       </div>
 
       <div className="welcome-Screen-container">

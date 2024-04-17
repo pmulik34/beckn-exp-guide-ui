@@ -1,14 +1,13 @@
-import React from 'react';
-import ClimateHeader from "./ClimateHeader";
+import Header from "../../common/Header/Header";
+import '../../welcome-page/ClimateResiliance.css';
 
-const Climate1 = () => {
-
+const Climate3 = () => {
   return (
     <>
-      <ClimateHeader
-        logoSrc='/assets/beckn_lg.svg'
-        headingLine1='An FMCG company delivers flood-resilient'
-        headingLine2 = 'farming advisory to its contract farmers'
+      <Header
+        logoSrc="/assets/beckn_lg.svg"
+        headingLine1="A humanitarian aid organization plans for"
+        headingLine2="anticipatory aid"
       />
       <div className="climate-container">
         <div className="desktop-wrapper">
@@ -17,8 +16,7 @@ const Climate1 = () => {
               <iframe
                 className="ChooseExpIframe"
                 allow="clipboard-read; clipboard-write; geolocation"
-                src="https://workspace.google.com/intl/en_in/solutions/ai/"
-                frameBorder="0"
+                src="https://workspace.google.com/faq/"
                 allowFullScreen
                 width={"100%"}
                 height={"100%"}
@@ -27,7 +25,9 @@ const Climate1 = () => {
             </div>
           </div>
         </div>
-        <div style={{ display: "flex", alignItems: "center", marginTop: '3rem'}}>
+        <div
+          style={{ display: "flex", alignItems: "center", marginTop: "3rem" }}
+        >
           <img
             src="/assets/videoIcon.svg"
             alt="icon"
@@ -40,7 +40,6 @@ const Climate1 = () => {
           height="500"
           src="https://www.youtube.com/embed/cDP7e1BWgek"
           title="Why Does Google Kill So Many Products? | Untangled"
-          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
@@ -51,4 +50,4 @@ const Climate1 = () => {
   );
 };
 
-export default Climate1;
+export default Climate3;

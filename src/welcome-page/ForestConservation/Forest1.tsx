@@ -1,11 +1,12 @@
 import React from 'react';
-import ClimateHeader from "../Climate/ClimateHeader";
+import Header from '../../common/Header/Header';
+import '../../welcome-page/ClimateResiliance.css';
 
 const Forest1 = () => {
 
   return (
     <>
-      <ClimateHeader
+      <Header
         logoSrc='/assets/beckn_lg.svg'
         headingLine1='Detect and measure forest degradation &'
         headingLine2 = 'facilitate intervention'

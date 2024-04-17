@@ -1,5 +1,6 @@
 import React from "react";
-// import "../;
+import { Link } from "react-router-dom"; 
+import "./Header.css";
 
 interface HeaderProps {
   logoSrc: string;
@@ -15,14 +16,17 @@ const Header: React.FC<HeaderProps> = ({
   return (
     <div className="header-container">
       <div className="header-left">
-        <img src={logoSrc} alt="Logo" className="logo" />
+        {/* Add Link to the logo */}
+        <Link to="/select-experience">
+          <img src={logoSrc} alt="Logo" className="logo" />
+        </Link>
       </div>
       <div className="heading">
         <div className="heading">{headingLine1}</div>
         <div className="heading">{headingLine2}</div>
       </div>
-      <div className="header-left">
-        <img src={logoSrc} alt="Logo" className="logo" />
+      <div className="header-right">
+        <img src="/assets/jica.png" alt="Logo" />
       </div>
     </div>
   );

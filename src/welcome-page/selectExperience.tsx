@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 import "./selectExperience.css";
 import { useEffect } from "react";
 import { Typography } from "antd";
-import Header from "../common/Header";
 
 const SelectExperience = () => {
   const navigate = useNavigate();
@@ -32,7 +31,14 @@ const SelectExperience = () => {
   return (
     <div style={{ overflow: "hidden" }}>
       <div className="headLogo-image">
-        <img className="Beckn-image" src="/assets/beckn_lg.svg" alt={"Logo"} />
+        <Link to="/select-experience">
+          <img
+            className="Beckn-image"
+            src="/assets/beckn_lg.svg"
+            alt={"Logo"}
+            height={'40px'}
+          />
+        </Link>
         <div className="heading-container">
           <Typography.Title
             level={3}
@@ -58,7 +64,7 @@ const SelectExperience = () => {
             {/* A decentralized network for secure access to reliable data */}
           </Typography.Paragraph>
         </div>
-        <button
+        {/* <button
           onClick={() => navigate("/")}
           style={{ width: "55px", marginTop: "-10px", background: "none" }}
           className="home-button-navigate"
@@ -70,7 +76,8 @@ const SelectExperience = () => {
               alt=""
             />
           </span>
-        </button>
+        </button> */}
+        <img src="/assets/jica.png" alt="Logo" />
       </div>
 
       <div className="welcome-Screen-container">

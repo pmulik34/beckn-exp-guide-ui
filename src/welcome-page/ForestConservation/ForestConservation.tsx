@@ -34,7 +34,13 @@ const ClimateResilience: React.FC = () => {
   return (
     <div style={{ overflow: "hidden" }}>
       <div className="headLogo-image">
-        <img className="Beckn-image" src="/assets/beckn_lg.svg" alt={"Logo"} />
+        <Link to="/select-experience">
+          <img
+            className="Beckn-image"
+            src="/assets/beckn_lg.svg"
+            alt={"Logo"}
+          />
+        </Link>{" "}
         <div className="heading-container">
           <Typography.Title
             level={3}
@@ -46,8 +52,7 @@ const ClimateResilience: React.FC = () => {
               fontWeight: "600",
             }}
           >
-            Climate Resilience Data Highways for <br />
-            Disaster Resilience
+            Figma ipsum component variant <br /> main layer. Scale arro.
           </Typography.Title>
           <Typography.Paragraph
             style={{
@@ -58,22 +63,11 @@ const ClimateResilience: React.FC = () => {
               fontWeight: "600",
             }}
           >
-            A decentralized network for secure access to reliable data
+            Figma ipsum component variant main layer. Vertical export layer
+            blur.{" "}
           </Typography.Paragraph>
         </div>
-        <button
-          onClick={() => navigate("/")}
-          style={{ width: "55px", marginTop: "-10px", background: "none" }}
-          className="home-button-navigate"
-        >
-          <span>
-            <img
-              style={{ width: "24px", position: "relative" }}
-              src="/assets/home.svg"
-              alt=""
-            />
-          </span>
-        </button>
+        <img src="/assets/jica.png" alt="Logo" />
       </div>
 
       <div className="welcome-Screen-container">
@@ -104,7 +98,8 @@ const ClimateResilience: React.FC = () => {
                   />
                   <p className="card-title-image">
                     <span className="font-color">
-                    forest restoration project to ensure ecological health and sustainability
+                      forest restoration project to ensure ecological health and
+                      sustainability
                     </span>
                   </p>
                 </div>
@@ -118,7 +113,8 @@ const ClimateResilience: React.FC = () => {
                   />
                   <p className="card-title-image">
                     <span className="font-color">
-                    a leading food and beverage company with an ambitious sustainability agenda
+                      a leading food and beverage company with an ambitious
+                      sustainability agenda
                     </span>
                   </p>
                 </div>

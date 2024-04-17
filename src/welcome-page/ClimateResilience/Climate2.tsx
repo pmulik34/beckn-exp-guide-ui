@@ -1,13 +1,14 @@
 import React from "react";
-import ClimateHeader from "./ClimateHeader";
+import Header from "../../common/Header/Header";
+import '../../welcome-page/ClimateResiliance.css';
 
-const Climate3 = () => {
+const Climate2 = () => {
   return (
     <>
-      <ClimateHeader
+      <Header
         logoSrc="/assets/beckn_lg.svg"
-        headingLine1="A humanitarian aid organization plans for"
-        headingLine2="anticipatory aid"
+        headingLine1="A climate services startup delivers flood"
+        headingLine2="predictions for early warnings"
       />
       <div className="climate-container">
         <div className="desktop-wrapper">
@@ -16,7 +17,7 @@ const Climate3 = () => {
               <iframe
                 className="ChooseExpIframe"
                 allow="clipboard-read; clipboard-write; geolocation"
-                src="https://workspace.google.com/faq/"
+                src="https://workspace.google.com/security/"
                 frameBorder="0"
                 allowFullScreen
                 width={"100%"}
@@ -52,4 +53,4 @@ const Climate3 = () => {
   );
 };
 
-export default Climate3;
+export default Climate2;

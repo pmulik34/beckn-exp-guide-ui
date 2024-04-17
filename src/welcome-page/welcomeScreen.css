@@ -41,7 +41,7 @@
 .fadeIn {
   -webkit-animation-name: fadeIn;
   animation-name: fadeIn;
-  margin-top: 94px;
+  margin-top: 50px;
 }
 .child-container {
   text-align: center;

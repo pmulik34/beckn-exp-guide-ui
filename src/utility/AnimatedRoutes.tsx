@@ -33,14 +33,14 @@ import ONDC from "../welcome-page/ONDC/ONDC";
 import RegenUEI from "../welcome-page/RegenUEI/regenUEI";
 import RegenerativeAgriculture from "../welcome-page/RegenerativeAgriculture/regenerativeAgriculture";
 import RegenUEINewFlow from "../welcome-page/regenUEINewFlow";
-import Climate1 from "../welcome-page/Climate/Climate1";
-import Climate2 from "../welcome-page/Climate/Climate2";
-import Climate3 from "../welcome-page/Climate/Climate3";
 import ClimateResilience from "../welcome-page/ClimateResilience/ClimateResilience";
 import ForestConservation from "../welcome-page/ForestConservation/ForestConservation";
 import Forest1 from "../welcome-page/ForestConservation/Forest1";
 import Forest2 from "../welcome-page/ForestConservation/Forest2";
 import Forest3 from "../welcome-page/ForestConservation/Forest3";
+import Climate1 from "../welcome-page/ClimateResilience/Climate1";
+import Climate2 from "../welcome-page/ClimateResilience/Climate2";
+import Climate3 from "../welcome-page/ClimateResilience/Climate3";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
